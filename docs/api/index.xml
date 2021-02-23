@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MR MiniApp</title>
+    <title>api on MR MiniApp</title>
     <link>http://tonniz.github.io/docs/api/</link>
-    <description>Recent content on MR MiniApp</description>
+    <description>Recent content in api on MR MiniApp</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
