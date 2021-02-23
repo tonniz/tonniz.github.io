@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="代收付#  易才HRO API
+  批量送盘
+  批次查询
+  对账文件生成
+  名录维护API
+ 由HRO在名录发生变更时推送给沐融系统
+   退票查询
+    短信/邮件 改造
+  短信模板
+  短信调用易才RabbitMQ
+  邮件配置
+    银行类型的改造
+  批次送盘 &amp; 回盘增加重点客户的优先级
+  删除商户有关的风控、检查；改造成客户
+  去除合作机构接口管理
+  提供卡BIN反查
+ 支持批量上送（需做笔数控制）
+   客户风控增加单批 笔数/金额 上限
+  交易状态增加 R：已退汇，流水表中增加退汇流水号、退汇日期">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="改造点" />
+<meta property="og:description" content="代收付#  易才HRO API
+  批量送盘
+  批次查询
+  对账文件生成
+  名录维护API
+ 由HRO在名录发生变更时推送给沐融系统
+   退票查询
+    短信/邮件 改造
+  短信模板
+  短信调用易才RabbitMQ
+  邮件配置
+    银行类型的改造
+  批次送盘 &amp; 回盘增加重点客户的优先级
+  删除商户有关的风控、检查；改造成客户
+  去除合作机构接口管理
+  提供卡BIN反查
+ 支持批量上送（需做笔数控制）
+   客户风控增加单批 笔数/金额 上限
+  交易状态增加 R：已退汇，流水表中增加退汇流水号、退汇日期" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/" /><meta property="article:section" content="docs" />
+
+
+
+<title>改造点 | 易才批量代付项目</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.5c155ab45a209ee138fd86a73869c020179ec26dc0c5b146a7ea11027b123172.js" integrity="sha256-XBVatFognuE4/YanOGnAIBeewm3AxbFGp&#43;oRAnsSMXI="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>易才批量代付项目</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>开发</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/task/" class="">任务分配</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/env/" class="">开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/pab/" class="">平安版本系统流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/" class=" active">改造点</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>API</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" class="">HRO接口文档</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/" class="">银行接口</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/" class="">HRO融合方案</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/" class="">Hro签名 Demo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/" class="">文件压缩解压</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Meeting</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210114/" class="">20210114th</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210108/" class="">20210108周例会</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>需求</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/technology/" class="">技术沟通确认清单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/" class="">易才需求沟通会</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/" class="">银行待沟通问题列表（工行）</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/" class="">银行待沟通问题列表（招行）</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>改造点</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#代收付">代收付</a></li>
+        <li><a href="#运营">运营</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="代收付">
+  代收付
+  <a class="anchor" href="#%e4%bb%a3%e6%94%b6%e4%bb%98">#</a>
+</h2>
+<ul>
+<li>
+<p>易才HRO API</p>
+<ul>
+<li>
+<p>批量送盘</p>
+</li>
+<li>
+<p>批次查询</p>
+</li>
+<li>
+<p>对账文件生成</p>
+</li>
+<li>
+<p>名录维护API</p>
+<blockquote>
+<p>由HRO在名录发生变更时推送给沐融系统</p>
+</blockquote>
+</li>
+<li>
+<p>退票查询</p>
+</li>
+</ul>
+</li>
+<li>
+<p>短信/邮件 改造</p>
+<ul>
+<li>
+<p>短信模板</p>
+</li>
+<li>
+<p>短信调用易才RabbitMQ</p>
+</li>
+<li>
+<p>邮件配置</p>
+</li>
+</ul>
+</li>
+<li>
+<p>银行类型的改造</p>
+</li>
+<li>
+<p>批次送盘 &amp; 回盘增加重点客户的优先级</p>
+</li>
+<li>
+<p>删除商户有关的风控、检查；改造成客户</p>
+</li>
+<li>
+<p>去除合作机构接口管理</p>
+</li>
+<li>
+<p>提供卡BIN反查</p>
+<blockquote>
+<p>支持批量上送（需做笔数控制）</p>
+</blockquote>
+</li>
+<li>
+<p>客户风控增加单批 笔数/金额 上限</p>
+</li>
+<li>
+<p>交易状态增加 R：已退汇，流水表中增加退汇流水号、退汇日期</p>
+</li>
+<li>
+<p>招行针对不同的费用有不同的接口</p>
+</li>
+<li>
+<p>CAPDSKINF需增加送盘/回盘文件路径</p>
+</li>
+<li>
+<p>检查所各表的索引</p>
+</li>
+<li>
+<p>检查会话型临时表</p>
+</li>
+<li>
+<p>大额、小额、超网单独拆分成独立的接口，公共部分用宏或者Include，关键字段接口配死</p>
+</li>
+<li>
+<p>在Disk处理完成后调用通知接口</p>
+</li>
+<li>
+<p>支付地同步增加账户类型（基本户、一般户）</p>
+</li>
+<li>
+<p>招行需根据支付地账户类型判别接口</p>
+</li>
+</ul>
+<h2 id="运营">
+  运营
+  <a class="anchor" href="#%e8%bf%90%e8%90%a5">#</a>
+</h2>
+<ul>
+<li>
+<p>与HRO融合改造</p>
+<ul>
+<li>
+<p>移除沐融管理系统中的菜单、用户、角色、权限，使用HRO的用户、角色、权限来控制沐融的页面</p>
+</li>
+<li>
+<p>HRO系统在原有的菜单基础上增加沐融批量代付相关的菜单，并且点击其链接能跳转至沐融管理系统相应的页面</p>
+</li>
+<li>
+<p>HRO向沐融系统提供Token鉴权接口用于沐融系统相关页面渲染前的权限检查，并在鉴权成功后返回HRO系统的用户ID及该页面下的按钮权限</p>
+</li>
+<li>
+<p>沐融系统使用鉴权返回的UserId来登记操作员日志</p>
+</li>
+<li>
+<p>HRO提供接口，输入Token，返回该Token下所有的权限ID</p>
+<blockquote>
+<p>返回的ID集合可以是这种形式：XXXX|XXXX|XXXX|XXXX|XXXX|XXXX</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>路由增加汇路维度</p>
+<p>公共基础 &raquo; 批量路由规则维护 页面增加汇路维度</p>
+<p>汇路枚举：超网、大额、小额</p>
+</li>
+<li>
+<p>客户风控增加维度</p>
+<ul>
+<li>单批</li>
+</ul>
+</li>
+<li>
+<p>机构风控增加维度</p>
+</li>
+<li>
+<p>报表</p>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#代收付">代收付</a></li>
+        <li><a href="#运营">运营</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

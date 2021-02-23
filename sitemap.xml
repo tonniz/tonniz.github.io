@@ -2,10 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tonniz.github.io/categories/</loc>
+    <loc>https://example.com/docs/%E5%BC%80%E5%8F%91/</loc>
   </url><url>
-    <loc>http://tonniz.github.io/</loc>
+    <loc>https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</loc>
   </url><url>
-    <loc>http://tonniz.github.io/tags/</loc>
+    <loc>https://example.com/docs/%E5%BC%80%E5%8F%91/task/</loc>
+  </url><url>
+    <loc>https://example.com/docs/API/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E5%BC%80%E5%8F%91/env/</loc>
+  </url><url>
+    <loc>https://example.com/docs/Meeting/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E9%9C%80%E6%B1%82/</loc>
+  </url><url>
+    <loc>https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/</loc>
+  </url><url>
+    <loc>https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E5%BC%80%E5%8F%91/pab/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/</loc>
+  </url><url>
+    <loc>https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/</loc>
+  </url><url>
+    <loc>https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/</loc>
+  </url><url>
+    <loc>https://example.com/docs/Meeting/20210114/</loc>
+  </url><url>
+    <loc>https://example.com/docs/Meeting/20210108/</loc>
+  </url><url>
+    <loc>https://example.com/categories/</loc>
+  </url><url>
+    <loc>https://example.com/docs/</loc>
+  </url><url>
+    <loc>https://example.com/tags/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E9%9C%80%E6%B1%82/technology/</loc>
+  </url><url>
+    <loc>https://example.com/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/</loc>
+  </url><url>
+    <loc>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/</loc>
   </url>
 </urlset>

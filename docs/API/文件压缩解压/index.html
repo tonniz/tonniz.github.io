@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="文件压缩/解压#Maven配置#&lt;dependency&gt; &lt;groupId&gt;net.lingala.zip4j&lt;/groupId&gt; &lt;artifactId&gt;zip4j&lt;/artifactId&gt; &lt;version&gt;2.6.4&lt;/version&gt; &lt;/dependency&gt; 压缩#ZipParameters zipParameters = new ZipParameters(); zipParameters.setEncryptFiles(true); zipParameters.setEncryptionMethod(EncryptionMethod.AES); // Below line is optional. AES 256 is used by default. You can override it to use AES 128. AES 192 is supported only for extracting. zipParameters.setAesKeyStrength(AesKeyStrength.KEY_STRENGTH_256); List&lt;File&gt; filesToAdd = Arrays.asList( new File(&#34;somefile&#34;), new File(&#34;someotherfile&#34;) ); ZipFile zipFile = new ZipFile(&#34;filename.zip&#34;, &#34;password&#34;.toCharArray()); zipFile.addFiles(filesToAdd, zipParameters); 解压#new ZipFile(&#34;filename.zip&#34;, &#34;password&#34;.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="文件压缩/解压#Maven配置#&lt;dependency&gt; &lt;groupId&gt;net.lingala.zip4j&lt;/groupId&gt; &lt;artifactId&gt;zip4j&lt;/artifactId&gt; &lt;version&gt;2.6.4&lt;/version&gt; &lt;/dependency&gt; 压缩#ZipParameters zipParameters = new ZipParameters(); zipParameters.setEncryptFiles(true); zipParameters.setEncryptionMethod(EncryptionMethod.AES); // Below line is optional. AES 256 is used by default. You can override it to use AES 128. AES 192 is supported only for extracting. zipParameters.setAesKeyStrength(AesKeyStrength.KEY_STRENGTH_256); List&lt;File&gt; filesToAdd = Arrays.asList( new File(&#34;somefile&#34;), new File(&#34;someotherfile&#34;) ); ZipFile zipFile = new ZipFile(&#34;filename.zip&#34;, &#34;password&#34;.toCharArray()); zipFile.addFiles(filesToAdd, zipParameters); 解压#new ZipFile(&#34;filename.zip&#34;, &#34;password&#34;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/" /><meta property="article:section" content="docs" />
+
+
+
+<title>文件压缩解压 | 易才批量代付项目</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.5c155ab45a209ee138fd86a73869c020179ec26dc0c5b146a7ea11027b123172.js" integrity="sha256-XBVatFognuE4/YanOGnAIBeewm3AxbFGp&#43;oRAnsSMXI="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>易才批量代付项目</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>开发</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/task/" class="">任务分配</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/env/" class="">开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/pab/" class="">平安版本系统流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/" class="">改造点</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>API</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" class="">HRO接口文档</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/" class="">银行接口</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/" class="">HRO融合方案</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/" class="">Hro签名 Demo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/" class=" active">文件压缩解压</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Meeting</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210114/" class="">20210114th</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210108/" class="">20210108周例会</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>需求</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/technology/" class="">技术沟通确认清单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/" class="">易才需求沟通会</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/" class="">银行待沟通问题列表（工行）</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/" class="">银行待沟通问题列表（招行）</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>文件压缩解压</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#文件压缩解压">文件压缩/解压</a>
+      <ul>
+        <li><a href="#maven配置">Maven配置</a></li>
+        <li><a href="#压缩">压缩</a></li>
+        <li><a href="#解压">解压</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="文件压缩解压">
+  文件压缩/解压
+  <a class="anchor" href="#%e6%96%87%e4%bb%b6%e5%8e%8b%e7%bc%a9%e8%a7%a3%e5%8e%8b">#</a>
+</h1>
+<h2 id="maven配置">
+  Maven配置
+  <a class="anchor" href="#maven%e9%85%8d%e7%bd%ae">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>net.lingala.zip4j<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>zip4j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>2.6.4<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><h2 id="压缩">
+  压缩
+  <a class="anchor" href="#%e5%8e%8b%e7%bc%a9">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ZipParameters zipParameters <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ZipParameters<span style="color:#f92672">();</span>
+zipParameters<span style="color:#f92672">.</span><span style="color:#a6e22e">setEncryptFiles</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+zipParameters<span style="color:#f92672">.</span><span style="color:#a6e22e">setEncryptionMethod</span><span style="color:#f92672">(</span>EncryptionMethod<span style="color:#f92672">.</span><span style="color:#a6e22e">AES</span><span style="color:#f92672">);</span>
+<span style="color:#75715e">// Below line is optional. AES 256 is used by default. You can override it to use AES 128. AES 192 is supported only for extracting.
+</span><span style="color:#75715e"></span>zipParameters<span style="color:#f92672">.</span><span style="color:#a6e22e">setAesKeyStrength</span><span style="color:#f92672">(</span>AesKeyStrength<span style="color:#f92672">.</span><span style="color:#a6e22e">KEY_STRENGTH_256</span><span style="color:#f92672">);</span> 
+
+List<span style="color:#f92672">&lt;</span>File<span style="color:#f92672">&gt;</span> filesToAdd <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>
+    <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;somefile&#34;</span><span style="color:#f92672">),</span> 
+    <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;someotherfile&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#f92672">);</span>
+
+ZipFile zipFile <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ZipFile<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;filename.zip&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">());</span>
+zipFile<span style="color:#f92672">.</span><span style="color:#a6e22e">addFiles</span><span style="color:#f92672">(</span>filesToAdd<span style="color:#f92672">,</span> zipParameters<span style="color:#f92672">);</span>
+</code></pre></div><h2 id="解压">
+  解压
+  <a class="anchor" href="#%e8%a7%a3%e5%8e%8b">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">new</span> ZipFile<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;filename.zip&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">extractAll</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/destination_directory&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><h2 id="参考">
+  参考
+  <a class="anchor" href="#%e5%8f%82%e8%80%83">#</a>
+</h2>
+<p><a href="https://github.com/srikanth-lingala/zip4j">zip4j</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#文件压缩解压">文件压缩/解压</a>
+      <ul>
+        <li><a href="#maven配置">Maven配置</a></li>
+        <li><a href="#压缩">压缩</a></li>
+        <li><a href="#解压">解压</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

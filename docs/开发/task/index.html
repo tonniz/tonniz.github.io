@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HRO API# 详参考《HRO接口文档》
+    任务名称 描述 负责人 进度     diskApply 批量代付申请 王磊 30%   diskResult 批量代付结果查询 王磊 0%   diskNotify 批次终态通知 王磊 0%   refundQuery 退票查询 赵林林 30%   customerSync 客户信息同步 赵林林 30%   titleSync 支付地账户信息同步 赵林林 30%   transStsSync 业务状态同步 王磊 0%   cardInfoQuery 卡信息查询 赵林林 30%    UI#   任务名称 描述 负责人 进度     UI Revision Flex翻写 左登红 70%   corgRiskRefactor 机构风控改造 左登红 0%   customerBrowse 客户信息浏览 左登红 0%   customerRiskManager 客户风控管理 左登红 0%   titleBrowse 支付地抬头浏览 左登红 0%   routerRefactor 路由改造（增加汇路） 左登红/王磊 0%   HRO Integration HRO整合 马东 0%    招行通道# 详参考《招商银行新引起开发指南》">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="任务分配" />
+<meta property="og:description" content="HRO API# 详参考《HRO接口文档》
+    任务名称 描述 负责人 进度     diskApply 批量代付申请 王磊 30%   diskResult 批量代付结果查询 王磊 0%   diskNotify 批次终态通知 王磊 0%   refundQuery 退票查询 赵林林 30%   customerSync 客户信息同步 赵林林 30%   titleSync 支付地账户信息同步 赵林林 30%   transStsSync 业务状态同步 王磊 0%   cardInfoQuery 卡信息查询 赵林林 30%    UI#   任务名称 描述 负责人 进度     UI Revision Flex翻写 左登红 70%   corgRiskRefactor 机构风控改造 左登红 0%   customerBrowse 客户信息浏览 左登红 0%   customerRiskManager 客户风控管理 左登红 0%   titleBrowse 支付地抬头浏览 左登红 0%   routerRefactor 路由改造（增加汇路） 左登红/王磊 0%   HRO Integration HRO整合 马东 0%    招行通道# 详参考《招商银行新引起开发指南》" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/%E5%BC%80%E5%8F%91/task/" /><meta property="article:section" content="docs" />
+
+
+
+<title>任务分配 | 易才批量代付项目</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.5c155ab45a209ee138fd86a73869c020179ec26dc0c5b146a7ea11027b123172.js" integrity="sha256-XBVatFognuE4/YanOGnAIBeewm3AxbFGp&#43;oRAnsSMXI="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>易才批量代付项目</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>开发</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/task/" class=" active">任务分配</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/env/" class="">开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/pab/" class="">平安版本系统流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/" class="">改造点</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>API</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" class="">HRO接口文档</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/" class="">银行接口</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/" class="">HRO融合方案</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/" class="">Hro签名 Demo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/" class="">文件压缩解压</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Meeting</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210114/" class="">20210114th</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210108/" class="">20210108周例会</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>需求</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/technology/" class="">技术沟通确认清单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/" class="">易才需求沟通会</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/" class="">银行待沟通问题列表（工行）</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/" class="">银行待沟通问题列表（招行）</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>任务分配</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hro-api">HRO API</a></li>
+        <li><a href="#ui">UI</a></li>
+        <li><a href="#招行通道">招行通道</a></li>
+        <li><a href="#工行通道">工行通道</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="hro-api">
+  HRO API
+  <a class="anchor" href="#hro-api">#</a>
+</h2>
+<blockquote>
+<p>详参考《HRO接口文档》</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>任务名称</th>
+<th>描述</th>
+<th>负责人</th>
+<th>进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>diskApply</td>
+<td>批量代付申请</td>
+<td>王磊</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>diskResult</td>
+<td>批量代付结果查询</td>
+<td>王磊</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>diskNotify</td>
+<td>批次终态通知</td>
+<td>王磊</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>refundQuery</td>
+<td>退票查询</td>
+<td>赵林林</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>customerSync</td>
+<td>客户信息同步</td>
+<td>赵林林</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>titleSync</td>
+<td>支付地账户信息同步</td>
+<td>赵林林</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>transStsSync</td>
+<td>业务状态同步</td>
+<td>王磊</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>cardInfoQuery</td>
+<td>卡信息查询</td>
+<td>赵林林</td>
+<td>30%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ui">
+  UI
+  <a class="anchor" href="#ui">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>任务名称</th>
+<th>描述</th>
+<th>负责人</th>
+<th>进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI Revision</td>
+<td>Flex翻写</td>
+<td>左登红</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>corgRiskRefactor</td>
+<td>机构风控改造</td>
+<td>左登红</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>customerBrowse</td>
+<td>客户信息浏览</td>
+<td>左登红</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>customerRiskManager</td>
+<td>客户风控管理</td>
+<td>左登红</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>titleBrowse</td>
+<td>支付地抬头浏览</td>
+<td>左登红</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>routerRefactor</td>
+<td>路由改造（增加汇路）</td>
+<td>左登红/王磊</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>HRO Integration</td>
+<td>HRO整合</td>
+<td>马东</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="招行通道">
+  招行通道
+  <a class="anchor" href="#%e6%8b%9b%e8%a1%8c%e9%80%9a%e9%81%93">#</a>
+</h2>
+<blockquote>
+<p>详参考《招商银行新引起开发指南》</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>任务名称</th>
+<th>描述</th>
+<th>负责人</th>
+<th>进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTAGCSAL</td>
+<td>代发工资经办</td>
+<td>马东</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>NTAGCAPY</td>
+<td>代发其他经办</td>
+<td>马东</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>NTAGCSAI</td>
+<td>超网代发工资经办</td>
+<td>马东</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>NTAGCAPI</td>
+<td>超网代发其他</td>
+<td>马东</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>NTAGDRFD</td>
+<td>代发退票明细查询</td>
+<td>马东</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>NTAGCQRI</td>
+<td>代发代扣直连综合查询</td>
+<td>马东</td>
+<td>30%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="工行通道">
+  工行通道
+  <a class="anchor" href="#%e5%b7%a5%e8%a1%8c%e9%80%9a%e9%81%93">#</a>
+</h2>
+<blockquote>
+<p>详细参考《高级新企业财务室提交指令查询接口》 &amp;  《企业财务室指令提交汇总记账》 &amp; 《中国工商银行银企互联系统企业开发手册》</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>任务名称</th>
+<th>描述</th>
+<th>负责人</th>
+<th>进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAYPERCOL</td>
+<td>送盘请求</td>
+<td>赵林林</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>QPAYPER</td>
+<td>回盘查询</td>
+<td>赵林林</td>
+<td>30%</td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hro-api">HRO API</a></li>
+        <li><a href="#ui">UI</a></li>
+        <li><a href="#招行通道">招行通道</a></li>
+        <li><a href="#工行通道">工行通道</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

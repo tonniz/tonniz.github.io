@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>易才批量代付项目</title>
+    <link>https://example.com/docs/API/</link>
+    <description>Recent content on 易才批量代付项目</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/docs/API/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HRO接口文档</title>
+      <link>https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</guid>
+      <description>易才代收付API#修订记录
+   版本号 更新日期 更新人 更新内容     v0.7 2021-01-18 赵磊 增加对账接口   v0.6 2021-01-14 赵磊 明确交易状态；增加批次失败信息；调整附言位置；   v0.5 2021-01-13 赵磊 diskResult/diskNotify增加diskMessage；增加账户类型   v0.4 2021-01-12 赵磊 refundQuery增加页码、总页数、当前页码   v0.3 2021-01-11 赵磊 titleSync去除费项代码，增加账户类型   v0.2 2021-01-11 赵磊 支付地增加代付默认配置   v0.1 2020-12-29 赵磊 初稿    [TOC]
+接口设计#报文头#报文头格式为：“&amp;lt;head&amp;gt;报文头内容&amp;lt;/head&amp;gt;”，内容结构详见接口设计部分公共报文头
+报文体#报文体主要用于传输业务数据信息，格式为：“&amp;lt;body&amp;gt;报文体内容&amp;lt;/body&amp;gt;”</description>
+    </item>
+    
+    <item>
+      <title>银行接口</title>
+      <link>https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/</guid>
+      <description>银行接口#工行# 中国工商银行银企互联系统企业开发手册.doc 高级新企业财务室提交指令查询接口.xls 企业财务室指令提交汇总记账.xls  招行# 招商银行新银企直联开发指南.docx  </description>
+    </item>
+    
+    <item>
+      <title>HRO融合方案</title>
+      <link>https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/</guid>
+      <description>HRO融合方案#流程图#流程图#接口说明#Auth Server#鉴权#  请求
+protocol : HTTP method : GET content-Type : application/x-www-form-urlencoded token：Token funcId：功能ID
+eg.
+GET /auth?token=ZW9xpZTdvamE4SWVTNmkK&amp;amp;funcId=10001 HTTP/1.1 Content-Type : application/x-www-form-urlencoded Host: localhost: 8888 Connection: keep-alive   返回
+根据http state来判断是否鉴权成功；200：鉴权通过 403：鉴权失败 funcSet: 满足条件的funcId集合，以逗号符分割
+eg. 成功：
+HTTP/1.1 200 OK Date: Wed, 13 Jan 2021 15:27:25 GMT Content-Type : application/xml Content-Length: 52 &amp;lt;root&amp;gt;&amp;lt;funcSet&amp;gt;100001,100002,100005&amp;lt;/funcSet&amp;gt;&amp;lt;/root&amp;gt; eg.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/</guid>
+      <description>HRO签名DEMO#import org.junit.Test; import java.io.UnsupportedEncodingException; import java.security.MessageDigest; import java.security.NoSuchAlgorithmException; import java.util.Base64; /** * @Author: Alawn * @Description: * @Date: Create in 6:40 下午 2021/1/20 */ public class SignDemo { private final static String secret = &amp;#34;Giur9quiuD&amp;#34;; private final static String charSet = &amp;#34;UTF-8&amp;#34;; @Test public void sign() throws NoSuchAlgorithmException, UnsupportedEncodingException { String reqBody = &amp;#34;&amp;lt;root&amp;gt;&amp;lt;head&amp;gt;&amp;lt;version&amp;gt;v1.0&amp;lt;/version&amp;gt;&amp;lt;serviceName&amp;gt;diskApply&amp;lt;/serviceName&amp;gt;&amp;lt;requestId&amp;gt;20210104000000000001&amp;lt;/requestId&amp;gt;&amp;lt;requestTime&amp;gt;20200104235959&amp;lt;/requestTime&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;applyDate&amp;gt;20201229&amp;lt;/applyDate&amp;gt;&amp;lt;diskNo&amp;gt;20201229000000000000000000000001&amp;lt;/diskNo&amp;gt;&amp;lt;filePath&amp;gt;/data/send/20201229000000000000000000000001&amp;lt;/filePath&amp;gt;&amp;lt;fileVersion&amp;gt;v1&amp;lt;/fileVersion&amp;gt;&amp;lt;customerId&amp;gt;OHJEMIA1EINGUGAH0AITHOHNUEYAHWOO&amp;lt;/customerId&amp;gt;&amp;lt;titleId&amp;gt;1000001&amp;lt;/titleId&amp;gt;&amp;lt;md5&amp;gt;c5950a259435d3e51262539a10a22910&amp;lt;/md5&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/root&amp;gt;&amp;#34;; MessageDigest md5Digest = MessageDigest.getInstance(&amp;#34;MD5&amp;#34;); String md5 = byteArrayToHexString(md5Digest.digest(reqBody.getBytes(charSet))); MessageDigest shaDigest = MessageDigest.getInstance(&amp;#34;SHA-256&amp;#34;); byte[] signBuf = new byte[md5.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/</guid>
+      <description>文件压缩/解压#Maven配置#&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;net.lingala.zip4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zip4j&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.6.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 压缩#ZipParameters zipParameters = new ZipParameters(); zipParameters.setEncryptFiles(true); zipParameters.setEncryptionMethod(EncryptionMethod.AES); // Below line is optional. AES 256 is used by default. You can override it to use AES 128. AES 192 is supported only for extracting. zipParameters.setAesKeyStrength(AesKeyStrength.KEY_STRENGTH_256); List&amp;lt;File&amp;gt; filesToAdd = Arrays.asList( new File(&amp;#34;somefile&amp;#34;), new File(&amp;#34;someotherfile&amp;#34;) ); ZipFile zipFile = new ZipFile(&amp;#34;filename.zip&amp;#34;, &amp;#34;password&amp;#34;.toCharArray()); zipFile.addFiles(filesToAdd, zipParameters); 解压#new ZipFile(&amp;#34;filename.zip&amp;#34;, &amp;#34;password&amp;#34;.</description>
+    </item>
+    
+  </channel>
+</rss>

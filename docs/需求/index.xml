@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>易才批量代付项目</title>
+    <link>https://example.com/docs/%E9%9C%80%E6%B1%82/</link>
+    <description>Recent content on 易才批量代付项目</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/docs/%E9%9C%80%E6%B1%82/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>技术沟通确认清单</title>
+      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/technology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/technology/</guid>
+      <description>技术沟通确认清单#  关于HRO与沐融代付管理系统的融合方案
+ 最终效果沐融代付系统的管理功能完全嵌入至HRO中
+   移除沐融管理系统中的菜单、用户、角色、权限，使用HRO的用户、角色、权限来控制沐融的页面
+  HRO系统在原有的菜单基础上增加沐融批量代付相关的菜单，并且点击其链接能跳转至沐融管理系统相应的页面
+  HRO向沐融系统提供Token鉴权接口用于沐融系统相关页面渲染前的权限检查，并在鉴权成功后返回HRO系统的用户ID及该页面下的按钮权限
+  沐融系统使用鉴权返回的UserId来登记操作员日志
+    关于HRO与沐融系统批次交互模式
+  沐融向HRO系统提供批次请求、批次查询等API，批次的内容以文件的形式存放在NFS服务器上
+  批次文件采用tar.gz压缩以减少网络传输的流量
+  批次文件使用对称加密及MD5签名的方式来保障文件的防篡改、防窃取
+  HRO上送的批次号全局唯一；批次文件中的明细ID全局唯一
+  沐融提供给HRO的回盘文件中需包含通道、出账账号、错误码、错误信息、业务状态、HRO流水、沐融流水、银行流水（银行如提供）
+    关于命中风控的处理策略
+  如整个批次命中风控的，则整批失败
+  如批次中局部明细命中风控的，则命中风控的部分明细作失败处理，未命中风控的部分正常发送
+    关于HRO与沐融系统的对账
+  沐融系统在 T + 1 日生成HRO系统T日的对账文件
+  对账文件仅包含成功、处理中的明细
+    关于退票的处理方式</description>
+    </item>
+    
+    <item>
+      <title>易才需求沟通会</title>
+      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/</guid>
+      <description>易才需求#技术#  批次全部成功后，通知易才
+  提供批量客户录入/修改接口
+  操作员日志沐融需要重写，只登记userID(易才给验证Token接口中给) + action
+  易才倾向于接口中附明细
+  送盘与回盘方式
+   使用文件，通过NFS、文件压缩且加密，压缩格式tar.gz
+  出口网络情况   上下行都是100M 电信、联通双线路、后期生产部署在北京
+  批次号不同、内容相同，如何处理?   HRO控制（SHA值校验）
+  批次中对于触发风控预警的明细处理情况   整批触发风控：整批作失败处理 单批部分明细触发风控：明细失败处理
+  短信客户端   易才提供MQ地址与格式
+  邮件服务器   易才提供邮件服务器配置
+  退票用推送？查询？   HRO每天查询
+  监控如何实现   业务监控沐融提供监控脚本</description>
+    </item>
+    
+    <item>
+      <title>银行待沟通问题列表（工行）</title>
+      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/</guid>
+      <description>银行待沟通问题列表（工行）#工行#  商务&amp;amp;流程
+  商务流程是什么样的？
+  多久可以提供测试参数？
+ 2~3个工作日
+   是否具备现成的联调环境？
+ ==工行近期更换环境，1月下旬到1月底才有联调环境==
+   是否有专人配合联调？
+ 专人配合
+   开发完成后银行是否需要在测试环境上验收？
+ 工行不验收，但需要易才出示带公章的验收报告，工行提供模板
+   生产参数及前置机软件多久可以提供？
+ 2~3个工作日
+   我方投产后行方是否需要生产环境的验收？
+ 不验收
+     跨行
+  大额、小额、超网 的限额及时效各是什么样的？
+ 大额：实时，100W以上（5 x 8） 小额：非实时，100w以下（7 x 24） 超网：实时，==5w以下==（7 x 24）
+   跨行业务是否要上送开户行行名、开户所在地、开户行支行名或联行号？</description>
+    </item>
+    
+    <item>
+      <title>银行待沟通问题列表（招行）</title>
+      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/</guid>
+      <description>银行待沟通问题列表（招行）#  商务&amp;amp;流程
+  商务流程是什么样的？
+  多久可以提供测试参数？
+ 2~3个工作日
+   是否具备现成的联调环境？
+ 有联调环境
+   是否有专人配合联调？
+ 有专人配合
+   开发完成后银行是否需要在测试环境上验收？
+ 测试环境需要验收，执行案例并填写银行给的测试报告
+   生产参数及前置机软件多久可以提供？
+ 2~3个工作日
+   我方投产后行方是否需要生产环境的验收？
+ 我方自行验证
+     跨行
+  大额、小额、超网 的限额及时效各是什么样的？
+ 大额：实时，100W以上（5 x 8） 小额：非实时，100w以下（7 x 24） 超网：实时，100w以下（7 x 24）
+   未走超网的跨行业务是否一定要上送开户行行名、开户所在地、开户行支行名或联行号？
+ 大小额需要上送；超网不需要上送</description>
+    </item>
+    
+  </channel>
+</rss>

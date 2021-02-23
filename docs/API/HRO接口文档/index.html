@@ -1,0 +1,3426 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="易才代收付API#修订记录
+   版本号 更新日期 更新人 更新内容     v0.7 2021-01-18 赵磊 增加对账接口   v0.6 2021-01-14 赵磊 明确交易状态；增加批次失败信息；调整附言位置；   v0.5 2021-01-13 赵磊 diskResult/diskNotify增加diskMessage；增加账户类型   v0.4 2021-01-12 赵磊 refundQuery增加页码、总页数、当前页码   v0.3 2021-01-11 赵磊 titleSync去除费项代码，增加账户类型   v0.2 2021-01-11 赵磊 支付地增加代付默认配置   v0.1 2020-12-29 赵磊 初稿    [TOC]
+接口设计#报文头#报文头格式为：“&lt;head&gt;报文头内容&lt;/head&gt;”，内容结构详见接口设计部分公共报文头
+报文体#报文体主要用于传输业务数据信息，格式为：“&lt;body&gt;报文体内容&lt;/body&gt;”">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="HRO接口文档" />
+<meta property="og:description" content="易才代收付API#修订记录
+   版本号 更新日期 更新人 更新内容     v0.7 2021-01-18 赵磊 增加对账接口   v0.6 2021-01-14 赵磊 明确交易状态；增加批次失败信息；调整附言位置；   v0.5 2021-01-13 赵磊 diskResult/diskNotify增加diskMessage；增加账户类型   v0.4 2021-01-12 赵磊 refundQuery增加页码、总页数、当前页码   v0.3 2021-01-11 赵磊 titleSync去除费项代码，增加账户类型   v0.2 2021-01-11 赵磊 支付地增加代付默认配置   v0.1 2020-12-29 赵磊 初稿    [TOC]
+接口设计#报文头#报文头格式为：“&lt;head&gt;报文头内容&lt;/head&gt;”，内容结构详见接口设计部分公共报文头
+报文体#报文体主要用于传输业务数据信息，格式为：“&lt;body&gt;报文体内容&lt;/body&gt;”" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" /><meta property="article:section" content="docs" />
+
+
+
+<title>HRO接口文档 | 易才批量代付项目</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.5c155ab45a209ee138fd86a73869c020179ec26dc0c5b146a7ea11027b123172.js" integrity="sha256-XBVatFognuE4/YanOGnAIBeewm3AxbFGp&#43;oRAnsSMXI="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>易才批量代付项目</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>开发</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/task/" class="">任务分配</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/env/" class="">开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/pab/" class="">平安版本系统流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/" class="">改造点</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>API</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" class=" active">HRO接口文档</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/" class="">银行接口</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/" class="">HRO融合方案</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/" class="">Hro签名 Demo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/" class="">文件压缩解压</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Meeting</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210114/" class="">20210114th</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210108/" class="">20210108周例会</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>需求</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/technology/" class="">技术沟通确认清单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/" class="">易才需求沟通会</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/" class="">银行待沟通问题列表（工行）</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/" class="">银行待沟通问题列表（招行）</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>HRO接口文档</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#易才代收付api">易才代收付API</a>
+      <ul>
+        <li><a href="#接口设计">接口设计</a>
+          <ul>
+            <li><a href="#报文头">报文头</a></li>
+            <li><a href="#报文体">报文体</a></li>
+            <li><a href="#通讯">通讯</a></li>
+            <li><a href="#签名">签名</a></li>
+            <li><a href="#报文格式">报文格式</a></li>
+          </ul>
+        </li>
+        <li><a href="#接口清单">接口清单</a>
+          <ul>
+            <li><a href="#公共请求响应头">公共请求/响应头</a></li>
+            <li><a href="#diskapply-批量代付申请">diskApply [批量代付申请]</a></li>
+            <li><a href="#diskresult-批量代付结果查询">diskResult [批量代付结果查询]</a></li>
+            <li><a href="#disknotify-批次终态通知">diskNotify [批次终态通知]</a></li>
+            <li><a href="#refundquery-退票查询">refundQuery [退票查询]</a></li>
+            <li><a href="#customersync-客户信息同步">customerSync [客户信息同步]</a></li>
+            <li><a href="#titlesync-支付地账户同步">titleSync [支付地账户同步]</a></li>
+            <li><a href="#transstssync-业务状态同步">transStsSync [业务状态同步]</a></li>
+            <li><a href="#cardinfoquery-卡信息查询">cardInfoQuery [卡信息查询]</a></li>
+          </ul>
+        </li>
+        <li><a href="#文件格式">文件格式</a>
+          <ul>
+            <li><a href="#送盘">送盘</a></li>
+            <li><a href="#回盘">回盘</a></li>
+            <li><a href="#对账">对账</a></li>
+          </ul>
+        </li>
+        <li><a href="#附录">附录</a>
+          <ul>
+            <li><a href="#响应码">响应码</a></li>
+            <li><a href="#银行通道">银行通道</a></li>
+            <li><a href="#分行号">分行号</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p><img  style="text-align:right"  src="http://www.murongtech.com/uploadfile/2019/0621/20190621060058441.png"  width="200px" /></p>
+<h1 id="易才代收付api">
+  易才代收付API
+  <a class="anchor" href="#%e6%98%93%e6%89%8d%e4%bb%a3%e6%94%b6%e4%bb%98api">#</a>
+</h1>
+<p><strong>修订记录</strong></p>
+<table>
+<thead>
+<tr>
+<th>版本号</th>
+<th>更新日期</th>
+<th>更新人</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0.7</td>
+<td>2021-01-18</td>
+<td>赵磊</td>
+<td>增加对账接口</td>
+</tr>
+<tr>
+<td>v0.6</td>
+<td>2021-01-14</td>
+<td>赵磊</td>
+<td>明确交易状态；增加批次失败信息；调整附言位置；</td>
+</tr>
+<tr>
+<td>v0.5</td>
+<td>2021-01-13</td>
+<td>赵磊</td>
+<td>diskResult/diskNotify增加diskMessage；增加账户类型</td>
+</tr>
+<tr>
+<td>v0.4</td>
+<td>2021-01-12</td>
+<td>赵磊</td>
+<td>refundQuery增加页码、总页数、当前页码</td>
+</tr>
+<tr>
+<td>v0.3</td>
+<td>2021-01-11</td>
+<td>赵磊</td>
+<td>titleSync去除费项代码，增加账户类型</td>
+</tr>
+<tr>
+<td>v0.2</td>
+<td>2021-01-11</td>
+<td>赵磊</td>
+<td>支付地增加代付默认配置</td>
+</tr>
+<tr>
+<td>v0.1</td>
+<td>2020-12-29</td>
+<td>赵磊</td>
+<td>初稿</td>
+</tr>
+</tbody>
+</table>
+<p>[TOC]</p>
+<h2 id="接口设计">
+  接口设计
+  <a class="anchor" href="#%e6%8e%a5%e5%8f%a3%e8%ae%be%e8%ae%a1">#</a>
+</h2>
+<h3 id="报文头">
+  报文头
+  <a class="anchor" href="#%e6%8a%a5%e6%96%87%e5%a4%b4">#</a>
+</h3>
+<p>报文头格式为：“&lt;head&gt;报文头内容&lt;/head&gt;”，内容结构详见接口设计部分公共报文头</p>
+<h3 id="报文体">
+  报文体
+  <a class="anchor" href="#%e6%8a%a5%e6%96%87%e4%bd%93">#</a>
+</h3>
+<p>报文体主要用于传输业务数据信息，格式为：“&lt;body&gt;报文体内容&lt;/body&gt;”</p>
+<h3 id="通讯">
+  通讯
+  <a class="anchor" href="#%e9%80%9a%e8%ae%af">#</a>
+</h3>
+<p>Protocol:HTTP
+Method:POST
+Content-Type:application/xml;charset=utf-8</p>
+<h3 id="签名">
+  签名
+  <a class="anchor" href="#%e7%ad%be%e5%90%8d">#</a>
+</h3>
+<p>将HTTP Body中的数据流用MD5进行签名，将签名结果与密钥拼接生成签名串，再使用SHA256对签名串进行哈希，结果放在HTTP Request Header中，Key为Signature</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String contentMD5 <span style="color:#f92672">=</span> byteArrayToHexString<span style="color:#f92672">(</span>MD5<span style="color:#f92672">(</span>bodyStream<span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">)));</span>
+String signature  <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">encode</span><span style="color:#f92672">(</span>SHA256<span style="color:#f92672">((</span>contentMD5 <span style="color:#f92672">+</span> secretKey<span style="color:#f92672">).</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">)));</span>
+</code></pre></div><p>bodyStream 为字节数组</p>
+<h3 id="报文格式">
+  报文格式
+  <a class="anchor" href="#%e6%8a%a5%e6%96%87%e6%a0%bc%e5%bc%8f">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;root&gt;</span>
+    <span style="color:#75715e">&lt;!--报文头--&gt;</span>
+    <span style="color:#f92672">&lt;head&gt;</span>
+        <span style="color:#f92672">&lt;version&gt;</span>v1.0<span style="color:#f92672">&lt;/version&gt;</span>                                             <span style="color:#75715e">&lt;!--接口版本--&gt;</span>
+        <span style="color:#f92672">&lt;serviceName&gt;</span>diskApply<span style="color:#f92672">&lt;/serviceName&gt;</span>                                <span style="color:#75715e">&lt;!--服务名--&gt;</span>
+        <span style="color:#f92672">&lt;requestId&gt;</span>20210104000000000001<span style="color:#f92672">&lt;/requestId&gt;</span>                         <span style="color:#75715e">&lt;!--请求ID--&gt;</span>
+        <span style="color:#f92672">&lt;requestTime&gt;</span>20200104235959<span style="color:#f92672">&lt;/requestTime&gt;</span>                           <span style="color:#75715e">&lt;!--请求时间--&gt;</span> 
+    <span style="color:#f92672">&lt;/head&gt;</span>
+    <span style="color:#75715e">&lt;!--报文体--&gt;</span>
+    <span style="color:#f92672">&lt;body&gt;</span>
+        <span style="color:#f92672">&lt;applyDate&gt;</span>20201229<span style="color:#f92672">&lt;/applyDate&gt;</span>                                     <span style="color:#75715e">&lt;!--送盘日期--&gt;</span>
+        <span style="color:#f92672">&lt;diskNo&gt;</span>20201229000000000000000000000001<span style="color:#f92672">&lt;/diskNo&gt;</span>               <span style="color:#75715e">&lt;!--磁盘编号--&gt;</span> 
+        <span style="color:#f92672">&lt;filePath&gt;</span>00001<span style="color:#f92672">&lt;/filePath&gt;</span>    <span style="color:#75715e">&lt;!--文件名--&gt;</span>
+        <span style="color:#f92672">&lt;fileVersion&gt;</span>v1<span style="color:#f92672">&lt;/fileVersion&gt;</span>                                       <span style="color:#75715e">&lt;!--文件版本--&gt;</span>
+        <span style="color:#f92672">&lt;customerId&gt;</span>OHJEMIA1EINGUGAH0AITHOHNUEYAHWOO<span style="color:#f92672">&lt;/customerId&gt;</span>           <span style="color:#75715e">&lt;!--客户ID--&gt;</span>
+        <span style="color:#f92672">&lt;titleId&gt;</span>1000001<span style="color:#f92672">&lt;/titleId&gt;</span>                                          <span style="color:#75715e">&lt;!--支付地抬头ID--&gt;</span>
+        <span style="color:#f92672">&lt;md5&gt;</span>c5950a259435d3e51262539a10a22910<span style="color:#f92672">&lt;/md5&gt;</span>                         <span style="color:#75715e">&lt;!--磁盘MD5值--&gt;</span> 
+    <span style="color:#f92672">&lt;/body&gt;</span>
+<span style="color:#f92672">&lt;/root&gt;</span>
+</code></pre></div></li>
+<li>
+<p>返回</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;root&gt;</span>
+    <span style="color:#75715e">&lt;!--报文头--&gt;</span>
+    <span style="color:#f92672">&lt;head&gt;</span>
+        <span style="color:#f92672">&lt;respCode&gt;</span>000000<span style="color:#f92672">&lt;/respCode&gt;</span>                                         <span style="color:#75715e">&lt;!--返回吗--&gt;</span>
+        <span style="color:#f92672">&lt;respMessage&gt;</span>交易成功<span style="color:#f92672">&lt;/respMessage&gt;</span>                                 <span style="color:#75715e">&lt;!--返回信息--&gt;</span>
+        <span style="color:#f92672">&lt;respTime&gt;</span>20210104235959<span style="color:#f92672">&lt;/respTime&gt;</span>                                 <span style="color:#75715e">&lt;!--返回时间--&gt;</span>
+    <span style="color:#f92672">&lt;/head&gt;</span>
+<span style="color:#f92672">&lt;/root&gt;</span>
+</code></pre></div></li>
+</ul>
+<h2 id="接口清单">
+  接口清单
+  <a class="anchor" href="#%e6%8e%a5%e5%8f%a3%e6%b8%85%e5%8d%95">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th>服务名</th>
+<th>描述</th>
+<th style="text-align:center">报文方向</th>
+<th style="text-align:center">是否签名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td>diskApply</td>
+<td>批量代付申请</td>
+<td style="text-align:center">HRO -&gt; 沐融代付</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td>diskResult</td>
+<td>批量代付结果查询</td>
+<td style="text-align:center">HRO -&gt; 沐融代付</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>diskNotify</td>
+<td>批次终态通知</td>
+<td style="text-align:center">沐融代付 -&gt; HRO</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td>refundQuery</td>
+<td>退票查询</td>
+<td style="text-align:center">HRO -&gt; 沐融代付</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td>customerSync</td>
+<td>客户信息同步</td>
+<td style="text-align:center">HRO -&gt; 沐融代付</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td>titleSync</td>
+<td>支付地账户信息同步</td>
+<td style="text-align:center">HRO -&gt; 沐融代付</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td>transStsSync</td>
+<td>业务状态同步</td>
+<td style="text-align:center">HRO -&gt; 沐融代付</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td>cardInfoQuery</td>
+<td>卡信息查询</td>
+<td style="text-align:center">HRO -&gt; 沐融代付</td>
+<td style="text-align:center">Y</td>
+</tr>
+</tbody>
+</table>
+<h3 id="公共请求响应头">
+  公共请求/响应头
+  <a class="anchor" href="#%e5%85%ac%e5%85%b1%e8%af%b7%e6%b1%82%e5%93%8d%e5%ba%94%e5%a4%b4">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>VARCHAR(10)</td>
+<td style="text-align:center">M</td>
+<td>接口版本</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>serviceName</td>
+<td>VARCHAR(50)</td>
+<td style="text-align:center">M</td>
+<td>服务名</td>
+<td>eg. diskApply</td>
+</tr>
+<tr>
+<td>requestId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>请求ID</td>
+<td>全局唯一</td>
+</tr>
+<tr>
+<td>requestTime</td>
+<td>VARCHAR(14)</td>
+<td style="text-align:center">M</td>
+<td>请求时间</td>
+<td>eg. 20210104120000</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requestId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>请求ID</td>
+<td>全局唯一</td>
+</tr>
+<tr>
+<td>respCode</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>返回码</td>
+<td>详见 <a href="#%e5%93%8d%e5%ba%94%e7%a0%81">响应码</a> 的定义</td>
+</tr>
+<tr>
+<td>respMessage</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>返回信息</td>
+<td></td>
+</tr>
+<tr>
+<td>respTime</td>
+<td>VARCHAR(14)</td>
+<td style="text-align:center">M</td>
+<td>服务器时间</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="diskapply-批量代付申请">
+  diskApply [批量代付申请]
+  <a class="anchor" href="#diskapply-%e6%89%b9%e9%87%8f%e4%bb%a3%e4%bb%98%e7%94%b3%e8%af%b7">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>applyDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>送盘日期</td>
+<td>eg. 20201229</td>
+</tr>
+<tr>
+<td>diskNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>磁盘编号</td>
+<td>eg. 20201229000000000000000000000001</td>
+</tr>
+<tr>
+<td>filePath</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>文件名/FID</td>
+<td>eg. 00001</td>
+</tr>
+<tr>
+<td>fileVersion</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">O</td>
+<td>文件版本</td>
+<td>eg. v1 默认v1</td>
+</tr>
+<tr>
+<td>customerId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>客户编号</td>
+<td>eg. OHJEMIA1EINGUGAH0AITHOHNUEYAHWOO</td>
+</tr>
+<tr>
+<td>titleId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>支付地抬头ID</td>
+<td>eg. 1000001</td>
+</tr>
+<tr>
+<td>md5</td>
+<td>VARCHAR(32)</td>
+<td style="text-align:center">M</td>
+<td>磁盘MD5值</td>
+<td>eg. c5950a259435d3e51262539a10a22910</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[公共返回头]</td>
+<td></td>
+<td style="text-align:center"></td>
+<td></td>
+<td>详见[公共请求/响应头]</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="diskresult-批量代付结果查询">
+  diskResult [批量代付结果查询]
+  <a class="anchor" href="#diskresult-%e6%89%b9%e9%87%8f%e4%bb%a3%e4%bb%98%e7%bb%93%e6%9e%9c%e6%9f%a5%e8%af%a2">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>applyDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>送盘日期</td>
+<td>eg. 20201229</td>
+</tr>
+<tr>
+<td>diskNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>磁盘名称</td>
+<td>eg. 20201229000000000000000000000001</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>diskSts</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">M</td>
+<td>批次状态</td>
+<td>1：已接收完成 2: 批次处理中 3: 批次处理完成 4: 批次处理失败</td>
+</tr>
+<tr>
+<td>diskMessage</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>批次结果信息</td>
+<td></td>
+</tr>
+<tr>
+<td>lastDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>最后更新日期</td>
+<td></td>
+</tr>
+<tr>
+<td>lastTime</td>
+<td>VARCHAR(6)</td>
+<td style="text-align:center">M</td>
+<td>最后更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>totalCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>总笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">M</td>
+<td>总金额</td>
+<td></td>
+</tr>
+<tr>
+<td>succCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>成功笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>succAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">M</td>
+<td>成功金额</td>
+<td></td>
+</tr>
+<tr>
+<td>failCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>失败笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>failAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">M</td>
+<td>失败金额</td>
+<td></td>
+</tr>
+<tr>
+<td>filePath</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>文件路径/FID</td>
+<td>eg. 00001</td>
+</tr>
+<tr>
+<td>md5</td>
+<td>VARCHAR(32)</td>
+<td style="text-align:center">M</td>
+<td>磁盘MD5值</td>
+<td>eg. c5950a259435d3e51262539a10a22910</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="disknotify-批次终态通知">
+  diskNotify [批次终态通知]
+  <a class="anchor" href="#disknotify-%e6%89%b9%e6%ac%a1%e7%bb%88%e6%80%81%e9%80%9a%e7%9f%a5">#</a>
+</h3>
+<blockquote>
+<p>批次完成后通知HRO系统</p>
+</blockquote>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>diskNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>磁盘名称</td>
+<td></td>
+</tr>
+<tr>
+<td>diskSts</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">M</td>
+<td>批次状态</td>
+<td>1：已接收完成 2: 批次处理中 3: 批次处理完成 4: 批次处理失败</td>
+</tr>
+<tr>
+<td>diskMessage</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>批次结果信息</td>
+<td></td>
+</tr>
+<tr>
+<td>lastDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>最后更新日期</td>
+<td></td>
+</tr>
+<tr>
+<td>lastTime</td>
+<td>VARCHAR(6)</td>
+<td style="text-align:center">M</td>
+<td>最后更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>totalCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>总笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">M</td>
+<td>总金额</td>
+<td></td>
+</tr>
+<tr>
+<td>succCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>成功笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>succAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">M</td>
+<td>成功金额</td>
+<td></td>
+</tr>
+<tr>
+<td>failCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>失败笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>failAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">M</td>
+<td>失败金额</td>
+<td></td>
+</tr>
+<tr>
+<td>filePath</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>文件路径/FID</td>
+<td>eg. 000001</td>
+</tr>
+<tr>
+<td>md5</td>
+<td>VARCHAR(32)</td>
+<td style="text-align:center">M</td>
+<td>磁盘MD5值</td>
+<td>eg. c5950a259435d3e51262539a10a22910</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[公共返回头]</td>
+<td></td>
+<td style="text-align:center"></td>
+<td></td>
+<td>详见[公共请求/响应头]</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="refundquery-退票查询">
+  refundQuery [退票查询]
+  <a class="anchor" href="#refundquery-%e9%80%80%e7%a5%a8%e6%9f%a5%e8%af%a2">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>开始日期</td>
+<td></td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>结束日期</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>当前页码</td>
+<td></td>
+</tr>
+<tr>
+<td>limit</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>每页记录数</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>总页码</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>当前页码</td>
+<td></td>
+</tr>
+<tr>
+<td>limit</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">M</td>
+<td>每页记录数</td>
+<td></td>
+</tr>
+<tr>
+<td>rec</td>
+<td>LIST</td>
+<td style="text-align:center"></td>
+<td>循环节点</td>
+<td></td>
+</tr>
+<tr>
+<td>diskNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>磁盘编号</td>
+<td></td>
+</tr>
+<tr>
+<td>transId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>业务平台流水号</td>
+<td>沐融交易流水号</td>
+</tr>
+<tr>
+<td>refId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>参考号</td>
+<td>HRO明细流水号</td>
+</tr>
+<tr>
+<td>bankRefId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>银行流水号</td>
+<td></td>
+</tr>
+<tr>
+<td>acctNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>账号</td>
+<td>卡号、存折号</td>
+</tr>
+<tr>
+<td>acctName</td>
+<td>VARCHAR(150)</td>
+<td style="text-align:center">M</td>
+<td>姓名</td>
+<td></td>
+</tr>
+<tr>
+<td>transDate</td>
+<td>VARCHAR(14)</td>
+<td style="text-align:center">M</td>
+<td>交易日期</td>
+<td></td>
+</tr>
+<tr>
+<td>transSts</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">M</td>
+<td>交易状态</td>
+<td>视银行返回结果定</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">M</td>
+<td>金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>refundCode</td>
+<td>VARCHAR(5)</td>
+<td style="text-align:center">M</td>
+<td>退票代码</td>
+<td></td>
+</tr>
+<tr>
+<td>refundPs</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>退票附言</td>
+<td></td>
+</tr>
+<tr>
+<td>payerAcctNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>出款账号</td>
+<td></td>
+</tr>
+<tr>
+<td>payerAcctName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>出款户名</td>
+<td></td>
+</tr>
+<tr>
+<td>remark</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>备注</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="customersync-客户信息同步">
+  customerSync [客户信息同步]
+  <a class="anchor" href="#customersync-%e5%ae%a2%e6%88%b7%e4%bf%a1%e6%81%af%e5%90%8c%e6%ad%a5">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customerId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>客户ID</td>
+<td></td>
+</tr>
+<tr>
+<td>customerName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>客户名称</td>
+<td></td>
+</tr>
+<tr>
+<td>customerCode</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>客户编号</td>
+<td></td>
+</tr>
+<tr>
+<td>rank</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>等级</td>
+<td>数字1~3，数字越大代表等级越高</td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">M</td>
+<td>是否启用</td>
+<td>Y：启用 N：停用</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[公共返回头]</td>
+<td></td>
+<td style="text-align:center"></td>
+<td></td>
+<td>详见[公共请求/响应头]</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="titlesync-支付地账户同步">
+  titleSync [支付地账户同步]
+  <a class="anchor" href="#titlesync-%e6%94%af%e4%bb%98%e5%9c%b0%e8%b4%a6%e6%88%b7%e5%90%8c%e6%ad%a5">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>titleId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">M</td>
+<td>支付地抬头ID</td>
+<td></td>
+</tr>
+<tr>
+<td>titleName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>支付地抬头名称</td>
+<td></td>
+</tr>
+<tr>
+<td>bankCode</td>
+<td>VARCHAR(20)</td>
+<td style="text-align:center">M</td>
+<td>银行代码</td>
+<td>详见 <a href="#%e9%93%b6%e8%a1%8c%e9%80%9a%e9%81%93">银行通道</a></td>
+</tr>
+<tr>
+<td>brNo</td>
+<td>VARCHAR(20)</td>
+<td style="text-align:center">M</td>
+<td>开户行所在分行号</td>
+<td>详见 <a href="#%e5%88%86%e8%a1%8c%e5%8f%b7">分行号</a></td>
+</tr>
+<tr>
+<td>acctType</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">M</td>
+<td>账户类型</td>
+<td>B:基本户 N:一般户</td>
+</tr>
+<tr>
+<td>acctNo</td>
+<td>VARCHAR(30)</td>
+<td style="text-align:center">M</td>
+<td>账号</td>
+<td></td>
+</tr>
+<tr>
+<td>acctName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">M</td>
+<td>户名</td>
+<td></td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">M</td>
+<td>是否启用</td>
+<td>Y：启用 N：停用</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[公共返回头]</td>
+<td></td>
+<td style="text-align:center"></td>
+<td></td>
+<td>详见[公共请求/响应头]</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="transstssync-业务状态同步">
+  transStsSync [业务状态同步]
+  <a class="anchor" href="#transstssync-%e4%b8%9a%e5%8a%a1%e7%8a%b6%e6%80%81%e5%90%8c%e6%ad%a5">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>applyDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">Y</td>
+<td>申请日期</td>
+<td></td>
+</tr>
+<tr>
+<td>refId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>参考号</td>
+<td>HRO明细流水号</td>
+</tr>
+<tr>
+<td>transSts</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">Y</td>
+<td>交易状态</td>
+<td>S：成功 F：失败 R：已退票</td>
+</tr>
+<tr>
+<td>remark</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>备注</td>
+<td>此处可填修改状态的具体原因</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[公共返回头]</td>
+<td></td>
+<td style="text-align:center"></td>
+<td></td>
+<td>详见[公共请求/响应头]</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="cardinfoquery-卡信息查询">
+  cardInfoQuery [卡信息查询]
+  <a class="anchor" href="#cardinfoquery-%e5%8d%a1%e4%bf%a1%e6%81%af%e6%9f%a5%e8%af%a2">#</a>
+</h3>
+<ul>
+<li>
+<p>请求</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cardNo</td>
+<td>VARCHAR(32)</td>
+<td style="text-align:center">Y</td>
+<td>卡号</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bankType</td>
+<td>VARCHAR(4)</td>
+<td style="text-align:center">Y</td>
+<td>银行类型</td>
+<td>详见 <a href="#%e9%93%b6%e8%a1%8c%e9%80%9a%e9%81%93">银行通道</a></td>
+</tr>
+<tr>
+<td>cardType</td>
+<td>VARCHAR(2)</td>
+<td style="text-align:center">Y</td>
+<td>卡类型</td>
+<td></td>
+</tr>
+<tr>
+<td>cardName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>卡名称</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="文件格式">
+  文件格式
+  <a class="anchor" href="#%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f">#</a>
+</h2>
+<h3 id="送盘">
+  送盘
+  <a class="anchor" href="#%e9%80%81%e7%9b%98">#</a>
+</h3>
+<ul>
+<li>
+<p>首行</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>totalCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">Y</td>
+<td>总笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">Y</td>
+<td>总金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>titleId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>支付地抬头ID</td>
+<td></td>
+</tr>
+<tr>
+<td>customerId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>客户ID</td>
+<td></td>
+</tr>
+<tr>
+<td>postscript</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>银行附言</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>循环体</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>acctNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>账号</td>
+<td>卡号、存折号</td>
+</tr>
+<tr>
+<td>acctName</td>
+<td>VARCHAR(150)</td>
+<td style="text-align:center">Y</td>
+<td>姓名</td>
+<td></td>
+</tr>
+<tr>
+<td>refId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>参考号</td>
+<td>HRO明细流水号</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">Y</td>
+<td>金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>bankType</td>
+<td>VARCHAR(4)</td>
+<td style="text-align:center">Y</td>
+<td>银行类型</td>
+<td>详见 <a href="#%e9%93%b6%e8%a1%8c%e9%80%9a%e9%81%93">银行通道</a></td>
+</tr>
+<tr>
+<td>bankCity</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>开户行所在城市</td>
+<td>存折与大小额时必输</td>
+</tr>
+<tr>
+<td>bankName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>开户银行网点</td>
+<td>存折与大小额时必输</td>
+</tr>
+<tr>
+<td>remark</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>备注</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="回盘">
+  回盘
+  <a class="anchor" href="#%e5%9b%9e%e7%9b%98">#</a>
+</h3>
+<ul>
+<li>
+<p>首行</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>totalCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">Y</td>
+<td>总笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">Y</td>
+<td>总金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>succCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">Y</td>
+<td>成功笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>succAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">Y</td>
+<td>成功金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>failCount</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">Y</td>
+<td>失败笔数</td>
+<td></td>
+</tr>
+<tr>
+<td>failAmount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">Y</td>
+<td>失败金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>titleId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>支付地抬头ID</td>
+<td></td>
+</tr>
+<tr>
+<td>customerId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>客户ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>循环体</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>applyDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">Y</td>
+<td>申请日期</td>
+<td></td>
+</tr>
+<tr>
+<td>lastTime</td>
+<td>VARCHAR(14)</td>
+<td style="text-align:center">M</td>
+<td>最后更新时间</td>
+<td>eg. 20210111</td>
+</tr>
+<tr>
+<td>acctType</td>
+<td>VARCHAR(2)</td>
+<td style="text-align:center">Y</td>
+<td>账号类型</td>
+<td>01：借记卡 02：贷记卡 03：准贷记卡 00：其他</td>
+</tr>
+<tr>
+<td>acctNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>账号</td>
+<td>卡号、存折号</td>
+</tr>
+<tr>
+<td>acctName</td>
+<td>VARCHAR(150)</td>
+<td style="text-align:center">Y</td>
+<td>姓名</td>
+<td></td>
+</tr>
+<tr>
+<td>transId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>业务平台流水号</td>
+<td>沐融交易流水号</td>
+</tr>
+<tr>
+<td>refId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>参考号</td>
+<td>HRO明细流水号</td>
+</tr>
+<tr>
+<td>bankRefId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>银行流水号</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">Y</td>
+<td>金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>bankName</td>
+<td>VARCHAR(50)</td>
+<td style="text-align:center">N</td>
+<td>银行名称</td>
+<td></td>
+</tr>
+<tr>
+<td>postscript</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">N</td>
+<td>银行附言</td>
+<td></td>
+</tr>
+<tr>
+<td>payerAcctNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>出款账号</td>
+<td></td>
+</tr>
+<tr>
+<td>payerAcctName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>出款户名</td>
+<td></td>
+</tr>
+<tr>
+<td>orgNo</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">N</td>
+<td>合作机构编号</td>
+<td>详见 <a href="#%e9%93%b6%e8%a1%8c%e9%80%9a%e9%81%93">银行通道</a></td>
+</tr>
+<tr>
+<td>remark</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>备注</td>
+<td></td>
+</tr>
+<tr>
+<td>transSts</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">Y</td>
+<td>明细状态</td>
+<td>S：成功 F：失败</td>
+</tr>
+<tr>
+<td>transMessage</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>业务信息</td>
+<td>当transSts = F时该字段返回错误信息</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="对账">
+  对账
+  <a class="anchor" href="#%e5%af%b9%e8%b4%a6">#</a>
+</h3>
+<ul>
+<li>循环体
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th style="text-align:center">必输</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>applyDate</td>
+<td>VARCHAR(8)</td>
+<td style="text-align:center">Y</td>
+<td>申请日期</td>
+<td></td>
+</tr>
+<tr>
+<td>transId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>业务平台流水号</td>
+<td>沐融交易流水号</td>
+</tr>
+<tr>
+<td>refId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>参考号</td>
+<td>HRO明细流水号</td>
+</tr>
+<tr>
+<td>bankRefId</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>银行流水号</td>
+<td></td>
+</tr>
+<tr>
+<td>payerAcctNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>出款账号</td>
+<td></td>
+</tr>
+<tr>
+<td>payerAcctName</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>出款户名</td>
+<td></td>
+</tr>
+<tr>
+<td>acctNo</td>
+<td>VARCHAR(48)</td>
+<td style="text-align:center">Y</td>
+<td>账号</td>
+<td>卡号、存折号</td>
+</tr>
+<tr>
+<td>acctName</td>
+<td>VARCHAR(150)</td>
+<td style="text-align:center">Y</td>
+<td>姓名</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>VARCHAR(18)</td>
+<td style="text-align:center">Y</td>
+<td>金额</td>
+<td>分为单位</td>
+</tr>
+<tr>
+<td>orgNo</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">N</td>
+<td>合作机构编号</td>
+<td>详见 <a href="#%e9%93%b6%e8%a1%8c%e9%80%9a%e9%81%93">银行通道</a></td>
+</tr>
+<tr>
+<td>transSts</td>
+<td>VARCHAR(1)</td>
+<td style="text-align:center">Y</td>
+<td>明细状态</td>
+<td>S：成功 P：处理中</td>
+</tr>
+<tr>
+<td>transMessage</td>
+<td>VARCHAR(100)</td>
+<td style="text-align:center">Y</td>
+<td>业务信息</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="附录">
+  附录
+  <a class="anchor" href="#%e9%99%84%e5%bd%95">#</a>
+</h2>
+<h3 id="响应码">
+  响应码
+  <a class="anchor" href="#%e5%93%8d%e5%ba%94%e7%a0%81">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>应答码(respCode)</th>
+<th>描述(respMessage)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td>操作成功</td>
+</tr>
+<tr>
+<td>01</td>
+<td>支付失败。详情请咨询您的发卡行</td>
+</tr>
+<tr>
+<td>02</td>
+<td>您输入的卡号无效，请确认后输入</td>
+</tr>
+<tr>
+<td>03</td>
+<td>支付失败，您的发卡银行不支持该商户，请更换其他银行卡</td>
+</tr>
+<tr>
+<td>04</td>
+<td>交易失败，请重试</td>
+</tr>
+<tr>
+<td>05</td>
+<td>文件校验错误</td>
+</tr>
+<tr>
+<td>06</td>
+<td>您的卡已经过期，请使用其他卡支付</td>
+</tr>
+<tr>
+<td>09</td>
+<td>业务处理中</td>
+</tr>
+<tr>
+<td>10</td>
+<td>公司账号不符</td>
+</tr>
+<tr>
+<td>11</td>
+<td>您卡上的余额不足</td>
+</tr>
+<tr>
+<td>13</td>
+<td>账号已挂失</td>
+</tr>
+<tr>
+<td>14</td>
+<td>您的卡已过期或者是您输入的有效期不正确，支付失败</td>
+</tr>
+<tr>
+<td>15</td>
+<td>您输入的银行卡密码有误，支付失败&quot;</td>
+</tr>
+<tr>
+<td>16</td>
+<td>账号户名不符</td>
+</tr>
+<tr>
+<td>18</td>
+<td>交易未通过，请尝试使用其他银联卡支付或联系95516</td>
+</tr>
+<tr>
+<td>20</td>
+<td>您输入的转入卡卡号有误，支付失败</td>
+</tr>
+<tr>
+<td>21</td>
+<td>您输入的验证信息有误，支付失败</td>
+</tr>
+<tr>
+<td>22</td>
+<td>付款币种非法</td>
+</tr>
+<tr>
+<td>23</td>
+<td>失败，请检查交易对应业务是否已经开通</td>
+</tr>
+<tr>
+<td>25</td>
+<td>查找原始交易失败</td>
+</tr>
+<tr>
+<td>30</td>
+<td>报文错误</td>
+</tr>
+<tr>
+<td>31</td>
+<td>交易受限</td>
+</tr>
+<tr>
+<td>32</td>
+<td>系统维护中</td>
+</tr>
+<tr>
+<td>36</td>
+<td>交易金额超限，支付失败</td>
+</tr>
+<tr>
+<td>37</td>
+<td>原始金额错误</td>
+</tr>
+<tr>
+<td>39</td>
+<td>您已连续多次输入错误密码</td>
+</tr>
+<tr>
+<td>40</td>
+<td>您的银行卡暂不支持在线支付业务，请向您的银行咨询如何加办银联在线支付</td>
+</tr>
+<tr>
+<td>41</td>
+<td>您的银行卡不支持认证支付，请选择快捷支付</td>
+</tr>
+<tr>
+<td>42</td>
+<td>您的银行卡不支持小额支付，请选择快捷支付</td>
+</tr>
+<tr>
+<td>43</td>
+<td>您的银行卡不支持认证支付</td>
+</tr>
+<tr>
+<td>44</td>
+<td>代发金额或次数超限</td>
+</tr>
+<tr>
+<td>56</td>
+<td>您的银行卡所能进行的交易受限，详细请致电发卡行进行查询</td>
+</tr>
+<tr>
+<td>57</td>
+<td>该银行卡未开通银联在线支付业务</td>
+</tr>
+<tr>
+<td>60</td>
+<td>银行卡未开通认证支付</td>
+</tr>
+<tr>
+<td>61</td>
+<td>银行卡开通状态查询次数过多</td>
+</tr>
+<tr>
+<td>71</td>
+<td>交易无效，无法完成，支付失败</td>
+</tr>
+<tr>
+<td>72</td>
+<td>无此交易</td>
+</tr>
+<tr>
+<td>73</td>
+<td>扣款成功但交易超时</td>
+</tr>
+<tr>
+<td>74</td>
+<td>对不起，该操作员只能在交易当日进行</td>
+</tr>
+<tr>
+<td>80</td>
+<td>内部错误</td>
+</tr>
+<tr>
+<td>81</td>
+<td>可疑报文</td>
+</tr>
+<tr>
+<td>82</td>
+<td>验签失败</td>
+</tr>
+<tr>
+<td>83</td>
+<td>超时</td>
+</tr>
+<tr>
+<td>84</td>
+<td>订单不存在</td>
+</tr>
+<tr>
+<td>85</td>
+<td>不支持短信发送</td>
+</tr>
+<tr>
+<td>86</td>
+<td>短信验证码错误</td>
+</tr>
+<tr>
+<td>87</td>
+<td>您的短信发送过于频繁，请稍候再试</td>
+</tr>
+<tr>
+<td>88</td>
+<td>您的短信发送累计过于频繁，请在x分钟后重试</td>
+</tr>
+<tr>
+<td>89</td>
+<td>对不起，短信发送失败，请稍候再试</td>
+</tr>
+<tr>
+<td>90</td>
+<td>请您登录工商银行网上银行或拨打95588进行后续认证操作</td>
+</tr>
+<tr>
+<td>93</td>
+<td>请致电您的银行以确定您的个人客户基本信息中的相关信息设置正确</td>
+</tr>
+<tr>
+<td>94</td>
+<td>重复交易</td>
+</tr>
+<tr>
+<td>95</td>
+<td>您尚未在邮储银行网点柜面或个人网银签约加办银联无卡支付业务，请去柜面或网银开通</td>
+</tr>
+<tr>
+<td>97</td>
+<td>请致电您的银行以确定您的用户信息是否设置正确，并咨询是否已经开办银联在线支付</td>
+</tr>
+</tbody>
+</table>
+<h3 id="银行通道">
+  银行通道
+  <a class="anchor" href="#%e9%93%b6%e8%a1%8c%e9%80%9a%e9%81%93">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>银行代码(bankCode)</th>
+<th>银行类型(bankType)</th>
+<th>银行名称(bankName)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LJCB</td>
+<td>0492</td>
+<td>龙江银行</td>
+</tr>
+<tr>
+<td>QSCCB</td>
+<td>6409</td>
+<td>齐鲁银行</td>
+</tr>
+<tr>
+<td>QSSCCB</td>
+<td>0438</td>
+<td>齐商银行</td>
+</tr>
+<tr>
+<td>YRRCB</td>
+<td>1446</td>
+<td>宁夏黄河农村商业银行</td>
+</tr>
+<tr>
+<td>ZYCCB</td>
+<td>0586</td>
+<td>中原银行</td>
+</tr>
+<tr>
+<td>SDRCB</td>
+<td>1408</td>
+<td>顺德农村商业银行</td>
+</tr>
+<tr>
+<td>QHCB</td>
+<td>6458</td>
+<td>青海银行</td>
+</tr>
+<tr>
+<td>QHRCB</td>
+<td>1449</td>
+<td>青海省农村信用社联合社</td>
+</tr>
+<tr>
+<td>QDCB</td>
+<td>0450</td>
+<td>青岛银行</td>
+</tr>
+<tr>
+<td>YASCB</td>
+<td>0566</td>
+<td>雅安市商业银行</td>
+</tr>
+<tr>
+<td>SXNRCU</td>
+<td>1442</td>
+<td>陕西省农村信用社联合社</td>
+</tr>
+<tr>
+<td>YQCCB</td>
+<td>0908</td>
+<td>阳泉市商业银行</td>
+</tr>
+<tr>
+<td>CZCCB</td>
+<td>0512</td>
+<td>长治银行</td>
+</tr>
+<tr>
+<td>CCAB</td>
+<td>0541</td>
+<td>长安银行</td>
+</tr>
+<tr>
+<td>TLCCB</td>
+<td>0539</td>
+<td>铁岭银行</td>
+</tr>
+<tr>
+<td>JHCB</td>
+<td>0426</td>
+<td>金华银行</td>
+</tr>
+<tr>
+<td>CQRB</td>
+<td>1413</td>
+<td>重庆农村商业银行</td>
+</tr>
+<tr>
+<td>CQTGB</td>
+<td>0542</td>
+<td>重庆三峡银行</td>
+</tr>
+<tr>
+<td>BEEB</td>
+<td>1420</td>
+<td>鄞州银行</td>
+</tr>
+<tr>
+<td>ESB</td>
+<td>0534</td>
+<td>鄂尔多斯银行</td>
+</tr>
+<tr>
+<td>ZZCB</td>
+<td>0435</td>
+<td>郑州银行</td>
+</tr>
+<tr>
+<td>HDCB</td>
+<td>0517</td>
+<td>邯郸银行</td>
+</tr>
+<tr>
+<td>XTCCB</td>
+<td>0554</td>
+<td>邢台银行</td>
+</tr>
+<tr>
+<td>SNZCB</td>
+<td>0551</td>
+<td>遂宁银行</td>
+</tr>
+<tr>
+<td>LYCCB</td>
+<td>0419</td>
+<td>辽阳银行</td>
+</tr>
+<tr>
+<td>LNNC</td>
+<td>1454</td>
+<td>辽宁省农村信用社联合社</td>
+</tr>
+<tr>
+<td>GZCB</td>
+<td>0463</td>
+<td>赣州银行</td>
+</tr>
+<tr>
+<td>BGZCB</td>
+<td>0500</td>
+<td>贵州银行</td>
+</tr>
+<tr>
+<td>HSBCB</td>
+<td>0561</td>
+<td>衡水银行</td>
+</tr>
+<tr>
+<td>HLCB</td>
+<td>0433</td>
+<td>葫芦岛银行</td>
+</tr>
+<tr>
+<td>YKCB</td>
+<td>0465</td>
+<td>营口银行</td>
+</tr>
+<tr>
+<td>LSB</td>
+<td>0497</td>
+<td>莱商银行</td>
+</tr>
+<tr>
+<td>SZCB</td>
+<td>1430</td>
+<td>苏州银行</td>
+</tr>
+<tr>
+<td>CITI</td>
+<td>0319</td>
+<td>花旗银行</td>
+</tr>
+<tr>
+<td>ZGSCB</td>
+<td>0909</td>
+<td>自贡银行</td>
+</tr>
+<tr>
+<td>SXCB</td>
+<td>0428</td>
+<td>绍兴银行</td>
+</tr>
+<tr>
+<td>QHDCCB</td>
+<td>0457</td>
+<td>秦皇岛银行</td>
+</tr>
+<tr>
+<td>HXCB</td>
+<td>0405</td>
+<td>福建海峡银行</td>
+</tr>
+<tr>
+<td>SJBK</td>
+<td>0417</td>
+<td>盛京银行</td>
+</tr>
+<tr>
+<td>WFCB</td>
+<td>6462</td>
+<td>潍坊银行</td>
+</tr>
+<tr>
+<td>LHCCB</td>
+<td>0556</td>
+<td>漯河银行</td>
+</tr>
+<tr>
+<td>HNNC</td>
+<td>1438</td>
+<td>湖南省农村信用社联合社</td>
+</tr>
+<tr>
+<td>HUBCB</td>
+<td>0575</td>
+<td>湖北银行</td>
+</tr>
+<tr>
+<td>HBRRB</td>
+<td>1410</td>
+<td>湖北农信社</td>
+</tr>
+<tr>
+<td>WZCB</td>
+<td>0412</td>
+<td>温州银行</td>
+</tr>
+<tr>
+<td>CBHB</td>
+<td>0318</td>
+<td>渤海银行</td>
+</tr>
+<tr>
+<td>SC</td>
+<td>0671</td>
+<td>渣打银行</td>
+</tr>
+<tr>
+<td>YZRCB</td>
+<td>1520</td>
+<td>深圳福田银座村镇银行</td>
+</tr>
+<tr>
+<td>HNRB</td>
+<td>1448</td>
+<td>海南省农村信用社联合社</td>
+</tr>
+<tr>
+<td>CZB</td>
+<td>0316</td>
+<td>浙商银行</td>
+</tr>
+<tr>
+<td>TACB</td>
+<td>0528</td>
+<td>泰安银行</td>
+</tr>
+<tr>
+<td>QZCCB</td>
+<td>0464</td>
+<td>泉州银行</td>
+</tr>
+<tr>
+<td>HBCB</td>
+<td>0422</td>
+<td>河北银行</td>
+</tr>
+<tr>
+<td>HBRC</td>
+<td>1441</td>
+<td>河北省农村信用社联合社</td>
+</tr>
+<tr>
+<td>CZCB</td>
+<td>0476</td>
+<td>沧州银行</td>
+</tr>
+<tr>
+<td>JYRCB</td>
+<td>1412</td>
+<td>江阴农村商业银行</td>
+</tr>
+<tr>
+<td>JXCB</td>
+<td>0448</td>
+<td>江西银行</td>
+</tr>
+<tr>
+<td>JXRCU</td>
+<td>1439</td>
+<td>江西农信联合社</td>
+</tr>
+<tr>
+<td>JSCB</td>
+<td>0508</td>
+<td>江苏银行</td>
+</tr>
+<tr>
+<td>JSRCU</td>
+<td>1424</td>
+<td>江苏省农村信用社联合社</td>
+</tr>
+<tr>
+<td>JNRCB</td>
+<td>1460</td>
+<td>江南农村商业银行</td>
+</tr>
+<tr>
+<td>HSBC</td>
+<td>0501</td>
+<td>汇丰银行</td>
+</tr>
+<tr>
+<td>WHSZ</td>
+<td>0510</td>
+<td>永亨银行</td>
+</tr>
+<tr>
+<td>WHRCB</td>
+<td>1459</td>
+<td>武汉农村商业银行</td>
+</tr>
+<tr>
+<td>GLCB</td>
+<td>6491</td>
+<td>桂林银行</td>
+</tr>
+<tr>
+<td>LZCB</td>
+<td>0495</td>
+<td>柳州银行</td>
+</tr>
+<tr>
+<td>CYCB</td>
+<td>0549</td>
+<td>朝阳银行</td>
+</tr>
+<tr>
+<td>QJCCB</td>
+<td>0906</td>
+<td>曲靖市商业银行</td>
+</tr>
+<tr>
+<td>JCCB</td>
+<td>0904</td>
+<td>晋城银行</td>
+</tr>
+<tr>
+<td>JZCCB</td>
+<td>0559</td>
+<td>晋中银行</td>
+</tr>
+<tr>
+<td>DBS</td>
+<td>0324</td>
+<td>星展银行</td>
+</tr>
+<tr>
+<td>KSRB</td>
+<td>1402</td>
+<td>昆山农村商业银行</td>
+</tr>
+<tr>
+<td>KLCB</td>
+<td>0547</td>
+<td>昆仑银行</td>
+</tr>
+<tr>
+<td>WXCCB</td>
+<td>1437</td>
+<td>无锡农村商业银行</td>
+</tr>
+<tr>
+<td>PZHCCB</td>
+<td>0483</td>
+<td>攀枝花市商业银行</td>
+</tr>
+<tr>
+<td>CMB</td>
+<td>0308</td>
+<td>招商银行</td>
+</tr>
+<tr>
+<td>FSCB</td>
+<td>0430</td>
+<td>抚顺银行</td>
+</tr>
+<tr>
+<td>CDCB</td>
+<td>0513</td>
+<td>承德银行</td>
+</tr>
+<tr>
+<td>CHDCB</td>
+<td>0429</td>
+<td>成都银行</td>
+</tr>
+<tr>
+<td>CDRB</td>
+<td>1422</td>
+<td>成都农村商业银行</td>
+</tr>
+<tr>
+<td>HSB</td>
+<td>0504</td>
+<td>恒生银行</td>
+</tr>
+<tr>
+<td>EBCL</td>
+<td>0315</td>
+<td>恒丰银行</td>
+</tr>
+<tr>
+<td>HSCB</td>
+<td>6440</td>
+<td>徽商银行</td>
+</tr>
+<tr>
+<td>DYCB</td>
+<td>0498</td>
+<td>长城华西银行</td>
+</tr>
+<tr>
+<td>ZJGRB</td>
+<td>1416</td>
+<td>张家港农村商业银行</td>
+</tr>
+<tr>
+<td>ZJKCB</td>
+<td>0490</td>
+<td>张家口银行</td>
+</tr>
+<tr>
+<td>XJKCCB</td>
+<td>0565</td>
+<td>库尔勒市商业银行</td>
+</tr>
+<tr>
+<td>BBWCB</td>
+<td>6478</td>
+<td>广西北部湾银行</td>
+</tr>
+<tr>
+<td>GXZRCU</td>
+<td>1443</td>
+<td>广西农村信用社联合社</td>
+</tr>
+<tr>
+<td>GZB</td>
+<td>0413</td>
+<td>广州银行</td>
+</tr>
+<tr>
+<td>GZRB</td>
+<td>1405</td>
+<td>广州农村商业银行</td>
+</tr>
+<tr>
+<td>GDRCU</td>
+<td>1450</td>
+<td>广东省农村信用社联合社</td>
+</tr>
+<tr>
+<td>GDB</td>
+<td>0306</td>
+<td>广东发展银行</td>
+</tr>
+<tr>
+<td>PDSCCB</td>
+<td>0548</td>
+<td>平顶山银行</td>
+</tr>
+<tr>
+<td>PABC</td>
+<td>0410</td>
+<td>平安银行</td>
+</tr>
+<tr>
+<td>CRRB</td>
+<td>1403</td>
+<td>常熟农村商业银行</td>
+</tr>
+<tr>
+<td>SXRB</td>
+<td>1455</td>
+<td>山西省农村信用社联合社</td>
+</tr>
+<tr>
+<td>SHDRB</td>
+<td>1414</td>
+<td>山东省农村信用社联合社</td>
+</tr>
+<tr>
+<td>FDCB</td>
+<td>6466</td>
+<td>富滇银行</td>
+</tr>
+<tr>
+<td>YBCCB</td>
+<td>0910</td>
+<td>宜宾市商业银行</td>
+</tr>
+<tr>
+<td>AHRB</td>
+<td>1447</td>
+<td>安徽省农村信用社联合社</td>
+</tr>
+<tr>
+<td>NBCB</td>
+<td>0408</td>
+<td>宁波银行</td>
+</tr>
+<tr>
+<td>NDHB</td>
+<td>0550</td>
+<td>宁波东海银行</td>
+</tr>
+<tr>
+<td>WHCB</td>
+<td>6481</td>
+<td>威海市商业银行</td>
+</tr>
+<tr>
+<td>TCRCB</td>
+<td>1433</td>
+<td>太仓农村商业银行</td>
+</tr>
+<tr>
+<td>TJBHRCB</td>
+<td>1456</td>
+<td>天津滨海农村商业银行</td>
+</tr>
+<tr>
+<td>UOB</td>
+<td>0622</td>
+<td>大华银行</td>
+</tr>
+<tr>
+<td>SCRC</td>
+<td>1452</td>
+<td>四川省农村信用社联合社</td>
+</tr>
+<tr>
+<td>JXCCB</td>
+<td>0470</td>
+<td>嘉兴银行</td>
+</tr>
+<tr>
+<td>TSCCB</td>
+<td>0499</td>
+<td>唐山银行</td>
+</tr>
+<tr>
+<td>HRBCB</td>
+<td>0442</td>
+<td>哈尔滨银行</td>
+</tr>
+<tr>
+<td>WJRCB</td>
+<td>1428</td>
+<td>吴江农村商业银行</td>
+</tr>
+<tr>
+<td>JLCB</td>
+<td>0451</td>
+<td>吉林银行</td>
+</tr>
+<tr>
+<td>JLNC</td>
+<td>1445</td>
+<td>吉林农信联合社</td>
+</tr>
+<tr>
+<td>TZCB</td>
+<td>0459</td>
+<td>台州银行</td>
+</tr>
+<tr>
+<td>WB</td>
+<td>0593</td>
+<td>友利银行</td>
+</tr>
+<tr>
+<td>XMCB</td>
+<td>3930</td>
+<td>厦门银行</td>
+</tr>
+<tr>
+<td>NCB</td>
+<td>0503</td>
+<td>南洋商业银行</td>
+</tr>
+<tr>
+<td>NCSCB</td>
+<td>0496</td>
+<td>四川天府银行</td>
+</tr>
+<tr>
+<td>NJCB</td>
+<td>0424</td>
+<td>南京银行</td>
+</tr>
+<tr>
+<td>HRXJ</td>
+<td>0570</td>
+<td>华融湘江银行</td>
+</tr>
+<tr>
+<td>HXB</td>
+<td>0304</td>
+<td>华夏银行</td>
+</tr>
+<tr>
+<td>FSBK</td>
+<td>0787</td>
+<td>华一银行</td>
+</tr>
+<tr>
+<td>BOB</td>
+<td>0403</td>
+<td>北京银行</td>
+</tr>
+<tr>
+<td>BSB</td>
+<td>0479</td>
+<td>包商银行</td>
+</tr>
+<tr>
+<td>LSZCB</td>
+<td>0555</td>
+<td>凉山州商业银行</td>
+</tr>
+<tr>
+<td>IMCB</td>
+<td>0474</td>
+<td>内蒙古银行</td>
+</tr>
+<tr>
+<td>IMRCU</td>
+<td>1451</td>
+<td>内蒙古自治区农村信用联合社</td>
+</tr>
+<tr>
+<td>CIB</td>
+<td>0309</td>
+<td>兴业银行</td>
+</tr>
+<tr>
+<td>LZB</td>
+<td>0447</td>
+<td>兰州银行</td>
+</tr>
+<tr>
+<td>XYCCB</td>
+<td>0569</td>
+<td>信阳银行</td>
+</tr>
+<tr>
+<td>BDCB</td>
+<td>0552</td>
+<td>保定银行</td>
+</tr>
+<tr>
+<td>BCOM</td>
+<td>0301</td>
+<td>交通银行</td>
+</tr>
+<tr>
+<td>YNRB</td>
+<td>6509</td>
+<td>云南省农村信用社联合社</td>
+</tr>
+<tr>
+<td>JJCCB</td>
+<td>0454</td>
+<td>九江银行</td>
+</tr>
+<tr>
+<td>LSSCB</td>
+<td>0540</td>
+<td>乐山市商业银行</td>
+</tr>
+<tr>
+<td>ULMQCB</td>
+<td>0427</td>
+<td>乌鲁木齐银行</td>
+</tr>
+<tr>
+<td>WHCCB</td>
+<td>0907</td>
+<td>乌海银行</td>
+</tr>
+<tr>
+<td>LSHCB</td>
+<td>0905</td>
+<td>临商银行</td>
+</tr>
+<tr>
+<td>BOC</td>
+<td>0104</td>
+<td>中国银行</td>
+</tr>
+<tr>
+<td>PSBC</td>
+<td>0100</td>
+<td>中国邮政储蓄银行</td>
+</tr>
+<tr>
+<td>CMBC</td>
+<td>0305</td>
+<td>中国民生银行</td>
+</tr>
+<tr>
+<td>CCB</td>
+<td>0105</td>
+<td>中国建设银行</td>
+</tr>
+<tr>
+<td>ICBC</td>
+<td>0102</td>
+<td>中国工商银行</td>
+</tr>
+<tr>
+<td>ABC</td>
+<td>0103</td>
+<td>中国农业银行</td>
+</tr>
+<tr>
+<td>CEB</td>
+<td>0303</td>
+<td>中国光大银行</td>
+</tr>
+<tr>
+<td>CITIC</td>
+<td>0302</td>
+<td>中信银行</td>
+</tr>
+<tr>
+<td>DGRB</td>
+<td>1415</td>
+<td>东莞农村商业银行</td>
+</tr>
+<tr>
+<td>BEA</td>
+<td>0502</td>
+<td>东亚银行</td>
+</tr>
+<tr>
+<td>SRCB</td>
+<td>6526</td>
+<td>上饶银行</td>
+</tr>
+<tr>
+<td>SPDB</td>
+<td>0310</td>
+<td>上海浦东发展银行</td>
+</tr>
+<tr>
+<td>FXBK</td>
+<td>0333</td>
+<td>法国兴业银行</td>
+</tr>
+<tr>
+<td>BOS</td>
+<td>0401</td>
+<td>上海银行</td>
+</tr>
+<tr>
+<td>SHRB</td>
+<td>1401</td>
+<td>上海农村商业银行</td>
+</tr>
+<tr>
+<td>SZRCB</td>
+<td>1404</td>
+<td>深圳农村商业银行</td>
+</tr>
+<tr>
+<td>DLCB</td>
+<td>0420</td>
+<td>大连银行</td>
+</tr>
+<tr>
+<td>TCCB</td>
+<td>0434</td>
+<td>天津银行</td>
+</tr>
+<tr>
+<td>LYCB</td>
+<td>0418</td>
+<td>洛阳银行</td>
+</tr>
+<tr>
+<td>NXCB</td>
+<td>0436</td>
+<td>宁夏银行</td>
+</tr>
+<tr>
+<td>CQCB</td>
+<td>0441</td>
+<td>重庆银行</td>
+</tr>
+<tr>
+<td>GYCB</td>
+<td>0443</td>
+<td>贵阳银行</td>
+</tr>
+<tr>
+<td>CSCB</td>
+<td>0461</td>
+<td>长沙银行</td>
+</tr>
+<tr>
+<td>BRCB</td>
+<td>1418</td>
+<td>北京农村商业银行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="分行号">
+  分行号
+  <a class="anchor" href="#%e5%88%86%e8%a1%8c%e5%8f%b7">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>分行名</th>
+<th>代码(brNo)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>北京</td>
+<td>10</td>
+</tr>
+<tr>
+<td>广州</td>
+<td>20</td>
+</tr>
+<tr>
+<td>上海</td>
+<td>21</td>
+</tr>
+<tr>
+<td>天津</td>
+<td>22</td>
+</tr>
+<tr>
+<td>重庆</td>
+<td>23</td>
+</tr>
+<tr>
+<td>沈阳</td>
+<td>24</td>
+</tr>
+<tr>
+<td>南京</td>
+<td>25</td>
+</tr>
+<tr>
+<td>武汉</td>
+<td>27</td>
+</tr>
+<tr>
+<td>成都</td>
+<td>28</td>
+</tr>
+<tr>
+<td>西安</td>
+<td>29</td>
+</tr>
+<tr>
+<td>太原</td>
+<td>35</td>
+</tr>
+<tr>
+<td>郑州</td>
+<td>37</td>
+</tr>
+<tr>
+<td>石家庄</td>
+<td>38</td>
+</tr>
+<tr>
+<td>唐山</td>
+<td>39</td>
+</tr>
+<tr>
+<td>大连</td>
+<td>41</td>
+</tr>
+<tr>
+<td>长春</td>
+<td>43</td>
+</tr>
+<tr>
+<td>哈尔滨</td>
+<td>45</td>
+</tr>
+<tr>
+<td>呼和浩特</td>
+<td>47</td>
+</tr>
+<tr>
+<td>银川</td>
+<td>51</td>
+</tr>
+<tr>
+<td>苏州</td>
+<td>52</td>
+</tr>
+<tr>
+<td>青岛</td>
+<td>53</td>
+</tr>
+<tr>
+<td>宁波</td>
+<td>54</td>
+</tr>
+<tr>
+<td>合肥</td>
+<td>55</td>
+</tr>
+<tr>
+<td>济南</td>
+<td>56</td>
+</tr>
+<tr>
+<td>杭州</td>
+<td>57</td>
+</tr>
+<tr>
+<td>温州</td>
+<td>58</td>
+</tr>
+<tr>
+<td>福州</td>
+<td>59</td>
+</tr>
+<tr>
+<td>泉州</td>
+<td>60</td>
+</tr>
+<tr>
+<td>无锡</td>
+<td>62</td>
+</tr>
+<tr>
+<td>南通</td>
+<td>63</td>
+</tr>
+<tr>
+<td>烟台</td>
+<td>65</td>
+</tr>
+<tr>
+<td>东莞</td>
+<td>69</td>
+</tr>
+<tr>
+<td>南宁</td>
+<td>71</td>
+</tr>
+<tr>
+<td>西宁</td>
+<td>72</td>
+</tr>
+<tr>
+<td>长沙</td>
+<td>73</td>
+</tr>
+<tr>
+<td>深圳</td>
+<td>75</td>
+</tr>
+<tr>
+<td>佛山</td>
+<td>77</td>
+</tr>
+<tr>
+<td>南昌</td>
+<td>79</td>
+</tr>
+<tr>
+<td>贵阳</td>
+<td>85</td>
+</tr>
+<tr>
+<td>昆明</td>
+<td>87</td>
+</tr>
+<tr>
+<td>海口</td>
+<td>89</td>
+</tr>
+<tr>
+<td>乌鲁木齐</td>
+<td>91</td>
+</tr>
+<tr>
+<td>厦门</td>
+<td>92</td>
+</tr>
+<tr>
+<td>兰州</td>
+<td>93</td>
+</tr>
+<tr>
+<td>香港</td>
+<td>97</td>
+</tr>
+<tr>
+<td>总行</td>
+<td>01</td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#易才代收付api">易才代收付API</a>
+      <ul>
+        <li><a href="#接口设计">接口设计</a>
+          <ul>
+            <li><a href="#报文头">报文头</a></li>
+            <li><a href="#报文体">报文体</a></li>
+            <li><a href="#通讯">通讯</a></li>
+            <li><a href="#签名">签名</a></li>
+            <li><a href="#报文格式">报文格式</a></li>
+          </ul>
+        </li>
+        <li><a href="#接口清单">接口清单</a>
+          <ul>
+            <li><a href="#公共请求响应头">公共请求/响应头</a></li>
+            <li><a href="#diskapply-批量代付申请">diskApply [批量代付申请]</a></li>
+            <li><a href="#diskresult-批量代付结果查询">diskResult [批量代付结果查询]</a></li>
+            <li><a href="#disknotify-批次终态通知">diskNotify [批次终态通知]</a></li>
+            <li><a href="#refundquery-退票查询">refundQuery [退票查询]</a></li>
+            <li><a href="#customersync-客户信息同步">customerSync [客户信息同步]</a></li>
+            <li><a href="#titlesync-支付地账户同步">titleSync [支付地账户同步]</a></li>
+            <li><a href="#transstssync-业务状态同步">transStsSync [业务状态同步]</a></li>
+            <li><a href="#cardinfoquery-卡信息查询">cardInfoQuery [卡信息查询]</a></li>
+          </ul>
+        </li>
+        <li><a href="#文件格式">文件格式</a>
+          <ul>
+            <li><a href="#送盘">送盘</a></li>
+            <li><a href="#回盘">回盘</a></li>
+            <li><a href="#对账">对账</a></li>
+          </ul>
+        </li>
+        <li><a href="#附录">附录</a>
+          <ul>
+            <li><a href="#响应码">响应码</a></li>
+            <li><a href="#银行通道">银行通道</a></li>
+            <li><a href="#分行号">分行号</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

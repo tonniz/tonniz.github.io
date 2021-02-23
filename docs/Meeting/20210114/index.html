@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" 文件系统使用fastDFS，报表也需要使用fastDFS，接口相应修改。 下周易才给环境，部署DEMO SDK下周二之后 数据库内账户信息加密 鉴权查询返回权限列表 functionID 短信api，邮件问题，易才确认。 工行都是代发工资，招行附言根据账户类型。基本户代发工资，一般户用薪酬/薪资替换，逻辑编写邮件，由业务确认。 GBK生僻字问题，出现生僻字，整包拒绝。 附言放在批次上，送中文。 银行类型，二次发放必输。若存则直接取，若无，则根据卡宾判断 回盘文件交易明细状态，成功、失败、已退票。 退票查询接口，交易交易状态字段待定。 支付地账户同步，bankCode字段填写ICBC或CMB 支付地抬头里分行号，从新提供一份全的。 记账方式，逐笔，并笔。逐笔记账，发送频率过高，会导致工行人为恶意攻击系统。 跨行快汇，超网，100万以下都支持 对方行行号，送联行号，工行需要确认是否送到总行级即可。 工行逐笔记账，立刻返回交易结果信息。 工行返回交易状态 失败：6、11，7-成功，其他状态为处理中，一天未查询到终态，认为异常，通知工行。 账户只认账户中文名。账户英文名不填。 加密机并发180笔，工行确认加密机并发量。 工行内部先评估，软证书方式工行是否能处理掉这么多记录。 工行确认是否有预约功能？ 测试环境测试是否可以预约处理。  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content=" 文件系统使用fastDFS，报表也需要使用fastDFS，接口相应修改。 下周易才给环境，部署DEMO SDK下周二之后 数据库内账户信息加密 鉴权查询返回权限列表 functionID 短信api，邮件问题，易才确认。 工行都是代发工资，招行附言根据账户类型。基本户代发工资，一般户用薪酬/薪资替换，逻辑编写邮件，由业务确认。 GBK生僻字问题，出现生僻字，整包拒绝。 附言放在批次上，送中文。 银行类型，二次发放必输。若存则直接取，若无，则根据卡宾判断 回盘文件交易明细状态，成功、失败、已退票。 退票查询接口，交易交易状态字段待定。 支付地账户同步，bankCode字段填写ICBC或CMB 支付地抬头里分行号，从新提供一份全的。 记账方式，逐笔，并笔。逐笔记账，发送频率过高，会导致工行人为恶意攻击系统。 跨行快汇，超网，100万以下都支持 对方行行号，送联行号，工行需要确认是否送到总行级即可。 工行逐笔记账，立刻返回交易结果信息。 工行返回交易状态 失败：6、11，7-成功，其他状态为处理中，一天未查询到终态，认为异常，通知工行。 账户只认账户中文名。账户英文名不填。 加密机并发180笔，工行确认加密机并发量。 工行内部先评估，软证书方式工行是否能处理掉这么多记录。 工行确认是否有预约功能？ 测试环境测试是否可以预约处理。  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/Meeting/20210114/" /><meta property="article:section" content="docs" />
+
+
+
+<title>20210114th | 易才批量代付项目</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.5c155ab45a209ee138fd86a73869c020179ec26dc0c5b146a7ea11027b123172.js" integrity="sha256-XBVatFognuE4/YanOGnAIBeewm3AxbFGp&#43;oRAnsSMXI="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>易才批量代付项目</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>开发</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/task/" class="">任务分配</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/env/" class="">开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/pab/" class="">平安版本系统流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/" class="">改造点</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>API</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" class="">HRO接口文档</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/" class="">银行接口</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/" class="">HRO融合方案</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/" class="">Hro签名 Demo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/" class="">文件压缩解压</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Meeting</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210114/" class=" active">20210114th</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/Meeting/20210108/" class="">20210108周例会</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>需求</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/technology/" class="">技术沟通确认清单</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/" class="">易才需求沟通会</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/" class="">银行待沟通问题列表（工行）</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/" class="">银行待沟通问题列表（招行）</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>20210114th</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents"></nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><ol>
+<li>文件系统使用fastDFS，报表也需要使用fastDFS，接口相应修改。</li>
+<li>下周易才给环境，部署DEMO</li>
+<li>SDK下周二之后</li>
+<li>数据库内账户信息加密</li>
+<li>鉴权查询返回权限列表 functionID</li>
+<li>短信api，邮件问题，易才确认。</li>
+<li>工行都是代发工资，招行附言根据账户类型。基本户代发工资，一般户用薪酬/薪资替换，逻辑编写邮件，由业务确认。</li>
+<li>GBK生僻字问题，出现生僻字，整包拒绝。</li>
+<li>附言放在批次上，送中文。</li>
+<li>银行类型，二次发放必输。若存则直接取，若无，则根据卡宾判断</li>
+<li>回盘文件交易明细状态，成功、失败、已退票。</li>
+<li>退票查询接口，交易交易状态字段待定。</li>
+<li>支付地账户同步，bankCode字段填写ICBC或CMB</li>
+<li>支付地抬头里分行号，从新提供一份全的。</li>
+<li>记账方式，逐笔，并笔。逐笔记账，发送频率过高，会导致工行人为恶意攻击系统。</li>
+<li>跨行快汇，超网，100万以下都支持</li>
+<li>对方行行号，送联行号，工行需要确认是否送到总行级即可。</li>
+<li>工行逐笔记账，立刻返回交易结果信息。</li>
+<li>工行返回交易状态 失败：6、11，7-成功，其他状态为处理中，一天未查询到终态，认为异常，通知工行。</li>
+<li>账户只认账户中文名。账户英文名不填。</li>
+<li>加密机并发180笔，工行确认加密机并发量。</li>
+<li>工行内部先评估，软证书方式工行是否能处理掉这么多记录。</li>
+<li>工行确认是否有预约功能？</li>
+<li>测试环境测试是否可以预约处理。</li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents"></nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
