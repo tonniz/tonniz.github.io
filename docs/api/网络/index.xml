@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/</guid>
+      <description>uni.uploadFile(OBJECT)#The local resources uploaded to the developer server, the client initiates a POSTrequest, which content-typeis multipart/form-data. OBJECT parameter description
+   parameter name Types Required Description     url String Yes Developer server url   name String Yes The key corresponding to the file, the developer can obtain the binary content of the file through this key on the server side   header Object no HTTP request Header, Referer cannot be set in the header.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/</guid>
+      <description>uni.request(OBJECT)#Initiate a network request.
+OBJECT parameter description
+   parameter name Types Required Defaults Description Platform difference description     url String Yes  Developer server interface address    data Object/String no  Requested parameters    header Object no  Set the requested header. Referer cannot be set in the header.    method String no GET See the description below for valid values    dataType String no json If set to json, it will try to do a JSON.</description>
+    </item>
+    
+  </channel>
+</rss>

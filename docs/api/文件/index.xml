@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E6%96%87%E4%BB%B6/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E6%96%87%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E6%96%87%E4%BB%B6/file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E6%96%87%E4%BB%B6/file/</guid>
+      <description>uni.saveFile(OBJECT)#Save the file locally.
+OBJECT parameter description:
+   parameter name Types Required Description     tempFilePath String Yes Temporary path of the file to be saved   success Function no Return the save path of the file, res = {savedFilePath:&amp;lsquo;File save path&amp;rsquo;}   fail Function no Callback function for interface call failure   complete Function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    success return parameter description:</description>
+    </item>
+    
+  </channel>
+</rss>

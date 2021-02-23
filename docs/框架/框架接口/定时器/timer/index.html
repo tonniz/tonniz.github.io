@@ -5,19 +5,23 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="setTimeout(callback, delay, rest)#Set a timer. Execute the registered callback function after the time expires
+Parameter Description
+   parameter Types of Required Description     callback Function Yes Callback   delay Number no Delay time, the function call will occur after the delay, the unit is ms   rest Any no Additional parameters such as param1, param2, &hellip;, paramN will be passed as parameters to the callback function    return value">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="setTimeout(callback, delay, rest)#Set a timer. Execute the registered callback function after the time expires
+Parameter Description
+   parameter Types of Required Description     callback Function Yes Callback   delay Number no Delay time, the function call will occur after the delay, the unit is ms   rest Any no Additional parameters such as param1, param2, &hellip;, paramN will be passed as parameters to the callback function    return value" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Timer | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1197,7 +1201,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-07ab1221dc146ff1ba21ebbc19800268" class="toggle"  />
+    <input type="checkbox" id="section-07ab1221dc146ff1ba21ebbc19800268" class="toggle" checked />
     <label for="section-07ab1221dc146ff1ba21ebbc19800268" class="flex justify-between">
       <a  class="">框架接口</a>
       <span>▾</span>
@@ -1214,7 +1218,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class=" active">Timer</a>
   
 
         </li>
@@ -2049,7 +2053,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Timer</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2068,12 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li><a href="#settimeoutcallback-delay-rest">setTimeout(callback, delay, rest)</a></li>
+        <li><a href="#cleartimeouttimeoutid">clearTimeout(timeoutID)</a></li>
+        <li><a href="#setintervalcallback-delay-rest">setInterval(callback, delay, rest)</a></li>
+        <li><a href="#clearintervalintervalid">clearInterval(intervalID)</a></li>
       </ul>
     </li>
   </ul>
@@ -2080,45 +2087,178 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
-<blockquote>
-<p>易才代付</p>
-</blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
+  <article class="markdown"><h2 id="settimeoutcallback-delay-rest">
+  setTimeout(callback, delay, rest)
+  <a class="anchor" href="#settimeoutcallback-delay-rest">#</a>
 </h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
-
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
+<p>Set a timer. Execute the registered callback function after the time expires</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Callback</td>
+</tr>
+<tr>
+<td style="text-align:left">delay</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Delay time, the function call will occur after the delay, the unit is ms</td>
+</tr>
+<tr>
+<td style="text-align:left">rest</td>
+<td style="text-align:left">Any</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Additional parameters such as param1, param2, &hellip;, paramN will be passed as parameters to the callback function</td>
+</tr>
+</tbody>
+</table>
+<p><strong>return value</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">return value</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">timeoutID</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">The number of the timer, this value can be passed to clearTimeout to cancel the timing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cleartimeouttimeoutid">
+  clearTimeout(timeoutID)
+  <a class="anchor" href="#cleartimeouttimeoutid">#</a>
+</h2>
+<p>Cancel the timer set by setTimeout.</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">timeoutID</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">ID of the timer to be cancelled</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setintervalcallback-delay-rest">
+  setInterval(callback, delay, rest)
+  <a class="anchor" href="#setintervalcallback-delay-rest">#</a>
+</h2>
+<p>Set a timer. Execute the registered callback function according to the specified period (in milliseconds)</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Callback</td>
+</tr>
+<tr>
+<td style="text-align:left">delay</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Delay time, the function call will occur after the delay, the unit is ms</td>
+</tr>
+<tr>
+<td style="text-align:left">rest</td>
+<td style="text-align:left">Any</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Additional parameters such as param1, param2, &hellip;, paramN will be passed as parameters to the callback function</td>
+</tr>
+</tbody>
+</table>
+<p><strong>return value</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">return value</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">intervalID</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">The number of the timer, this value can be passed to clearInterval to cancel the timer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clearintervalintervalid">
+  clearInterval(intervalID)
+  <a class="anchor" href="#clearintervalintervalid">#</a>
+</h2>
+<p>Cancel the timer set by setInterval.</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">intervalID</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">ID of the timer to be cancelled</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
 </article>
  
       
@@ -2153,9 +2293,12 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li><a href="#settimeoutcallback-delay-rest">setTimeout(callback, delay, rest)</a></li>
+        <li><a href="#cleartimeouttimeoutid">clearTimeout(timeoutID)</a></li>
+        <li><a href="#setintervalcallback-delay-rest">setInterval(callback, delay, rest)</a></li>
+        <li><a href="#clearintervalintervalid">clearInterval(intervalID)</a></li>
       </ul>
     </li>
   </ul>

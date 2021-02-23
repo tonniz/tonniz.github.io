@@ -5,19 +5,23 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="uni.showToast(OBJECT)#A message box is displayed.
+OBJECT parameter description
+   parameter Types of Required Description     title String Yes The length of the prompt content is related to the icon value.   icon String no Icon, the effective value is detailed in the description below.   image String no The local path of the custom icon   mask Boolean no Whether to display a transparent mask to prevent touch penetration, default: false   duration Number no Prompt delay time, in milliseconds, default: 1500   position String no Light plain text display position, only fill the effective value of titleproperty to take effect, the effective value see note below.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="uni.showToast(OBJECT)#A message box is displayed.
+OBJECT parameter description
+   parameter Types of Required Description     title String Yes The length of the prompt content is related to the icon value.   icon String no Icon, the effective value is detailed in the description below.   image String no The local path of the custom icon   mask Boolean no Whether to display a transparent mask to prevent touch penetration, default: false   duration Number no Prompt delay time, in milliseconds, default: 1500   position String no Light plain text display position, only fill the effective value of titleproperty to take effect, the effective value see note below." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Prompt | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -452,7 +456,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-d22b47d69d5bf3fad5b3a81accb75d7a" class="toggle"  />
+    <input type="checkbox" id="section-d22b47d69d5bf3fad5b3a81accb75d7a" class="toggle" checked />
     <label for="section-d22b47d69d5bf3fad5b3a81accb75d7a" class="flex justify-between">
       <a  class="">界面</a>
       <span>▾</span>
@@ -482,7 +486,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" class="">Prompt</a>
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" class=" active">Prompt</a>
   
 
         </li>
@@ -2049,7 +2053,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Prompt</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2068,18 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unishowtoastobject">uni.showToast(OBJECT)</a></li>
+            <li><a href="#unihidetoast-">uni.hideToast ()</a></li>
+            <li><a href="#unishowloadingobject">uni.showLoading(OBJECT)</a></li>
+            <li><a href="#unihideloading-">uni.hideLoading ()</a></li>
+            <li><a href="#unishowmodalobject">uni.showModal(OBJECT)</a></li>
+            <li><a href="#unishowactionsheet-object">uni.showActionSheet (OBJECT)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2080,46 +2093,371 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
-<blockquote>
-<p>易才代付</p>
-</blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
+  <article class="markdown"><h3 id="unishowtoastobject">
+  uni.showToast(OBJECT)
+  <a class="anchor" href="#unishowtoastobject">#</a>
+</h3>
+<p>A message box is displayed.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">title</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The length of the prompt content is related to the icon value.</td>
+</tr>
+<tr>
+<td style="text-align:left">icon</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Icon, the effective value is detailed in the description below.</td>
+</tr>
+<tr>
+<td style="text-align:left">image</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The local path of the custom icon</td>
+</tr>
+<tr>
+<td style="text-align:left">mask</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Whether to display a transparent mask to prevent touch penetration, default: false</td>
+</tr>
+<tr>
+<td style="text-align:left">duration</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Prompt delay time, in milliseconds, default: 1500</td>
+</tr>
+<tr>
+<td style="text-align:left">position</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Light plain text display position, only fill the effective value of <code>title</code>property to take effect, the effective value see note below.</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>icon value description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">The success icon is displayed. At this time, the title text displays up to 7 Chinese characters in length. Defaults</td>
+</tr>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">No icon is displayed. At this time, only single line display is supported.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">showToast</span>({
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Title&#39;</span>,
+    <span style="color:#a6e22e">duration</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2000</span>
+});
+</code></pre></div><p><strong>Description of position value (valid only for App)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">top</td>
+<td style="text-align:left">Top display</td>
+</tr>
+<tr>
+<td style="text-align:left">center</td>
+<td style="text-align:left">Center display</td>
+</tr>
+<tr>
+<td style="text-align:left">bottom</td>
+<td style="text-align:left">Bottom display</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tips</strong></p>
+<ul>
+<li>can achieve more functions through plus.nativeUI.toast API.</li>
+</ul>
+<h3 id="unihidetoast-">
+  uni.hideToast ()
+  <a class="anchor" href="#unihidetoast-">#</a>
+</h3>
+<p>Hide the message box.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">hideToast</span>();
+</code></pre></div><h3 id="unishowloadingobject">
+  uni.showLoading(OBJECT)
+  <a class="anchor" href="#unishowloadingobject">#</a>
+</h3>
+<p>The loading prompt box is displayed, and uni.hideLoading must be actively called to close the prompt box.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">title</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The prompt text content is displayed below loading</td>
+</tr>
+<tr>
+<td style="text-align:left">mask</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Whether to display a transparent mask to prevent touch penetration, default: false</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">showLoading</span>({
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Loading&#39;</span>
+});
+</code></pre></div><h3 id="unihideloading-">
+  uni.hideLoading ()
+  <a class="anchor" href="#unihideloading-">#</a>
+</h3>
+<p>Hide the loading prompt box.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">showLoading</span>({
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Loading&#39;</span>
+});
 
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
-</article>
+<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span> () {
+    <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">hideLoading</span>();
+}, <span style="color:#ae81ff">2000</span>);
+</code></pre></div><h3 id="unishowmodalobject">
+  uni.showModal(OBJECT)
+  <a class="anchor" href="#unishowmodalobject">#</a>
+</h3>
+<p>The display modal pop-up window can have only one OK button, or both OK and Cancel buttons. Similar to an API that integrates html: alert, confirm.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">title</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Prompt title</td>
+</tr>
+<tr>
+<td style="text-align:left">content</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Prompt content</td>
+</tr>
+<tr>
+<td style="text-align:left">showCancel</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Whether to display the cancel button, the default is true</td>
+</tr>
+<tr>
+<td style="text-align:left">cancelText</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The text of the cancel button, the default is &ldquo;Cancel&rdquo;, up to 4 characters</td>
+</tr>
+<tr>
+<td style="text-align:left">confirmText</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The text of the OK button, the default is &ldquo;OK&rdquo;, up to 4 characters</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success return parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">confirm</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">When true, it means that the user clicked the OK button</td>
+</tr>
+<tr>
+<td style="text-align:left">cancel</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">When it is true, it means that the user clicked cancel (used for the Android system to distinguish between clicking the mask to close or clicking the cancel button to close)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">showModal</span>({
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Reminder&#39;</span>,
+    <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;This is a modal window&#39;</span>,
+    <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">res</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">confirm</span>) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;user click for confirm&#39;</span>);
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">cancel</span>) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;user click for cancel&#39;</span>);
+        }
+    }
+});
+</code></pre></div><h3 id="unishowactionsheet-object">
+  uni.showActionSheet (OBJECT)
+  <a class="anchor" href="#unishowactionsheet-object">#</a>
+</h3>
+<p>Pop up the operation menu from the bottom up</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">itemList</td>
+<td style="text-align:left">Array<String></td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The text array of the button</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call, see the return parameter description for details</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success return parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">tapIndex</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">The buttons clicked by the user, from top to bottom, starting from 0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code>uni.showActionSheet({
+    itemList: ['A', 'B', 'C'],
+    success: function (res) {
+        console.log('Selected' + (res.tapIndex + 1) + 'buttons');
+    },
+    fail: function (res) {
+        console.log(res.errMsg);
+    }
+});
+</code></pre></article>
  
       
 
@@ -2153,9 +2491,18 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unishowtoastobject">uni.showToast(OBJECT)</a></li>
+            <li><a href="#unihidetoast-">uni.hideToast ()</a></li>
+            <li><a href="#unishowloadingobject">uni.showLoading(OBJECT)</a></li>
+            <li><a href="#unihideloading-">uni.hideLoading ()</a></li>
+            <li><a href="#unishowmodalobject">uni.showModal(OBJECT)</a></li>
+            <li><a href="#unishowactionsheet-object">uni.showActionSheet (OBJECT)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/</guid>
+      <description>uni.chooseImage(OBJECT)#Choose a picture from a local album or take a photo with the camera.
+If you need a richer camera API on the App side (such as directly calling the front camera)
+OBJECT parameter description
+   parameter name Types of Required Description Platform difference description     count Number no The maximum number of pictures that can be selected, the default is 9 See description below   sizeType Array&amp;lt;String&amp;gt; no original original image, compressed image, both have by default    extension Array&amp;lt;String&amp;gt; no According to the file extension filtering, each item cannot be an empty string.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/</guid>
+      <description>editorContext#The editorContext instance corresponding to the editor component can be obtained through uni.createSelectorQuery
+onEditorReady() { uni.createSelectorQuery().select(&amp;#39;#editor&amp;#39;).context((res) =&amp;gt; { this.editorCtx = res.context }).exec() } onEditorReady() { this.editorCtx = requireDynamicLib(&amp;#39;editorLib&amp;#39;).createEditorContext(&amp;#39;editorId&amp;#39;); }  References dynamic libraries in the project, in the manifest.jsonmiddle to add adynamicLib  &amp;#34;mp-baidu&amp;#34; : { &amp;#34;usingComponents&amp;#34; : true, &amp;#34;appid&amp;#34; : &amp;#34;&amp;#34;, &amp;#34;setting&amp;#34; : { &amp;#34;urlCheck&amp;#34; : true }, &amp;#34;dynamicLib&amp;#34;: { &amp;#34;editorLib&amp;#34;: { &amp;#34;provider&amp;#34;: &amp;#34;swan-editor&amp;#34; } } }, In each using a rich text editor component to a page, the configuration pages.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/</guid>
+      <description>uni.getRecorderManager()#Get the globally unique recording manager recorderManager.
+List of methods of recorderManager object
+   method parameter Description Platform difference description     start options start recording    pause  Pause recording App not currently supported   resume  Continue recording App not currently supported   stop  Stop recording    onStart callback Recording start event    onPause callback Recording pause event    onStop callback Recording stop event, will call back the file address    onFrameRecorded callback After the file with the specified frame size has been recorded, the recording fragment result data will be called back.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/</guid>
+      <description>uni.chooseFile(OBJECT)#Select the file locally.
+This API is mainly used to select non-media files. If the selected file is a media file, there are 3 dedicated APIs:
+ Picture selection Video selection Multimedia file selection (including picture video)  Platform difference description
+ If you need to select non-media files on the App side, you can search for file options in the plug-in market . Among them, Native.js can be used on the Android side without native plug-ins, while the iOS side requires native plug-ins.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/</guid>
+      <description>uni.createLivePlayerContext(livePlayerId, this)#Create a live-player context livePlayerContext object. Note that it is live broadcast, not push streaming.
+Parameter Description
+   parameter Description Platform difference description     livePlayerId &amp;lt;live-player&amp;gt;Component id          List of methods of livePlayerContext object:
+   method parameter Description     play Object Play   stop Object stop   mute Object Mute   pause Object time out   resume Object restore   requestFullScreen Object Enter full screen   exitFullScreen Object Exit Full Screen    Object parameter list of requestFullScreen:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/</guid>
+      <description>uni.createCameraContext()#Create and return the context cameraContext object of the camera component.
+This API is a js API supporting the camera component. It has the same platform compatibility as the camera component and can realize non-full-screen cameras. App can realize full-screen camera through plus.camera
+method list of cameraContext object
+   method parameter Description     takePhoto Object Take a picture, you can specify the quality, and return the picture path if successful.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/</guid>
+      <description>uni.getBackgroundAudioManager()#Get the globally unique background audio manager backgroundAudioManager.
+The background audio is not the background music of the game, but similar to QQ Music. When the App is in the background, it is still playing music. If you do not need to continue playing when the App is switched to the background, then you should not use this API, but use the normal audio API uni.createInnerAudioContext instead.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/</guid>
+      <description>uni.chooseVideo(OBJECT)#Take a video or select a video from the phone album, and return to the temporary file path of the video.
+OBJECT parameter description
+   parameter name Types of Required Description Platform difference description     sourceType Array&amp;lt;String&amp;gt; no album Select a video from the album, and the camera uses the camera to shoot, the default is: [&amp;lsquo;album&amp;rsquo;,&amp;lsquo;camera&amp;rsquo;]    extension Array&amp;lt;String&amp;gt; no According to the file extension filtering, each item cannot be an empty string.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/</guid>
+      <description>uni.createVideoContext(videoId, this)#Create and return a video context videoContext object. In the custom component, the second component parameters into the this example, the operation to the component &amp;lt;video&amp;gt; assembly.
+List of methods of the videoContext object
+   method parameter Description Platform difference description     play no Play    pause no time out    seek position Jump to the specified position, unit s    stop  Stop video WeChat Mini Program   sendDanmu danmu Send barrage, danmu contains two attributes text, color    playbackRate rate Set the double speed playback, the supported magnifications are 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/</guid>
+      <description>uni.createMediaContainer()#Creating audio and video processing vessel, the final container can be synthesized one video track, returns MediaContainerthe object
+MediaContainer.addTrack(track)#Add audio or video tracks to the container
+Parameter Description
+   parameter Description     track Audio or video track to add    MediaContainer.destroy()#Destroy the container and release resources
+MediaContainer.export()#Combine the tracks in the container and export the video file</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/</guid>
+      <description>uni.createInnerAudioContext()#Creates and returns an internal audio context innerAudioContextobject.
+List of properties of innerAudioContext object
+   Attributes Types of Description Read only Platform difference description     src String Audio data link for direct playback. no    startTime Number Start playing position (unit: s), default 0 no    autoplay Boolean Whether to start playing automatically, the default is false no Some browsers on H5 do not support   loop Boolean Whether to play in a loop, the default is false no    obeyMuteSwitch Boolean Whether to follow the system mute switch, when this parameter is false, even if the user turns on the mute switch, the sound can continue to be emitted, the default value is true no    duration Number The length of the current audio (unit: s), only returned when there is currently a valid src, it needs to be obtained in onCanplay Yes    currentTime Number The current audio playback position (unit: s), only returned when there is currently a legal src, the time is not rounded up, and 6 digits after the decimal point are kept Yes    paused Boolean Whether the current state is paused or stopped, true means pause or stop, false means playing Yes    buffered Number The time of audio buffering, only to ensure that the content has been buffered from the current playback time to this time.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/</guid>
+      <description>navigation-bar#The page navigation bar configuration node is used to specify some properties of the navigation bar. It can only be the first node in the page-meta component, and it needs to be used together.
+Property description
+   Attributes Types of Defaults Required Description     title-icon string  no Title icon, icon path such as &amp;ldquo;./img/t.png&amp;rdquo;, only supports local file path, relative path, relative to the host position of the current page, fixed width and height are logical pixel value &amp;ldquo;34px&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

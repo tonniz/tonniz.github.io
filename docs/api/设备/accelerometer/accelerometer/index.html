@@ -5,19 +5,25 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="uni.onAccelerometerChange(CALLBACK)#Listen for acceleration data,Frequency: 5 cycles per second,Interface calls will automatically start listening,use uni.offAccelerometer to listening the cancel.
+CALLBACK Return Parameter
+   Parameter Type Description     x Number The X axis   y Number The Y axis   z Number The Z axis    Tips
+ H5 to obtain acceleration information,need to be deployed in https server,http protocol still available when local preview（localhost）.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="uni.onAccelerometerChange(CALLBACK)#Listen for acceleration data,Frequency: 5 cycles per second,Interface calls will automatically start listening,use uni.offAccelerometer to listening the cancel.
+CALLBACK Return Parameter
+   Parameter Type Description     x Number The X axis   y Number The Y axis   z Number The Z axis    Tips
+ H5 to obtain acceleration information,need to be deployed in https server,http protocol still available when local preview（localhost）." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Accelerometer | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -691,7 +697,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-9f38acd593e541b6ade3bb0fc2f3f3d1" class="toggle"  />
+    <input type="checkbox" id="section-9f38acd593e541b6ade3bb0fc2f3f3d1" class="toggle" checked />
     <label for="section-9f38acd593e541b6ade3bb0fc2f3f3d1" class="flex justify-between">
       <a  class="">设备</a>
       <span>▾</span>
@@ -708,7 +714,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" class="">Accelerometer</a>
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" class=" active">Accelerometer</a>
   
 
         </li>
@@ -2049,7 +2055,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Accelerometer</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2070,16 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unionaccelerometerchangecallback">uni.onAccelerometerChange(CALLBACK)</a></li>
+            <li><a href="#unioffaccelerometerchangecallback">uni.offAccelerometerChange(CALLBACK)</a></li>
+            <li><a href="#unistartaccelerometerobject">uni.startAccelerometer(OBJECT)</a></li>
+            <li><a href="#unistopaccelerometerobject">uni.stopAccelerometer(OBJECT)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2080,46 +2093,132 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
-<blockquote>
-<p>易才代付</p>
-</blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
-
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
-</article>
+  <article class="markdown"><h3 id="unionaccelerometerchangecallback">
+  uni.onAccelerometerChange(CALLBACK)
+  <a class="anchor" href="#unionaccelerometerchangecallback">#</a>
+</h3>
+<p>Listen for acceleration data,Frequency: 5 cycles per second,Interface calls will automatically start listening,use <code>uni.offAccelerometer</code> to listening the cancel.</p>
+<p><strong>CALLBACK Return Parameter</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">The X axis</td>
+</tr>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">The Y axis</td>
+</tr>
+<tr>
+<td style="text-align:left">z</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">The Z axis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tips</strong></p>
+<ul>
+<li>H5 to obtain acceleration information,need to be deployed in <strong>https</strong> server,http protocol still available when local preview（localhost）.</li>
+</ul>
+<p><strong>Sample</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">onAccelerometerChange</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">res</span>) {
+	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">x</span>);
+	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">y</span>);
+	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">z</span>);
+});
+</code></pre></div><h3 id="unioffaccelerometerchangecallback">
+  uni.offAccelerometerChange(CALLBACK)
+  <a class="anchor" href="#unioffaccelerometerchangecallback">#</a>
+</h3>
+<p>Unlisten for acceleration data.</p>
+<h3 id="unistartaccelerometerobject">
+  uni.startAccelerometer(OBJECT)
+  <a class="anchor" href="#unistartaccelerometerobject">#</a>
+</h3>
+<p>Start listening for acceleration data.</p>
+<p><strong>OBJECT Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attribute</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Default value</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">A successful callback to the interface call</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The interface calls the callback function that failed</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><code>interval</code> The legal value</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">game</td>
+<td style="text-align:left">callback frequency applicable to updating the game,It&rsquo;s about 20ms</td>
+</tr>
+<tr>
+<td style="text-align:left">ui</td>
+<td style="text-align:left">The callback frequency for updating the UI,It&rsquo;s about 60ms</td>
+</tr>
+<tr>
+<td style="text-align:left">normal</td>
+<td style="text-align:left">Normal callback frequency,It&rsquo;s about 200ms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">startAccelerometer</span>();
+</code></pre></div><h3 id="unistopaccelerometerobject">
+  uni.stopAccelerometer(OBJECT)
+  <a class="anchor" href="#unistopaccelerometerobject">#</a>
+</h3>
+<p>Stop listening for acceleration data.</p>
+<p><strong>Object Parameter description</strong></p>
+<p>|Attribute|Type|Default value|Required|Description|
+|:-|:-|:-|:-|
+|success|Function|no|Callback function for successful interface call|
+|fail|Function|no|Callback function for interface call failure|
+|complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|</p>
+<p><strong>Sample</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">stopAccelerometer</span>();
+</code></pre></div></article>
  
       
 
@@ -2153,9 +2252,16 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unionaccelerometerchangecallback">uni.onAccelerometerChange(CALLBACK)</a></li>
+            <li><a href="#unioffaccelerometerchangecallback">uni.offAccelerometerChange(CALLBACK)</a></li>
+            <li><a href="#unistartaccelerometerobject">uni.startAccelerometer(OBJECT)</a></li>
+            <li><a href="#unistopaccelerometerobject">uni.stopAccelerometer(OBJECT)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

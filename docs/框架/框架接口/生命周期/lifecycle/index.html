@@ -5,19 +5,21 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="Application life cycle#The following application life cycle functions are supported:
+   Function name Description     onLaunch uni-appTriggered when the initialization is completed (global trigger only once)   onShow When uni-appstarted, or from the background into the foreground display   onHide As uni-appfrom the foreground into the background   onError When the uni-apptrigger error   onUniNViewMessage For nvuedata pages sent by the monitor, refer to nvue to communicate vue   onUnhandledRejection Listener function for unprocessed Promise rejection event (2.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="Application life cycle#The following application life cycle functions are supported:
+   Function name Description     onLaunch uni-appTriggered when the initialization is completed (global trigger only once)   onShow When uni-appstarted, or from the background into the foreground display   onHide As uni-appfrom the foreground into the background   onError When the uni-apptrigger error   onUniNViewMessage For nvuedata pages sent by the monitor, refer to nvue to communicate vue   onUnhandledRejection Listener function for unprocessed Promise rejection event (2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Lifecycle | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1197,7 +1199,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-07ab1221dc146ff1ba21ebbc19800268" class="toggle"  />
+    <input type="checkbox" id="section-07ab1221dc146ff1ba21ebbc19800268" class="toggle" checked />
     <label for="section-07ab1221dc146ff1ba21ebbc19800268" class="flex justify-between">
       <a  class="">框架接口</a>
       <span>▾</span>
@@ -1240,7 +1242,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class=" active">Lifecycle</a>
   
 
         </li>
@@ -2049,7 +2051,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Lifecycle</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2066,15 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#application-life-cycle">Application life cycle</a></li>
+            <li><a href="#page-life-cycle">Page life cycle</a></li>
+            <li><a href="#component-life-cycle">Component life cycle</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2080,45 +2088,308 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
-<blockquote>
-<p>易才代付</p>
-</blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
-
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
+  <article class="markdown"><h3 id="application-life-cycle">
+  Application life cycle
+  <a class="anchor" href="#application-life-cycle">#</a>
+</h3>
+<p>The following application life cycle functions are supported:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">onLaunch</td>
+<td style="text-align:left"><code>uni-app</code>Triggered when the initialization is completed (global trigger only once)</td>
+</tr>
+<tr>
+<td style="text-align:left">onShow</td>
+<td style="text-align:left">When <code>uni-app</code>started, or from the background into the foreground display</td>
+</tr>
+<tr>
+<td style="text-align:left">onHide</td>
+<td style="text-align:left">As <code>uni-app</code>from the foreground into the background</td>
+</tr>
+<tr>
+<td style="text-align:left">onError</td>
+<td style="text-align:left">When the <code>uni-app</code>trigger error</td>
+</tr>
+<tr>
+<td style="text-align:left">onUniNViewMessage</td>
+<td style="text-align:left">For <code>nvue</code>data pages sent by the monitor, refer to <a href="https://uniapp.dcloud.io/nvue-api?id=communication">nvue to communicate vue</a></td>
+</tr>
+<tr>
+<td style="text-align:left">onUnhandledRejection</td>
+<td style="text-align:left">Listener function for unprocessed Promise rejection event (2.8.1+)</td>
+</tr>
+<tr>
+<td style="text-align:left">onPageNotFound</td>
+<td style="text-align:left">No monitoring function exists on the page</td>
+</tr>
+<tr>
+<td style="text-align:left">onThemeChange</td>
+<td style="text-align:left">Monitor system theme changes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>note</strong></p>
+<ul>
+<li>The application life cycle can only be <code>App.vue</code>monitored in , and monitoring on other pages is invalid.</li>
+</ul>
+<p><strong>Sample code</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// You can only listen for the application lifecycle in app.vue
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">onLaunch</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;App Launch&#39;</span>)
+        },
+        <span style="color:#a6e22e">onShow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;App Show&#39;</span>)
+        },
+        <span style="color:#a6e22e">onHide</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;App Hide&#39;</span>)
+        }
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="page-life-cycle">
+  Page life cycle
+  <a class="anchor" href="#page-life-cycle">#</a>
+</h3>
+<p>The following page life cycle functions are supported:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">onLoad</td>
+<td style="text-align:left">Monitor page loading, its parameter is the data passed on the previous page, the parameter type is Object (used for page parameter transfer)</td>
+</tr>
+<tr>
+<td style="text-align:left">onShow</td>
+<td style="text-align:left">Monitor page display. It is triggered every time the page appears on the screen, including returning from the lower page point to reveal the current page</td>
+</tr>
+<tr>
+<td style="text-align:left">onReady</td>
+<td style="text-align:left">The first rendering of the monitoring page is complete. Note that if the rendering speed is fast, it will be triggered before the page enters the animation.</td>
+</tr>
+<tr>
+<td style="text-align:left">onHide</td>
+<td style="text-align:left">Monitor page hiding</td>
+</tr>
+<tr>
+<td style="text-align:left">onUnload</td>
+<td style="text-align:left">Monitor page uninstall</td>
+</tr>
+<tr>
+<td style="text-align:left">onPullDownRefresh</td>
+<td style="text-align:left">Monitor user pull-down actions, generally used for pull-down refresh</td>
+</tr>
+<tr>
+<td style="text-align:left">onReachBottom</td>
+<td style="text-align:left">The event when the page scrolls to the bottom (not the scroll-view scroll to the bottom) is often used to pull down the next page of data. See the notes below for details</td>
+</tr>
+<tr>
+<td style="text-align:left">onPageScroll</td>
+<td style="text-align:left">Monitor page scrolling, the parameter is Object</td>
+</tr>
+</tbody>
+</table>
+<p><code>onInit</code>Use attention</p>
+<ul>
+<li>Only Baidu applet base library above 3.260 supports onInit life cycle</li>
+<li>Other versions or platforms can use the onLoad life cycle to be compatible at the same time, pay attention to avoid repeating the same logic</li>
+<li>The logic that does not rely on page passing parameters can be directly replaced by the created life cycle</li>
+</ul>
+<p><code>onReachBottom</code>Note that you can define the trigger distance onReachBottomDistance at the bottom of the specific page in pages.json, for example, set it to 50, then the onReachBottom event will be triggered when the page is scrolled to 50px from the bottom.</p>
+<p>If scroll-view is used and the page does not scroll, the bottoming event will not be triggered. For the event of scroll-view scrolling to the bottom, please refer to the scroll-view documentation</p>
+<p><code>onPageScroll</code> (Monitor scroll, scroll monitor, scroll event) parameter description:</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Types of</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scrollTop</td>
+<td>Number</td>
+<td>The distance the page has been scrolled in the vertical direction (in px)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>note</strong></p>
+<ul>
+<li><code>onPageScroll</code>Don&rsquo;t write interactive complex js, such as frequent page modification. Because this life cycle is triggered in the rendering layer, on the non-h5 side, js is executed in the logic layer, and communication between the two layers is lossy. If the data exchange between the two layers is triggered frequently during the scrolling process, it may cause stuck.</li>
+<li>If you want to achieve a transparent gradient of the title bar when scrolling, under App and H5, you can configure the type under titleNView as transparent in pages.json.</li>
+<li>If you need to scroll the ceiling to fix certain elements, it is recommended to use the sticky layout of CSS . There are also other ceiling plug-ins implemented by js in the plug-in market, but the performance is not good, you can search by yourself when you need it.</li>
+<li>In App, WeChat applet, and H5, you can also use wxs to monitor scrolling; in app-nvue, you can use bindingx to monitor scrolling.</li>
+<li><code>onBackPress``async</code>Can’t be used on , it will prevent the default return</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">onPageScroll</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) { <span style="color:#75715e">//nvue does not support scrolling listening. BindingX can be used instead
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Rolling distance is：&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">scrollTop</span>);
+},
+</code></pre></div><p><code>onTabItemTap</code> Description of the returned json object:</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Types of</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>String</td>
+<td>The sequence number of the clicked tabItem, starting from 0</td>
+</tr>
+<tr>
+<td>pagePath</td>
+<td>String</td>
+<td>The page path of the clicked tabItem</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>The button text of the tabItem that was clicked</td>
+</tr>
+</tbody>
+</table>
+<p><strong>note</strong></p>
+<ul>
+<li>onTabItemTap is often used to click the current tabitem, scroll or refresh the current page. If you click on a different tabitem, it will definitely trigger a page switch.</li>
+<li>If you want to click on a tabitem on the App side without jumping to the page, you can&rsquo;t use onTabItemTap, you can use plus.nativeObj.view to put a block to cover the original tabitem and intercept the click event.</li>
+<li>Alipay applet platform onTabItemTap appears to be triggered after clicking non-current tabitem, so it cannot be used to achieve the operation of clicking back to the top</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">onTabItemTap</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">e</span>);
+    <span style="color:#75715e">// E is returned as a json object： {&#34;index&#34;:0,&#34;text&#34;:&#34;home page&#34;,&#34;pagePath&#34;:&#34;pages/index/index&#34;}
+</span><span style="color:#75715e"></span>},
+</code></pre></div><p><code>onNavigationBarButtonTap</code> Parameter Description:</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Types of</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>Number</td>
+<td>The subscript of the native title bar button array</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">onNavigationBarButtonTap</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">e</span>);
+    <span style="color:#75715e">// E is returned as a json object：{&#34;text&#34;:&#34;test&#34;,&#34;index&#34;:0}
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p><code>onBackPress</code> Description of callback parameter object:</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Types of</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td>String</td>
+<td>The source of triggering the return behavior:&lsquo;backbutton&rsquo;-the upper left corner navigation bar button and the Android return key;&lsquo;navigateBack&rsquo;-uni.navigateBack() method. <strong>Alipay applet does not support returning this field</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+    <span style="color:#a6e22e">data</span>() {
+        <span style="color:#66d9ef">return</span> {};
+    },
+    <span style="color:#a6e22e">onBackPress</span>(<span style="color:#a6e22e">options</span>) {
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;from:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">from</span>)
+    }
+}
+</code></pre></div><p><strong>note</strong></p>
+<ul>
+<li>The life cycle supported by the weex compilation mode of the nvue page is the same as that of weex.</li>
+<li>The real phone of Alipay applet can monitor non- <code>navigateBack</code>triggered return events (it will not be triggered when using applet development tools <code>onBackPress</code>), and the default return behavior cannot be prevented</li>
+</ul>
+<h3 id="component-life-cycle">
+  Component life cycle
+  <a class="anchor" href="#component-life-cycle">#</a>
+</h3>
+<p><code>uni-app</code>The life cycle supported by the component is the same as the life cycle of the vue standard component. There is no page-level onLoad and other life cycles:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Platform difference description</th>
+<th style="text-align:left">Minimum version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">beforeCreate</td>
+<td style="text-align:left">Called after the instance is initialized. <a href="https://vuejs.org/v2/api/#beforeCreate">See</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">created</td>
+<td style="text-align:left">It is called immediately after the instance is created. <a href="https://vuejs.org/v2/api/#created">See</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">beforeMount</td>
+<td style="text-align:left">Called before the start of the mount. <a href="https://vuejs.org/v2/api/#beforeMount">See</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">mounted</td>
+<td style="text-align:left">Called after mounting to the instance. <a href="https://vuejs.org/v2/api/#mounted">For details, please</a> note: It is not certain that all subcomponents are mounted here. If you need to perform operations after the subcomponents are fully mounted, you can use the <code>$nextTick</code><a href="https://vuejs.org/v2/api/#Vue-nextTick">official Vue documentation</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">beforeUpdate</td>
+<td style="text-align:left">Called when the data is updated, before the virtual DOM is patched. <a href="https://vuejs.org/v2/api/#beforeUpdate">See</a></td>
+<td style="text-align:left">Only supported by H5 platform</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">updated</td>
+<td style="text-align:left">The virtual DOM is re-rendered and patched due to data changes, after which the hook will be called. <a href="https://vuejs.org/v2/api/#updated">See</a></td>
+<td style="text-align:left">Only supported by H5 platform</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">beforeDestroy</td>
+<td style="text-align:left">Called before the instance is destroyed. At this step, the instance is still fully available. <a href="https://vuejs.org/v2/api/#beforeDestroy">See</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">destroyed</td>
+<td style="text-align:left">Called after the Vue instance is destroyed. After the call, everything indicated by the Vue instance will be unbound, all event listeners will be removed, and all child instances will be destroyed. <a href="https://vuejs.org/v2/api/#destroyed">See</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
 </article>
  
       
@@ -2153,9 +2424,15 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#application-life-cycle">Application life cycle</a></li>
+            <li><a href="#page-life-cycle">Page life cycle</a></li>
+            <li><a href="#component-life-cycle">Component life cycle</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

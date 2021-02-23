@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/</guid>
+      <description>audio#Audio.
+Property description
+   Attribute name Types of Defaults Description     id String  Unique identifier of the audio component   src String  Resource address to play audio   loop Boolean false Whether to loop   controls Boolean false Whether to show the default controls   poster String  The image resource address of the audio cover on the default control.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/</guid>
+      <description>image#image.
+   Attribute name Types of Defaults Description Platform difference description     src String  Image resource address    mode String &amp;lsquo;scaleToFill&amp;rsquo; Image cropping and zooming mode    lazy-load Boolean false Images are lazy loading. Only valid for image under page and scroll-view App   fade-show Boolean true Picture shows animation effect Only App-nvue 2.3.4+ Android is valid   @error HandleEvent  When an error occurs, the name of the event posted to AppService, event object event.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/</guid>
+      <description>video#Video playback component.
+Property description
+   Attribute name Types of Defaults Description Platform difference description     src String  The resource address of the video to be played    autoplay Boolean false Whether to play automatically    loop Boolean false Whether to loop    muted Boolean false Whether to play silently    initial-time Number  Specify the initial playback position of the video, in seconds (s).</description>
+    </item>
+    
+  </channel>
+</rss>

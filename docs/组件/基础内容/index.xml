@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/</guid>
+      <description>icon#icon.
+Tips
+ Due to differences in each end of the icon component performance, by using the Fonts icon to compensate for differences in the way each end.  Property description
+   Attribute name Types of Defaults Description     type String  icon type   size Number twenty three icon size, unit px   color Color  icon color, same as css color    &amp;lt;view class=&amp;#34;item&amp;#34; v-for=&amp;#34;(value,index) in iconType&amp;#34; :key=&amp;#34;index&amp;#34;&amp;gt; &amp;lt;icon :type=&amp;#34;value&amp;#34; size=&amp;#34;26&amp;#34;/&amp;gt; &amp;lt;text&amp;gt;{{value}}&amp;lt;/text&amp;gt; &amp;lt;/view&amp;gt; export default { data() { return { iconType: [&amp;#39;success&amp;#39;] } }, onLoad() { // #ifdef APP-PLUS|| MP-WEIXIN  this.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/</guid>
+      <description>progress#progress bar.
+Property description
+   Attribute name Types of Defaults Description     percent Float no Percentage 0~100   show-info Boolean false Show percentage on the right side of the progress bar   border-radius number/string 0 Fillet size   font-size number/string 16 Percentage font size on the right   stroke-width Number 6 The width of the progress bar, in px   activeColor Color #09BB07 (Baidu is #E6E6E6) The color of the selected progress bar   backgroundColor Color #EBEBEB The color of the unselected progress bar   active Boolean false Animation of the progress bar from left to right   active-mode String backwards backwards: the animation is played from the beginning; forwards: the animation is played from the last end point   duration number 30 The number of milliseconds required to increase the progress by 1%    Example view demo</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/</guid>
+      <description>rich-text#Rich text.
+Property description
+   Attribute name Types of Defaults Description     nodes Array / String [] Node list / HTML String    note
+ The app-nvue platform nodes property only supports the Array type  If you need to support HTML String, you need to convert HTML String to nodes array by yourself, you can use html-parser to convert.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/</guid>
+      <description>text#Text component.
+Used to wrap text content.
+Property description
+   Attribute name Types of Defaults Description     selectable Boolean false Whether the text is optional   space String  Show consecutive spaces   decode Boolean false Whether to decode    space value description
+   value Description     ensp Half size of Chinese character space   emsp Chinese character space size   nbsp Space size set according to font    Tips</description>
+    </item>
+    
+  </channel>
+</rss>

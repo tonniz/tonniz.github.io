@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/</guid>
+      <description>uni.setStorage(OBJECT)#Storing data in the specified key in the local cache will overwrite the original content corresponding to the key. This is an asynchronous interface.
+OBJECT parameter description
+   parameter name Types Required Description     key String Yes The specified key in the local cache   data Any Yes The content that needs to be stored, only supports native types and objects that can be serialized through JSON.</description>
+    </item>
+    
+  </channel>
+</rss>

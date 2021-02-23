@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/</guid>
+      <description>uni.onAccelerometerChange(CALLBACK)#Listen for acceleration data,Frequency: 5 cycles per second,Interface calls will automatically start listening,use uni.offAccelerometer to listening the cancel.
+CALLBACK Return Parameter
+   Parameter Type Description     x Number The X axis   y Number The Y axis   z Number The Z axis    Tips
+ H5 to obtain acceleration information,need to be deployed in https server,http protocol still available when local preview（localhost）.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/barcode/barcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/barcode/barcode/</guid>
+      <description>uni.scanCode(OBJECT)#Turn up the client scan interface, scan code after successful return the corresponding results.
+Object Parameter Description
+   Paramater Name Type Required Description     onlyFromCamera Boolean no If only from the camera code, are not allowed to select images from album   scanType Array no Sweep the code type,The parameter type is an array,Qr code is &amp;lsquo;qrCode&amp;rsquo;,One dimension code is&amp;rsquo;barCode&#39;,DataMatrix是‘datamatrix’,pdf417是‘pdf417’.   success Function no A successful callback to the interface call,See details for returned content.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/batteryinfo/batteryinfo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/batteryinfo/batteryinfo/</guid>
+      <description>Battery Information#The battery API is not unified yet,It needs to be compiled according to platform conditions.
+ App platform:use Native.js.  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/ble/ble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/ble/ble/</guid>
+      <description>uni.setBLEMTU(OBJECT)#2.8.4+
+Set Bluetooth maximum transmission unit.Call after successful call uni.createBLEConnection, mtu range (22,512), need Android 5.1 or above.
+OBJECT Parameter Description
+   Attribute Type Default value Required Description     deviceId string  yes ID used to distinguish devices   mtu number  yes Maximum transmission unit range (22,512),Unit bytes   success function  no Callback function for successful interface call   fail function  no Callback function for interface call failure   complete function  no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    uni.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/</guid>
+      <description>uni.openBluetoothAdapter(OBJECT)#Initialize the Bluetooth module
+Object Parameter description
+   Attribute Type Default value Required Description     success function  no Interface calls a successful callback function   fail function  no Callback function for interface call failure   complete function  no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    Error#   Error Code Error Message Description     0 ok normal   10000 not init The Bluetooth adapter is not initialized   10001 not available The current Bluetooth adapter is not available   10002 no device The specified device was not found   10003 connection fail Connection failed   10004 no service The specified service was not found   10005 no characteristic The specified property was not found   10006 no connection The current connection is disconnected   10007 property not support The current property does not support this operation   10008 system error Exceptions reported by all other systems   10009 system not support Only supported by Android system, system version lower than 4.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/brightness/brightness/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/brightness/brightness/</guid>
+      <description>uni.setScreenBrightness(OBJECT)#Screen brightness setting.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |value|Number|yes|Screen brightness value,Ranges 0 to 1, where 0 is darkest and 1 is brightest| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+Sample
+uni.setScreenBrightness({ value: 0.5, success: function () { console.log(&amp;#39;success&amp;#39;); } });  Tips: avoid using setScreenBrightness() in onshow() process, The brightness change triggers onShow() again, causing an endless loop</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/clipboard/clipboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/clipboard/clipboard/</guid>
+      <description>uni.setClipboardData(OBJECT)#Sets the contents of the system clipboard.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |data|String|yes|What needs to be set| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+Sample
+uni.setClipboardData({ data: &amp;#39;hello&amp;#39;, success: function () { console.log(&amp;#39;success&amp;#39;); } }); uni.getClipboardData(OBJECT)#Get the contents of the system clipboard.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/compass/compass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/compass/compass/</guid>
+      <description>uni.onCompassChange(CALLBACK)#Monitor compass data, frequency:5 beats per second,Interface calls automatically start listening,You can cancel listening by using uni.offCompassChange().
+CALLBACK Return Parameter
+   Parameter Type Description     direction Number The degree of the direction we&amp;rsquo;re facing    Tips
+ H5 Obtain disk information,It needs to be deployed on HTTPS service,Local Preview (localhost) can still use HTTP.  Sample
+uni.onCompassChange(function (res) { console.log(res.direction); }); uni.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/contact/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/contact/contact/</guid>
+      <description>uni.addPhoneContact(OBJECT)#Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |photoFilePath|String|no|Avatars local file path| |nickName|String|no|nick name| |lastName|String|no|family name| |middleName|String|no|middle name| |firstName|String|yes|name| |remark|String|no|remark| |mobilePhoneNumber|String|no|cell-phone number| |weChatNumber|String|no|WeChat ID| |addressCountry|String|no|Contact Address Country| |addressState|String|no|Contact Address Provinces| |addressCity|String|no|Contact Address City| |addressStreet|String|no|Contact Address Street| |addressPostalCode|String|no|Contact Address postal code| |organization|String|no|corporation| |title|String|no|position| |workFaxNumber|String|no|work fax| |workPhoneNumber|String|no|work phone| |hostNumber|String|no|company tel| |email|String|no|EMail| |url|String|no|website| |workAddressCountry|String|no|Work Address Country| |workAddressState|String|no|Work address province| |workAddressCity|String|no|Work Address City| |workAddressStreet|String|no|Work Address Street| |workAddressPostalCode|String|no|Work address postal code| |homeFaxNumber|String|no|Residential fax| |homePhoneNumber|String|no|Home phone| |homeAddressCountry|String|no|Residential address Country| |homeAddressState|String|no|Residential address province| |homeAddressCity|String|no|Residential address City| |homeAddressStreet|String|no|Residential address Street| |homeAddressPostalCode|String|no|Residential address postal code| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/ibeacon/ibeacon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/ibeacon/ibeacon/</guid>
+      <description>uni.onBeaconServiceChange(CALLBACK)#Monitor iBeacon service status change events
+CALLBACK Return parameter
+   Attribute Type Description     available boolean is the service currently available   discovering boolean is it currently in search state    uni.onBeaconUpdate(CALLBACK)#Monitor iBeacon device update events
+CALLBACK Return parameter
+   Attribute Type Description     beacons Array List of all iBeacon devices currently found    uni.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/newwork/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/newwork/network/</guid>
+      <description>uni.getNetworkType(OBJECT)#Get the network type.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |success|Function|yes|The interface call was successful,return network type| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+success Return parameter description
+   Attribute Description     networkType network type    The legal value of networkType</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/nfc/nfc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/nfc/nfc/</guid>
+      <description>NFC#Pay Tips to using conditional compile to call codes of different platforms.
+ App platform is implemented through Native.js.  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/phone/phone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/phone/phone/</guid>
+      <description>uni.makePhoneCall(OBJECT)#Make a phone call.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |phoneNumber|String|yes|The number to call| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+Sample
+uni.makePhoneCall({ phoneNumber: &amp;#39;114&amp;#39; //Just for a sample }); </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/systeminfo/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/systeminfo/info/</guid>
+      <description>uni.getSystemInfo(OBJECT)#Get System Information.
+OBJECT parameter description:
+   Argument Name Type Required Description     success Function yes A successful callback to the interface call   fail Function no The interface calls the callback function that failed   complete Function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    success Return parameter description:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/systemtheme/theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/systemtheme/theme/</guid>
+      <description>uni.onThemeChange(CALLBACK)#Listen for system theme changes.
+Sample
+uni.onThemeChange(function (res) { console.log(res.theme); }); Tips
+ In effect by CustomBase V3 compilation support only,reference manifest.json configuration  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/wi-fi/wifi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/wi-fi/wifi/</guid>
+      <description>Wi-Fi#Pay Tips to using conditional compile to call codes of different platforms.</description>
+    </item>
+    
+  </channel>
+</rss>

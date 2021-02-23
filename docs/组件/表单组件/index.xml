@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/</guid>
+      <description>Button#button.
+Property description
+   Attribute name Types of Defaults Description Effective time     size String default Button size    type String default Button style type    plain Boolean false Whether the button is hollowed out and the background color is transparent    disabled Boolean false Whether to disable    loading Boolean false Whether there is a loading icon before the name      Note1：button-hover default is {background-color: rgba(0, 0, 0, 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/</guid>
+      <description>checkbox-group#Multiple selector, composed of multiple checkboxes inside.
+Property description
+   Attribute name type Defaults Describe     @change EventHandle  &amp;lt;checkbox-group&amp;gt;The change of the selected item in the middle triggers the change event, detail = {value:[array of value of the selected checkbox]}    checkbox#Multiple selection items.
+Property description
+   Attribute name type Defaults Description     value String  &amp;lt;checkbox&amp;gt;Identify, select trigger &amp;lt;checkbox-group&amp;gt;the change event and carry &amp;lt;checkbox&amp;gt;the value.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/</guid>
+      <description>editor#Rich text editor, you can edit and mix pictures and text formats.
+In web development, you can use it contenteditableto implement content editing. But this is a dom API and cannot be used on non-H5 platforms. So the WeChat applet and Uni-app&amp;rsquo;s App-vue provide editorcomponents to achieve this function, and compatibility is also provided on the uni-app&amp;rsquo;s H5 platform. Technically speaking, this component is still running in the view layer webview, which also uses the contenteditablefunctions of the browser .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/</guid>
+      <description>form#Form, &amp;lt;switch&amp;gt; &amp;lt;input&amp;gt; &amp;lt;checkbox&amp;gt; &amp;lt;slider&amp;gt; &amp;lt;radio&amp;gt; &amp;lt;picker&amp;gt;submit the user input in the component .
+When you click &amp;lt;form&amp;gt;the form to submit formType of &amp;lt;button&amp;gt;the component, value value will be submitted in the form component, we need to add components to the form name as key.
+Property description
+   Attribute name Types of Description     report-submit Boolean Whether to return formId for sending template message   report-submit-timeout number Wait for a period of time (milliseconds) to confirm whether the formId is valid.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/</guid>
+      <description>input#Input box.
+Property description
+   Attribute name Types of Defaults Description     value String  The initial content of the input box   type String text input type   password Boolean false Is it a password type   placeholder String  Placeholder when the input box is empty   placeholder-style String  Specify the style of the placeholder   placeholder-class String &amp;ldquo;input-placeholder&amp;rdquo; Specify the style class of the placeholder.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/</guid>
+      <description>label#Used to improve the usability of form components, use the for attribute to find the corresponding id, or place the control under the label. When clicked, the corresponding control will be triggered.
+The priority of for is higher than internal controls. When there are multiple controls inside, the first control is triggered by default.
+Currently controls can be bound to include: &amp;lt;button&amp;gt;, &amp;lt;checkbox&amp;gt;, &amp;lt;radio&amp;gt;, &amp;lt;switch&amp;gt;.
+Property description</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/</guid>
+      <description>picker-view#Scroll selector embedded in the page.
+Compared with pickercomponents, it picker-viewhas more flexibility. When you need to customize the pop-up mode and UI performance, you often need to use it picker-view.
+Property description
+   Attribute name Types of Defaults     value Array＜Number＞ The numbers in the array indicate the number of items selected by picker-view-column in picker-view (the subscript starts from 0). When the number is greater than the length of the picker-view-column option, the last item is selected.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/</guid>
+      <description>picker#The scroll selector that pops up from the bottom. Supports five types of selectors, distinguished by mode, they are ordinary selector, multi-column selector, time selector, date selector, province/city selector, and the default is normal selector.
+Normal selector#mode = selectorProperty description
+   Attribute name Types of Defaults Description     range Array / Array＜Object＞ [] When mode is selector or multiSelector, range is valid   range-key String  When range is an Array, use range-key to specify the value of key in Object as the selector display content   value Number 0 The value of value indicates which number in the range is selected (the subscript starts from 0)   selector-type String auto UI type for large screens, support picker, select, auto, by default it is displayed in picker style on iPad and select style on PC   @change EventHandle  The change event is triggered when the value changes, event.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/</guid>
+      <description>radio-group#Single selector, a plurality of internal &amp;lt;radio&amp;gt;components. By putting multiple radiopackages under one radio-group, radiothe single selection of these is realized .
+Property description
+   Attribute name Types of Defaults Description     @change EventHandle  &amp;lt;radio-group&amp;gt; The change event is triggered when the selected item in the selection changes, event.detail = {value: the value of the selected item radio}    radio#Single-select items.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/</guid>
+      <description>slider#Slide the selector.
+Property description
+   Attribute name Types of Defaults Description     min Number 0 Minimum   max Number 100 Max   step Number 1 Step size, the value must be greater than 0 and divisible by (max-min)   disabled Boolean false Whether to disable   value Number 0 Current value   activeColor Color Different platforms, see below for details The line color of the selected part on the left side of the slider   backgroundColor Color # e9e9e9 The color of the background bar on the right side of the slider   block-size Number 28 The size of the slider, the value range is 12-28   block-color Color #ffffff The color of the slider   show-value Boolean false Whether to display the current value   @change EventHandle  Event triggered after completing a drag, event.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/</guid>
+      <description>switch#Switch selector.
+Property description
+   Attribute name Types of Defaults Description     checked Boolean false Whether selected   disabled Boolean false Whether to disable   type String switch Style, valid values: switch, checkbox   @change EventHandle  The change event is triggered when checked changes, event.detail={ value:checked}   color Color  The color of switch, same as the color of css    Example</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/</guid>
+      <description>textarea#Multi-line input box.
+Property description
+   Attribute name Types of Defaults Description     value String  The content of the input box   placeholder String  Placeholder when the input box is empty   placeholder-style String  Specify the style of the placeholder   disabled Boolean false Whether to disable   maxlength Number 140 Maximum input length, when set to -1, the maximum length is not limited   focus Boolean false Get focus   auto-height Boolean false Whether to increase automatically, style.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,19 +5,25 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="uni.getLocation(OBJECT)#Get the current geographic location and speed.
+In the WeChat Mini Program, after the user leaves the application, this interface cannot be called unless the background continuous positioning permission is requested; when the user clicks &ldquo;display at the top of the chat&rdquo;, this interface can continue to be called.
+OBJECT parameter description
+   parameter name Types Required Description     type String no The default is wgs84 return gps coordinates, gcj02 return to the country office coordinate measurement can be used to uni.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="uni.getLocation(OBJECT)#Get the current geographic location and speed.
+In the WeChat Mini Program, after the user leaves the application, this interface cannot be called unless the background continuous positioning permission is requested; when the user clicks &ldquo;display at the top of the chat&rdquo;, this interface can continue to be called.
+OBJECT parameter description
+   parameter name Types Required Description     type String no The default is wgs84 return gps coordinates, gcj02 return to the country office coordinate measurement can be used to uni." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Location | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -82,7 +88,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-b13a9910074d19666a6097979f2f91fd" class="toggle"  />
+    <input type="checkbox" id="section-b13a9910074d19666a6097979f2f91fd" class="toggle" checked />
     <label for="section-b13a9910074d19666a6097979f2f91fd" class="flex justify-between">
       <a  class="">位置</a>
       <span>▾</span>
@@ -125,7 +131,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" class="">Location</a>
+    <a href="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" class=" active">Location</a>
   
 
         </li>
@@ -2049,7 +2055,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Location</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2070,14 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unigetlocationobject">uni.getLocation(OBJECT)</a></li>
+            <li><a href="#unichooselocationobject">uni.chooseLocation(OBJECT)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2080,46 +2091,236 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
-<blockquote>
-<p>易才代付</p>
-</blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
-
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
-</article>
+  <article class="markdown"><h3 id="unigetlocationobject">
+  uni.getLocation(OBJECT)
+  <a class="anchor" href="#unigetlocationobject">#</a>
+</h3>
+<p>Get the current geographic location and speed.</p>
+<p>In the WeChat Mini Program, after the user leaves the application, this interface cannot be called unless the background continuous positioning permission is requested; when the user clicks &ldquo;display at the top of the chat&rdquo;, this interface can continue to be called.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter name</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The default is wgs84 return gps coordinates, gcj02 return to the country office coordinate measurement can be used to <code>uni.openLocation</code>coordinate, app platform high moral SDK only supports returning gcj02</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Callback function for successful interface call. For details, see the return parameter description.</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success return parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">Latitude, floating point number, range -90~90, negative number means south latitude</td>
+</tr>
+<tr>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">Longitude, floating point number, range -180~180, negative number means west longitude</td>
+</tr>
+<tr>
+<td style="text-align:left">speed</td>
+<td style="text-align:left">Speed, floating point number, unit m/s</td>
+</tr>
+<tr>
+<td style="text-align:left">accuracy</td>
+<td style="text-align:left">Position accuracy</td>
+</tr>
+<tr>
+<td style="text-align:left">altitude</td>
+<td style="text-align:left">Height, unit m</td>
+</tr>
+<tr>
+<td style="text-align:left">verticalAccuracy</td>
+<td style="text-align:left">Vertical accuracy, unit m (Android can’t get it, return 0)</td>
+</tr>
+<tr>
+<td style="text-align:left">horizontalAccuracy</td>
+<td style="text-align:left">Horizontal accuracy, unit m</td>
+</tr>
+</tbody>
+</table>
+<p><strong>address information description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">description</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">country</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">country</td>
+<td style="text-align:left">Such as &ldquo;China&rdquo;, if this information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">province</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Province name</td>
+<td style="text-align:left">Such as &ldquo;Beijing&rdquo;, if the information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">city</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">city name</td>
+<td style="text-align:left">Such as &ldquo;Beijing&rdquo;, if the information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">district</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">District (county) name</td>
+<td style="text-align:left">Such as &ldquo;Chaoyang District&rdquo;, if this information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">street</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Street information</td>
+<td style="text-align:left">Such as &ldquo;Jiuxianqiao Road&rdquo;, if this information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">streetNum</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Get street number information</td>
+<td style="text-align:left">Such as &ldquo;No. 3&rdquo;, if this information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">poiName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">POI information</td>
+<td style="text-align:left">Such as &ldquo;Electronic City. International Electronic Headquarters&rdquo;, if this information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">postalCode</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Postal code</td>
+<td style="text-align:left">Such as &ldquo;100016&rdquo;, if this information cannot be obtained, undefined will be returned</td>
+</tr>
+<tr>
+<td style="text-align:left">cityCode</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">City code</td>
+<td style="text-align:left">Such as &ldquo;010&rdquo;, if this information cannot be obtained, undefined will be returned</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">getLocation</span>({
+	<span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;wgs84&#39;</span>,
+	<span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">res</span>) {
+		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Longitude of current position:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">longitude</span>);
+		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Longitude of current position:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">latitude</span>);
+	}
+});
+</code></pre></div><h3 id="unichooselocationobject">
+  uni.chooseLocation(OBJECT)
+  <a class="anchor" href="#unichooselocationobject">#</a>
+</h3>
+<p>Open the map and select a location.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter name</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Callback function for successful interface call. For details, see the return parameter description.</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure (triggered when the location fails to obtain, the user cancels, etc.)</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success return parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">Location name</td>
+</tr>
+<tr>
+<td style="text-align:left">address</td>
+<td style="text-align:left">Address</td>
+</tr>
+<tr>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">Latitude, floating point number, range -90~90, negative number means south latitude, use gcj02 China National Surveying Bureau coordinate system.</td>
+</tr>
+<tr>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">Longitude, floating point number, range -180~180, negative number means west longitude, use gcj02 China National Surveying Bureau coordinate system.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">chooseLocation</span>({
+	<span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">res</span>) {
+		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Location Name:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">name</span>);
+		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Detailed address:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">address</span>);
+		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Latitude:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">latitude</span>);
+		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Longitude:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">longitude</span>);
+	}
+});
+</code></pre></div></article>
  
       
 
@@ -2153,9 +2354,14 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unigetlocationobject">uni.getLocation(OBJECT)</a></li>
+            <li><a href="#unichooselocationobject">uni.chooseLocation(OBJECT)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subnvue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subnvues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subnvue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subnvues/</guid>
+      <description>subNvue is the native sub-form of the vue page. The native interface rendered by weex is used as the sub-form of the vue page to overlay the page. It is not a full-screen page, it provides a more powerful and flexible solution for the hierarchical coverage and native interface customization in the vue page of the App platform. It is not a component, but a native child form.
+ subNvue is supported since 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/</guid>
+      <description>getCurrentPages()#getCurrentPages() The function is used to obtain the instance of the current page stack, which is given in the order of the stack in the form of an array, the first element is the home page, and the last element is the current page.
+Note: It getCurrentPages() is only used to display the page stack. Please do not modify the page stack to avoid causing page status errors.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</guid>
+      <description>uni.$emit(eventName,OBJECT)#To trigger a global custom event, additional parameters will be passed to the listener callback function.
+   Attributes Types description     eventName String Event name   OBJECT Object Additional parameters carried by the trigger event    Code example
+uni.$emit(&amp;#39;update&amp;#39;,{msg:&amp;#39;Page updates&amp;#39;}) uni.$on(eventName,callback)#Monitor global custom events, the event uni.$emitis triggered, the callback function receives an incoming event trigger function parameters.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/</guid>
+      <description>uni.showToast(OBJECT)#Displays a message prompt box.
+**OBJECT Parameter description **
+   parameter name Types Required Description     title String Yes The length of the prompt is related to the value of icon.   icon String no Icon, effective value see below.   duration Number no The prompt delay time, in milliseconds, default: 1500   success Function no Interface calls a successful callback function   fail Function no Interface calls a failed callback function   complete Function no Callback function at the end of interface call (executed on success or failure)    Icon Value description</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/</guid>
+      <description>onPullDownRefresh#Define the onPullDownRefresh processing function in js (at the same level as onLoad and other life cycle functions) to monitor the pull-down refresh event of the page user.
+ Need pages.json, pages node of the current page to find, and in styleopen option enablePullDownRefresh. After processing the data refresh, uni.stopPullDownRefreshyou can stop the pull-down refresh of the current page.  uni.startPullDownRefresh(OBJECT)#The pull-down refresh starts, and the pull-down refresh animation is triggered after the call.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/</guid>
+      <description>uni.showToast(OBJECT)#A message box is displayed.
+OBJECT parameter description
+   parameter Types of Required Description     title String Yes The length of the prompt content is related to the icon value.   icon String no Icon, the effective value is detailed in the description below.   image String no The local path of the custom icon   mask Boolean no Whether to display a transparent mask to prevent touch penetration, default: false   duration Number no Prompt delay time, in milliseconds, default: 1500   position String no Light plain text display position, only fill the effective value of titleproperty to take effect, the effective value see note below.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/</guid>
+      <description>uni.createAnimation(OBJECT)
+Create an animation instance animation . Call the method of the instance to describe the animation. Finally, the animation data is exported to the animation property of the component through the export method of the animation instance.
+note:
+ The export method will clear the previous animation operation after each call  OBJECT parameter description:
+   parameter Types of Required Defaults Description     duration Integer no 400 Animation duration, unit ms   timingFunction String no &amp;ldquo;linear&amp;rdquo; Define the effect of the animation   delay Integer no 0 Animation delay time, unit ms   transformOrigin String no &amp;ldquo;50% 50% 0&amp;rdquo; Set transform-origin    Valid values of timingFunction:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/</guid>
+      <description>The MediaQueryObserver object is used to monitor changes in the media query status of the page, such as whether the width and height of the interface are within a specified range.
+uni.createMediaQueryObserver([this])#Creates and returns an MediaQueryObserverobject instance.
+List of methods of the MediaQueryObserver object#   method Description     MediaQueryObserver.observe (Object descriptor, function callback) Start monitoring the changes of the page media query   MediaQueryObserver.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/</guid>
+      <description>uni.loadFontFace(Object object)#Load web fonts dynamically, the file address must be the download type.
+note:
+ Introduce Chinese fonts, errors will occur when the volume is too large, it is recommended to extract part of the Chinese, reduce the volume, or replace it with pictures Native components such as canvas do not support fonts added using the interface The tool prompts Faild to load font can be ignored  Parameter Description</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/</guid>
+      <description>uni.pageScrollTo(OBJECT)#Scroll the page to the target position.
+OBJECT parameter description
+   parameter name Types of Required Description     scrollTop String Yes Scroll to the target position of the page (in px)   duration Number no The duration of the scroll animation, the default is 300ms, the unit is ms   success function no Callback function for successful interface call   fail function no Callback function for interface call failure   complete function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    selector syntax selector is similar to CSS selector, but only supports the following syntax.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/</guid>
+      <description>uni.onWindowResize(CALLBACK)#Listen to the window size change event
+CALLBACK parameter description
+   Attributes Types of Description     size Object The size of the changed window, in px, {windowWidth,windowHeight}    Code example
+uni.onWindowResize((res) =&amp;gt; { console.log(&amp;#39;Changed the width of window=&amp;#39; + res.size.windowWidth) console.log(&amp;#39;Changed the height of window=&amp;#39; + res.size.windowHeight) }) TIPS
+ If the App side sets the soft keyboard pop-up mode to adjustResize, this event will be triggered when the keyboard pops up.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/</guid>
+      <description>uni.setBackgroundColor(OBJECT)#Dynamically set the background color of the window.
+Parameter Description
+   Attributes Types of Defaults Required Description     backgroundColor String  no The background color of the window, must be a hexadecimal color value   success Function  no Callback function for successful interface call   fail Function  no Callback function for interface call failure   complete Function  no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    Code example</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nexttick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nexttick/</guid>
+      <description>nextTick(function callback)#Use in custom components in mini programs, such as wxcomponents. Delay a part of the operation to the next time slice before execution. (Similar to setTimeout).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/</guid>
+      <description>uni.createSelectorQuery()#It returns an SelectorQueryobject instance. You may be used in this example selectand other methods to select a node, and using boundingClientRecta method such as selection information to be queried.
+Tips:
+ Use uni.createSelectorQuery()needs in the life cycle mountedbe called later. Custom components compile mode (default mode), requires the use of selectorQuery.inthe method.  SelectorQuery#Object to query node information
+selectorQuery.in(component)#The selector changes the selection for the custom components componentwithin, a return SelectorQueryobject instance.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/</guid>
+      <description>The Node Layout Intersection State API can be used to monitor the intersection state of two or more component nodes in the layout position. This set of APIs can often be used to infer whether certain nodes can be seen by users and what percentage of them can be seen by users.
+uni.createIntersectionObserver([this], [options])#Creates and returns an IntersectionObserverobject instance.
+The optional parameters of options are:
+   Field name Types of Description     thresholds Array A numeric array containing all thresholds.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AEtabbar/tabbar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AEtabbar/tabbar/</guid>
+      <description>uni.setTabBarItem(OBJECT)#Dynamically set the content of a tabBar
+OBJECT parameter description:
+   Attributes Types of Defaults Required Description     index number  Yes Which item of the tabBar, counting from the left   text String  no button text on tab   iconPath String  no The image path, the icon size is limited to 40kb, and the recommended size is 81px * 81px.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/</guid>
+      <description>uni.setNavigationBarTitle(OBJECT)#Dynamically set the title of the current page.
+OBJECT parameter description
+   parameter Types of Required Description     title String Yes page title   success Function no Callback function for successful interface call   fail Function no Callback function for interface call failure   complete Function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    Example</description>
+    </item>
+    
+  </channel>
+</rss>

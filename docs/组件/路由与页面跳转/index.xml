@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/</guid>
+      <description>custom-tab-bar#Custom tabBar component.
+to enhance performance, pages.jsonin a fixed configuration native tabBar.
+At the same time, has more flexible requirements for the position and style of the tabBar. As a first-level navigation, the tabBar is more often at the top of the PC web page rather than the bottom.
+Custom tabBar components should be born, it still reads pages.jsontabBar information in configuration, but this component can customize its placement, the flexibility to configure various css.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/</guid>
+      <description>navigator#Page jump.
+This component is similar to the component in HTML &amp;lt;a&amp;gt;, but it can only jump to local pages. The target page must be registered in pages.json.
+The function of this component has API method, see also: API&amp;gt;Routing and page jump&amp;gt;router.md
+Property description
+   Attribute name Types of Defaults Description Platform difference description     url String  Hoplinks within the application, is a relative or absolute path, such as: &amp;ldquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

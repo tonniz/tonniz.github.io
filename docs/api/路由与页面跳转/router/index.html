@@ -5,19 +5,23 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="uni.navigateTo(OBJECT)#Keep the current page, jump to a page in the app, and use uni.navigateBackit to return to the original page.
+OBJECT parameter description
+   parameter Types of Required Defaults Description Platform difference description     url String Yes  The path of the non-tabBar page in the application that needs to be redirected. Parameters can be added after the path. The parameter and the path are separated by ?">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="uni.navigateTo(OBJECT)#Keep the current page, jump to a page in the app, and use uni.navigateBackit to return to the original page.
+OBJECT parameter description
+   parameter Types of Required Defaults Description Platform difference description     url String Yes  The path of the non-tabBar page in the application that needs to be redirected. Parameters can be added after the path. The parameter and the path are separated by ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/api/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Router | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -921,7 +925,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-dda0c1f8b541fdb05aba4ff8986a42de" class="toggle"  />
+    <input type="checkbox" id="section-dda0c1f8b541fdb05aba4ff8986a42de" class="toggle" checked />
     <label for="section-dda0c1f8b541fdb05aba4ff8986a42de" class="flex justify-between">
       <a  class="">路由与页面跳转</a>
       <span>▾</span>
@@ -938,7 +942,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/api/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" class="">Router</a>
+    <a href="http://tonniz.github.io/docs/api/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" class=" active">Router</a>
   
 
         </li>
@@ -2049,7 +2053,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Router</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2068,13 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2080,45 +2088,549 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
+  <article class="markdown"><h4 id="uninavigatetoobject">
+  uni.navigateTo(OBJECT)
+  <a class="anchor" href="#uninavigatetoobject">#</a>
+</h4>
+<p>Keep the current page, jump to a page in the app, and use <code>uni.navigateBack</code>it to return to the original page.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Defaults</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Platform difference description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">url</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">The path of the non-tabBar page in the application that needs to be redirected. Parameters can be added after the path. The parameter and the path are separated by ?, the parameter key and parameter value are connected by =, and different parameters are separated by &amp;; for example,&lsquo;path?key=value&amp;key2=value2&rsquo;, path is the path of the next page, and the onLoad function of the next page can be used Get passed parameters</td>
+<td style="text-align:left">:-</td>
+</tr>
+<tr>
+<td style="text-align:left">animationType</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">pop-in</td>
+<td style="text-align:left">The animation effect of the window display, see: Window animation</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">animationDuration</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">Duration of window animation, unit is ms</td>
+<td style="text-align:left">App</td>
+</tr>
+<tr>
+<td style="text-align:left">events</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">The communication interface between pages is used to monitor the data sent from the opened page to the current page. 2.8.9+ started to support.</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Callback function for successful interface call</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Callback function for interface call failure</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+<td style="text-align:left"> </td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.success callback function</strong></p>
+<p><strong>parameter</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">eventChannel</td>
+<td style="text-align:left">EventChannel</td>
+<td style="text-align:left">Communicate with the opened page</td>
+</tr>
+</tbody>
+</table>
+<p>**   <strong>Example</strong>  **</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//On the start page, jump to the test.vue page and pass the parameters
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">navigateTo</span>({
+	<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;test?id=1&amp;name=uniapp&#39;</span>
+});
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Accept the parameters on the test.vue page
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+	<span style="color:#a6e22e">onLoad</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">option</span>) { <span style="color:#75715e">//Option is of type Object and serializes the parameters passed on the previous page
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">option</span>.<span style="color:#a6e22e">id</span>); <span style="color:#75715e">//Print out the parameters passed on the previous page.
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">option</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">//Print out the parameters passed on the previous page.
+</span><span style="color:#75715e"></span>	}
+}
+</code></pre></div><pre><code>// 2.8.9+ support
+uni.navigateTo({
+  url: 'pages/test?id=1',
+  events: {
+    // Adds a listener for the specified event that fetches the data passed to the       current page by the opened page
+    acceptDataFromOpenedPage: function(data) {
+      console.log(data)
+    },
+    someEvent: function(data) {
+      console.log(data)
+    }
+    ...
+  },
+  success: function(res) {
+    // Data is sent to the opened page via EventChannel
+    res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
+  }
+})
+
+// Uni. navigate To target page pages/test.vue
+onLoad: function(option) {
+  console.log(option.query)
+  const eventChannel = this.getOpenerEventChannel()
+  eventChannel.emit('acceptDataFromOpenedPage', {data: 'test'});
+  eventChannel.emit('someEvent', {data: 'test'});
+  // Listens for the AcceptDataFromEnerPage event to retrieve the data from the previous page sent to the current page via EventChannel
+  eventChannel.on('acceptDataFromOpenerPage', function(data) {
+    console.log(data)
+  })
+}
+</code></pre><p>The URL has a length limit. If the string is too long, it will fail to pass. You can use form communication, global variables , or <code>encodeURIComponent</code>other methods to solve it. The following is <code>encodeURIComponent</code>an example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">navigator</span> <span style="color:#a6e22e">:url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#39;/pages/test/test?item=&#39;+ encodeURIComponent(JSON.stringify(item))&#34;</span>&gt;&lt;/<span style="color:#f92672">navigator</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Accept the parameters on the test.vue page
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">onLoad</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">option</span>) {
+	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(decodeURIComponent(<span style="color:#a6e22e">option</span>.<span style="color:#a6e22e">item</span>));
+}
+</code></pre></div><p><strong>note:</strong></p>
+<ul>
+<li>There are hierarchical restrictions on the page jump path, and you cannot jump to new pages without restrictions</li>
+<li>Jump to tabBar page can only use switchTab to jump</li>
+<li>The target page of the routing API must be the vue page registered in pages.json. If you want to open the web url, you can use plus.runtime.openURL or web-view component on the App platform ; window.open for the H5 platform; web-view component for the applet platform (url needs to be in the whitelist of the applet). There is a component ulink.vue in hello uni-app that has encapsulated multiple terminals, you can refer to it.</li>
+</ul>
+<h4 id="uniredirecttoobject">
+  uni.redirectTo(OBJECT)
+  <a class="anchor" href="#uniredirecttoobject">#</a>
+</h4>
+<p>Close the current page and jump to a page in the app.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Parameters</strong></th>
+<th style="text-align:left"><strong>Type</strong></th>
+<th style="text-align:left"><strong>Required</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">url</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The path of the non-tabBar page in the application that needs to be jumped. Parameters can be included after the path. Use? To separate parameter and path, parameter key and parameter value are connected with =, and different parameters are separated by &amp;; such as&rsquo;path?key=value&amp;key2=value2'</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p>** <strong>Example</strong> **</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">redirectTo</span>({
+	<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;test?id=1&#39;</span>
+});
+</code></pre></div><p><strong>note:</strong></p>
+<ul>
+<li>Jump to tabBar page can only use switchTab to jump</li>
+</ul>
+<h4 id="unirelaunchobject">
+  uni.reLaunch(OBJECT)
+  <a class="anchor" href="#unirelaunchobject">#</a>
+</h4>
+<p>Close all pages and open a page within the app.</p>
+<p><strong>Note: If</strong> uni.preloadPage (OBJECT) is called, it does not close, triggering only the lifecycle <code>onHide</code></p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">url</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The path of the in-app page that needs to be jumped to, the path can be followed by parameters. Use? To separate the parameter and the path, the parameter key and the parameter value are connected with =, and the different parameters are separated by &amp;; for example,&lsquo;path?key=value&amp;key2=value2&rsquo;, if the redirected page path is a tabBar page, no parameters</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">reLaunch</span>({
+	<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;test?id=1&#39;</span>
+});
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+	<span style="color:#a6e22e">onLoad</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">option</span>) {
+		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">option</span>.<span style="color:#a6e22e">id</span>);
+	}
+}
+</code></pre></div><p>Tips：</p>
+<ul>
+<li>The <code>uni.reLaunch</code>previous page stack will be destroyed after the H5 end is called , but the previous history of the browser cannot be cleared, and it can <code>navigateBack</code>not be returned at this time . If there is a history, you <code>history.back()</code>can still navigate to other history of the browser by clicking the browser&rsquo;s return button or calling .</li>
+</ul>
+<h4 id="uniswitchtabobject">
+  uni.switchTab(OBJECT)
+  <a class="anchor" href="#uniswitchtabobject">#</a>
+</h4>
+<p>Jump to the tabBar page and close all other non-tabBar pages.</p>
+<p><strong>Note: If</strong> uni.preloadPage (OBJECT) is called, it does not close, triggering only the lifecycle <code>onHide</code></p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">url</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The path of the tabBar page to be jumped to (the page defined in the tabBar field of pages.json), no parameters can be included after the path</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<p>pages.json</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#e6db74">&#34;tabBar&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;list&#34;</span><span style="color:#f92672">:</span> [{
+      <span style="color:#e6db74">&#34;pagePath&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pages/index/index&#34;</span>,
+      <span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Home page&#34;</span>
+    },{
+      <span style="color:#e6db74">&#34;pagePath&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pages/other/other&#34;</span>,
+      <span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;other&#34;</span>
+    }]
+  }
+}
+</code></pre></div><p>other.vue</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">switchTab</span>({
+	<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/pages/index/index&#39;</span>
+});
+</code></pre></div><h4 id="uninavigatebackobject">
+  uni.navigateBack(OBJECT)
+  <a class="anchor" href="#uninavigatebackobject">#</a>
+</h4>
+<p>Close the current page and return to the previous page or multi-level pages. Can <code>getCurrentPages()</code>get the current stack of pages, the decision needs to return several layers.</p>
+<p><strong>OBJECT parameter description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Defaults</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Platform difference description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">delta</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">The number of pages returned, if delta is greater than the number of existing pages, return to the home page.</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">animationType</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">pop-out</td>
+<td style="text-align:left">The animation effect of window closing, see: window animation</td>
+<td style="text-align:left">App</td>
+</tr>
+<tr>
+<td style="text-align:left">animationDuration</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">The duration of the window closing animation, in ms</td>
+<td style="text-align:left">App</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Note: When you call the navigateTo jump, the page that called the method is added to the stack, whereas the redirectTo method is not. See the sample code below
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// This is page A
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">navigateTo</span>({
+	<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;B?id=1&#39;</span>
+});
+
+<span style="color:#75715e">// This is page B
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">navigateTo</span>({
+	<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;C?id=1&#39;</span>
+});
+
+<span style="color:#75715e">// NavigateBack in page C returns to page A
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">navigateBack</span>({
+	<span style="color:#a6e22e">delta</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+});
+</code></pre></div><h4 id="eventchannelevent-channel">
+  EventChannel@event-channel
+  <a class="anchor" href="#eventchannelevent-channel">#</a>
+</h4>
+<p>2.8.9+ Support event communication channel between pages</p>
+<p><strong>Method</strong></p>
+<h4 id="eventchannelemitstring-eventname-any-args">
+  EventChannel.emit(string eventName, any args)
+  <a class="anchor" href="#eventchannelemitstring-eventname-any-args">#</a>
+</h4>
+<p>Trigger an event</p>
+<p>string eventName event name</p>
+<p>any args event parameters</p>
+<h4 id="eventchanneloffstring-eventname-function-fn">
+  EventChannel.off(string eventName, function fn)
+  <a class="anchor" href="#eventchanneloffstring-eventname-function-fn">#</a>
+</h4>
+<p>Cancel listening for an event. When the second parameter is given, only the given listening function is cancelled, otherwise all listening functions are cancelled</p>
+<p>string eventName event name</p>
+<p>function fn event monitoring function</p>
+<p>Parameters any args trigger event parameters</p>
+<h4 id="eventchannelonstring-eventname-function-fn">
+  EventChannel.on(string eventName, function fn)
+  <a class="anchor" href="#eventchannelonstring-eventname-function-fn">#</a>
+</h4>
+<p>Keep listening for an event</p>
+<p>string eventName event name</p>
+<p>function fn event monitoring function</p>
+<p>Parameters any args trigger event parameters</p>
+<h4 id="eventchanneloncestring-eventname-function-fn">
+  EventChannel.once(string eventName, function fn)
+  <a class="anchor" href="#eventchanneloncestring-eventname-function-fn">#</a>
+</h4>
+<p>Listen to an event once, and fail when triggered</p>
+<p>string eventName event name</p>
+<p>function fn event monitoring function</p>
+<p>Parameters any args trigger event parameters</p>
+<p>Tips：</p>
+<ul>
+<li><code>navigateTo</code>, <code>redirectTo</code>Only non-tabBar pages can be opened.</li>
+<li><code>switchTab</code>You can only open <code>tabBar</code>the page.</li>
+<li><code>reLaunch</code> Any page can be opened.</li>
+<li>Bottom of the page <code>tabBar</code>by the page decision, that is, as long as it is defined as <code>tabBar</code>a page, at the bottom there <code>tabBar</code>.</li>
+<li>You can not <code>App.vue</code>be the page jump inside.</li>
+<li>After the H5 page is refreshed, the page stack will disappear and you <code>navigateBack</code>cannot return at this time . If you must return, you can use <code>history.back()</code>other history records to navigate to the browser.</li>
+</ul>
+<p><strong>References</strong></p>
+<ul>
+<li>Page routing interception and management, there are many packaged tools in the plug-in market, search routing</li>
+</ul>
+<h4 id="window-animation">
+  Window animation
+  <a class="anchor" href="#window-animation">#</a>
+</h4>
 <blockquote>
-<p>易才代付</p>
+<p>This API is only supported by App. The applet itself does not support custom animations. H5&rsquo;s window animation can use the conventional single-page animation processing scheme, see the example of single-page animation under H5</p>
 </blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
-
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
+<p>The display/close animation of the window is supported in APIs, components, pages.json, priority: .<code>API = Component &gt; pages.json</code></p>
+<h5 id="api">
+  API
+  <a class="anchor" href="#api">#</a>
+</h5>
+<p>A valid routing API</p>
+<ul>
+<li>navigateTo</li>
+<li>navigateBack</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">navigateTo</span>({
+	<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;../test/test&#39;</span>,
+	<span style="color:#a6e22e">animationType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pop-in&#39;</span>,
+	<span style="color:#a6e22e">animationDuration</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>
+});
+<span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">navigateBack</span>({
+	<span style="color:#a6e22e">delta</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+	<span style="color:#a6e22e">animationType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pop-out&#39;</span>,
+	<span style="color:#a6e22e">animationDuration</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>
+});
+</code></pre></div><h5 id="component">
+  Component
+  <a class="anchor" href="#component">#</a>
+</h5>
+<p>Open-type valid value</p>
+<ul>
+<li>navigateTo</li>
+<li>navigateBack</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">navigator</span> <span style="color:#a6e22e">animation-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pop-in&#34;</span> <span style="color:#a6e22e">animation-duration</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;300&#34;</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../test/test&#34;</span>&gt;navigator&lt;/<span style="color:#f92672">navigator</span>&gt;
+&lt;<span style="color:#f92672">navigator</span> <span style="color:#a6e22e">animation-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pop-out&#34;</span> <span style="color:#a6e22e">animation-duration</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;300&#34;</span> <span style="color:#a6e22e">open-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigateBack&#34;</span> &gt;navigator&lt;/<span style="color:#f92672">navigator</span>&gt;
+</code></pre></div><h5 id="pagesjson">
+  pages.json
+  <a class="anchor" href="#pagesjson">#</a>
+</h5>
+<p>The animation of the window display is configured in pages.json</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;style&#34;</span><span style="color:#f92672">:</span> {
+	<span style="color:#e6db74">&#34;app-plus&#34;</span><span style="color:#f92672">:</span> {
+		<span style="color:#e6db74">&#34;animationType&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fade-in&#34;</span>,
+		<span style="color:#e6db74">&#34;animationDuration&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">300</span>
+	}
+}
+</code></pre></div><p>Show animation and turn off animation, there will be the default corresponding rules. However, if the type of animation that closes the window is configured through an API or component, the default type is not used.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>The animation is displayed</strong></th>
+<th style="text-align:left"><strong>Turn off the animation</strong></th>
+<th style="text-align:left"><strong>Show animation description (turn off animation to the opposite)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">slide-in-right</td>
+<td style="text-align:left">slide-out-right</td>
+<td style="text-align:left">The new form enters from the right</td>
+</tr>
+<tr>
+<td style="text-align:left">slide-in-left</td>
+<td style="text-align:left">slide-out-left</td>
+<td style="text-align:left">The new form enters from the left</td>
+</tr>
+<tr>
+<td style="text-align:left">slide-in-top</td>
+<td style="text-align:left">slide-out-top</td>
+<td style="text-align:left">The new form enters from the top</td>
+</tr>
+<tr>
+<td style="text-align:left">slide-in-bottom</td>
+<td style="text-align:left">slide-out-bottom</td>
+<td style="text-align:left">The new form enters from the bottom</td>
+</tr>
+<tr>
+<td style="text-align:left">pop-in</td>
+<td style="text-align:left">pop-out</td>
+<td style="text-align:left">The new form enters from the left and the old form is squeezed out</td>
+</tr>
+<tr>
+<td style="text-align:left">fade-in</td>
+<td style="text-align:left">fade-out</td>
+<td style="text-align:left">New forms are displayed gradually from transparent to opaque</td>
+</tr>
+<tr>
+<td style="text-align:left">zoom-out</td>
+<td style="text-align:left">zoom-in</td>
+<td style="text-align:left">The new form scales from small to large</td>
+</tr>
+<tr>
+<td style="text-align:left">zoom-fade-out</td>
+<td style="text-align:left">zoom-fade-in</td>
+<td style="text-align:left">New forms zoom in from small to large and appear from transparent to opaque</td>
+</tr>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">none</td>
+<td style="text-align:left">No animation</td>
+</tr>
+</tbody>
+</table>
+<p>For detailed window animation instructions, please refer to:</p>
+<ul>
+<li>Animation of the window:AnimationTypeShow</li>
+<li>Animation of window closure:AnimationTypeClose</li>
+</ul>
+<p><strong>note</strong></p>
+<ul>
+<li>For pure nvue projects (render is native), the default entry animation of the window animation is popin, and the return is pop-out. If you want to modify the animation type, you can only modify it through uni.navigateTo API, and the animation type configuration in the component or pages.json is invalid</li>
+<li>Non-pure nvue project, App side window animation, default entry animation is slider-in-right, default return animation is pop-out</li>
+<li>When uni-app H5 is embedded in webview, use uni.webView.navigateTo&hellip; to jump to the page</li>
+</ul>
 </article>
  
       
@@ -2153,9 +2665,13 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

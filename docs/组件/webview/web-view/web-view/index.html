@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="web-view#web-view It is a web browser component that can be used to host a web page container, which will automatically fill the entire page (nvue use requires manual specification of width and height).
+ For each applet platform, the URL loaded by the web-view needs to configure the domain name whitelist in the background, including other URLs embedded in the iframe again.
+ Property description
+   Attribute name Types of Description Platform difference description     src String webview links to web pages    allow String Used to specify the characteristic strategy for the iframe    sandbox String This attribute enables some additional restrictions on the content rendered in the iframe frame.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="web-view#web-view It is a web browser component that can be used to host a web page container, which will automatically fill the entire page (nvue use requires manual specification of width and height).
+ For each applet platform, the URL loaded by the web-view needs to configure the domain name whitelist in the background, including other URLs embedded in the iframe again.
+ Property description
+   Attribute name Types of Description Platform difference description     src String webview links to web pages    allow String Used to specify the characteristic strategy for the iframe    sandbox String This attribute enables some additional restrictions on the content rendered in the iframe frame." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Web View | MR MiniApp</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>MR MiniApp</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>API</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b13a9910074d19666a6097979f2f91fd" class="toggle"  />
+    <label for="section-b13a9910074d19666a6097979f2f91fd" class="flex justify-between">
+      <a  class="">位置</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E6%9F%A5%E7%9C%8B%E4%BD%8D%E7%BD%AE/open-location/" class="">Open Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" class="">Location</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4022b02b2db2e74ebad1e167f09570b4" class="toggle"  />
+    <label for="section-4022b02b2db2e74ebad1e167f09570b4" class="flex justify-between">
+      <a  class="">基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/" class="">Application</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ee929375efadada16220c4322cfcd126" class="toggle"  />
+    <label for="section-ee929375efadada16220c4322cfcd126" class="flex justify-between">
+      <a  class="">媒体</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/" class="">Editor Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/" class="">Record Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/" class="">Live Player Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/" class="">Camera Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/" class="">Background Audio Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/" class="">Video Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" class="">Media Container</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/" class="">Audio Context</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c25429eaae0759bbb274c795f3ebe70" class="toggle"  />
+    <label for="section-7c25429eaae0759bbb274c795f3ebe70" class="flex justify-between">
+      <a  class="">数据缓存</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/" class="">Storage</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b515129697bc5e2772a39bfb84ec20d7" class="toggle"  />
+    <label for="section-b515129697bc5e2772a39bfb84ec20d7" class="flex justify-between">
+      <a  class="">文件</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d22b47d69d5bf3fad5b3a81accb75d7a" class="toggle"  />
+    <label for="section-d22b47d69d5bf3fad5b3a81accb75d7a" class="flex justify-between">
+      <a  class="">界面</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/" class="">Pulldown</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/" class="">Media Query Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/" class="">Font</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/" class="">Scroll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/" class="">Bgcolor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nexttick/" class="">Next Tick</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/" class="">Nodes Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/" class="">Intersection Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AEtabbar/tabbar/" class="">Tabbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/" class="">Navigationbar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-56447ee843f6a25e728631087c343d54" class="toggle"  />
+    <label for="section-56447ee843f6a25e728631087c343d54" class="flex justify-between">
+      <a  class="">网络</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/" class="">Network File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/" class="">Request</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9f38acd593e541b6ade3bb0fc2f3f3d1" class="toggle"  />
+    <label for="section-9f38acd593e541b6ade3bb0fc2f3f3d1" class="flex justify-between">
+      <a  class="">设备</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" class="">Accelerometer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/barcode/barcode/" class="">Barcode</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/batteryinfo/batteryinfo/" class="">Battery Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/ble/ble/" class="">Ble</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/" class="">Bluetooth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/brightness/brightness/" class="">Brightness</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/clipboard/clipboard/" class="">Clipboard</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/compass/compass/" class="">Compass</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/contact/contact/" class="">Contact</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/ibeacon/ibeacon/" class="">Ibeacon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/newwork/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/nfc/nfc/" class="">Nfc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/phone/phone/" class="">Phone</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/systeminfo/info/" class="">Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/systemtheme/theme/" class="">Theme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%AE%BE%E5%A4%87/wi-fi/wifi/" class="">Wifi</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dda0c1f8b541fdb05aba4ff8986a42de" class="toggle"  />
+    <label for="section-dda0c1f8b541fdb05aba4ff8986a42de" class="flex justify-between">
+      <a  class="">路由与页面跳转</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9c01ff340d57d663f197e2a64574311a" class="toggle"  />
+    <label for="section-9c01ff340d57d663f197e2a64574311a" class="flex justify-between">
+      <a  class="">键盘</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E9%94%AE%E7%9B%98/key/" class="">Key</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d45056eb37e7319c6b773b3c932e691" class="toggle"  />
+    <label for="section-6d45056eb37e7319c6b773b3c932e691" class="flex justify-between">
+      <a  class="">页面和窗体</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subnvue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subnvues/" class="">Sub Nvues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/api/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>架构</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a049cd745287998359886ef19cf6be67" class="toggle"  />
+    <label for="section-a049cd745287998359886ef19cf6be67" class="flex justify-between">
+      <a  class="">Vue教程</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/api/vue-api/" class="">Vue API</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/" class="">Vue Basics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/" class="">Vue Components</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f66d6a9144fa49d179687aa87ff1ae24" class="toggle"  />
+    <label for="section-f66d6a9144fa49d179687aa87ff1ae24" class="flex justify-between">
+      <a  class="">框架简介</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/frame/" class="">Frame</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>框架</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-07ab1221dc146ff1ba21ebbc19800268" class="toggle"  />
+    <label for="section-07ab1221dc146ff1ba21ebbc19800268" class="flex justify-between">
+      <a  class="">框架接口</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38c1653e5e3826b85c1f2bdb1f455def" class="toggle"  />
+    <label for="section-38c1653e5e3826b85c1f2bdb1f455def" class="flex justify-between">
+      <a  class="">配置</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/app.vue/app/" class="">App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/" class="">Main</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/" class="">Manifest</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/" class="">Pages</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/" class="">Uni Scss</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/" class="">Vue Config</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>组件</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-af81226e1da28475831af89717cba19e" class="toggle" checked />
+    <label for="section-af81226e1da28475831af89717cba19e" class="flex justify-between">
+      <a  class="">Webview</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/" class=" active">Web View</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-46a489929b7e31aa77df6165d986e5ac" class="toggle"  />
+    <label for="section-46a489929b7e31aa77df6165d986e5ac" class="flex justify-between">
+      <a  class="">地图</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1ddd43c2c32bce99c608b406e5e0bceb" class="toggle"  />
+    <label for="section-1ddd43c2c32bce99c608b406e5e0bceb" class="flex justify-between">
+      <a  class="">基础内容</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/" class="">Icon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/" class="">Progress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/" class="">Rich Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/" class="">Text</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96b7efc3e2e98da8b3f00706c6b85a0f" class="toggle"  />
+    <label for="section-96b7efc3e2e98da8b3f00706c6b85a0f" class="flex justify-between">
+      <a  class="">媒体组件</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/" class="">Audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b59fe0717594eb116818d49b286a34d7" class="toggle"  />
+    <label for="section-b59fe0717594eb116818d49b286a34d7" class="flex justify-between">
+      <a  class="">导航类组件</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/" class="">Navigation Bar</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-22be46d54acf7207f8310ab94f68a986" class="toggle"  />
+    <label for="section-22be46d54acf7207f8310ab94f68a986" class="flex justify-between">
+      <a  class="">画布</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E7%94%BB%E5%B8%83/canvas/canvas/" class="">Canvas</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f602e61b476c4e21125c04e1ddc8af16" class="toggle"  />
+    <label for="section-f602e61b476c4e21125c04e1ddc8af16" class="flex justify-between">
+      <a  class="">表单组件</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/" class="">Button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/" class="">Checkbox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/" class="">Editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/" class="">Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/" class="">Input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/" class="">Label</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/" class="">Picker View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/" class="">Picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/" class="">Radio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/" class="">Slider</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/" class="">Textarea</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-63f14fe37d486068ba68f9b5b01a1c42" class="toggle"  />
+    <label for="section-63f14fe37d486068ba68f9b5b01a1c42" class="flex justify-between">
+      <a  class="">视图容器</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/cover-image/cover-view/" class="">Cover View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/match-media/match-media/" class="">Match Media</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movable-view/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movavle-area/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/scroll-view/scroll-view/" class="">Scroll View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/swiper/swiper/" class="">Swiper</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/view/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1db3b5deb264f9b5de772b4dbba8b7f9" class="toggle"  />
+    <label for="section-1db3b5deb264f9b5de772b4dbba8b7f9" class="flex justify-between">
+      <a  class="">路由与页面跳转</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/" class="">Custom Tab Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/" class="">Navigator</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Web View</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h4 id="web-view">
+  web-view
+  <a class="anchor" href="#web-view">#</a>
+</h4>
+<p><code>web-view</code> It is a web browser component that can be used to host a web page container, which will automatically fill the entire page (nvue use requires manual specification of width and height).</p>
+<blockquote>
+<p>For each applet platform, the URL loaded by the web-view needs to configure the domain name whitelist in the background, including other URLs embedded in the iframe again.</p>
+</blockquote>
+<p><strong>Property description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attribute name</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Platform difference description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">src</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">webview links to web pages</td>
+<td style="text-align:left"> </td>
+</tr>
+<tr>
+<td style="text-align:left">allow</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Used to specify the characteristic strategy for the iframe</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">sandbox</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">This attribute enables some additional restrictions on the content rendered in the iframe frame.</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">webview-styles</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">webview style</td>
+<td style="text-align:left">App-vue</td>
+</tr>
+<tr>
+<td style="text-align:left">@onPostMessage</td>
+<td style="text-align:left">EventHandler</td>
+<td style="text-align:left">Web page to application real-time <code>postMessage</code></td>
+<td style="text-align:left">App-nvue</td>
+</tr>
+</tbody>
+</table>
+<p><strong>webview-styles</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">progress</td>
+<td style="text-align:left">Object/Boolean</td>
+<td style="text-align:left">The style of the progress bar. It takes effect only when the network load HTML, set to <code>false</code>disable the progress bar.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>progress</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Defaults</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">#00FF00</td>
+<td style="text-align:left">Progress bar color</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">view</span>&gt;
+		&lt;<span style="color:#f92672">web-view</span> <span style="color:#a6e22e">:webview-styles</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;webviewStyles&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://uniapp.dcloud.io/static/web-view.html&#34;</span>&gt;&lt;/<span style="color:#f92672">web-view</span>&gt;
+	&lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+	<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+		<span style="color:#a6e22e">data</span>() {
+			<span style="color:#66d9ef">return</span> {
+				<span style="color:#a6e22e">webviewStyles</span><span style="color:#f92672">:</span> {
+					<span style="color:#a6e22e">progress</span><span style="color:#f92672">:</span> {
+						<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#FF3333&#39;</span>
+					}
+				}
+			}
+		}
+	}
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><pre v-pre="" data-lang="">
+	<code class="lang-" style="padding:0">
+┌─components           
+├─hybrid              
+│  └─html
+│     ├─css
+│     │  └─test.css
+│     ├─img
+│     │  └─icon.png
+│     ├─js
+│     │  └─test.js
+│     └─local.html
+├─pages              
+│  └─index
+│     └─index.vue  
+├─static              
+├─main.js             
+├─App.vue              
+├─manifest.json      
+└─pages.json         
+	</code>
+</pre>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">view</span>&gt;
+		&lt;<span style="color:#f92672">web-view</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/hybrid/html/local.html&#34;</span>&gt;&lt;/<span style="color:#f92672">web-view</span>&gt;
+	&lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p><code>&lt;web-view&gt;</code> Some uni interfaces are supported in the loaded webpage:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Method name</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Platform difference description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">uni.navigateTo</td>
+<td style="text-align:left">navigateTo</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">uni.redirectTo</td>
+<td style="text-align:left">redirectTo</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">uni.reLaunch</td>
+<td style="text-align:left">reLaunch</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">uni.switchTab</td>
+<td style="text-align:left">switchTab</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">uni.navigateBack</td>
+<td style="text-align:left">navigateBack</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">uni.getEnv</td>
+<td style="text-align:left">Get the current environment</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="unipostmessageobject">
+  uni.postMessage(OBJECT)
+  <a class="anchor" href="#unipostmessageobject">#</a>
+</h5>
+<p>Page, in a message sent to the application <code>&lt;web-view&gt;</code>&rsquo;s <code>message</code>event callback <code>event.detail.data</code>receives the message.</p>
+<p><strong>Tips</strong></p>
+<ul>
+<li>The message information passed must be written in the data object.</li>
+<li><code>event.detail.data</code> The data in each post is received in the form of an array.。</li>
+</ul>
+<h5 id="unigetenvcallback">
+  uni.getEnv(CALLBACK)
+  <a class="anchor" href="#unigetenvcallback">#</a>
+</h5>
+<p><strong>Example</strong></p>
+<p>In the <code>&lt;web-view&gt;</code>loaded HTML, add the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Web page&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+      .<span style="color:#a6e22e">btn</span> {
+        <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+        <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
+        <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#007aff</span>;
+        <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span>;
+        <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+      }
+
+      .<span style="color:#a6e22e">btn-red</span> {
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#dd524d</span>;
+      }
+
+      .<span style="color:#a6e22e">btn-yellow</span> {
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#f0ad4e</span>;
+      }
+
+      .<span style="color:#a6e22e">desc</span> {
+        <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#999999</span>;
+      }
+
+      .<span style="color:#a6e22e">post-message-section</span> {
+        <span style="color:#66d9ef">visibility</span>: <span style="color:#66d9ef">hidden</span>;
+      }
+    &lt;/<span style="color:#f92672">style</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;The web-view component loads the web html example. Click the button below to jump to other pages.&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn-list&#34;</span>&gt;
+      &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigateTo&#34;</span>&gt;navigateTo&lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;redirectTo&#34;</span>&gt;redirectTo&lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigateBack&#34;</span>&gt;navigateBack&lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;reLaunch&#34;</span>&gt;reLaunch&lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;switchTab&#34;</span>&gt;switchTab&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-message-section&#34;</span>&gt;
+      &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;desc&#34;</span>&gt;The webpage sends a message to the application. Note: The applet-side application will receive the message when the page is backed.&lt;/<span style="color:#f92672">p</span>&gt;
+      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn-list&#34;</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-red&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;postMessage&#34;</span>&gt;postMessage&lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">userAgent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">userAgent</span>;
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">userAgent</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;AlipayClient&#39;</span>) <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+        <span style="color:#75715e">// The JS-SDK of the Alipay applet prevents the 404 from being dynamically loaded. If you do not need to be compatible with the Alipay applet, you do not need to quote this JS file.
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">writeln</span>(<span style="color:#e6db74">&#39;&lt;script src=&#34;https://appx/web-view.min.js&#34;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&gt;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&lt;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;script&gt;&#39;</span>);
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">/QQ/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#e6db74">/miniProgram/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>)) {
+        <span style="color:#75715e">// QQ applet
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">write</span>(
+          <span style="color:#e6db74">&#39;&lt;script type=&#34;text/javascript&#34; src=&#34;https://qqq.gtimg.cn/miniprogram/webview_jssdk/qqjssdk-1.0.0.js&#34;&gt;&lt;\/script&gt;&#39;</span>
+        );
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">/miniProgram/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#e6db74">/micromessenger/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>)) {
+        <span style="color:#75715e">// WeChat Mini Program JS-SDK If you do not need to be compatible with WeChat Mini Program, you do not need to quote this JS file.
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;&lt;script type=&#34;text/javascript&#34; src=&#34;https://res.wx.qq.com/open/js/jweixin-1.4.0.js&#34;&gt;&lt;\/script&gt;&#39;</span>);
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">/toutiaomicroapp/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>)) {
+        <span style="color:#75715e">// Toutiao Mini Program JS-SDK If you don’t need to be compatible with Toutiao Mini Program, you don’t need to quote this JS file.
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">write</span>(
+          <span style="color:#e6db74">&#39;&lt;script type=&#34;text/javascript&#34; src=&#34;https://s3.pstatp.com/toutiao/tmajssdk/jssdk-1.0.1.js&#34;&gt;&lt;\/script&gt;&#39;</span>);
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">/swan/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>)) {
+        <span style="color:#75715e">// Baidu Mini Program JS-SDK If you do not need to be compatible with Baidu Mini Program, you do not need to quote this JS file.
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">write</span>(
+          <span style="color:#e6db74">&#39;&lt;script type=&#34;text/javascript&#34; src=&#34;https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.18.js&#34;&gt;&lt;\/script&gt;&#39;</span>
+        );
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">/quickapp/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>)) {
+        <span style="color:#75715e">// quickapp
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;&lt;script type=&#34;text/javascript&#34; src=&#34;https://quickapp/jssdk.webview.min.js&#34;&gt;&lt;\/script&gt;&#39;</span>);
+      }
+      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#e6db74">/toutiaomicroapp/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">userAgent</span>)) {
+        document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.post-message-section&#39;</span>).<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">visibility</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;visible&#39;</span>;
+      }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">&lt;!-- uni&#39;s SDK --&gt;</span>
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+      <span style="color:#75715e">// After the `UniAppJSBridgeReady` event is triggered, uni&#39;s API can be called.
+</span><span style="color:#75715e"></span>      document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;UniAppJSBridgeReady&#39;</span>, <span style="color:#66d9ef">function</span>() {
+        <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">postMessage</span>({
+            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">action</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;message&#39;</span>
+            }
+        });
+        <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">getEnv</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">res</span>) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Current environment：&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">res</span>));
+        });
+
+        document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.btn-list&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">evt</span>) {
+          <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">evt</span>.<span style="color:#a6e22e">target</span>;
+          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">tagName</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;BUTTON&#39;</span>) {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">action</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;data-action&#39;</span>);
+            <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">action</span>) {
+              <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;switchTab&#39;</span><span style="color:#f92672">:</span>
+                <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">switchTab</span>({
+                  <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/pages/tabBar/API/API&#39;</span>
+                });
+                <span style="color:#66d9ef">break</span>;
+              <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;reLaunch&#39;</span><span style="color:#f92672">:</span>
+                <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">reLaunch</span>({
+                  <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/pages/tabBar/component/component&#39;</span>
+                });
+                <span style="color:#66d9ef">break</span>;
+              <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;navigateBack&#39;</span><span style="color:#f92672">:</span>
+                <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">navigateBack</span>({
+                  <span style="color:#a6e22e">delta</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+                });
+                <span style="color:#66d9ef">break</span>;
+              <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+                <span style="color:#a6e22e">uni</span>[<span style="color:#a6e22e">action</span>]({
+                  <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/pages/component/button/button&#39;</span>
+                });
+                <span style="color:#66d9ef">break</span>;
+            }
+          }
+        });
+        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;postMessage&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() {
+          <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">postMessage</span>({
+            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">action</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;message&#39;</span>
+            }
+          });
+        });
+      });
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div><h5 id="app-side-web-view-extension">
+  <strong>App-side web-view extension</strong>
+  <a class="anchor" href="#app-side-web-view-extension">#</a>
+</h5>
+<p>The webview on the App side is very powerful and can be controlled more flexibly and has a richer API.</p>
+<p>Each vue page is actually a webview, and the web-view component in the vue page is actually a sub-webview in the webview. This child webview is appended to the parent webview.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">view</span>&gt;
+		&lt;<span style="color:#f92672">web-view</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.xxx.com&#34;</span>&gt;&lt;/<span style="color:#f92672">web-view</span>&gt;
+	&lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wv</span>;<span style="color:#75715e">//Plan to create webview
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+	<span style="color:#a6e22e">onReady</span>() {
+		<span style="color:#75715e">// #ifdef APP-PLUS
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">currentWebview</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$scope</span>.<span style="color:#a6e22e">$getAppWebview</span>() <span style="color:#75715e">//This object is equivalent to plus.webview.currentWebview() in html5plus. It is invalid to use plus.webview.currentWebview() directly on the vue page in uni-app, and use this.$mp.page.$getAppWebview() in non-v3 compilation mode
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+			<span style="color:#a6e22e">wv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">currentWebview</span>.<span style="color:#a6e22e">children</span>()[<span style="color:#ae81ff">0</span>]
+			<span style="color:#a6e22e">wv</span>.<span style="color:#a6e22e">setStyle</span>({<span style="color:#a6e22e">top</span><span style="color:#f92672">:</span><span style="color:#ae81ff">150</span>,<span style="color:#a6e22e">height</span><span style="color:#f92672">:</span><span style="color:#ae81ff">300</span>})
+		}, <span style="color:#ae81ff">1000</span>); <span style="color:#75715e">//If it is the page initialization call, you need to delay
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// #endif
+</span><span style="color:#75715e"></span>		}
+	};
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>You can even <code>web-view</code>create a sub-webview directly to load html without using components. For example, if you don&rsquo;t want the remote webpage to use the plus API, whether for security reasons or because of back monitoring conflicts, you can use the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">view</span>&gt;
+	&lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wv</span>;<span style="color:#75715e">//Plan to create webview
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+	<span style="color:#a6e22e">onLoad</span>() {
+		<span style="color:#75715e">// #ifdef APP-PLUS
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">wv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">plus</span>.<span style="color:#a6e22e">webview</span>.<span style="color:#a6e22e">create</span>(<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#e6db74">&#34;custom-webview&#34;</span>,{
+			<span style="color:#a6e22e">plusrequire</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;none&#34;</span>, <span style="color:#75715e">//Forbid remote webpages to use the plus API. Some webpages made with mui may listen to plus.key and cause confusion when closing the page. You can disable it in this way
+</span><span style="color:#75715e"></span>      <span style="color:#e6db74">&#39;uni-app&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;none&#39;</span>, <span style="color:#75715e">//Do not load the uni-app rendering layer framework to avoid style conflicts
+</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">top</span><span style="color:#f92672">:</span><span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">getSystemInfoSync</span>().<span style="color:#a6e22e">statusBarHeight</span><span style="color:#f92672">+</span><span style="color:#ae81ff">44</span> <span style="color:#75715e">//Place it below titleNView. If you want to add an address bar or something above the webview, you can continue to lower the TOP value
+</span><span style="color:#75715e"></span>		})
+		<span style="color:#a6e22e">wv</span>.<span style="color:#a6e22e">loadURL</span>(<span style="color:#e6db74">&#34;https://www.baidu.com&#34;</span>)
+		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">currentWebview</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$scope</span>.<span style="color:#a6e22e">$getAppWebview</span>(); <span style="color:#75715e">//This object is equivalent to plus.webview.currentWebview() in html5plus. It is invalid to use plus.webview.currentWebview() directly on the vue page in uni-app, and use this.$mp.page.$getAppWebview() in non-v3 compilation mode
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">currentWebview</span>.<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">wv</span>);<span style="color:#75715e">//Be sure to append to the current page! ! ! In order to animate with the current page and close together
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+			<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">wv</span>.<span style="color:#a6e22e">getStyle</span>())
+		}, <span style="color:#ae81ff">1000</span>);<span style="color:#75715e">//If the onload call of the home page needs to be delayed, the secondary page does not need to be delayed, and can be obtained directly
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// #endif
+</span><span style="color:#75715e"></span>	}
+};
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>If you want to set the web-view component to zoom with two fingers, you can refer to the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">onReady</span>() {
+		<span style="color:#75715e">// #ifdef APP-PLUS
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">currentWebview</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$mp</span>.<span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">$getAppWebview</span>() <span style="color:#75715e">//Get the webview object of the current page
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+			<span style="color:#a6e22e">wv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">currentWebview</span>.<span style="color:#a6e22e">children</span>()[<span style="color:#ae81ff">0</span>]
+			<span style="color:#a6e22e">wv</span>.<span style="color:#a6e22e">setStyle</span>({<span style="color:#a6e22e">scalable</span><span style="color:#f92672">:</span><span style="color:#66d9ef">true</span>})
+		}, <span style="color:#ae81ff">1000</span>); <span style="color:#75715e">//If it is the page initialization call, you need to delay
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// #endif
+</span><span style="color:#75715e"></span>		}
+	};
+</code></pre></div><h5 id="web-viewcomponent-level-problem-solving">
+  <code>web-view</code>Component level problem solving
+  <a class="anchor" href="#web-viewcomponent-level-problem-solving">#</a>
+</h5>
+<p>The web-view component has a higher level in App and applet. If you need to write code in the vue page to cover the content of the web-view component, the applet has no solution, and the div can only be popped up by the web-view component. There are several solutions on the App side:</p>
+<ol>
+<li>The simpler way is native pop-up menus such as actionsheet (small programs can also use this scheme)</li>
+<li>Use plus.nativeObj.view.</li>
+<li>Raw child window used subNvue</li>
+<li>You can pop up a div with a higher z-index in the webpage embedded in the web-view component. If it is an external webpage, after obtaining the sub-webview object in vue, inject a section of js into this sub-webview through evalJS , and operate it to pop up the div layer.</li>
+</ol>
+<p><strong>Precautions</strong></p>
+<ul>
+<li><code>&lt;web-view&gt;</code>By default, the components fill the full screen and are higher level than the front-end components. If you want to adjust the size or overwrite content on the App, you need to use the plus specification.</li>
+<li><code>&lt;web-view&gt;</code>The title of the components of the window, the page following the <code>&lt;title&gt;</code>variation value changes .</li>
+<li><code>web-view</code>The html page loaded by App-vue can run the plus API, but note that if the page calls the plus.key API to monitor the back button (or uses mui encapsulation), it will cause back monitoring conflicts. The html page needs to remove the back monitoring. Or follow the example code above to prohibit web pages from using the plus object. The <code>web-view</code>components of the app-nvue page cannot run the plus API.</li>
+<li><code>uni.webview.js</code>The latest version address: <a href="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js">https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js</a></li>
+<li>Applet platform, the individual types of small type with overseas programs use <code>web-view</code>components, submit review attention to micro-channel platforms such as whether to allow the use of</li>
+</ul>
+<h5 id="faq">
+  FAQ
+  <a class="anchor" href="#faq">#</a>
+</h5>
+<p>Q: How do web-view pages interact with pages in the application?
+A: Call uni-related APIs to switch pages and send messages.</p>
+<p>Q: Can the 5+ capabilities be used in the HTML loaded by the web-view?
+A: There are 5+ environments in the loaded HTML, which can be called after plusready.</p>
+<p>uni.webView.navigateTo example, note that uni sdk is placed under the body</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;noscript&gt;
+      &lt;strong&gt;Please enable JavaScript to continue.&lt;/strong&gt;
+    &lt;/noscript&gt;
+    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+    &lt;!-- built files will be auto injected --&gt;
+  &lt;/body&gt;
+  &lt;!-- uni's SDK --&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    document.addEventListener('UniAppJSBridgeReady', function() {
+      uni.webView.getEnv(function(res) {
+        console.log('Current environment：' + JSON.stringify(res));
+      });
+      // uni.webView.navigateTo(...)
+    });
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</guid>
+      <description>setTimeout(callback, delay, rest)#Set a timer. Execute the registered callback function after the time expires
+Parameter Description
+   parameter Types of Required Description     callback Function Yes Callback   delay Number no Delay time, the function call will occur after the delay, the unit is ms   rest Any no Additional parameters such as param1, param2, &amp;hellip;, paramN will be passed as parameters to the callback function    return value</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</guid>
+      <description>console#Print log information to the console.
+debug#Print debug log to the console
+Note: In the App-side custom component mode, the debug method is equivalent to the log method.
+log#Print log to the console
+info#Print info log to the console
+warn#Print warn log to the console
+error#Print error log to the console
+note:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</guid>
+      <description>Application life cycle#The following application life cycle functions are supported:
+   Function name Description     onLaunch uni-appTriggered when the initialization is completed (global trigger only once)   onShow When uni-appstarted, or from the background into the foreground display   onHide As uni-appfrom the foreground into the background   onError When the uni-apptrigger error   onUniNViewMessage For nvuedata pages sent by the monitor, refer to nvue to communicate vue   onUnhandledRejection Listener function for unprocessed Promise rejection event (2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/</guid>
+      <description>getApp ()#getApp() The function is used to obtain the current application instance, generally used to obtain globalData.
+Instance
+const app = getApp() console.log(app.globalData) note:
+ Do not defined in the App()in the function, or calling Appbefore the call getApp(), by this.$scopeapp corresponding instance Get By getApp()then obtain an instance, the life cycle Do not attempt to call the function. The v3 mode accelerates the nvuestartup speed of the homepage , and when used on the homepage nvue, it getApp()may not be possible to obtain real Appobjects.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</guid>
+      <description>Since HBuilderX 2.0.0, custom component compilation mode support.
+ uni.$emit(eventName,OBJECT)#Trigger global custom events. Additional parameters will be passed to the listener callback.
+   Attributes Types of description     eventName String Event name   OBJECT Object Additional parameters carried by the trigger event    Code example
+uni.$emit(&amp;#39;update&amp;#39;,{msg:&amp;#39;Page updates&amp;#39;}) uni.$on(eventName,callback)#Listen to global custom events. The event can be triggered by uni.</description>
+    </item>
+    
+  </channel>
+</rss>

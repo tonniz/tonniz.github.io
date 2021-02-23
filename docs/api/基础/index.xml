@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</guid>
+      <description>setTimeout(callback, delay, rest)#Set a timer. Execute the registered callback function after the time expires
+Parameter Description
+   parameter Types of Required Description     callback Function Yes Callback   delay Number no Delay time, the function call will occur after the delay, the unit is ms   rest Any no Additional parameters such as param1, param2, &amp;hellip;, paramN will be passed as parameters to the callback function    return value</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/</guid>
+      <description>uni.onPageNotFound(funciton callback)#There is no event for the page to be opened by the listening application. The event with the App.onPageNotFoundcallback time to coincide
+parameter#function callback
+The callback function for the event that the page to be opened does not exist
+parameter#   Attributes Types of Description     path String The path of the page does not exist (code package path)   query Object Open the query parameter of a page that does not exist   isEntryPage Boolean Whether it’s the first page launched this time (for example, coming in from an entry such as sharing, the first page is the sharing page configured by the developer)    note</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</guid>
+      <description>console#Print log information to the console.
+debug#Print debug log to the console
+Note: In the App-side custom component mode, the debug method is equivalent to the log method.
+log#Print log to the console
+info#Print info log to the console
+warn#Print warn log to the console
+error#Print error log to the console</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/api/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</guid>
+      <description>Application life cycle#Support application life cycle functions such as onLaunch, onShow, onHide, etc.
+Page life cycle#Support life cycle functions such as onLoad, onShow, onReady.</description>
+    </item>
+    
+  </channel>
+</rss>

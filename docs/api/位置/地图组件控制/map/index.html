@@ -5,19 +5,23 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="uni.createMapContext(mapId,this)#Creates and returns a map context mapContextobject. In the custom component, the second component parameters into the this example, the operation to the component &lt;map&gt;assembly.
+List of methods of the mapContext object
+   method parameter Description     getCenterLocation OBJECT Get the latitude and longitude of the current map center, the return is the gcj02 coordinate system   moveToLocation OBJECT To move the center of the map to the current location, it needs to be used with the show-location of the map component   getRegion OBJECT Get the field of view of the current map   getScale OBJECT Get the zoom level of the current map    $getAppMap() Precautions:">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="uni.createMapContext(mapId,this)#Creates and returns a map context mapContextobject. In the custom component, the second component parameters into the this example, the operation to the component &lt;map&gt;assembly.
+List of methods of the mapContext object
+   method parameter Description     getCenterLocation OBJECT Get the latitude and longitude of the current map center, the return is the gcj02 coordinate system   moveToLocation OBJECT To move the center of the map to the current location, it needs to be used with the show-location of the map component   getRegion OBJECT Get the field of view of the current map   getScale OBJECT Get the zoom level of the current map    $getAppMap() Precautions:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Map | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -82,7 +86,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-b13a9910074d19666a6097979f2f91fd" class="toggle"  />
+    <input type="checkbox" id="section-b13a9910074d19666a6097979f2f91fd" class="toggle" checked />
     <label for="section-b13a9910074d19666a6097979f2f91fd" class="flex justify-between">
       <a  class="">位置</a>
       <span>▾</span>
@@ -99,7 +103,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" class="">Map</a>
+    <a href="http://tonniz.github.io/docs/api/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" class=" active">Map</a>
   
 
         </li>
@@ -2049,7 +2053,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Map</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2068,18 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unicreatemapcontextmapidthis">uni.createMapContext(mapId,this)</a></li>
+          </ul>
+        </li>
+        <li><a href="#mapsearch-modulemodule">mapSearch module(module)</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2080,45 +2093,482 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
-<blockquote>
-<p>易才代付</p>
-</blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
+  <article class="markdown"><h3 id="unicreatemapcontextmapidthis">
+  uni.createMapContext(mapId,this)
+  <a class="anchor" href="#unicreatemapcontextmapidthis">#</a>
+</h3>
+<p>Creates and returns a map context <code>mapContext</code>object. In the custom component, the second component parameters into the this example, the operation to the component <code>&lt;map&gt;</code>assembly.</p>
+<p><strong>List of methods of the mapContext object</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">method</th>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">getCenterLocation</td>
+<td style="text-align:left">OBJECT</td>
+<td style="text-align:left">Get the latitude and longitude of the current map center, the return is the gcj02 coordinate system</td>
+</tr>
+<tr>
+<td style="text-align:left">moveToLocation</td>
+<td style="text-align:left">OBJECT</td>
+<td style="text-align:left">To move the center of the map to the current location, it needs to be used with the show-location of the map component</td>
+</tr>
+<tr>
+<td style="text-align:left">getRegion</td>
+<td style="text-align:left">OBJECT</td>
+<td style="text-align:left">Get the field of view of the current map</td>
+</tr>
+<tr>
+<td style="text-align:left">getScale</td>
+<td style="text-align:left">OBJECT</td>
+<td style="text-align:left">Get the zoom level of the current map</td>
+</tr>
+</tbody>
+</table>
+<p><code>$getAppMap()</code> Precautions:</p>
+<ul>
+<li>In a page, you must <code>onReady</code>call.</li>
+<li>In the assembly, you must <code>mounted</code>call.</li>
+<li>nvue does not <code>$getAppMap()</code>, please use<code>createMapContext</code></li>
+</ul>
+<p><strong>OBJECT parameter list of getCenterLocation</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call, res = {longitude: &ldquo;longitude&rdquo;, latitude: &ldquo;latitude&rdquo;}</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OBJECT parameter list of moveToLocation</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Longitude, App 2.6.8, H5, only WeChat applet 2.8.0+ support</td>
+</tr>
+<tr>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Latitude, App 2.6.8, H5, only WeChat applet 2.8.0+ support</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call, res = {longitude: &ldquo;longitude&rdquo;, latitude: &ldquo;latitude&rdquo;}</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OBJECT parameter list of translateMarker</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">markerId</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Specify marker</td>
+</tr>
+<tr>
+<td style="text-align:left">destination</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Specify the target point where the marker moves</td>
+</tr>
+<tr>
+<td style="text-align:left">autoRotate</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Whether to automatically rotate the marker during movement</td>
+</tr>
+<tr>
+<td style="text-align:left">rotate</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">the rotation angle of the marker</td>
+</tr>
+<tr>
+<td style="text-align:left">duration</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Animation duration, the default value is 1000ms, translation and rotation are calculated separately</td>
+</tr>
+<tr>
+<td style="text-align:left">animationEnd</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Animation end callback function</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OBJECT parameter list of includePoints</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">points</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">A list of coordinate points to be displayed in the visible area, [{latitude, longitude}]</td>
+</tr>
+<tr>
+<td style="text-align:left">padding</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The distance from the edge of the rectangle formed by the coordinate points to the edge of the map, in unit pixels. The format is [top, right, bottom, left], only the first item of the array can be recognized on Android, and the padding of the top, bottom, left, and right is the same. The developer tool does not support the padding parameter temporarily.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OBJECT parameter list of getRegion</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call, res = {southwest, northeast}, the latitude and longitude of the southwest corner and the northeast corner</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OBJECT parameter list of getScale</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for successful interface call, res = {scale}</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Callback function for interface call failure</td>
+</tr>
+<tr>
+<td style="text-align:left">complete</td>
+<td style="text-align:left">Function</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The callback function for the end of the interface call (the call will be executed if it succeeds or fails)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapsearch-modulemodule">
+  mapSearch module(module)
+  <a class="anchor" href="#mapsearch-modulemodule">#</a>
 </h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
-
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
+<h4 id="reversegeocodeobjectcallback">
+  reverseGeocode(Object,callback)
+  <a class="anchor" href="#reversegeocodeobjectcallback">#</a>
+</h4>
+<blockquote>
+<p>Reverse geocoding</p>
+</blockquote>
+<h5 id="object">
+  Object
+  <a class="anchor" href="#object">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Defaults</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">point</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">{latitude: latitude, longitude: longitude}</td>
+</tr>
+</tbody>
+</table>
+<h5 id="callback-returns-object-parameter-description">
+  callback returns Object parameter description
+  <a class="anchor" href="#callback-returns-object-parameter-description">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&ldquo;success&rdquo; means success, &ldquo;fail&rdquo; means failure</td>
+</tr>
+<tr>
+<td style="text-align:left">code</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Return 0 on success, and the corresponding code on failure</td>
+</tr>
+<tr>
+<td style="text-align:left">message</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Failure description</td>
+</tr>
+<tr>
+<td style="text-align:left">address</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Address after query (returned when successful)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="poisearchnearbyobjectcallback">
+  poiSearchNearBy（Object,callback);
+  <a class="anchor" href="#poisearchnearbyobjectcallback">#</a>
+</h4>
+<blockquote>
+<p>Peripheral search</p>
+</blockquote>
+<h5 id="object-1">
+  Object
+  <a class="anchor" href="#object-1">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Defaults</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">point</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Retrieved center point coordinates {latitude: latitude, longitude: longitude}</td>
+</tr>
+<tr>
+<td style="text-align:left">key</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">search for the keyword</td>
+</tr>
+<tr>
+<td style="text-align:left">radius</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">3000</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Retrieved radius, in meters</td>
+</tr>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Index of the page number to get the search results</td>
+</tr>
+</tbody>
+</table>
+<h5 id="callback-returns-object-parameter-description-1">
+  callback returns Object parameter description
+  <a class="anchor" href="#callback-returns-object-parameter-description-1">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&ldquo;success&rdquo; means success, &ldquo;fail&rdquo; means failure</td>
+</tr>
+<tr>
+<td style="text-align:left">code</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Return 0 on success, and the corresponding code on failure</td>
+</tr>
+<tr>
+<td style="text-align:left">message</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Failure description</td>
+</tr>
+<tr>
+<td style="text-align:left">totalNumber</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Number of POIs returned</td>
+</tr>
+<tr>
+<td style="text-align:left">currentNumber</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Number of POIs on the current page</td>
+</tr>
+<tr>
+<td style="text-align:left">pageNumber</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Number of pages</td>
+</tr>
+<tr>
+<td style="text-align:left">pageIndex</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Current page index</td>
+</tr>
+<tr>
+<td style="text-align:left">poiList</td>
+<td style="text-align:left">Array.<poiObject></td>
+<td style="text-align:left">POI information array</td>
+</tr>
+</tbody>
+</table>
+<h5 id="poiobject">
+  poiObject
+  <a class="anchor" href="#poiobject">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">location</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">{latitude: latitude, longitude: longitude}</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">name</td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Types</td>
+</tr>
+<tr>
+<td style="text-align:left">distance</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Distance (in meters)</td>
+</tr>
+<tr>
+<td style="text-align:left">address</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">address</td>
+</tr>
+</tbody>
+</table>
 </article>
  
       
@@ -2153,9 +2603,18 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unicreatemapcontextmapidthis">uni.createMapContext(mapId,this)</a></li>
+          </ul>
+        </li>
+        <li><a href="#mapsearch-modulemodule">mapSearch module(module)</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

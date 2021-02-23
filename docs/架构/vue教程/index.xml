@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/api/vue-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/api/vue-api/</guid>
+      <description>Global configuration#   Vue global configuration description H5 App side     Vue.config.silent Cancel all logging and warning Vue √ √   Vue.config.optionMergeStrategies Custom options into policy details √ √   Vue.config.errorHandler Uncaught error handler specified component during rendering and viewing details √ √   Vue.config.warnHandler Vue to run when a warning given to a custom handler details √ √   Vue.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/</guid>
+      <description>Introduction#What is Vue.js
+Vue (pronounced /vjuː/, similar to view) is a progressive framework for building user interfaces. Vue is designed to be applied layer by layer from the bottom up.
+Vue.js uses HTML-based template syntax, allowing developers to declaratively bind the DOM to the data of the underlying Vue instance. All Vue.js templates are legal HTML, so they can be parsed by browsers and HTML parsers that follow the specification.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/</guid>
+      <description>Concept# Components are the basic building blocks of the view layer. The component is an encapsulation of a single functional module. A component includes a start tag and an end tag. Attributes can be written on the label and assigned values to the attributes. The content is written in two labels.  Root is &amp;lt;template&amp;gt;, this &amp;lt;template&amp;gt;case can only and must have a root &amp;lt;view&amp;gt;component. This is the [vue single file component specification] .</description>
+    </item>
+    
+  </channel>
+</rss>

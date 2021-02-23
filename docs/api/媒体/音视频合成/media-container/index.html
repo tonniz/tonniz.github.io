@@ -5,19 +5,27 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTG-CAP# 易才代付
- 整体进度#HRO API 进度[# ] 10%UI 进度[#### ] 30%工行 进度(# ) 20%招行 进度[# ] 20%">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="易才批量代付概况" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tonniz.github.io/" />
+<meta name="description" content="uni.createMediaContainer()#Creating audio and video processing vessel, the final container can be synthesized one video track, returns MediaContainerthe object
+MediaContainer.addTrack(track)#Add audio or video tracks to the container
+Parameter Description
+   parameter Description     track Audio or video track to add    MediaContainer.destroy()#Destroy the container and release resources
+MediaContainer.export()#Combine the tracks in the container and export the video file">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="uni.createMediaContainer()#Creating audio and video processing vessel, the final container can be synthesized one video track, returns MediaContainerthe object
+MediaContainer.addTrack(track)#Add audio or video tracks to the container
+Parameter Description
+   parameter Description     track Audio or video track to add    MediaContainer.destroy()#Destroy the container and release resources
+MediaContainer.export()#Combine the tracks in the container and export the video file" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" /><meta property="article:section" content="docs" />
 
-<title>易才批量代付概况 | MR MiniApp</title>
+
+
+<title>Media Container | MR MiniApp</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
 <script defer src="/en.search.min.a702039c1563c5e4f42790621886327899dc385e3427742610c88ce9b2c8daa5.js" integrity="sha256-pwIDnBVjxeT0J5BiGIYyeJncOF40J3QmEMiM6bLI2qU="></script>
-<link rel="alternate" type="application/rss+xml" href="http://tonniz.github.io/index.xml" title="MR MiniApp" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -217,7 +225,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-ee929375efadada16220c4322cfcd126" class="toggle"  />
+    <input type="checkbox" id="section-ee929375efadada16220c4322cfcd126" class="toggle" checked />
     <label for="section-ee929375efadada16220c4322cfcd126" class="flex justify-between">
       <a  class="">媒体</a>
       <span>▾</span>
@@ -351,7 +359,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" class="">Media Container</a>
+    <a href="http://tonniz.github.io/docs/api/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" class=" active">Media Container</a>
   
 
         </li>
@@ -2049,7 +2057,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>易才批量代付概况</strong>
+  <strong>Media Container</strong>
 
   <label for="toc-control">
     
@@ -2064,9 +2072,14 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unicreatemediacontainer">uni.createMediaContainer()</a></li>
+            <li><a href="#mediatrack">MediaTrack</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2080,45 +2093,118 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ctg-cap">
-  CTG-CAP
-  <a class="anchor" href="#ctg-cap">#</a>
-</h1>
-<blockquote>
-<p>易才代付</p>
-</blockquote>
-<h2 id="整体进度">
-  整体进度
-  <a class="anchor" href="#%e6%95%b4%e4%bd%93%e8%bf%9b%e5%ba%a6">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="hro-api">HRO API</h3>
-<p>进度[#                                                 ] 10%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="ui">UI</h3>
-<p>进度[####                                              ] 30%
-  </div>
-  
-</div>
-
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="工行">工行</h3>
-<p>进度(#                                                 ) 20%
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <h3 id="招行">招行</h3>
-<p>进度[#                                                 ] 20%
-  </div>
-  
-</div>
-
+  <article class="markdown"><h3 id="unicreatemediacontainer">
+  uni.createMediaContainer()
+  <a class="anchor" href="#unicreatemediacontainer">#</a>
+</h3>
+<p>Creating audio and video processing vessel, the final container can be synthesized one video track, returns <code>MediaContainer</code>the object</p>
+<h4 id="mediacontaineraddtracktrack">
+  MediaContainer.addTrack(track)
+  <a class="anchor" href="#mediacontaineraddtracktrack">#</a>
+</h4>
+<p>Add audio or video tracks to the container</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">track</td>
+<td style="text-align:left">Audio or video track to add</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mediacontainerdestroy">
+  MediaContainer.destroy()
+  <a class="anchor" href="#mediacontainerdestroy">#</a>
+</h4>
+<p>Destroy the container and release resources</p>
+<h4 id="mediacontainerexport">
+  MediaContainer.export()
+  <a class="anchor" href="#mediacontainerexport">#</a>
+</h4>
+<p>Combine the tracks in the container and export the video file</p>
+<h4 id="mediacontainerextractdatasourceobject">
+  MediaContainer.extractDataSource(object)
+  <a class="anchor" href="#mediacontainerextractdatasourceobject">#</a>
+</h4>
+<p>The track consolidation in the container and export video files, return <code>MediaTrack</code>target</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">source</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Video source address, only supports local files</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mediacontainerremovetracktrack">
+  MediaContainer.removeTrack(track)
+  <a class="anchor" href="#mediacontainerremovetracktrack">#</a>
+</h4>
+<p>Add audio or video tracks to the container</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">track</td>
+<td style="text-align:left">Audio or video track to remove</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mediatrack">
+  MediaTrack
+  <a class="anchor" href="#mediatrack">#</a>
+</h3>
+<p>By <code>MediaContainer.extractDataSource</code>return.</p>
+<p><code>MediaTrack</code> Audio or video track, you can perform some operations on the track</p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">kind</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Track type, read-only, audio: audio track; video: video track</td>
+</tr>
+<tr>
+<td style="text-align:left">duration</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Track length, read only</td>
+</tr>
+<tr>
+<td style="text-align:left">volume</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Volume, valid under audio track, writeable</td>
+</tr>
+</tbody>
+</table>
 </article>
  
       
@@ -2153,9 +2239,14 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#ctg-cap">CTG-CAP</a>
+    <li>
       <ul>
-        <li><a href="#整体进度">整体进度</a></li>
+        <li>
+          <ul>
+            <li><a href="#unicreatemediacontainer">uni.createMediaContainer()</a></li>
+            <li><a href="#mediatrack">MediaTrack</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

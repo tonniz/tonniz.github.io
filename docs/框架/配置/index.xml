@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MR MiniApp</title>
+    <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/</link>
+    <description>Recent content on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/app.vue/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/app.vue/app/</guid>
+      <description>App.vueIs uni-app main assembly, all the pages are in App.vuethe switch is a page entry file. But it App.vueis not a page itself, and view elements cannot be written here.
+The role of this file includes: calling application life cycle functions, configuring global styles, configuring global storage globalData
+The application life cycle can only be App.vuemonitored in , and monitoring on the page is invalid.
+Application life cycle#uni-appSupport application life cycle functions such as onLaunch, onShow, onHide, etc.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/</guid>
+      <description>main.jsIt is the entry file of uni-app. Its main function is to initialize vueinstances, define global components, and use required plug-ins such as vuex.
+First introduced the Vuelibrary and App.vue, created an vueinstance, and mounted the vueinstance.
+import Vue from &#39;vue&#39;import App from &#39;./App&#39;import pageHead from &#39;./components/page-head.vue&#39; //Global reference to the page-head componentVue.config.productionTip = falseVue.component(&#39;page-head&#39;, pageHead) //Globally register the page-head component, which each page will be able to use directlyApp.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/</guid>
+      <description>manifest.jsonThe file is the configuration file of the application, used to specify the name, icon, permissions, etc. of the application. The project created by HBuilderX is in the root directory, and the project created by CLI is in the src directory.
+List of configuration items#   Attributes Types of Defaults description Minimum version     name String  Application Name    appid String When creating a new uni-app project, DCloud will assign it.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/</guid>
+      <description>pages.json The file is used to configure uni-app globally, determine the path of the page file, window style, native navigation bar, native tabbar at the bottom, etc.
+It is similar to app.jsonthe page management part of the WeChat applet . Note that app.jsonthe content that originally belonged to the location permission application is configured in the manifest in the uni-app.
+List of configuration items#   Attributes Types of Required description Platform compatible     globalStyle Object no Set the window performance of the default page    pages Object Array Yes Set page path and window performance    easycom Object no Automatic component introduction rules 2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/</guid>
+      <description>uni.scssThe purpose of the file is to facilitate overall control of the style of the application. For example, button color, border style, uni.scssa batch of scss variable presets are preset in the file.
+uni-appThe official extension (uni ui) have used these tripartite plug-style variables, if you are a plugin developer, I suggest you use scss pretreatment, and use these variables (no need to import this file) directly in the plug-in code , It is convenient for users to develop apps with the same overall style by building blocks.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/</guid>
+      <description>vue.config.js is an optional configuration file. If this file exists in the root directory of the project, it will be automatically loaded. It is generally used to configure compilation options such as webpack. For specific specifications, refer to: vue.config.js
+**Support situation**- CLI project- HBuilderX 2.1.5 and above**Precautions**- Only the vue page takes effectSome configuration items will be overwritten by the compiled configuration, for example:- PublicPath does not support.</description>
+    </item>
+    
+  </channel>
+</rss>
