@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Concept# Components are the basic building blocks of the view layer. The component is an encapsulation of a single functional module. A component includes a start tag and an end tag. Attributes can be written on the label and assigned values to the attributes. The content is written in two labels.  Root is &lt;template&gt;, this &lt;template&gt;case can only and must have a root &lt;view&gt;component. This is the [vue single file component specification] .">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="Concept# Components are the basic building blocks of the view layer. The component is an encapsulation of a single functional module. A component includes a start tag and an end tag. Attributes can be written on the label and assigned values to the attributes. The content is written in two labels.  Root is &lt;template&gt;, this &lt;template&gt;case can only and must have a root &lt;view&gt;component. This is the [vue single file component specification] ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Vue Components | MR MiniApp</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.6e5054cc4e2971ba85444f42f0143e1d26f5392ca6597e6664a27dc2c18f8c8b.js" integrity="sha256-blBUzE4pcbqFRE9C8BQ&#43;HSb1OSymWX5mZKJ9wsGPjIs="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>MR MiniApp</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E6%9F%A5%E7%9C%8B%E4%BD%8D%E7%BD%AE/open-location/" class="">Open Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" class="">Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/" class="">Application</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/" class="">Editor Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/" class="">Record Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/" class="">Live Player Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/" class="">Camera Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/" class="">Background Audio Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/" class="">Video Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" class="">Media Container</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/" class="">Audio Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/" class="">Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/" class="">Pulldown</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/" class="">Media Query Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/" class="">Font</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/" class="">Scroll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/" class="">Bgcolor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nextTick/" class="">Next Tick</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/" class="">Nodes Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/" class="">Intersection Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AETabBar/tabbar/" class="">Tabbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/" class="">Navigationbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/" class="">Network File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/" class="">Request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" class="">Accelerometer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/barcode/barcode/" class="">Barcode</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/batteryInfo/batteryInfo/" class="">Battery Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/ble/ble/" class="">Ble</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/" class="">Bluetooth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/brightness/brightness/" class="">Brightness</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/clipboard/clipboard/" class="">Clipboard</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/compass/compass/" class="">Compass</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/contact/contact/" class="">Contact</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/iBeacon/ibeacon/" class="">Ibeacon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/newwork/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/NFC/nfc/" class="">Nfc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/phone/phone/" class="">Phone</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemInfo/info/" class="">Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemTheme/theme/" class="">Theme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/Wi-Fi/wifi/" class="">Wifi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%94%AE%E7%9B%98/key/" class="">Key</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subNVue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subNVues/" class="">Sub Nvues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/API/vue-api/" class="">Vue API</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/" class="">Vue Basics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/" class=" active">Vue Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/frame/" class="">Frame</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/App.vue/App/" class="">App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/" class="">Main</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/" class="">Manifest</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/" class="">Pages</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/" class="">Uni Scss</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/" class="">Vue Config</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/" class="">Web View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/" class="">Icon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/" class="">Progress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/" class="">Rich Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/" class="">Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/" class="">Audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/" class="">Navigation Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E7%94%BB%E5%B8%83/canvas/canvas/" class="">Canvas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/" class="">Button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/" class="">Checkbox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/" class="">Editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/" class="">Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/" class="">Input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/" class="">Label</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/" class="">Picker View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/" class="">Picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/" class="">Radio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/" class="">Slider</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/" class="">Textarea</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/cover-image/cover-view/" class="">Cover View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/match-media/match-media/" class="">Match Media</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movable-view/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movavle-area/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/scroll-view/scroll-view/" class="">Scroll View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/swiper/swiper/" class="">Swiper</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/view/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/" class="">Custom Tab Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/" class="">Navigator</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Vue Components</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#advantage">Advantage</a></li>
+        <li><a href="#registered">Registered</a>
+          <ul>
+            <li><a href="#global-registration">Global registration</a></li>
+            <li><a href="#partial-registration">Partial registration</a></li>
+          </ul>
+        </li>
+        <li><a href="#props">props</a>
+          <ul>
+            <li></li>
+            <li><a href="#pass-static-or-dynamic-prop">Pass static or dynamic Prop</a></li>
+            <li><a href="#unidirectional-data-flow">Unidirectional data flow</a></li>
+          </ul>
+        </li>
+        <li><a href="#custom-event">Custom event</a>
+          <ul>
+            <li><a href="#bind-native-events-to-components">Bind native events to components</a></li>
+            <li><a href="#sync-modifier">.sync modifier</a></li>
+          </ul>
+        </li>
+        <li><a href="#slot">Slot</a>
+          <ul>
+            <li><a href="#compilation-scope">Compilation scope</a></li>
+            <li><a href="#default-content">Default content</a></li>
+            <li><a href="#named-slot">Named slot</a></li>
+            <li><a href="#scope-slot">Scope slot</a></li>
+          </ul>
+        </li>
+        <li><a href="#naming-restrictions">Naming restrictions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="concept">
+  Concept
+  <a class="anchor" href="#concept">#</a>
+</h2>
+<ul>
+<li>Components are the basic building blocks of the view layer.</li>
+<li>The component is an encapsulation of a single functional module.</li>
+<li>A component includes a start tag and an end tag. Attributes can be written on the label and assigned values to the attributes. The content is written in two labels.
+<ul>
+<li>Root is <code>&lt;template&gt;</code>, this <code>&lt;template&gt;</code>case can only and must have a root <code>&lt;view&gt;</code>component. This is the [vue single file component specification] .</li>
+<li>The data option of a component must be a function.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- References the User-Info component on the index.vue page --&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">user-info</span>&gt;&lt;/<span style="color:#f92672">user-info</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    <span style="color:#75715e">&lt;!-- I am the component User-Info --&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span>&gt;{{userName}}&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#e6db74">&#34;userName&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;foo&#34;</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="advantage">
+  Advantage
+  <a class="anchor" href="#advantage">#</a>
+</h2>
+<ul>
+<li>The components can be reused any number of times.</li>
+<li>Reasonable division of components helps improve application performance.</li>
+<li>The code is more convenient to organize and manage, and it is more extensible, facilitating collaborative development by multiple people.</li>
+<li>Component development can greatly improve application development efficiency, testability, reusability, etc.</li>
+</ul>
+<h2 id="registered">
+  Registered
+  <a class="anchor" href="#registered">#</a>
+</h2>
+<p>When registering a component, we always need to give it a name. There are two ways to define component names:</p>
+<ul>
+<li>Use kebab-case</li>
+</ul>
+<p>When using kebab-case (name separated by dashes) to define a component, you must also use kebab-case when referencing this custom element, for example <code>&lt;my-component-name&gt;</code>.</p>
+<ul>
+<li>Use PascalCase</li>
+</ul>
+<p>When defining a component using PascalCase (name with initial capital letters), you can use both nomenclatures when referencing this custom element. Both <code>&lt;my-component-name&gt;</code>and <code>&lt;MyComponentName&gt;</code>are acceptable.</p>
+<h3 id="global-registration">
+  Global registration
+  <a class="anchor" href="#global-registration">#</a>
+</h3>
+<p><strong>Note</strong></p>
+<ul>
+<li>The first parameter of Vue.component must be a static string.</li>
+<li>The nvue page does not currently support global components.</li>
+</ul>
+<p>\1. Global import and registration in <code>main.js</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Vue</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;vue&#39;</span>
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">pageHead</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/page-head.vue&#39;</span>
+    <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">component</span>(<span style="color:#e6db74">&#39;page-head&#39;</span>,<span style="color:#a6e22e">pageHead</span>)
+</code></pre></div><p>\2. Components can be used directly in<code>index.vue</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">page-head</span>&gt;&lt;/<span style="color:#f92672">page-head</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><h3 id="partial-registration">
+  Partial registration
+  <a class="anchor" href="#partial-registration">#</a>
+</h3>
+<p>Before partial registration, import the component you want to use on the page that needs to reference the component.</p>
+<p><strong>The way the page introduces components</strong></p>
+<p>The following two ways to import a corner label component library, recommended to use <code>easycom</code> to introduce</p>
+<ol>
+<li><strong>Traditional vue specifications:</strong> On the index.vue page, import the component as <code>import</code> ,and define the <code>components</code>you want to use  in the Components option.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Introduce the uni-badge component in index.vue --&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">uni-badge</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>&gt;&lt;/<span style="color:#f92672">uni-badge</span>&gt;<span style="color:#75715e">&lt;!-- 3. Use components --&gt;</span>
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">uniBadge</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@/components/uni-badge/uni-badge.vue&#39;</span>;<span style="color:#75715e">//1. Import components (This step belongs to the traditional VUE specification）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">uniBadge</span> }<span style="color:#75715e">//2. Registration of Components (This step belongs to the traditional VUE specification） 
+</span><span style="color:#75715e"></span>        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>For the <code>components</code>object of each property, its property name is the name of the custom elements, objects whose property value is the option of this component.</p>
+<p>Putting a variable name similar to uniBadge in the object is actually uniBadge: short for uniBadge, that is, the variable name is also:</p>
+<ul>
+<li>The name of the custom element used in the template</li>
+<li>The variable name that contains this component option (Only hump naming is supported)</li>
+</ul>
+<ol>
+<li><strong>Easycom</strong>  : introduce the components into one step. As long as the components are installed in the project <code>components</code>directory, and in accordance with <code>components/组件名称/组件名称.vue</code>the directory structure. You can use it directly on the page without quoting or registering.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Introduce the uni-badge component in index.vue --&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">uni-badge</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>&gt;&lt;/<span style="color:#f92672">uni-badge</span>&gt;<span style="color:#75715e">&lt;!-- 3. Use components --&gt;</span>
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#75715e">// There is no need to import or register a uni-badge component in Components. Template can be used directly
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><ul>
+<li><strong>Easycom is automatically turned on</strong> , you do not need to manually open ,when there is a demand <code>pages.json</code>of <code>easycom</code>nodes personalize .</li>
+<li>No matter how many components are installed in the components directory, easycom will automatically remove unused components after packaging, which is particularly friendly to the use of component libraries.</li>
+</ul>
+<p>Component is a very important part of the technology in <code>vue</code>.Components allow UI-related wheels to be easily manufactured and shared, which in turn makes development efficiency for <code>vue</code>users significantly higher.</p>
+<h2 id="props">
+  props
+  <a class="anchor" href="#props">#</a>
+</h2>
+<p><code>props</code>Can be an array or object, used to receive data from the parent component. <code>props</code>It can be a simple array, or use an object as an alternative. The object allows configuration of advanced options such as type detection, custom validation, and setting default values.</p>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>Types of</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Array</code>, <code>Object</code>, <code>Date</code>, <code>Function</code>, <code>Symbol</code>Array, any custom constructor, or the above composition</td>
+<td>A checks <code>prop</code>whether the given type, otherwise throws a warning</td>
+</tr>
+<tr>
+<td>default</td>
+<td>any</td>
+<td>For <code>prop</code>a default value specified. If this <code>prop</code>is not passed, then the change to do with this value. The default value of the object or array must be returned from a factory function.</td>
+</tr>
+<tr>
+<td>required</td>
+<td>Boolean</td>
+<td>The definition of <code>prop</code>whether it is required</td>
+</tr>
+<tr>
+<td>validator</td>
+<td>Function</td>
+<td>The custom authentication function <code>prop</code>value as the only parameter is substituted. In a non-production environment, if the function returns a <code>falsy</code>value (that is, authentication fails), a warning will be thrown console</td>
+</tr>
+</tbody>
+</table>
+<h5 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am the child component Componenta --&gt;</span>
+            &lt;<span style="color:#f92672">view</span>&gt;{{age}}&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+                <span style="color:#75715e">// Detection type + other validation
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> {
+                    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> Number,
+                    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+                    <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+                    <span style="color:#a6e22e">validator</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>) {
+                        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>
+                    }
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am the parent component --&gt;</span>
+            &lt;<span style="color:#f92672">componentA</span> <span style="color:#a6e22e">:age</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;10&#34;</span>&gt;&lt;/<span style="color:#f92672">componentA</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><h3 id="pass-static-or-dynamic-prop">
+  Pass static or dynamic Prop
+  <a class="anchor" href="#pass-static-or-dynamic-prop">#</a>
+</h3>
+<ul>
+<li>You can give like this <code>prop</code>passed in a static value:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">blog-post</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;My journey with Vue&#34;</span>&gt;&lt;/<span style="color:#f92672">blog-post</span>&gt;
+</code></pre></div><ul>
+<li>Can be <code>v-bind</code>assigned dynamically</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- To assign a value to a variable dynamically --&gt;</span>
+    &lt;<span style="color:#f92672">blog-post</span> <span style="color:#a6e22e">v-bind:title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post.title&#34;</span>&gt;&lt;/<span style="color:#f92672">blog-post</span>&gt;
+
+    <span style="color:#75715e">&lt;!-- This means&#39; true &#39;even if the prop has no value.--&gt;</span>
+    &lt;<span style="color:#f92672">blog-post</span> <span style="color:#a6e22e">is-published</span>&gt;&lt;/<span style="color:#f92672">blog-post</span>&gt;
+
+    &lt;<span style="color:#f92672">blog-post</span> <span style="color:#a6e22e">v-bind:is-published</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post.isPublished&#34;</span>&gt;&lt;/<span style="color:#f92672">blog-post</span>&gt;
+</code></pre></div><ul>
+<li>Pass in all of an object <code>property</code></li>
+</ul>
+<p>If you want to pass in all <code>property</code>of an object as a prop, you can use without parameters <code>v-bind</code>(replace v-bind: prop-name) . For example, for a given object <code>post</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#a6e22e">post</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+        <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;My Journey with Vue&#39;</span>
+    }
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">blog</span><span style="color:#f92672">-</span><span style="color:#a6e22e">post</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">-</span><span style="color:#a6e22e">bind</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/blog-post&gt;</span>
+    <span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">The</span> <span style="color:#a6e22e">above</span> <span style="color:#a6e22e">template</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">equivalent</span> <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#f92672">--&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">blog</span><span style="color:#f92672">-</span><span style="color:#a6e22e">post</span>
+        <span style="color:#a6e22e">v</span><span style="color:#f92672">-</span><span style="color:#a6e22e">bind</span><span style="color:#f92672">:</span><span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post.id&#34;</span>
+        <span style="color:#a6e22e">v</span><span style="color:#f92672">-</span><span style="color:#a6e22e">bind</span><span style="color:#f92672">:</span><span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post.title&#34;</span>
+    <span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/blog-post&gt;</span>
+</code></pre></div><h3 id="unidirectional-data-flow">
+  Unidirectional data flow
+  <a class="anchor" href="#unidirectional-data-flow">#</a>
+</h3>
+<p>All props form a one <strong>-line downward binding</strong> between their parent and child props : updates to the parent prop will flow down to the child components, but the reverse is not possible. This will prevent accidental changes to the state of the parent component from the child component, which will make the data flow of your application difficult to understand.</p>
+<blockquote>
+<p>Every time the parent component changes, all props in the child component will be refreshed to the latest value. This means that you should not change props inside a subcomponent. If you do, Vue will issue a warning in the browser console.</p>
+</blockquote>
+<ul>
+<li>This <code>prop</code>is used to pass an initial value; the desired sub-assembly to the next as a local <code>prop</code>used data.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!--I am the child component Componenta --&gt;</span>
+            &lt;<span style="color:#f92672">view</span>&gt;{{title}}&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;title&#39;</span>]
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am the parent component --&gt;</span>
+            &lt;<span style="color:#f92672">componentA</span> <span style="color:#a6e22e">:title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;&lt;/<span style="color:#f92672">componentA</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;hello&#34;</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><ul>
+<li>This <code>prop</code>with a primitive values passed and the need for conversion. In this case, it is preferable to use the <code>prop</code>value of a calculated attribute to define:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am the child component Component A --&gt;</span>
+            &lt;<span style="color:#f92672">view</span>&gt;{{normalizedSize}}&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;size&#39;</span>],
+            <span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">normalizedSize</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">size</span>.<span style="color:#a6e22e">toLowerCase</span>()
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am the parent component --&gt;</span>
+            &lt;<span style="color:#f92672">componentA</span> <span style="color:#a6e22e">:size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;size&#34;</span>&gt;&lt;/<span style="color:#f92672">componentA</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">size</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;M&#34;</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="custom-event">
+  Custom event
+  <a class="anchor" href="#custom-event">#</a>
+</h2>
+<h3 id="bind-native-events-to-components">
+  Bind native events to components
+  <a class="anchor" href="#bind-native-events-to-components">#</a>
+</h3>
+<p>You may want to listen to a native event directly on the root element of a component many times. At this point, you can use <code>v-on</code>a <code>.native</code>modifier:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am the parent component --&gt;</span>
+            &lt;<span style="color:#f92672">componentA</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">native</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clickComponentA&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height: 200px;&#34;</span>&gt;&lt;/<span style="color:#f92672">componentA</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">clickComponentA</span>(){
+                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;clickComponentA&#34;</span>);
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am a child component --&gt;</span>
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;default&#34;</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">stop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;open&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height: 30px;&#34;</span>&gt;click&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span>{
+                <span style="color:#a6e22e">open</span>(){
+                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;open&#34;</span>);
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="sync-modifier">
+  .sync modifier
+  <a class="anchor" href="#sync-modifier">#</a>
+</h3>
+<p>When a child component changes the value of a <code>prop</code>, the change is synchronized with the binding in the parent component. <code>.sync</code>It is extended as a <code>v-on</code> listener that automatically updates the properties of the parent component.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- The parent component --&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">syncA</span> <span style="color:#a6e22e">:title</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">sync</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;&lt;/<span style="color:#f92672">syncA</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;hello vue.js&#34;</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">&lt;!-- Child components --&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changeTitle&#34;</span>&gt;{{title}}&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> {
+                    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;hello&#34;</span>
+                },
+            },
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span>{
+                <span style="color:#a6e22e">changeTitle</span>(){
+                    <span style="color:#75715e">//An update event is fired
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$emit</span>(<span style="color:#e6db74">&#39;update:title&#39;</span>,<span style="color:#e6db74">&#34;super-app&#34;</span>)
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="slot">
+  Slot
+  <a class="anchor" href="#slot">#</a>
+</h2>
+<p>Vue implements a content distribution API, using <code>slot</code>elements as outlets for hosting content distribution.</p>
+<p>It allows you to synthesize components like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">componentA</span>&gt;
+                Your Profile
+            &lt;/<span style="color:#f92672">componentA</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>In the <code>&lt;componentA&gt;</code>template may be written as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- I am the child component Componenta --&gt;</span>
+            &lt;<span style="color:#f92672">view</span> &gt;{{title}}&lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">slot</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>When the component is rendered, it <code>&lt;slot&gt;&lt;/slot&gt;</code>will be replaced with &ldquo;Your Profile&rdquo;. The slot can contain any template code, including <code>HTML</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!--I am the parent component --&gt;</span>
+            &lt;<span style="color:#f92672">componentA</span>&gt;
+                &lt;<span style="color:#f92672">view</span>&gt;Your Profile&lt;/<span style="color:#f92672">view</span>&gt;
+                <span style="color:#75715e">&lt;!-- Add a uni-icons icon--&gt;</span>
+                &lt;<span style="color:#f92672">uni-icons</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contact&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;30&#34;</span>&gt;&lt;/<span style="color:#f92672">uni-icons</span>&gt;
+            &lt;/<span style="color:#f92672">componentA</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>If <code>&lt;componentA&gt;</code>a <code>template</code>does not contain an <code>&lt;slot&gt;</code>element, then anything between the start tag and an end tag assembly is discarded.</p>
+<h3 id="compilation-scope">
+  Compilation scope
+  <a class="anchor" href="#compilation-scope">#</a>
+</h3>
+<p>When you want to use data in a slot, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">navigation-link</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/profile&#34;</span>&gt;
+        Logged in as {{ user.name }}
+    &lt;/<span style="color:#f92672">navigation-link</span>&gt;
+</code></pre></div><p>This slot has access to the same instance<code>property</code> (that is, the same &ldquo;scope&rdquo;) as the rest of the template, but not to the scope of <code>&lt;navigation-link&gt;</code>.For example, <code>url</code>a visit of less than:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">navigation-link</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/profile&#34;</span>&gt;
+        Clicking here will send you to: {{ url }}
+    <span style="color:#75715e">&lt;!--
+</span><span style="color:#75715e">        So the &#39;URL&#39; here is going to be undefined,
+</span><span style="color:#75715e">Because its contents are _ passed to _ &lt;navigation-link&gt;
+</span><span style="color:#75715e">It is not defined within the &lt;navigation-link&gt; component *.
+</span><span style="color:#75715e">    --&gt;</span>
+    &lt;/<span style="color:#f92672">navigation-link</span>&gt;
+</code></pre></div><blockquote>
+<p>Remember the rule: <strong>everything in the parent template is compiled in the parent scope; everything in the child template is compiled in the child scope.</strong></p>
+</blockquote>
+<h3 id="default-content">
+  Default content
+  <a class="anchor" href="#default-content">#</a>
+</h3>
+<p>Sometimes it is useful to set a specific fallback (that is, the default) content for a slot, which will only be rendered when no content is provided. In one example, <code>&lt;submit-button&gt;</code>component:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;
+        &lt;<span style="color:#f92672">slot</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+    &lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><p>We may hope that <code>&lt;button&gt;</code>the vast majority of cases are rendered within the text &ldquo;Submit&rdquo;. In order to &ldquo;Submit&rdquo; content as a backup, we can put it <code>&lt;slot&gt;</code>in the label:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;
+        &lt;<span style="color:#f92672">slot</span>&gt;Submit&lt;/<span style="color:#f92672">slot</span>&gt;
+    &lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><ul>
+<li>When I use a parent component <code>&lt;submit-button&gt;</code>when slot and does not provide any content:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Parent component: No slot content is provided --&gt;</span>
+    &lt;<span style="color:#f92672">submit-button</span>&gt;&lt;/<span style="color:#f92672">submit-button</span>&gt;
+
+    <span style="color:#75715e">&lt;!-- Subcomponent: Backup content &#34;Submit&#34; will be rendered: --&gt;</span>
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;
+        Submit
+    &lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><ul>
+<li>When I use a parent assembly <code>&lt;submit-button&gt;</code>time and provides a slot content:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Parent component: Provides slot content --&gt;</span>
+    &lt;<span style="color:#f92672">submit-button</span>&gt;
+        Save
+    &lt;/<span style="color:#f92672">submit-button</span>&gt;
+
+    <span style="color:#75715e">&lt;!-- Subcomponent: then the supplied content will be rendered in place of the backup content: --&gt;</span>
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;
+        Save
+    &lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><h3 id="named-slot">
+  Named slot
+  <a class="anchor" href="#named-slot">#</a>
+</h3>
+<p>When multiple slots are required, you can define named slots using a special feature of the  <code>&lt;slot&gt;</code> element: <code>name</code></p>
+<ul>
+<li><code>&lt;base-layout&gt;</code> Subcomponent template:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+            &lt;<span style="color:#f92672">header</span>&gt;
+                <span style="color:#75715e">&lt;!-- We want to put the header here --&gt;</span>
+                &lt;<span style="color:#f92672">slot</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;header&#34;</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+            &lt;/<span style="color:#f92672">header</span>&gt;
+            &lt;<span style="color:#f92672">main</span>&gt;
+                <span style="color:#75715e">&lt;!-- We want to put the main thing here --&gt;</span>
+                &lt;<span style="color:#f92672">slot</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+            &lt;/<span style="color:#f92672">main</span>&gt;
+            &lt;<span style="color:#f92672">footer</span>&gt;
+                <span style="color:#75715e">&lt;!-- We want to put the footer here --&gt;</span>
+                &lt;<span style="color:#f92672">slot</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;footer&#34;</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+            &lt;/<span style="color:#f92672">footer</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><ul>
+<li>When providing content to a named slot, We can use  <code>v-slot</code>  directive on a <code>&lt;template&gt;</code>element, and provide their name as a parameter of v-slot:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+        <span style="color:#75715e">&lt;!-- The parent component uses the child component &#39;&lt;base-layout&gt;&#39;, and the node uses the slot feature: --&gt;</span>
+            &lt;<span style="color:#f92672">base-layout</span>&gt;
+                &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot:header</span>&gt;
+                    &lt;<span style="color:#f92672">view</span>&gt;Here might be a page title&lt;/<span style="color:#f92672">view</span>&gt;
+                &lt;/<span style="color:#f92672">template</span>&gt;
+                &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot:default</span>&gt;
+                    &lt;<span style="color:#f92672">view</span>&gt;A paragraph for the main content.&lt;/<span style="color:#f92672">view</span>&gt;
+                    &lt;<span style="color:#f92672">view</span>&gt;And another one.&lt;/<span style="color:#f92672">view</span>&gt;
+                &lt;/<span style="color:#f92672">template</span>&gt;
+                &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot:footer</span>&gt;
+                    &lt;<span style="color:#f92672">view</span>&gt;Here&#39;s some contact info&lt;/<span style="color:#f92672">view</span>&gt;
+                &lt;/<span style="color:#f92672">template</span>&gt;
+            &lt;/<span style="color:#f92672">base-layout</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>Now <code>&lt;template&gt;</code>all the content elements will have to be passed in the appropriate slot. Any not been wrapped with the v-slot in<code>&lt;template&gt;</code>is considered the default slot content in the content .</p>
+<blockquote>
+<p>v-slot can be added only in the <code>&lt;template&gt;</code></p>
+<p>A  <code>&lt;slot&gt;</code>exit without a name carries the implied name &ldquo;default&rdquo;.</p>
+</blockquote>
+<h4 id="abbreviation-for-named-slot">
+  Abbreviation for named slot
+  <a class="anchor" href="#abbreviation-for-named-slot">#</a>
+</h4>
+<p>Like v-on and v-bind, <code>v-slot</code>it also has abbreviations, that is, replace everything before the parameter (v-slot:) with the character <strong>#</strong> . For example, <code>v-slot:header</code>it can be rewritten as <code>#header</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+        <span style="color:#75715e">&lt;!-- The parent component uses the child component &#39;&lt;base-layout&gt;&#39;, and the node uses the slot feature: --&gt;</span>
+            &lt;<span style="color:#f92672">base-layout</span>&gt;
+                &lt;<span style="color:#f92672">template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">header</span>&gt;
+                    &lt;<span style="color:#f92672">view</span>&gt;Here might be a page title&lt;/<span style="color:#f92672">view</span>&gt;
+                &lt;/<span style="color:#f92672">template</span>&gt;
+
+                &lt;<span style="color:#f92672">view</span>&gt;A paragraph for the main content.&lt;/<span style="color:#f92672">view</span>&gt;
+                &lt;<span style="color:#f92672">view</span>&gt;And another one.&lt;/<span style="color:#f92672">view</span>&gt;
+
+                &lt;<span style="color:#f92672">template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">footer</span>&gt;
+                    &lt;<span style="color:#f92672">view</span>&gt;Here&#39;s some contact info&lt;/<span style="color:#f92672">view</span>&gt;
+                &lt;/<span style="color:#f92672">template</span>&gt;
+            &lt;/<span style="color:#f92672">base-layout</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><h3 id="scope-slot">
+  Scope slot
+  <a class="anchor" href="#scope-slot">#</a>
+</h3>
+<p>In the scope slot, the parent component can get the data of the child component. Subassembly may be <code>slot</code>bound label on the attribute value.</p>
+<p>Sometimes it is useful to allow the contents of the slot to access data that is only available in the subcomponent.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Child components &lt;current-user&gt;--&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">slot</span>&gt;{{ user.lastName }}&lt;/<span style="color:#f92672">slot</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>We may want to change the default content and display it by first name instead of last name. as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">current-user</span>&gt;
+                {{ user.firstName }}
+            &lt;/<span style="color:#f92672">current-user</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>However, the above code does not work properly, because only <code>&lt;current-user&gt;</code>components can access the user and the content we provide is in the parent rendering.</p>
+<p>To make user available in the parent slot contents, we can bind user as an <code>attribute</code> of the  <code>&lt;slot&gt;</code> element:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Child components &lt;current-user&gt;--&gt;</span>
+    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">slot</span> <span style="color:#a6e22e">:user</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span>&gt;{{user.lastName}}&lt;/<span style="color:#f92672">slot</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">user</span><span style="color:#f92672">:</span>{
+                        <span style="color:#e6db74">&#34;lastName&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;bar&#34;</span>,
+                        <span style="color:#e6db74">&#34;firstName&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;foo&#34;</span>
+                    }
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Binding <code>&lt;slot&gt;</code>on the element <code>attribute</code>is called <strong>slot prop</strong> .Now in the parent scope, we can use the valued <code>v-slot</code> to define the name of the <code>prop</code> we provide:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">current-user</span>&gt;
+                &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot:default</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;slotProps&#34;</span>&gt;
+                    {{ slotProps.user.firstName }}
+                &lt;/<span style="color:#f92672">template</span>&gt;
+            &lt;/<span style="color:#f92672">current-user</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>In this example, we select will contain all the slots <code>prop</code>object name <code>slotProps</code>, but you can use any name you like.</p>
+<h4 id="abbreviated-syntax-for-exclusive-default-slot">
+  Abbreviated syntax for exclusive default slot
+  <a class="anchor" href="#abbreviated-syntax-for-exclusive-default-slot">#</a>
+</h4>
+<p>Like assume unspecified content corresponding slot as the default, with no arguments <code>v-slot</code>is assumed to correspond to the default slot:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">view</span>&gt;
+        &lt;<span style="color:#f92672">current-user</span>&gt;
+            &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;slotProps&#34;</span>&gt;
+                {{ slotProps.user.firstName }}
+            &lt;/<span style="color:#f92672">template</span>&gt;
+        &lt;/<span style="color:#f92672">current-user</span>&gt;
+    &lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p><strong>The abbreviated syntax of the default slot cannot be mixed with the named slot</strong> , because it will cause the scope to be ambiguous:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- Invalid and will result in a warning --&gt;</span>
+            &lt;<span style="color:#f92672">current-user</span> <span style="color:#a6e22e">v-slot</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;slotProps&#34;</span>&gt;
+                {{ slotProps.user.firstName }}
+                &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot:other</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;otherSlotProps&#34;</span>&gt;
+                    slotProps is NOT available here
+                &lt;/<span style="color:#f92672">template</span>&gt;
+            &lt;/<span style="color:#f92672">current-user</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>Always use the full <code>&lt;template&gt;</code>-based syntax for all slots whenever multiple slots are present:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">current-user</span>&gt;
+                &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot:default</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;slotProps&#34;</span>&gt;
+                    {{ slotProps.user.firstName }}
+                &lt;/<span style="color:#f92672">template</span>&gt;
+
+                &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-slot:other</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;otherSlotProps&#34;</span>&gt;
+                    ...
+                &lt;/<span style="color:#f92672">template</span>&gt;
+            &lt;/<span style="color:#f92672">current-user</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><h4 id="deconstruct-slot-prop">
+  Deconstruct Slot Prop
+  <a class="anchor" href="#deconstruct-slot-prop">#</a>
+</h4>
+<p>The internal working principle of scoped slots is to wrap the contents of your slot in a function with a single parameter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">slotProps</span>) {
+        <span style="color:#75715e">// Content of the slot
+</span><span style="color:#75715e"></span>    }
+</code></pre></div><p>This means that the value of a  <code>v-slot</code> can actually be any<code>JavaScript</code> expression that can be used as a parameter in a function definition. So with the support of the environment ( single file component ), you can also use the ES2015 deconstructed to pass specific slot <code>prop</code>, as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">current-user</span> <span style="color:#a6e22e">v-slot</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{ user }&#34;</span>&gt;
+        {{ user.firstName }}
+    &lt;/<span style="color:#f92672">current-user</span>&gt;
+</code></pre></div><p>This makes the template more compact, especially if the slot provides more than one <code>prop</code>.It also opens up other possibilities, such as<code>prop</code> renaming,for example, <code>user</code>rename <code>person</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">current-user</span> <span style="color:#a6e22e">v-slot</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{ user: person }&#34;</span>&gt;
+        {{ person.firstName }}
+    &lt;/<span style="color:#f92672">current-user</span>&gt;
+</code></pre></div><p>You can even define a backup for the case where <code>prop</code> in the slot is <code>undefined</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">current-user</span> <span style="color:#a6e22e">v-slot</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{ user = { firstName: &#39;Guest&#39; } }&#34;</span>&gt;
+        {{ user.firstName }}
+    &lt;/<span style="color:#f92672">current-user</span>&gt;
+</code></pre></div><h2 id="naming-restrictions">
+  Naming restrictions
+  <a class="anchor" href="#naming-restrictions">#</a>
+</h2>
+<p>The following are reserved keywords and can not be used as component names.</p>
+<ul>
+<li><code>a</code></li>
+<li><code>canvas</code></li>
+<li><code>cell</code></li>
+<li><code>content</code></li>
+<li><code>countdown</code></li>
+<li><code>datepicker</code></li>
+<li><code>div</code></li>
+<li><code>element</code></li>
+<li><code>embed</code></li>
+<li><code>header</code></li>
+<li><code>image</code></li>
+<li><code>img</code></li>
+<li><code>indicator</code></li>
+<li><code>input</code></li>
+<li><code>link</code></li>
+<li><code>list</code></li>
+<li><code>loading-indicator</code></li>
+<li><code>loading</code></li>
+<li><code>marquee</code></li>
+<li><code>meta</code></li>
+<li><code>refresh</code></li>
+<li><code>richtext</code></li>
+<li><code>script</code></li>
+<li><code>scrollable</code></li>
+<li><code>scroller</code></li>
+<li><code>select</code></li>
+<li><code>slider-neighbor</code></li>
+<li><code>slider</code></li>
+<li><code>slot</code></li>
+<li><code>span</code></li>
+<li><code>spinner</code></li>
+<li><code>style</code></li>
+<li><code>svg</code></li>
+<li><code>switch</code></li>
+<li><code>tabbar</code></li>
+<li><code>tabheader</code></li>
+<li><code>template</code></li>
+<li><code>text</code></li>
+<li><code>textarea</code></li>
+<li><code>timepicker</code></li>
+<li><code>transition-group</code></li>
+<li><code>transition</code></li>
+<li><code>video</code></li>
+<li><code>view</code></li>
+<li><code>web</code></li>
+</ul>
+<p>Tips</p>
+<ul>
+<li>In addition to the names in the above list, standard HTML and SVG tag names cannot be used as component names.</li>
+<li>When using in Baidu applet, do not use hidden in data, it may cause rendering errors.</li>
+<li>Methods cannot use a method name with the same name as a lifecycle.</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#advantage">Advantage</a></li>
+        <li><a href="#registered">Registered</a>
+          <ul>
+            <li><a href="#global-registration">Global registration</a></li>
+            <li><a href="#partial-registration">Partial registration</a></li>
+          </ul>
+        </li>
+        <li><a href="#props">props</a>
+          <ul>
+            <li></li>
+            <li><a href="#pass-static-or-dynamic-prop">Pass static or dynamic Prop</a></li>
+            <li><a href="#unidirectional-data-flow">Unidirectional data flow</a></li>
+          </ul>
+        </li>
+        <li><a href="#custom-event">Custom event</a>
+          <ul>
+            <li><a href="#bind-native-events-to-components">Bind native events to components</a></li>
+            <li><a href="#sync-modifier">.sync modifier</a></li>
+          </ul>
+        </li>
+        <li><a href="#slot">Slot</a>
+          <ul>
+            <li><a href="#compilation-scope">Compilation scope</a></li>
+            <li><a href="#default-content">Default content</a></li>
+            <li><a href="#named-slot">Named slot</a></li>
+            <li><a href="#scope-slot">Scope slot</a></li>
+          </ul>
+        </li>
+        <li><a href="#naming-restrictions">Naming restrictions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

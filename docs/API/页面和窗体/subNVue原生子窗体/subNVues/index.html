@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="subNvue is the native sub-form of the vue page. The native interface rendered by weex is used as the sub-form of the vue page to overlay the page. It is not a full-screen page, it provides a more powerful and flexible solution for the hierarchical coverage and native interface customization in the vue page of the App platform. It is not a component, but a native child form.
+ subNvue is supported since 1.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="subNvue is the native sub-form of the vue page. The native interface rendered by weex is used as the sub-form of the vue page to overlay the page. It is not a full-screen page, it provides a more powerful and flexible solution for the hierarchical coverage and native interface customization in the vue page of the App platform. It is not a component, but a native child form.
+ subNvue is supported since 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subNVue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subNVues/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Sub Nvues | MR MiniApp</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.6e5054cc4e2971ba85444f42f0143e1d26f5392ca6597e6664a27dc2c18f8c8b.js" integrity="sha256-blBUzE4pcbqFRE9C8BQ&#43;HSb1OSymWX5mZKJ9wsGPjIs="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>MR MiniApp</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E6%9F%A5%E7%9C%8B%E4%BD%8D%E7%BD%AE/open-location/" class="">Open Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" class="">Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/" class="">Application</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/" class="">Editor Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/" class="">Record Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/" class="">Live Player Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/" class="">Camera Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/" class="">Background Audio Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/" class="">Video Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" class="">Media Container</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/" class="">Audio Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/" class="">Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/" class="">Pulldown</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/" class="">Media Query Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/" class="">Font</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/" class="">Scroll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/" class="">Bgcolor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nextTick/" class="">Next Tick</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/" class="">Nodes Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/" class="">Intersection Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AETabBar/tabbar/" class="">Tabbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/" class="">Navigationbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/" class="">Network File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/" class="">Request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" class="">Accelerometer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/barcode/barcode/" class="">Barcode</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/batteryInfo/batteryInfo/" class="">Battery Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/ble/ble/" class="">Ble</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/" class="">Bluetooth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/brightness/brightness/" class="">Brightness</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/clipboard/clipboard/" class="">Clipboard</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/compass/compass/" class="">Compass</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/contact/contact/" class="">Contact</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/iBeacon/ibeacon/" class="">Ibeacon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/newwork/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/NFC/nfc/" class="">Nfc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/phone/phone/" class="">Phone</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemInfo/info/" class="">Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemTheme/theme/" class="">Theme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/Wi-Fi/wifi/" class="">Wifi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%94%AE%E7%9B%98/key/" class="">Key</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subNVue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subNVues/" class=" active">Sub Nvues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/API/vue-api/" class="">Vue API</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/" class="">Vue Basics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/" class="">Vue Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/frame/" class="">Frame</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/App.vue/App/" class="">App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/" class="">Main</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/" class="">Manifest</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/" class="">Pages</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/" class="">Uni Scss</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/" class="">Vue Config</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/" class="">Web View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/" class="">Icon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/" class="">Progress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/" class="">Rich Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/" class="">Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/" class="">Audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/" class="">Navigation Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E7%94%BB%E5%B8%83/canvas/canvas/" class="">Canvas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/" class="">Button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/" class="">Checkbox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/" class="">Editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/" class="">Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/" class="">Input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/" class="">Label</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/" class="">Picker View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/" class="">Picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/" class="">Radio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/" class="">Slider</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/" class="">Textarea</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/cover-image/cover-view/" class="">Cover View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/match-media/match-media/" class="">Match Media</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movable-view/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movavle-area/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/scroll-view/scroll-view/" class="">Scroll View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/swiper/swiper/" class="">Swiper</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/view/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/" class="">Custom Tab Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/" class="">Navigator</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Sub Nvues</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#unigetsubnvuebyidsubnvueid">uni.getSubNVueById(subNvueId)</a></li>
+            <li><a href="#unigetcurrentsubnvue">uni.getCurrentSubNVue()</a></li>
+            <li><a href="#subnvueshow-anishow-duration-showedcb">subNVue.show (aniShow, duration, showedCB)</a></li>
+            <li><a href="#subnvuehide-anishowduration">subNVue.hide (aniShow,duration)</a></li>
+            <li><a href="#subnvuesetstyle-style">subNVue.setStyle (style)</a></li>
+            <li><a href="#subnvuepostmessageobject">subNVue.postMessage(OBJECT)</a></li>
+            <li><a href="#subnvueonmessagecallback">subNVue.onMessage(CallBack)</a></li>
+            <li><a href="#animation-type">Animation type</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>subNvue is the native sub-form of the vue page. The native interface rendered by weex is used as the sub-form of the vue page to overlay the page. It is not a full-screen page, it provides a more powerful and flexible solution for the hierarchical coverage and native interface customization in the vue page of the App platform. It is not a component, but a native child form.</p>
+<blockquote>
+<p>subNvue is supported since 1.9.10 and only supports app platform</p>
+</blockquote>
+<h3 id="unigetsubnvuebyidsubnvueid">
+  uni.getSubNVueById(subNvueId)
+  <a class="anchor" href="#unigetsubnvuebyidsubnvueid">#</a>
+</h3>
+<p>By <code>ID</code>acquiring <code>subNVues</code>examples of original children form. subNVues configuration</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>Types</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>subNvueId</td>
+<td>String</td>
+<td>ID of the native child form</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Code example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">subNVue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">getSubNVueById</span>(<span style="color:#e6db74">&#39;popup&#39;</span>);
+</code></pre></div><h4 id="return-value">
+  Return value
+  <a class="anchor" href="#return-value">#</a>
+</h4>
+<p>Return a subNVue object</p>
+<h3 id="unigetcurrentsubnvue">
+  uni.getCurrentSubNVue()
+  <a class="anchor" href="#unigetcurrentsubnvue">#</a>
+</h3>
+<p>Nvue page code in the form of a subnvue, obtain the current <code>subNVues</code>instance of the original Son form.</p>
+<p><strong>Code sample (note that the execution is in the nvue page)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">subNVue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">getCurrentSubNVue</span>();
+</code></pre></div><h4 id="return-value-1">
+  Return value
+  <a class="anchor" href="#return-value-1">#</a>
+</h4>
+<p>Return a subNVue object</p>
+<h4 id="list-of-methods-of-subnvue-object">
+  List of methods of subNVue object
+  <a class="anchor" href="#list-of-methods-of-subnvue-object">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show</td>
+<td>Show native child form</td>
+</tr>
+<tr>
+<td>hide</td>
+<td>Hide native child form</td>
+</tr>
+<tr>
+<td>setStyle</td>
+<td>Set the style of the native child form</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subnvueshow-anishow-duration-showedcb">
+  subNVue.show (aniShow, duration, showedCB)
+  <a class="anchor" href="#subnvueshow-anishow-duration-showedcb">#</a>
+</h3>
+<p>Show native child form</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>Types</th>
+<th>Defaults</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aniShow</td>
+<td>String</td>
+<td>auto</td>
+<td>Display the animation effect of the native child form. If the window animation type is not specified, the default value &ldquo;auto&rdquo; is used, that is, the animation effect of the last displayed window is automatically selected. If it has not been displayed before, the &ldquo;none&rdquo; animation effect is used. <a href="https://uniapp.dcloud.io/api/window/subNVues?id=%e5%8a%a8%e7%94%bb%e7%b1%bb%e5%9e%8b">See animation types for details</a></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Number</td>
+<td>600</td>
+<td>The animation duration of the native child form is displayed in ms. If it is not set, the default window animation time is 600ms.</td>
+</tr>
+<tr>
+<td>showedCB</td>
+<td>Function</td>
+<td></td>
+<td>The callback function for display completion. The callback function is triggered when the specified native subform display animation is completed, and the callback function is also triggered when the window has no animation effect (such as &ldquo;none&rdquo; animation effect).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Code example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">subNVue</span>.<span style="color:#a6e22e">show</span>(<span style="color:#e6db74">&#39;slide-in-left&#39;</span>,<span style="color:#ae81ff">200</span>,()=&gt;{
+	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;subNVue The primary child window displayed successfully&#39;</span>);
+})
+</code></pre></div><h3 id="subnvuehide-anishowduration">
+  subNVue.hide (aniShow,duration)
+  <a class="anchor" href="#subnvuehide-anishowduration">#</a>
+</h3>
+<p>Hide native child form</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>Types of</th>
+<th>Defaults</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aniShow</td>
+<td>String</td>
+<td>auto</td>
+<td>Hide the animation effect of the native child form. If the window animation type is not specified, the default value &ldquo;auto&rdquo; is used, that is, the animation effect of the last displayed window is automatically selected. If it has not been displayed before, the &ldquo;none&rdquo; animation effect is used. <a href="https://uniapp.dcloud.io/api/window/subNVues?id=%e5%8a%a8%e7%94%bb%e7%b1%bb%e5%9e%8b">See animation types for details</a></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Number</td>
+<td>600</td>
+<td>The animation duration of the hidden native sub-form is in ms. If it is not set, the default window animation time is 600ms.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Code example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">subNVue</span>.<span style="color:#a6e22e">hide</span>(<span style="color:#e6db74">&#39;slide-out-left&#39;</span>,<span style="color:#ae81ff">200</span>);
+</code></pre></div><h3 id="subnvuesetstyle-style">
+  subNVue.setStyle (style)
+  <a class="anchor" href="#subnvuesetstyle-style">#</a>
+</h3>
+<p>Set the style of the native child form</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>Types of</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>style</td>
+<td>Object</td>
+<td>The style of the native child form</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The style of the native child form</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Defaults</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">position</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">absolute</td>
+<td style="text-align:left">The layout position of the native child form. The layout position determines the positioning method of the native child form in the parent window. Possible values: &ldquo;static&rdquo;, the native subform is positioned normally on the page, if the page has a scroll bar, it will scroll with the window content; &ldquo;absolute&rdquo;, the native subform is absolutely positioned on the page, if the page has a scroll bar, it will not follow the window Content scrolling; &ldquo;dock&rdquo;, the native child form is docked in the page, and the docking position is determined by the value of the dock property. The default value is &ldquo;absolute&rdquo;.</td>
+</tr>
+<tr>
+<td style="text-align:left">though</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">bottom</td>
+<td style="text-align:left">The docking method of the native child form takes effect only when the native child form’s &ldquo;position&rdquo; property value is set to &ldquo;dock&rdquo;, the value can be: &ldquo;top&rdquo;, the native child form is docked at the top of the page; &ldquo;bottom&rdquo;, native The subform is docked at the bottom of the page; &ldquo;right&rdquo;, the native subform is docked on the right side of the page; &ldquo;left&rdquo;, the native subform is docked on the left side of the page. The default value is &ldquo;bottom&rdquo;.</td>
+</tr>
+<tr>
+<td style="text-align:left">mask</td>
+<td style="text-align:left">HexColor</td>
+<td style="text-align:left">rgba (0,0,0,0.5)</td>
+<td style="text-align:left">The mask layer of the native subform will only take effect when the &ldquo;type&rdquo; attribute value of the native subform is set to &ldquo;popup&rdquo;. Values are: rgba format string, which defines the solid color mask layer style, such as &ldquo;rgba(0 ,0,0,0.5)&rdquo;, which means black translucent;</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">The width of the native child form supports percentages and pixel values. The default is 100%. When the width attribute value is not set, the left and right attribute values can be set at the same time to change the default width of the window.</td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">The height of the native child form, supports percentage, pixel value, the default is 100%. When the height attribute value is not set, the top and bottom attribute values are given priority to calculate the height of the native child form.</td>
+</tr>
+<tr>
+<td style="text-align:left">top</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">0px</td>
+<td style="text-align:left">The vertical downward offset of the native child form. It supports percentage and pixel value. The default value is 0px. When the top attribute value is not set, the bottom and height attribute values are first used to calculate the top position of the native child form.</td>
+</tr>
+<tr>
+<td style="text-align:left">bottom</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">The vertical upward offset of the native child form supports percentages and pixel values. The default value has no value (automatically calculated based on the top and height attribute values). When the top and height values are set at the same time, this attribute value is ignored; when the height value is not set, the height of the native child form can be determined by the top and bottom attribute values.</td>
+</tr>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">0px</td>
+<td style="text-align:left">The horizontal leftward offset of the native child form. It supports percentage and pixel value. The default value is 0px. When the left attribute value is not set, the left position of the native child form is calculated by the right and width attribute values first.</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">The horizontal offset of the native child form to the right, supports percentages, pixel values, and no value by default (automatically calculated based on the left and width attribute values). When the left and width values are set, this property value is ignored; when the width value is not set, the width of the native child form can be determined by the left and bottom property values.</td>
+</tr>
+<tr>
+<td style="text-align:left">margin</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">The margin of the native child form is used to locate the position of the native child form. It supports auto, which means centering. If left, right, top, bottom are set, the corresponding margin value is invalid.</td>
+</tr>
+<tr>
+<td style="text-align:left">zindex</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">The stacking order value of the windows of the native child form. A window with a higher stacking order will always be in front of a window with a lower stacking order, and a window with the same stacking order will be in front after the show method is called.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Code example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#a6e22e">subNVue</span>.<span style="color:#a6e22e">setStyle</span>({
+	<span style="color:#e6db74">&#34;position&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;absolute&#34;</span>, <span style="color:#75715e">//Except popup, refer to the 5+ WebView Position document for value fields
+</span><span style="color:#75715e"></span>	<span style="color:#e6db74">&#34;width&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;50%&#34;</span>,
+	<span style="color:#e6db74">&#34;height&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;50%&#34;</span>,
+	<span style="color:#e6db74">&#34;left&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;20px&#34;</span>,
+	<span style="color:#e6db74">&#34;top&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;100px&#34;</span>
+})
+</code></pre></div><h3 id="subnvuepostmessageobject">
+  subNVue.postMessage(OBJECT)
+  <a class="anchor" href="#subnvuepostmessageobject">#</a>
+</h3>
+<p>Send a message, this communication method is outdated, please use <code>uni.$emit</code>for communication</p>
+<p><strong>Code example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">subNVue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">getSubNVueById</span>(<span style="color:#e6db74">&#39;subNvue&#39;</span>);
+<span style="color:#a6e22e">subNvue</span>.<span style="color:#a6e22e">postMessage</span>({
+	<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;1&#39;</span>
+	<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;subNvues&#39;</span>
+})
+</code></pre></div><h3 id="subnvueonmessagecallback">
+  subNVue.onMessage(CallBack)
+  <a class="anchor" href="#subnvueonmessagecallback">#</a>
+</h3>
+<p>Monitor messages, this communication method is outdated, please use <code>uni.$on</code>for communication</p>
+<p><strong>Code example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">subNVue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">uni</span>.<span style="color:#a6e22e">getSubNVueById</span>(<span style="color:#e6db74">&#39;subNvue&#39;</span>);
+<span style="color:#a6e22e">subNvue</span>.<span style="color:#a6e22e">onMessage</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>){
+	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Listens for messages from the page&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>));
+})
+</code></pre></div><ul>
+<li>
+<h3 id="animation-type">
+  Animation type
+  <a class="anchor" href="#animation-type">#</a>
+</h3>
+<p>There will be default corresponding rules for displaying animation and closing animation. However, if the close animation type of the native child form through the API, the default type will not be used.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Show animation</th>
+<th style="text-align:left">Close animation</th>
+<th style="text-align:left">Show animation description (the opposite of closing animation)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">slide-in-right</td>
+<td style="text-align:left">slide-out-right</td>
+<td style="text-align:left">The new form enters from the right</td>
+</tr>
+<tr>
+<td style="text-align:left">slide-in-left</td>
+<td style="text-align:left">slide-out-left</td>
+<td style="text-align:left">Enter the new form from the left</td>
+</tr>
+<tr>
+<td style="text-align:left">slide-in-top</td>
+<td style="text-align:left">slide-out-top</td>
+<td style="text-align:left">The new form enters from the top</td>
+</tr>
+<tr>
+<td style="text-align:left">slide-in-bottom</td>
+<td style="text-align:left">slide-out-bottom</td>
+<td style="text-align:left">The new form enters from the bottom</td>
+</tr>
+<tr>
+<td style="text-align:left">fade-in</td>
+<td style="text-align:left">fade-out</td>
+<td style="text-align:left">The new form is gradually displayed from transparent to opaque</td>
+</tr>
+<tr>
+<td style="text-align:left">zoom-out</td>
+<td style="text-align:left">zoom-in</td>
+<td style="text-align:left">The new window zooms from small to large</td>
+</tr>
+<tr>
+<td style="text-align:left">zoom-fade-out</td>
+<td style="text-align:left">zoom-fade-in</td>
+<td style="text-align:left">The new window is gradually enlarged from small to large and gradually displayed from transparent to opaque</td>
+</tr>
+<tr>
+<td style="text-align:left">pop-in</td>
+<td style="text-align:left">pop-out</td>
+<td style="text-align:left">The new form enters from the left, and the old form is squeezed out</td>
+</tr>
+<tr>
+<td style="text-align:left">none</td>
+<td style="text-align:left">none</td>
+<td style="text-align:left">No animation</td>
+</tr>
+</tbody>
+</table>
+<p>For detailed window animation instructions, please refer to:</p>
+<ul>
+<li>Animation displayed in the window: AnimationTypeShow</li>
+<li>Animation of window closing: AnimationTypeClose</li>
+</ul>
+<p><strong>Precautions</strong></p>
+<ul>
+<li>Learn more <code>subNVue</code>original purposes of the children of the form, please read the subNVues original form twins Development Guide</li>
+<li>In the interface-interface-native sub-form of hello uni-app, there are complete subNVue examples, including the native navigation bar with gradient, the side-slide menu that can cover the map, the pop-up that can be popped from the top, and the video Scrolling message list</li>
+<li>Each <code>subNVue</code>page must be registered in pages.json in. If you need a global pop-up window, you can also directly pop up the nvue page</li>
+<li><code>subNVue</code>More powerful than the cover-view and plus.nativeObj.view, also take up more memory, in order to ensure a better performance experience, a vue pages do not load too much <code>subNVue</code>child form, recommended control in less than three</li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#unigetsubnvuebyidsubnvueid">uni.getSubNVueById(subNvueId)</a></li>
+            <li><a href="#unigetcurrentsubnvue">uni.getCurrentSubNVue()</a></li>
+            <li><a href="#subnvueshow-anishow-duration-showedcb">subNVue.show (aniShow, duration, showedCB)</a></li>
+            <li><a href="#subnvuehide-anishowduration">subNVue.hide (aniShow,duration)</a></li>
+            <li><a href="#subnvuesetstyle-style">subNVue.setStyle (style)</a></li>
+            <li><a href="#subnvuepostmessageobject">subNVue.postMessage(OBJECT)</a></li>
+            <li><a href="#subnvueonmessagecallback">subNVue.onMessage(CallBack)</a></li>
+            <li><a href="#animation-type">Animation type</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

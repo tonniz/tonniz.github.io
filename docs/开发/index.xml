@@ -1,69 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>易才批量代付项目</title>
-    <link>https://example.com/docs/%E5%BC%80%E5%8F%91/</link>
-    <description>Recent content on 易才批量代付项目</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/docs/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>任务分配</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/task/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/task/</guid>
-      <description>HRO API# 详参考《HRO接口文档》
-    任务名称 描述 负责人 进度     diskApply 批量代付申请 王磊 30%   diskResult 批量代付结果查询 王磊 0%   diskNotify 批次终态通知 王磊 0%   refundQuery 退票查询 赵林林 30%   customerSync 客户信息同步 赵林林 30%   titleSync 支付地账户信息同步 赵林林 30%   transStsSync 业务状态同步 王磊 0%   cardInfoQuery 卡信息查询 赵林林 30%    UI#   任务名称 描述 负责人 进度     UI Revision Flex翻写 左登红 70%   corgRiskRefactor 机构风控改造 左登红 0%   customerBrowse 客户信息浏览 左登红 0%   customerRiskManager 客户风控管理 左登红 0%   titleBrowse 支付地抬头浏览 左登红 0%   routerRefactor 路由改造（增加汇路） 左登红/王磊 0%   HRO Integration HRO整合 马东 0%    招行通道# 详参考《招商银行新引起开发指南》</description>
-    </item>
-    
-    <item>
-      <title>开发环境</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/env/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/env/</guid>
-      <description>门户#  平安版本运营
-http://182.18.1.4:8280/ubui
-User:T00001 Pass:1234qwer
-  版本库#   仓库名称 仓库描述 仓库地址     ctg-app-cap 易才代付核心-应用 https://alawn.cn:3001/MrTech/ctg-app-cap.git   ctg-plat-cap 易才代付核心-平台 https://alawn.cn:3001/MrTech/ctg-plat-cap.git   ctg-app-ui 易才代付运营-应用 https://alawn.cn:3001/MrTech/ctg-app-ui.git   ctg-plat-ui 易才代付运营-平台 https://alawn.cn:3001/MrTech/ctg-plat-ui.git   ctg-plat-ui 易才代付运营-平台 https://alawn.cn:3001/MrTech/ctg-plat-ui.git   ctg-vue 易才代付运营-前端 https://alawn.cn:3001/MrTech/ctg-vue.git   capbui 平安代付运营-应用 https://alawn.cn:3001/zhang_xx/capubui.git   ctg-jar Jar源码 https://alawn.cn:3001/MrTech/ctg-jar.git    开发环境 [易才]# 需要连易才VPN</description>
-    </item>
-    
-    <item>
-      <title>平安版本系统流程</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/pab/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/pab/</guid>
-      <description>Guide#Flowchart#文件处理 &amp;amp; 批次打包#送盘#回盘#技术要点#  库表索引的合理性
-  库表要分区
-  </description>
-    </item>
-    
-    <item>
-      <title>改造点</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/</guid>
-      <description>代收付#  易才HRO API
-  批量送盘
-  批次查询
-  对账文件生成
-  名录维护API
- 由HRO在名录发生变更时推送给沐融系统
-   退票查询
-    短信/邮件 改造
-  短信模板
-  短信调用易才RabbitMQ
-  邮件配置
-    银行类型的改造
-  批次送盘 &amp;amp; 回盘增加重点客户的优先级
-  删除商户有关的风控、检查；改造成客户
-  去除合作机构接口管理
-  提供卡BIN反查
- 支持批量上送（需做笔数控制）
-   客户风控增加单批 笔数/金额 上限
-  交易状态增加 R：已退汇，流水表中增加退汇流水号、退汇日期</description>
-    </item>
-    
-  </channel>
-</rss>

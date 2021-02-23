@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="map#Map component.
+The map component is used to display the map, and the positioning API just gets the coordinates, don&rsquo;t confuse the two.
+Property description
+   Attribute name Types of Defaults Description     longitude Number  Center longitude   latitude Number  Center latitude   scale Number 16 Zoom level, the value range is 3-20   min-scale Number 3 Minimum zoom level   max-scale Number 20 Maximum zoom level   layer-style Number 1 Personalized map   markers Array  Mark point   polyline Array  route   circles Array  round   controls Array  Control   include-points Array  Zoom the field of view to include all given coordinate points   enable-3D Boolean false Whether to display 3D blocks   show-compass Boolean false Whether to show the compass   enable-zoom Boolean true Whether to support zoom   enable-scroll Boolean true Whether to support drag   enable-rotate Boolean false Whether to support rotation   enable-overlooking Boolean false Whether to open the top view   enable-satellite Boolean false Whether to open the satellite image   enable-traffic Boolean false Whether to enable real-time traffic   enable-poi Boolean false Whether to show POI points   enable-building Boolean false Whether to display the building   polygons Array.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="map#Map component.
+The map component is used to display the map, and the positioning API just gets the coordinates, don&rsquo;t confuse the two.
+Property description
+   Attribute name Types of Defaults Description     longitude Number  Center longitude   latitude Number  Center latitude   scale Number 16 Zoom level, the value range is 3-20   min-scale Number 3 Minimum zoom level   max-scale Number 20 Maximum zoom level   layer-style Number 1 Personalized map   markers Array  Mark point   polyline Array  route   circles Array  round   controls Array  Control   include-points Array  Zoom the field of view to include all given coordinate points   enable-3D Boolean false Whether to display 3D blocks   show-compass Boolean false Whether to show the compass   enable-zoom Boolean true Whether to support zoom   enable-scroll Boolean true Whether to support drag   enable-rotate Boolean false Whether to support rotation   enable-overlooking Boolean false Whether to open the top view   enable-satellite Boolean false Whether to open the satellite image   enable-traffic Boolean false Whether to enable real-time traffic   enable-poi Boolean false Whether to show POI points   enable-building Boolean false Whether to display the building   polygons Array." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Map | MR MiniApp</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.6e5054cc4e2971ba85444f42f0143e1d26f5392ca6597e6664a27dc2c18f8c8b.js" integrity="sha256-blBUzE4pcbqFRE9C8BQ&#43;HSb1OSymWX5mZKJ9wsGPjIs="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>MR MiniApp</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E6%9F%A5%E7%9C%8B%E4%BD%8D%E7%BD%AE/open-location/" class="">Open Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" class="">Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/" class="">Application</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/" class="">Editor Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/" class="">Record Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/" class="">Live Player Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/" class="">Camera Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/" class="">Background Audio Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/" class="">Video Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" class="">Media Container</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/" class="">Audio Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/" class="">Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/" class="">Pulldown</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/" class="">Media Query Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/" class="">Font</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/" class="">Scroll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/" class="">Bgcolor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nextTick/" class="">Next Tick</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/" class="">Nodes Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/" class="">Intersection Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AETabBar/tabbar/" class="">Tabbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/" class="">Navigationbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/" class="">Network File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/" class="">Request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" class="">Accelerometer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/barcode/barcode/" class="">Barcode</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/batteryInfo/batteryInfo/" class="">Battery Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/ble/ble/" class="">Ble</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/" class="">Bluetooth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/brightness/brightness/" class="">Brightness</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/clipboard/clipboard/" class="">Clipboard</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/compass/compass/" class="">Compass</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/contact/contact/" class="">Contact</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/iBeacon/ibeacon/" class="">Ibeacon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/newwork/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/NFC/nfc/" class="">Nfc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/phone/phone/" class="">Phone</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemInfo/info/" class="">Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemTheme/theme/" class="">Theme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/Wi-Fi/wifi/" class="">Wifi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%94%AE%E7%9B%98/key/" class="">Key</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subNVue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subNVues/" class="">Sub Nvues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/API/vue-api/" class="">Vue API</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/" class="">Vue Basics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/" class="">Vue Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/frame/" class="">Frame</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/App.vue/App/" class="">App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/" class="">Main</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/" class="">Manifest</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/" class="">Pages</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/" class="">Uni Scss</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/" class="">Vue Config</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/" class="">Web View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/" class=" active">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/" class="">Icon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/" class="">Progress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/" class="">Rich Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/" class="">Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/" class="">Audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/" class="">Navigation Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E7%94%BB%E5%B8%83/canvas/canvas/" class="">Canvas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/" class="">Button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/" class="">Checkbox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/" class="">Editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/" class="">Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/" class="">Input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/" class="">Label</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/" class="">Picker View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/" class="">Picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/" class="">Radio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/" class="">Slider</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/" class="">Textarea</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/cover-image/cover-view/" class="">Cover View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/match-media/match-media/" class="">Match Media</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movable-view/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movavle-area/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/scroll-view/scroll-view/" class="">Scroll View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/swiper/swiper/" class="">Swiper</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/view/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/" class="">Custom Tab Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/" class="">Navigator</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Map</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h4 id="map">
+  map
+  <a class="anchor" href="#map">#</a>
+</h4>
+<p>Map component.</p>
+<p>The map component is used to display the map, and the positioning API just gets the coordinates, don&rsquo;t confuse the two.</p>
+<p><strong>Property description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attribute name</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Defaults</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Center longitude</td>
+</tr>
+<tr>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Center latitude</td>
+</tr>
+<tr>
+<td style="text-align:left">scale</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">Zoom level, the value range is 3-20</td>
+</tr>
+<tr>
+<td style="text-align:left">min-scale</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Minimum zoom level</td>
+</tr>
+<tr>
+<td style="text-align:left">max-scale</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">Maximum zoom level</td>
+</tr>
+<tr>
+<td style="text-align:left">layer-style</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Personalized map</td>
+</tr>
+<tr>
+<td style="text-align:left">markers</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Mark point</td>
+</tr>
+<tr>
+<td style="text-align:left">polyline</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">route</td>
+</tr>
+<tr>
+<td style="text-align:left">circles</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">round</td>
+</tr>
+<tr>
+<td style="text-align:left">controls</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Control</td>
+</tr>
+<tr>
+<td style="text-align:left">include-points</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Zoom the field of view to include all given coordinate points</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-3D</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to display 3D blocks</td>
+</tr>
+<tr>
+<td style="text-align:left">show-compass</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to show the compass</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-zoom</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">Whether to support zoom</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-scroll</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">Whether to support drag</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-rotate</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to support rotation</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-overlooking</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to open the top view</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-satellite</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to open the satellite image</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-traffic</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to enable real-time traffic</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-poi</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to show POI points</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-building</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to display the building</td>
+</tr>
+<tr>
+<td style="text-align:left">polygons</td>
+<td style="text-align:left">Array.<code>&lt;polygon&gt;</code></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Polygon</td>
+</tr>
+<tr>
+<td style="text-align:left">enable-indoorMap</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Whether to display the indoor map</td>
+</tr>
+<tr>
+<td style="text-align:left">@markertap</td>
+<td style="text-align:left">EventHandle</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Triggered when the marker is clicked, e.detail = {markerId}</td>
+</tr>
+<tr>
+<td style="text-align:left">@callouttap</td>
+<td style="text-align:left">EventHandle</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Triggered when the bubble corresponding to the marker point is clicked, e.detail = {markerId}</td>
+</tr>
+<tr>
+<td style="text-align:left">@controltap</td>
+<td style="text-align:left">EventHandle</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Triggered when the control is clicked, e.detail = {controlId}</td>
+</tr>
+<tr>
+<td style="text-align:left">@tap</td>
+<td style="text-align:left">EventHandle</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Triggered when the map is clicked; App-nuve, WeChat Mini Program 2.9 support returning longitude and latitude</td>
+</tr>
+<tr>
+<td style="text-align:left">@anchorpointtap</td>
+<td style="text-align:left">EventHandle</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Triggered when you click the locator, e.detail = {longitude, latitude}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>note</strong></p>
+<ul>
+<li><code>&lt;map&gt;</code> The width/height of the component is recommended to be written directly, such as 750rpx, do not set a percentage value.</li>
+<li><code>uni-app</code>Only supports <code>gcj02</code>coordinates</li>
+<li>App Platform <code>layer-style</code>attributes need to create a map service provider background, details</li>
+</ul>
+<p><strong>markers</strong></p>
+<p>Marker points are used to display the marked location on the map</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">Marker id</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The marker click event callback will return this id. It is recommended to set the Number type id for each marker to ensure better performance when updating the marker. Maximum limit of 9 digits</td>
+</tr>
+<tr>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Floating point number, range -90 ~ 90</td>
+</tr>
+<tr>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Floating point number, range -180 ~ 180</td>
+</tr>
+<tr>
+<td style="text-align:left">title</td>
+<td style="text-align:left">Mark roll call</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Displayed when clicked, will be ignored when callout exists</td>
+</tr>
+<tr>
+<td style="text-align:left">iconPath</td>
+<td style="text-align:left">Icon displayed</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The image path under the project directory supports relative path writing, starting with'/' means relative Mini Program root directory; temporary path is also supported</td>
+</tr>
+<tr>
+<td style="text-align:left">rotate</td>
+<td style="text-align:left">Rotation angle</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Angle of clockwise rotation, range 0 ~ 360, default is 0</td>
+</tr>
+<tr>
+<td style="text-align:left">alpha</td>
+<td style="text-align:left">Labeled transparency</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Default 1, no transparency, range 0 ~ 1</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">Label icon width</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The default is the actual width of the picture</td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">Label icon height</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The default is the actual height of the picture</td>
+</tr>
+<tr>
+<td style="text-align:left">callout</td>
+<td style="text-align:left">Customize the bubble window above the marker</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The supported attributes are shown in the following table, and line breaks can be recognized.</td>
+</tr>
+<tr>
+<td style="text-align:left">label</td>
+<td style="text-align:left">Add a label next to the marker</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The supported attributes are shown in the following table, and line breaks can be recognized.</td>
+</tr>
+<tr>
+<td style="text-align:left">anchor</td>
+<td style="text-align:left">The latitude and longitude are at the anchor point of the label icon, the default bottom midpoint</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">{x, y}, x means horizontal (0-1), y means vertical (0-1). {x: .5, y: 1} represents the midpoint of the bottom edge</td>
+</tr>
+<tr>
+<td style="text-align:left">joinCluster</td>
+<td style="text-align:left">Whether to participate in point aggregation</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">clusterId</td>
+<td style="text-align:left">Use when customizing the point aggregation cluster effect</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">customCallout</td>
+<td style="text-align:left">Custom bubble window</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">aria-label</td>
+<td style="text-align:left">Accessibility, additional description of (attribute) elements</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>bubble callout on the marker</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">content</td>
+<td style="text-align:left">text</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">Text color</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">fontSize</td>
+<td style="text-align:left">font size</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">borderRadius</td>
+<td style="text-align:left">callout border rounded corners</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">bgColor</td>
+<td style="text-align:left">Background color</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">padding</td>
+<td style="text-align:left">Margins of text</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">display</td>
+<td style="text-align:left">&lsquo;BYCLICK&rsquo;: click to show;&lsquo;ALWAYS&rsquo;: always show</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">textAlign</td>
+<td style="text-align:left">Text alignment. Valid values: left, right, center</td>
+<td style="text-align:left">String</td>
+</tr>
+</tbody>
+</table>
+<p><strong>label on the marker</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">content</td>
+<td style="text-align:left">text</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">Text color</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">fontSize</td>
+<td style="text-align:left">font size</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">The coordinates of the label, the origin is the latitude and longitude corresponding to the marker</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">The coordinates of the label, the origin is the latitude and longitude corresponding to the marker</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">borderRadius</td>
+<td style="text-align:left">Rounded corners</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">bgColor</td>
+<td style="text-align:left">Background color</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">padding</td>
+<td style="text-align:left">Margins of text</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">textAlign</td>
+<td style="text-align:left">Text alignment. Valid values: left, right, center</td>
+<td style="text-align:left">String</td>
+</tr>
+<tr>
+<td style="text-align:left">joinCluster</td>
+<td style="text-align:left">Whether to participate in point aggregation</td>
+<td style="text-align:left">Boolean</td>
+</tr>
+<tr>
+<td style="text-align:left">clusterId</td>
+<td style="text-align:left">Use when customizing the point aggregation cluster effect</td>
+<td style="text-align:left">Number</td>
+</tr>
+<tr>
+<td style="text-align:left">customCallout</td>
+<td style="text-align:left">Custom bubble window</td>
+<td style="text-align:left">Object</td>
+</tr>
+<tr>
+<td style="text-align:left">aria-label</td>
+<td style="text-align:left">Accessibility, additional description of (attribute) elements</td>
+<td style="text-align:left">String</td>
+</tr>
+</tbody>
+</table>
+<p><strong>polyline</strong></p>
+<p>Specify a series of coordinate points, connecting from the first item to the last item of the array</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">points</td>
+<td style="text-align:left">Latitude and longitude array</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">[{latitude: 0, longitude: 0}]</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">Line color</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">8-digit hexadecimal representation, the last two digits represent the alpha value, such as: #0000AA</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">Line width</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">dottedLine</td>
+<td style="text-align:left">Whether it is dashed</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Default false</td>
+</tr>
+<tr>
+<td style="text-align:left">arrowLine</td>
+<td style="text-align:left">Line with arrow</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The default is false, the WeChat Mini Program Developer Tool does not support this attribute temporarily</td>
+</tr>
+<tr>
+<td style="text-align:left">arrowIconPath</td>
+<td style="text-align:left">Change arrow icon</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Effective when arrowLine is true</td>
+</tr>
+<tr>
+<td style="text-align:left">borderColor</td>
+<td style="text-align:left">Border color of the line</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">borderWidth</td>
+<td style="text-align:left">Line thickness</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">colorList</td>
+<td style="text-align:left">Rainbow line</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Ignore the color value if it exists</td>
+</tr>
+</tbody>
+</table>
+<p><strong>polygon</strong>
+specifies a series of coordinate points, and generates a closed polygon according to the points coordinate data</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">points</td>
+<td style="text-align:left">Latitude and longitude array</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">[{latitude: 0, longitude: 0}]</td>
+</tr>
+<tr>
+<td style="text-align:left">strokeWidth</td>
+<td style="text-align:left">Stroke width</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">strokeColor</td>
+<td style="text-align:left">Stroke color</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Hexadecimal</td>
+</tr>
+<tr>
+<td style="text-align:left">fillColor</td>
+<td style="text-align:left">Fill color</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Hexadecimal</td>
+</tr>
+<tr>
+<td style="text-align:left">zIndex</td>
+<td style="text-align:left">Set the polygon Z axis value</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>circles</strong></p>
+<p>Show circle on the map</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">latitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Floating point number, range -90 ~ 90</td>
+</tr>
+<tr>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">longitude</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Floating point number, range -180 ~ 180</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">Stroke color</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">8-digit hexadecimal representation, the last two digits represent the alpha value, such as: #0000AA</td>
+</tr>
+<tr>
+<td style="text-align:left">fillColor</td>
+<td style="text-align:left">Fill color</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">8-digit hexadecimal representation, the last two digits represent the alpha value, such as: #0000AA</td>
+</tr>
+<tr>
+<td style="text-align:left">radius</td>
+<td style="text-align:left">radius</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">strokeWidth</td>
+<td style="text-align:left">Stroke width</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>controls</strong></p>
+<p>Display the control on the map, the control does not move with the map</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">Control id</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">In the control click event callback will return this id</td>
+</tr>
+<tr>
+<td style="text-align:left">position</td>
+<td style="text-align:left">The location of the control on the map</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Control relative map position</td>
+</tr>
+<tr>
+<td style="text-align:left">iconPath</td>
+<td style="text-align:left">Icon displayed</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">The image path in the project directory supports relative path writing, starting with'/' means relative project root directory; temporary path is also supported</td>
+</tr>
+<tr>
+<td style="text-align:left">clickable</td>
+<td style="text-align:left">Clickable</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Not clickable by default</td>
+</tr>
+</tbody>
+</table>
+<p><strong>position</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">How far is it from the left border of the map</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Default is 0</td>
+</tr>
+<tr>
+<td style="text-align:left">top</td>
+<td style="text-align:left">How far is it from the upper border of the map</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Default is 0</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">Control width</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The default is the image width</td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">Control height</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">The default is the image height</td>
+</tr>
+</tbody>
+</table>
+<p>The latitude and longitude of the map component are required. If the latitude and longitude are not filled, the default value is the latitude and longitude of Beijing.</p>
+<p><strong>Example</strong> view example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">view</span>&gt;
+		&lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-body&#34;</span>&gt;
+			&lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-section page-section-gap&#34;</span>&gt;
+				&lt;<span style="color:#f92672">map</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 100%; height: 300px;&#34;</span> <span style="color:#a6e22e">:latitude</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;latitude&#34;</span> <span style="color:#a6e22e">:longitude</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;longitude&#34;</span> <span style="color:#a6e22e">:markers</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;covers&#34;</span>&gt;
+				&lt;/<span style="color:#f92672">map</span>&gt;
+			&lt;/<span style="color:#f92672">view</span>&gt;
+		&lt;/<span style="color:#f92672">view</span>&gt;
+	&lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+	<span style="color:#a6e22e">data</span>() {
+		<span style="color:#66d9ef">return</span> {
+      <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>, <span style="color:#75715e">// Use marker to click event, need to fill in id
+</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;map&#39;</span>,
+			<span style="color:#a6e22e">latitude</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">39.909</span>,
+			<span style="color:#a6e22e">longitude</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">116.39742</span>,
+			<span style="color:#a6e22e">covers</span><span style="color:#f92672">:</span> [{
+				<span style="color:#a6e22e">latitude</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">39.909</span>,
+				<span style="color:#a6e22e">longitude</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">116.39742</span>,
+				<span style="color:#a6e22e">iconPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;../../../static/location.png&#39;</span>
+			}, {
+				<span style="color:#a6e22e">latitude</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">39.90</span>,
+				<span style="color:#a6e22e">longitude</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">116.39</span>,
+				<span style="color:#a6e22e">iconPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;../../../static/location.png&#39;</span>
+			}]
+		}
+	},
+	<span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+
+	}
+}
+</code></pre></div><p>JS API for map component related operations: uni.createMapContext</p>
+<p><strong>Precautions</strong></p>
+<ul>
+<li>In app-vue, <code>&lt;map&gt;</code>components are native components created by the engine. Its level is the highest and cannot be controlled by z-index. To <code>&lt;map&gt;</code>draw content on top, you can use the marker, controls and other attributes that come with the <code>&lt;cover-view&gt;</code>component , or you can use the component. App side can also use plus.nativeObj.view or subNVue to draw native content, for reference . In addition, there is no hierarchical problem with nvue files on the App side.</li>
+<li>The map and applet of the nvue file on the App side are more aligned. The map in vue has the same function as plus.map, which is slightly different from the map in the applet. <strong>Nvue is recommended to use map on the App side.</strong></li>
+<li>If you use a local image on the App side, you need to set the resource to release mode before packaging. Add a runmode node to app-plus in the manifest file and set the value to liberate.</li>
+<li>And app-vue, do not use the scroll-view, swiper, picker- view, movable-view in the hierarchy problem involving a small program in <code>&lt;map&gt;</code>assembly.</li>
+<li>App-vue in, css animated <code>&lt;map&gt;</code>component is invalid.</li>
+<li>The latitude and longitude used by the map component are the coordinates of the National Bureau of Survey and Measurement, and calling the uni.getLocation interface needs to specify the type as gcj02.</li>
+<li><code>&lt;map&gt;</code>The underlying engines of the components on different platforms are different: App applets are Gaode maps; App-vue can also use Baidu map, which is configured in the manifest and takes effect after packaging, but app-nvue only supports Gaode maps. In addition, the API for selecting the map and viewing the map location only supports Gaode maps. If there is no special need on the App side, it is recommended to use Gaode map.</li>
+<li>The default api of the map component refers to the WeChat applet. If you need to use plus.map, you can <code>$getAppMap</code>obtain the native map object. See details . Note that the map component of nvue is not a plus.map object and cannot be used<code>$getAppMap</code></li>
+<li>To obtain location information on the H5 side, it needs to be deployed on the <strong>https</strong> service. The local preview (localhost) can still use the http protocol.</li>
+<li>When using the Chrome browser on a PC device without a GPS module or GPS signal, the location information is obtained by connecting to the Google server, and domestic users may fail to obtain the location information.</li>
+<li>To use the map component on the App side, you need <strong>to apply for SDK qualification from third-party service providers such as AutoNavi or Baidu to obtain the AppKey. When packaging, you need to check the corresponding module in the manifest file and fill in the Appkey in the SDK configuration. Note that the application package name must match the package name when packaging, and the certificate information must match</strong> . There is a detailed application guide in the manifest visualization interface.</li>
+<li>To use maps and positioning on the H5 terminal, you need to apply for a key on the Tencent Maps Open Platform and fill in the manifest.json.</li>
+<li>ios nvue Color does not support ARGB hexadecimal, use rgba(r,g,b,a) instead</li>
+</ul>
+<h5 id="faq">
+  FAQ
+  <a class="anchor" href="#faq">#</a>
+</h5>
+<p>Q: applications using <code>&lt;map&gt;</code>the component, packaged as App, suggesting a lack of permissions module how to do?
+A: The native map on the App side relies on a third-party SDK. Therefore, when packaging a mobile application, you need to check the relevant permissions in the manifest and fill in the key information.</p>
+<p>Q: What should I do if foreign applications want to use Google Maps/Google Maps?
+A: 1. You can call Google&rsquo;s web map under web-view; 2. You can write a native plug-in to encapsulate Google&rsquo;s native map. For details, please refer to the native plug-in development tutorial of uni-app plug-in market. There are already map plugins written by three parties in the plugin market .</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

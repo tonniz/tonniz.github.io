@@ -1,6 +1,6 @@
 {
-  "name": "易才批量代付项目",
-  "short_name": "易才批量代付项目",
+  "name": "MR MiniApp",
+  "short_name": "MR MiniApp",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

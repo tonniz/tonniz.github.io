@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Introduction#What is Vue.js
+Vue (pronounced /vjuː/, similar to view) is a progressive framework for building user interfaces. Vue is designed to be applied layer by layer from the bottom up.
+Vue.js uses HTML-based template syntax, allowing developers to declaratively bind the DOM to the data of the underlying Vue instance. All Vue.js templates are legal HTML, so they can be parsed by browsers and HTML parsers that follow the specification.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="Introduction#What is Vue.js
+Vue (pronounced /vjuː/, similar to view) is a progressive framework for building user interfaces. Vue is designed to be applied layer by layer from the bottom up.
+Vue.js uses HTML-based template syntax, allowing developers to declaratively bind the DOM to the data of the underlying Vue instance. All Vue.js templates are legal HTML, so they can be parsed by browsers and HTML parsers that follow the specification." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Vue Basics | MR MiniApp</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.533dbfa5b0e2c4a6fe8738900d3c5955aad26f9887c7fb49f2dae751e59fe52d.css" integrity="sha256-Uz2/pbDixKb&#43;hziQDTxZVarSb5iHx/tJ8trnUeWf5S0=">
+<script defer src="/en.search.min.6e5054cc4e2971ba85444f42f0143e1d26f5392ca6597e6664a27dc2c18f8c8b.js" integrity="sha256-blBUzE4pcbqFRE9C8BQ&#43;HSb1OSymWX5mZKJ9wsGPjIs="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>MR MiniApp</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E6%9F%A5%E7%9C%8B%E4%BD%8D%E7%BD%AE/open-location/" class="">Open Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/" class="">Location</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/" class="">Application</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/" class="">Editor Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/" class="">Record Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/" class="">Live Player Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/" class="">Camera Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/" class="">Background Audio Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/" class="">Video Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/" class="">Media Container</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/" class="">Audio Context</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/" class="">Storage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E6%96%87%E4%BB%B6/file/" class="">File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/" class="">Pulldown</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/" class="">Animation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/" class="">Media Query Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/" class="">Font</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/" class="">Scroll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/" class="">Bgcolor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nextTick/" class="">Next Tick</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/" class="">Nodes Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/" class="">Intersection Observer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AETabBar/tabbar/" class="">Tabbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/" class="">Navigationbar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/" class="">Network File</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/" class="">Request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/" class="">Accelerometer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/barcode/barcode/" class="">Barcode</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/batteryInfo/batteryInfo/" class="">Battery Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/ble/ble/" class="">Ble</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/" class="">Bluetooth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/brightness/brightness/" class="">Brightness</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/clipboard/clipboard/" class="">Clipboard</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/compass/compass/" class="">Compass</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/contact/contact/" class="">Contact</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/iBeacon/ibeacon/" class="">Ibeacon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/newwork/network/" class="">Network</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/NFC/nfc/" class="">Nfc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/phone/phone/" class="">Phone</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemInfo/info/" class="">Info</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemTheme/theme/" class="">Theme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/Wi-Fi/wifi/" class="">Wifi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/" class="">Router</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%94%AE%E7%9B%98/key/" class="">Key</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subNVue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subNVues/" class="">Sub Nvues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/" class="">Prompt</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/API/vue-api/" class="">Vue API</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/" class=" active">Vue Basics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/" class="">Vue Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/frame/" class="">Frame</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/" class="">Timer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/" class="">Log</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/" class="">Window</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/" class="">Communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/App.vue/App/" class="">App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/" class="">Main</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/" class="">Manifest</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/" class="">Pages</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/" class="">Uni Scss</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/" class="">Vue Config</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/" class="">Web View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/" class="">Map</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/" class="">Icon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/" class="">Progress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/" class="">Rich Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/" class="">Text</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/" class="">Audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/" class="">Image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/" class="">Video</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/" class="">Navigation Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E7%94%BB%E5%B8%83/canvas/canvas/" class="">Canvas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/" class="">Button</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/" class="">Checkbox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/" class="">Editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/" class="">Form</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/" class="">Input</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/" class="">Label</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/" class="">Picker View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/" class="">Picker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/" class="">Radio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/" class="">Slider</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/" class="">Switch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/" class="">Textarea</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/cover-image/cover-view/" class="">Cover View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/match-media/match-media/" class="">Match Media</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movable-view/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movavle-area/movable-view/" class="">Movable View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/scroll-view/scroll-view/" class="">Scroll View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/swiper/swiper/" class="">Swiper</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/view/view/" class="">View</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/" class="">Custom Tab Bar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/" class="">Navigator</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Vue Basics</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#vue-development-advantages-over-traditional-js">Vue development advantages over traditional js</a>
+          <ul>
+            <li><a href="#file-type-changes">File type changes</a></li>
+            <li><a href="#changes-in-the-code-structure-within-the-file">Changes in the code structure within the file</a></li>
+            <li><a href="#changes-in-the-way-external-files-are-cited">Changes in the way external files are cited</a></li>
+            <li><a href="#componentlabel-changes">Component/label changes</a></li>
+            <li><a href="#js-changes">js changes</a></li>
+          </ul>
+        </li>
+        <li><a href="#template-syntax">Template syntax</a>
+          <ul>
+            <li><a href="#interpolation">Interpolation</a></li>
+            <li><a href="#instruction">instruction</a></li>
+          </ul>
+        </li>
+        <li><a href="#data-attribute">data attribute</a></li>
+        <li><a href="#class-and-style-binding">Class and Style binding</a>
+          <ul>
+            <li><a href="#object-syntax">Object syntax</a></li>
+            <li><a href="#array-syntax">Array syntax</a></li>
+            <li><a href="#used-on-components">Used on components</a></li>
+          </ul>
+        </li>
+        <li><a href="#conditional-rendering">Conditional rendering</a>
+          <ul>
+            <li><a href="#v-if-and-v-else">v-if and v-else</a></li>
+            <li><a href="#conditional-rendering-grouping">Conditional rendering grouping</a></li>
+            <li><a href="#v-show">v-show</a></li>
+            <li><a href="#the-difference-between-v-if-and-v-show">The difference between v-if and v-show</a></li>
+          </ul>
+        </li>
+        <li><a href="#list-rendering">List rendering</a>
+          <ul>
+            <li><a href="#use-arrays-in-v-for">Use arrays in v-for</a></li>
+            <li><a href="#use-objects-in-v-for">Use objects in v-for</a></li>
+            <li><a href="#list-rendering-grouping">List rendering grouping</a></li>
+            <li><a href="#key">key</a></li>
+            <li><a href="#precautions">Precautions</a></li>
+            <li><a href="#use-v-for-on-components">Use v-for on components</a></li>
+          </ul>
+        </li>
+        <li><a href="#event-handler">Event handler</a>
+          <ul>
+            <li><a href="#listen-for-events">Listen for events</a></li>
+            <li><a href="#event-handling-method">Event handling method</a></li>
+            <li><a href="#event-modifier">Event modifier</a></li>
+            <li><a href="#event-mapping-table">Event mapping table</a></li>
+          </ul>
+        </li>
+        <li><a href="#form-control-binding">Form control binding</a>
+          <ul>
+            <li><a href="#v-model">v-model</a></li>
+          </ul>
+        </li>
+        <li><a href="#computed-attributes-and-listeners">Computed attributes and listeners</a>
+          <ul>
+            <li><a href="#calculated-attribute">Calculated attribute</a></li>
+            <li><a href="#calculated-attribute-cache-vs-method">Calculated attribute cache vs method</a></li>
+            <li><a href="#computed-attributes-vs-listening-attributes">Computed attributes vs. listening attributes</a></li>
+            <li><a href="#listener-watch">Listener watch</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h2>
+<p><strong>What is Vue.js</strong></p>
+<p>Vue (pronounced /vjuː/, similar to view) is a progressive framework for building user interfaces. Vue is designed to be applied layer by layer from the bottom up.</p>
+<p>Vue.js uses HTML-based template syntax, allowing developers to declaratively bind the DOM to the data of the underlying Vue instance. All Vue.js templates are legal HTML, so they can be parsed by browsers and HTML parsers that follow the specification.</p>
+<p>In the underlying implementation, Vue compiles the template into a virtual DOM rendering function. Combined with the response system, Vue can intelligently calculate how many components need to be re-rendered and minimize the number of DOM operations.</p>
+<p>The core of Vue.js is a system that allows the use of concise template syntax to declaratively render data into the DOM. It only focuses on the view layer and is easy to use. Everything is responsive.</p>
+<h2 id="vue-development-advantages-over-traditional-js">
+  Vue development advantages over traditional js
+  <a class="anchor" href="#vue-development-advantages-over-traditional-js">#</a>
+</h2>
+<p>In traditional development, when the native JavaScript DOM manipulation function is used to frequently manipulate the DOM, the browser must constantly render the new DOM tree, causing the page to look very stuck.</p>
+<p>Vue is a single-page application, which makes the page partially refresh, without having to request all the data and DOM every time you jump to the page, which greatly speeds up the access speed and improves the user experience.</p>
+<p><strong>Advantages of vue:</strong></p>
+<ul>
+<li>Lightweight Progressive Framework</li>
+<li>Separation of view, data and structure</li>
+<li>Responsive two-way data binding</li>
+<li>Componentization</li>
+<li>Virtual DOM</li>
+<li>Fast running speed, easy to use</li>
+<li>Easy to integrate with third-party libraries or existing projects</li>
+</ul>
+<h3 id="file-type-changes">
+  File type changes
+  <a class="anchor" href="#file-type-changes">#</a>
+</h3>
+<ul>
+<li>It used to be .html files, development was also html, and running was also html.</li>
+<li>Now it is a .vue file, and development is a vue. After compilation, the runtime has become a js file.</li>
+</ul>
+<h3 id="changes-in-the-code-structure-within-the-file">
+  Changes in the code structure within the file
+  <a class="anchor" href="#changes-in-the-code-structure-within-the-file">#</a>
+</h3>
+<ul>
+<li>Before a <code>html</code>large node, there <code>script</code>and <code>style</code>nodes;</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>  
+    &lt;<span style="color:#f92672">html</span>&gt;  
+        &lt;<span style="color:#f92672">head</span>&gt;  
+            &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;  
+            &lt;<span style="color:#f92672">title</span>&gt;&lt;/<span style="color:#f92672">title</span>&gt;  
+            &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;  
+            &lt;/<span style="color:#f92672">script</span>&gt;  
+            &lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;  
+            &lt;/<span style="color:#f92672">style</span>&gt;  
+        &lt;/<span style="color:#f92672">head</span>&gt;  
+        &lt;<span style="color:#f92672">body</span>&gt;  
+        &lt;/<span style="color:#f92672">body</span>&gt;  
+    &lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><ul>
+<li>Now <code>template</code>is a node for writing tag components, <code>script</code>and <code>style</code>is a node in parallel, that is, there are three-level node.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;  
+        &lt;<span style="color:#f92672">view</span>&gt;  
+        Note that there must be one view and only one root view. All the content is written under this view.  
+        &lt;/<span style="color:#f92672">view</span>&gt;  
+    &lt;/<span style="color:#f92672">template</span>&gt;  
+    &lt;<span style="color:#f92672">script</span>&gt;  
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {  
+        }  
+    &lt;/<span style="color:#f92672">script</span>&gt;  
+    &lt;<span style="color:#f92672">style</span>&gt;  
+    &lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><h3 id="changes-in-the-way-external-files-are-cited">
+  Changes in the way external files are cited
+  <a class="anchor" href="#changes-in-the-way-external-files-are-cited">#</a>
+</h3>
+<ul>
+<li>In the past, external js and css were introduced through script src and link href;</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/jquery-1.10.2.js&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;  
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;css/bootstrap.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>/&gt;
+</code></pre></div><ul>
+<li>Now it is written in es6, <code>import</code>import external js module (note that it is not a file) or css;</li>
+</ul>
+<p><strong>js needs to come in and become an object</strong> .</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">script</span>&gt;  
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">util</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../../../common/util.js&#39;</span>);  <span style="color:#75715e">//Require this js module  
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">formatedPlayTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">formatTime</span>(<span style="color:#a6e22e">playTime</span>); <span style="color:#75715e">//Call the method of the JS module 
+</span><span style="color:#75715e"></span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>In this <code>util.js</code>, the prior should <code>function</code>method for encapsulating as an object</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">formatTime</span>(<span style="color:#a6e22e">time</span>) {  
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">time</span>;<span style="color:#75715e">//There&#39;s no logic here 
+</span><span style="color:#75715e"></span>    }  
+    <span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {  
+        <span style="color:#a6e22e">formatTime</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">formatTime</span>  
+    }
+</code></pre></div><p><strong>In addition, Vue supports component import, which makes it easier to encapsulate a library that includes interface, js, and styles</strong> .</p>
+<h3 id="componentlabel-changes">
+  Component/label changes
+  <a class="anchor" href="#componentlabel-changes">#</a>
+</h3>
+<p>It used to be html tags, for example <code>&lt;div&gt;</code>, now it is a small program component, for example <code>&lt;view&gt;</code>.</p>
+<p>So what is the difference between a label and a component, isn&rsquo;t it all surrounded by angle brackets in English?</p>
+<ul>
+<li>In fact, tags are an old concept. Tags are built-in browsers.</li>
+<li>But the components can be freely expanded. Similarly, you can encapsulate a piece of js into a function or module, and you can also encapsulate a ui control into a component.</li>
+</ul>
+<h3 id="js-changes">
+  js changes
+  <a class="anchor" href="#js-changes">#</a>
+</h3>
+<ul>
+<li>In the previous DOM operation, if you want to change the display content of a DOM element, such as the display text of a view: set the id to the view, then get the DOM element through the selector in js, and then perform assignment operations through js to modify the DOM element Attribute or value.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">html</span>&gt;  
+        &lt;<span style="color:#f92672">head</span>&gt;  
+            &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;  
+                document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>,<span style="color:#66d9ef">function</span> () {  
+                    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;spana&#34;</span>).<span style="color:#a6e22e">innerText</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;456&#34;</span>  
+                })  
+                <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">changetextvalue</span> () {  
+                    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;spana&#34;</span>).<span style="color:#a6e22e">innerText</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;789&#34;</span>  
+                }  
+            &lt;/<span style="color:#f92672">script</span>&gt;  
+        &lt;/<span style="color:#f92672">head</span>&gt;  
+        &lt;<span style="color:#f92672">body</span>&gt;  
+            &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;spana&#34;</span>&gt;123&lt;/<span style="color:#f92672">span</span>&gt;  
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changetextvalue()&#34;</span>&gt;Changed to 789&lt;/<span style="color:#f92672">button</span>&gt;  
+        &lt;/<span style="color:#f92672">body</span>&gt;  
+    &lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><ul>
+<li>The current practice is the binding mode of vue, bind a js variable to this DOM element, modify the value of the js variable in the script, the DOM will automatically change, and the page will automatically update the rendering.
+<ul>
+<li>The front end uses the [MVVM](short for Model-View-ViewModel) mode. Simply put, Model: represents the data model, View: only focuses on view UI processing, and ViewModel: only processes business and data. Its core is the VM in MVVM, which is the ViewModel. ViewModel is responsible for connecting View and Model to ensure the consistency of views and data. This lightweight architecture makes front-end development more efficient and convenient, greatly reducing the number of lines of code, and better differential rendering performance.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;  
+        &lt;<span style="color:#f92672">view</span>&gt;  
+            &lt;<span style="color:#f92672">text</span>&gt;{{textvalue}}&lt;/<span style="color:#f92672">text</span>&gt;<span style="color:#75715e">&lt;!-- This demonstrates the binding of component values--&gt;</span>  
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">:type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;buttontype&#34;</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changetextvalue()&#34;</span>&gt;Changed to 789&lt;/<span style="color:#f92672">button</span>&gt;<span style="color:#75715e">&lt;!-- This demonstrates the binding of properties and events --&gt;</span>  
+        &lt;/<span style="color:#f92672">view</span>&gt;  
+    &lt;/<span style="color:#f92672">template</span>&gt;  
+    &lt;<span style="color:#f92672">script</span>&gt;  
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {  
+            <span style="color:#a6e22e">data</span>() {  
+                <span style="color:#66d9ef">return</span> {  
+                    <span style="color:#a6e22e">textvalue</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;123&#34;</span>,  
+                    <span style="color:#a6e22e">buttontype</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;primary&#34;</span>  
+                };  
+            },  
+            <span style="color:#a6e22e">onLoad</span>() {  
+                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textvalue</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;456&#34;</span><span style="color:#75715e">// change the value of textValue, 123 becomes 456 and 123 is not displayed
+</span><span style="color:#75715e"></span>            },  
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {  
+                <span style="color:#a6e22e">changetextvalue</span>() {  
+                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textvalue</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;789&#34;</span><span style="color:#75715e">//you change the value of textValue, and the page automatically refreshes to 789
+</span><span style="color:#75715e"></span>                }  
+            }  
+        }  
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="template-syntax">
+  Template syntax
+  <a class="anchor" href="#template-syntax">#</a>
+</h2>
+<h3 id="interpolation">
+  Interpolation
+  <a class="anchor" href="#interpolation">#</a>
+</h3>
+<p>The most common form of data binding is text interpolation:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">view</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;Message: {{ msg }}&lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span>() {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello Vue!&#39;</span>
+            }
+        }
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>The content in {{msg}} will be replaced with the value of msg on the corresponding data object. Whenever the msg on the bound data object changes, the content at the interpolation point will be updated.</p>
+<h3 id="instruction">
+  instruction
+  <a class="anchor" href="#instruction">#</a>
+</h3>
+<p>[Watch this video explanation]</p>
+<p>Instructions are special attributes prefixed with v-.</p>
+<ul>
+<li>The value of the directive attribute is expected to be a single JavaScript expression (v-for is an exception).</li>
+<li>The function of the instruction is that when the value of the expression changes, the collateral effect produced by it will act on the DOM responsively.</li>
+<li>Some commands can receive a &ldquo;parameter&rdquo;, which is indicated by a colon (:) after the command name.</li>
+</ul>
+<h4 id="v-bind">
+  v-bind
+  <a class="anchor" href="#v-bind">#</a>
+</h4>
+<p>Dynamically bind one or more attributes, or a component <code>prop</code>to the expression.</p>
+<ul>
+<li>v-bind is abbreviated as &lsquo;:&rsquo;</li>
+<li>In binding <code>prop</code>upon, <code>prop</code>it must be declared in the sub-assembly.</li>
+<li>You can specify different binding types with modifiers.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">image</span> <span style="color:#a6e22e">v-bind:src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;imgUrl&#34;</span>&gt;&lt;/<span style="color:#f92672">image</span>&gt;
+    <span style="color:#75715e">&lt;!-- abbreviations --&gt;</span>
+    &lt;<span style="color:#f92672">image</span> <span style="color:#a6e22e">:src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;imgUrl&#34;</span>&gt;&lt;/<span style="color:#f92672">image</span>&gt;
+
+    <span style="color:#75715e">&lt;!-- Prop binding. &#34;Prop&#34; must be declared in the my-component.--&gt;</span>
+    &lt;<span style="color:#f92672">my-component</span> <span style="color:#a6e22e">:prop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;someThing&#34;</span>&gt;&lt;/<span style="color:#f92672">my-component</span>&gt;
+
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">v-bind:disabled</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;isButtonDisabled&#34;</span>&gt;Button&lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><p>If the <code>isButtonDisabled</code>values are <code>null</code>, <code>undefined</code>or <code>false</code>, it <code>disabled</code>will not even be included in the rendered <code>button</code>elements.</p>
+<h4 id="v-on">
+  v-on
+  <a class="anchor" href="#v-on">#</a>
+</h4>
+<p>The v-on instruction, which is used to monitor DOM events. v-on is abbreviated as'@'</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Complete syntax --&gt;</span>
+    &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-on:click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;doSomething&#34;</span>&gt;click&lt;/<span style="color:#f92672">view</span>&gt;    
+    <span style="color:#75715e">&lt;!-- abbreviations --&gt;</span>
+    &lt;<span style="color:#f92672">view</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;doSomething&#34;</span>&gt;click&lt;/<span style="color:#f92672">view</span>&gt;
+</code></pre></div><h4 id="v-once">
+  v-once
+  <a class="anchor" href="#v-once">#</a>
+</h4>
+<p>Only render elements and components once. Subsequent re-rendering, the element/component and all its child nodes will be treated as static content and skipped.</p>
+<p>Unlike front-end framework in understanding the client in order to achieve a logical multiplexing state flag template node will be added to the <code>v-once</code>guarantee rendering node only once, but not necessarily be able to optimize the rendering performance, but might slow down the client Comparison efficiency when multiplexing nodes.</p>
+<blockquote>
+<p>h5, WeChat applets are not supported</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-once</span>&gt;This will never change: {{msg}}&lt;/<span style="color:#f92672">view</span>&gt;
+    <span style="color:#75715e">&lt;!-- A child element --&gt;</span>
+    &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-once</span>&gt;
+        &lt;<span style="color:#f92672">text</span>&gt;comment&lt;/<span style="color:#f92672">text</span>&gt;
+        &lt;<span style="color:#f92672">text</span>&gt;{{msg}}&lt;/<span style="color:#f92672">text</span>&gt;
+    &lt;/<span style="color:#f92672">view</span>&gt;
+</code></pre></div><h4 id="v-html">
+  v-html
+  <a class="anchor" href="#v-html">#</a>
+</h4>
+<p>Update elements <code>innerHTML</code>.</p>
+<ul>
+<li>Note: The <strong>content is inserted as normal HTML-it will not be compiled as a Vue template.</strong></li>
+<li>If you try to use the v-html composite template, you can reconsider whether to replace it by using components.</li>
+<li>App and H5 end support <code>v-html</code>, WeChat applet will be converted <code>rich-text</code>, other end does not support <code>v-html</code>.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-html</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rawHtml&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">rawHtml</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;div style=&#34;text-align:center;background-color: #007AFF;&#34;&gt;&lt;div &gt;I am content&lt;/div&gt;&lt;img src=&#34;https://vkceyugu.cdn.bspapp.com/d8590190-4f28-11eb-b680-7980c8a877b8.png&#34;/&gt;&lt;/div&gt;&#39;</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="data-attribute">
+  data attribute
+  <a class="anchor" href="#data-attribute">#</a>
+</h2>
+<p>data must be declared as a function that returns an initial data object (note that the data object returned in the function should not directly reference objects outside the function); otherwise, the data will not be automatically destroyed when the page is closed, and the last data will be displayed when the page is opened again .</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#75715e">//Properly used, using a function to return an object
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span>() {
+        <span style="color:#66d9ef">return</span> {
+            <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>
+        }
+    }
+
+    <span style="color:#75715e">//Incorrect notation that will cause the last data to be displayed when the page is reopened
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>
+    }
+
+    <span style="color:#75715e">//Incorrect notation can also result in multiple component instance object data influencing each other
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>
+    }
+    <span style="color:#a6e22e">data</span>() {
+        <span style="color:#66d9ef">return</span> {
+            <span style="color:#a6e22e">obj</span>
+        }
+    }
+</code></pre></div><h2 id="class-and-style-binding">
+  Class and Style binding
+  <a class="anchor" href="#class-and-style-binding">#</a>
+</h2>
+<h3 id="object-syntax">
+  Object syntax
+  <a class="anchor" href="#object-syntax">#</a>
+</h3>
+<p>An object can be passed to v-bind:class to switch classes dynamically.</p>
+<p>You can also pass in more fields in the object to dynamically switch multiple classes. In addition, the v-bind:class instruction can also coexist with ordinary classes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- class --&gt;</span>
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;static&#34;</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{ active: isActive}&#34;</span>&gt;111&lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;static&#34;</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{ active: isActive, &#39;text-danger&#39;: hasError }&#34;</span>&gt;222&lt;/<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- style --&gt;</span>
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-bind:style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{ color: activeColor, fontSize: fontSize + &#39;px&#39; }&#34;</span>&gt;333&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">isActive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+                    <span style="color:#a6e22e">hasError</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+                    <span style="color:#a6e22e">activeColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;green&#34;</span>,
+                    <span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span><span style="color:#ae81ff">50</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+    .<span style="color:#a6e22e">static</span>{
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#2C405A</span>;
+    }
+    .<span style="color:#a6e22e">active</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#007AFF</span>;
+    }
+    .<span style="color:#a6e22e">text-danger</span>{
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#DD524D</span>;
+    }
+    &lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><p>The rendering result is</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;static active&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+</code></pre></div><p>When <code>isActive</code>or <code>hasError</code>changes, class list will be updated accordingly. For example, if <code>hasError</code>the value <code>true</code>, class list becomes <code>static active text-danger</code>.</p>
+<h3 id="array-syntax">
+  Array syntax
+  <a class="anchor" href="#array-syntax">#</a>
+</h3>
+<p>You can pass an array to v-bind:class to apply a class list.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">view</span>&gt;
+        <span style="color:#75715e">&lt;!-- class --&gt;</span>
+        &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;static&#34;</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[activeClass,errorClass]&#34;</span>&gt;111&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;static&#34;</span> <span style="color:#a6e22e">v-bind:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[isActive ? activeClass : &#39;&#39;, errorClass]&#34;</span>&gt;222&lt;/<span style="color:#f92672">view</span>&gt;<span style="color:#75715e">&lt;!-- 三元表达式 --&gt;</span>
+        &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;static&#34;</span> <span style="color:#a6e22e">v-bind:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[{ active: isActive }, errorClass]&#34;</span>&gt;333&lt;/<span style="color:#f92672">view</span>&gt;
+        <span style="color:#75715e">&lt;!-- style --&gt;</span>
+        &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-bind:style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[{ color: activeColor, fontSize: fontSize + &#39;px&#39; }]&#34;</span>&gt;444&lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span>() {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">isActive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+                <span style="color:#a6e22e">activeClass</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;active&#39;</span>,
+                <span style="color:#a6e22e">errorClass</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text-danger&#39;</span>,
+                <span style="color:#a6e22e">activeColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;green&#34;</span>,
+                <span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span><span style="color:#ae81ff">50</span>
+            }
+        }
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">style</span>&gt;
+    .<span style="color:#a6e22e">static</span>{
+        <span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">30</span>rpx;
+    }
+    .<span style="color:#a6e22e">active</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#007AFF</span>;
+    }
+    .<span style="color:#a6e22e">text-danger</span>{
+        <span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">60</span>rpx;
+        <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#DD524D</span>;
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><p><strong>Note: Set the px pixel value in the way: style=&quot;&quot;. The value is the actual pixel and will not be converted by the compiler.</strong></p>
+<p>Further it may also be used <code>computed</code>to generate a method <code>class</code>or a <code>style</code>string, inserted into the page, illustrated:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">template</span>&gt;
+      <span style="color:#75715e">&lt;!-- support --&gt;</span>
+      &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;computedClassStr&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+      &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{active: isActive}&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+      <span style="color:#75715e">&lt;!-- Does not support --&gt;</span>
+      &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;computedClassObject&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+  &lt;/<span style="color:#f92672">template</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+          <span style="color:#a6e22e">data</span> () {
+              <span style="color:#66d9ef">return</span> {
+                  <span style="color:#a6e22e">isActive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+              }
+          },
+          <span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">computedClassStr</span> () {
+                  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">isActive</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;active&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+              },
+              <span style="color:#a6e22e">computedClassObject</span> () {
+                  <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">active</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">isActive</span> }
+              }
+          }
+      }
+  &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><blockquote>
+<p>Non-H5 end does not support <code>classObject</code>and <code>styleObject</code>syntax.</p>
+</blockquote>
+<p>Examples not supported:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">:class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[activeClass]&#34;</span> <span style="color:#a6e22e">:style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[baseStyles,overridingStyles]&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">activeClass</span><span style="color:#f92672">:</span> {
+                        <span style="color:#e6db74">&#39;active&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+                        <span style="color:#e6db74">&#39;text-danger&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+                    },
+                    <span style="color:#a6e22e">baseStyles</span><span style="color:#f92672">:</span> {
+                        <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;green&#39;</span>,
+                        <span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;30px&#39;</span>
+                    },
+                    <span style="color:#a6e22e">overridingStyles</span><span style="color:#f92672">:</span> {
+                        <span style="color:#e6db74">&#39;font-weight&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;bold&#39;</span>
+                    }
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="used-on-components">
+  Used on components
+  <a class="anchor" href="#used-on-components">#</a>
+</h3>
+<p>Non-H5 end (non-custom pattern compiler component) <strong>temporarily supported</strong> on a custom assembly for use in <code>Class</code>the <code>Style</code>binding.</p>
+<h2 id="conditional-rendering">
+  Conditional rendering
+  <a class="anchor" href="#conditional-rendering">#</a>
+</h2>
+<h3 id="v-if-and-v-else">
+  v-if and v-else
+  <a class="anchor" href="#v-if-and-v-else">#</a>
+</h3>
+<p><code>v-if</code>Instructions are used to conditionally render a piece of content. This content will only return instruction in an expression <code>truthy</code>is rendered value of the time. Use <code>v-else</code>instructions represent the v-if &ldquo;else block.&rdquo;</p>
+<blockquote>
+<p>In JavaScript, truthy means that the converted value is true in the context of Boolean values. All values are true values unless they are defined as false values (that is, all true values except false, 0, &ldquo;&rdquo;, null, undefined, and NaN).</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-if</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;seen&#34;</span>&gt;Look at me&lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-else</span>&gt;Can&#39;t look me&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">seen</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p><code>v-else-if</code>, As the name suggests, serves as the &ldquo;else-if block&rdquo; of v-if and can be used continuously:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-if</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type === &#39;A&#39;&#34;</span>&gt;
+                A
+            &lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-else-if</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type === &#39;B&#39;&#34;</span>&gt;
+                B
+            &lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-else-if</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type === &#39;C&#39;&#34;</span>&gt;
+                C
+            &lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-else</span>&gt;
+                Not A/B/C
+            &lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;B&#39;</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Similarly <code>v-else</code>, <code>v-else-if</code>we must immediately bring <code>v-if</code>or <code>v-else-if</code>elements after.</p>
+<h3 id="conditional-rendering-grouping">
+  Conditional rendering grouping
+  <a class="anchor" href="#conditional-rendering-grouping">#</a>
+</h3>
+<p>Because <code>v-if</code>a command, so it must be added to an element. But what if you want to switch multiple elements? At this time it can be a <code>template</code>element as invisible package elements, and using v-if above. The final rendering results will not contain <code>template</code>elements.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-if</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;seen&#34;</span>&gt;
+    &lt;<span style="color:#f92672">view</span>&gt;title&lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;<span style="color:#f92672">view</span>&gt;content:Now you see me&lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><h3 id="v-show">
+  v-show
+  <a class="anchor" href="#v-show">#</a>
+</h3>
+<p><code>v-show</code>It is an instruction to display element options based on conditions. Usage and roughly <code>v-if</code>the same:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-show</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ok&#34;</span>&gt;Hello!&lt;/<span style="color:#f92672">view</span>&gt;
+</code></pre></div><p>The difference is that elements with v-show will always be rendered and kept in the DOM. v-show simply switching element <code>CSS</code>attributes <code>display</code>.</p>
+<blockquote>
+<p>Note that v-show does not support template elements, nor does v-else.</p>
+</blockquote>
+<h3 id="the-difference-between-v-if-and-v-show">
+  The difference between v-if and v-show
+  <a class="anchor" href="#the-difference-between-v-if-and-v-show">#</a>
+</h3>
+<p><code>v-if</code> It is a &ldquo;real&rdquo; conditional rendering, because it will ensure that the event listeners and subcomponents in the conditional block are properly destroyed and rebuilt during the switching process.</p>
+<p><code>v-if</code> It is also lazy: if the condition is false in the initial rendering, nothing is done, and the conditional block will not be rendered until the condition becomes true for the first time.</p>
+<p>In contrast, <code>v-show</code>it is much simpler, no matter what the initial conditions are, the element will always be rendered, and it is simply switched based on CSS to control the display and hiding of the element.</p>
+<p><strong>Choose according to application scenarios</strong></p>
+<ul>
+<li><code>v-if</code> There is a higher switching overhead. If the conditions rarely change during runtime, it is better to use v-if.</li>
+<li><code>v-show</code>There is a higher initial rendering overhead. If you need to switch very frequently, v-show is better.</li>
+</ul>
+<p><strong>note</strong></p>
+<ul>
+<li>Not recommended to use both <code>v-if</code>and <code>v-for</code>.</li>
+<li>When <code>v-if</code>and <code>v-for</code>when used together, <code>v-for</code>than <code>v-if</code>a higher priority.</li>
+</ul>
+<h2 id="list-rendering">
+  List rendering
+  <a class="anchor" href="#list-rendering">#</a>
+</h2>
+<h3 id="use-arrays-in-v-for">
+  Use arrays in v-for
+  <a class="anchor" href="#use-arrays-in-v-for">#</a>
+</h3>
+<p>The v-for instruction can render a list based on an array.</p>
+<ul>
+<li>
+<pre><code>v-for
+</code></pre><p>Instruction requires the use of</p>
+<pre><code>item in items
+</code></pre><p>special syntax form, wherein</p>
+<pre><code>items
+</code></pre><p>the source data array,</p>
+<pre><code>item
+</code></pre><p>it is an alias iterated array element.</p>
+<ul>
+<li>The first parameter <code>item</code>is the alias iterated array elements.</li>
+<li>The second parameter, the index of the current item <code>index</code>, is optional.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(item, index) in items&#34;</span>&gt;
+                {{ index }} - {{ item.message }}
+            &lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">items</span><span style="color:#f92672">:</span> [
+                        { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Foo&#39;</span> },
+                        { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Bar&#39;</span> }
+                    ]
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>result:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    0 - Foo
+    1 - Bar
+</code></pre></div><h3 id="use-objects-in-v-for">
+  Use objects in v-for
+  <a class="anchor" href="#use-objects-in-v-for">#</a>
+</h3>
+<p>You can also use v-for to traverse an object <code>property</code>.</p>
+<ul>
+<li>The first parameter <code>value</code>is an alias iterated array elements.</li>
+<li>The second parameter is the <code>property</code>name (that is, the key name).</li>
+<li>The third parameter serves as an index.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(value, name, index) in object&#34;</span>&gt;
+                 {{ index }}. {{ name }}: {{ value }}
+            &lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">object</span><span style="color:#f92672">:</span> {
+                        <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;How to do lists in Vue&#39;</span>,
+                        <span style="color:#a6e22e">author</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Jane Doe&#39;</span>,
+                        <span style="color:#a6e22e">publishedAt</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;2020-04-10&#39;</span>
+                    }
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>result:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    0.title: How to do lists in Vue,
+    1.author: Jane Doe,
+    2.publishedAt: 2020-04-10
+</code></pre></div><h3 id="list-rendering-grouping">
+  List rendering grouping
+  <a class="anchor" href="#list-rendering-grouping">#</a>
+</h3>
+<p>Like <code>v-if</code>, you can also use with <code>v-for</code>the <code>template</code>cyclically render some content that contain multiple elements. such as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item in items&#34;</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;{{ item.message }}&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;divider&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;presentation&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><h3 id="key">
+  key
+  <a class="anchor" href="#key">#</a>
+</h3>
+<p>When using Vue being updated <code>v-for</code>when the list elements rendered, it defaults to &ldquo;place update&rdquo; strategy. If the order of the data items is changed, Vue will not move the DOM elements to match the order of the data items, but instead update each element in place and ensure that they are rendered correctly at each index position.</p>
+<p>If the position of items in the list will dynamically change or new items added to the list, and you want the list of projects to maintain its own identity and status (such as <code>input</code>input content, <code>switch</code>the selected state), you need <code>:key</code>to specify a list of items The unique identifier.</p>
+<p><code>:key</code> The value of is provided in two forms</p>
+<ul>
+<li>Use <code>v-for</code>cycles <code>array</code>in <code>item</code>a a <code>property</code>, the <code>property</code>value needs to be unique list number or string, and can not be changed dynamically.</li>
+<li>Use <code>v-for</code>cycle <code>item</code>itself, then the need <code>item</code>itself is a unique character string or a number</li>
+</ul>
+<p>When the data change triggers the rendering layer to re-render, the components with keys will be corrected, and the framework will ensure that they are reordered, not recreated, to ensure that the components maintain their own state and improve the efficiency of the list rendering.</p>
+<blockquote>
+<p>If you do not provide: key, one will be reported <code>warning</code>. If you know that the list is static or you don&rsquo;t need to pay attention to its order, you can choose to ignore it.</p>
+</blockquote>
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- Some property of item in Array --&gt;</span>
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(item,index) in objectArray&#34;</span> <span style="color:#a6e22e">:key</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.id&#34;</span>&gt;
+                {{index +&#39;:&#39;+ item.name}}
+            &lt;/<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- When item itself is a unique string or number, we can use item itself --&gt;</span>
+            &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(item,index) in stringArray&#34;</span> <span style="color:#a6e22e">:key</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
+                {{index +&#39;:&#39;+ item}}
+            &lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span> () {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">objectArray</span><span style="color:#f92672">:</span>[{
+                    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>,
+                    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;li ming&#39;</span>
+                },{
+                    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+                    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;wang peng&#39;</span>
+                }],
+                <span style="color:#a6e22e">stringArray</span><span style="color:#f92672">:</span>[<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;b&#39;</span>,<span style="color:#e6db74">&#39;c&#39;</span>]
+            }
+        }
+    }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="precautions">
+  Precautions
+  <a class="anchor" href="#precautions">#</a>
+</h3>
+<ul>
+<li>Differences and other platforms when the platforms H5 integer v-for loop, as <code>v-for=&quot;(item, index) in 10&quot;</code>in, item 1 from the start, other platforms item from zero, the second parameter may be used in index H5 platform consistent.</li>
+<li>The third parameter is not supported in the non-cyclic object H5 platform, such as <code>v-for=&quot;(value, name, index) in object&quot;</code>in, index parameter is not supported.</li>
+<li>The data on the applet side is updated by difference. Since the applet does not support deleting object properties, the setting value is used instead of null. As a result, the traversal may not meet expectations. You need to filter the null data by yourself.</li>
+</ul>
+<h3 id="use-v-for-on-components">
+  Use v-for on components
+  <a class="anchor" href="#use-v-for-on-components">#</a>
+</h3>
+<p>On the custom component, you can use it like any ordinary element <code>v-for</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">my-component</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item in items&#34;</span> <span style="color:#a6e22e">:key</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.id&#34;</span>&gt;&lt;/<span style="color:#f92672">my-component</span>&gt;
+</code></pre></div><p><strong>When using v-for on the component, the key is required.</strong></p>
+<h2 id="event-handler">
+  Event handler
+  <a class="anchor" href="#event-handler">#</a>
+</h2>
+<h3 id="listen-for-events">
+  Listen for events
+  <a class="anchor" href="#listen-for-events">#</a>
+</h3>
+<p>You can listen to DOM events with v-on instruction, when triggered and run some <code>JavaScript</code>code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">v-on:click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;counter += 1&#34;</span>&gt;Add 1&lt;/<span style="color:#f92672">button</span>&gt;
+            &lt;<span style="color:#f92672">text</span>&gt;The button above has been clicked {{ counter }} times.&lt;/<span style="color:#f92672">text</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">counter</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="event-handling-method">
+  Event handling method
+  <a class="anchor" href="#event-handling-method">#</a>
+</h3>
+<p>However, many event processing logic is more complex, so directly to the <code>JavaScript</code>code is written in the <code>v-on</code>instructions is not feasible. So <code>v-on</code>you can also receive the name of a method needs to be called.</p>
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            <span style="color:#75715e">&lt;!-- &#39;greet&#39; is the method name defined below --&gt;</span>
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">v-on:click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;greet&#34;</span>&gt;Greet&lt;/<span style="color:#f92672">button</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Vue.js&#39;</span>
+                }
+            },
+            <span style="color:#75715e">// Define the methods in the &#39;methods&#39; object
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">event</span>){
+                    <span style="color:#75715e">// &#39;event&#39; is a native DOM event
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>);
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Sometimes it is also necessary to access the original DOM event in the inline statement processor. You can use the special variable <code>$event</code>it passed to the method:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">v-on:click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;warn(&#39;Form cannot be submitted yet.&#39;, $event)&#34;</span>&gt;
+              Submit
+            &lt;/<span style="color:#f92672">button</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">warn</span>(<span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">event</span>) {
+                    <span style="color:#75715e">// Now we have access to the native event object
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>) {
+                        <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>()
+                    }
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="event-modifier">
+  Event modifier
+  <a class="anchor" href="#event-modifier">#</a>
+</h3>
+<p>The modifier is a special suffix specified by a period. It is used to indicate that an instruction should be bound in a special way. For example, <code>.prevent</code>modifier tells <code>v-on</code>instructions for event-triggered call <code>event.preventDefault()</code>:</p>
+<p>v-on provides event modifiers:</p>
+<ul>
+<li><code>.stop</code>: Supported by all platforms, it will prevent the event from bubbling when used, and also prevent the default behavior of the event on the non-H5 side</li>
+<li><code>.native</code>: Monitor native events, only supported on H5 platform</li>
+<li><code>.prevent</code>: Only supported on H5 platform</li>
+<li><code>.capture</code>: Only supported on H5 platform</li>
+<li><code>.self</code>: Only supported on H5 platform</li>
+<li><code>.once</code>: Only supported on H5 platform</li>
+<li><code>.passive</code>: Only supported on H5 platform</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- Prevents the click event from propagating further --&gt;</span>
+    &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">v-on:click</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">stop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;doThis&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+</code></pre></div><blockquote>
+<p>When using modifiers, the order is important; the corresponding codes will be generated in the same order. Therefore, with the <code>v-on:click.prevent.self</code>blocks all clicks, and <code>v-on:click.self.prevent</code>will only prevent clicks on the element itself.</p>
+</blockquote>
+<p><strong>note</strong></p>
+<ul>
+<li>Compatible each end, events need to use <strong>v-on</strong> or <strong>@</strong> way binding, do not use the small end of the program <code>bind</code>and <code>catch</code>for event binding.</li>
+<li>If you need to scroll down the page prohibiting mask, use <code>@touchmove.stop.prevent=&quot;moveHandle&quot;</code>, <code>moveHandle</code>processing can be used to <code>touchmove</code>events, but also can be an empty function.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mask&#34;</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">touchmove</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">stop</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">prevent</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;moveHandle&#34;</span>&gt;&lt;/<span style="color:#f92672">view</span>&gt;
+</code></pre></div><h3 id="event-mapping-table">
+  Event mapping table
+  <a class="anchor" href="#event-mapping-table">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+    {
+        <span style="color:#a6e22e">click</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;tap&#39;</span>,
+        <span style="color:#a6e22e">touchstart</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;touchstart&#39;</span>,
+        <span style="color:#a6e22e">touchmove</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;touchmove&#39;</span>,
+        <span style="color:#a6e22e">touchcancel</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;touchcancel&#39;</span>,
+        <span style="color:#a6e22e">touchend</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;touchend&#39;</span>,
+        <span style="color:#a6e22e">tap</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;tap&#39;</span>,
+        <span style="color:#a6e22e">longtap</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;longtap&#39;</span>, <span style="color:#75715e">//LongPress is recommended instead
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;input&#39;</span>,
+        <span style="color:#a6e22e">change</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;change&#39;</span>,
+        <span style="color:#a6e22e">submit</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;submit&#39;</span>,
+        <span style="color:#a6e22e">blur</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;blur&#39;</span>,
+        <span style="color:#a6e22e">focus</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;focus&#39;</span>,
+        <span style="color:#a6e22e">reset</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;reset&#39;</span>,
+        <span style="color:#a6e22e">confirm</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;confirm&#39;</span>,
+        <span style="color:#a6e22e">columnchange</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;columnchange&#39;</span>,
+        <span style="color:#a6e22e">linechange</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;linechange&#39;</span>,
+        <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;error&#39;</span>,
+        <span style="color:#a6e22e">scrolltoupper</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;scrolltoupper&#39;</span>,
+        <span style="color:#a6e22e">scrolltolower</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;scrolltolower&#39;</span>,
+        <span style="color:#a6e22e">scroll</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;scroll&#39;</span>
+    }
+</code></pre></div><h2 id="form-control-binding">
+  Form control binding
+  <a class="anchor" href="#form-control-binding">#</a>
+</h2>
+<h3 id="v-model">
+  v-model
+  <a class="anchor" href="#v-model">#</a>
+</h3>
+<p>You can form a v-model command <code>input</code>, <code>textarea</code>and <code>select</code>create a two-way data binding on the element. It will automatically select the correct method to update the element based on the control type. While some magic, but <code>v-model</code>in essence merely syntactic sugar. It is responsible for monitoring the user&rsquo;s input events to update the data, and perform some special processing on some extreme scenarios.</p>
+<blockquote>
+<p>v-model ignores all form elements <code>value</code>, <code>checked</code>, <code>selected</code>the initial value of the attribute data while always Vue instance as a data source. You should declare the initial value in the data option of the component via JavaScript.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">v-model</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;message&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;edit me&#34;</span>&gt;
+            &lt;<span style="color:#f92672">text</span>&gt;Message is: {{ message }}&lt;/<span style="color:#f92672">text</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;&#34;</span>
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h5 id="example-usage">
+  Example usage
+  <a class="anchor" href="#example-usage">#</a>
+</h5>
+<ul>
+<li>H5 The <code>select</code>label <code>picker</code>for assembly instead of</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">picker</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">change</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bindPickerChange&#34;</span> <span style="color:#a6e22e">:value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index&#34;</span> <span style="color:#a6e22e">:range</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;array&#34;</span>&gt;
+                &lt;<span style="color:#f92672">view</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;picker&#34;</span>&gt;
+                    The currently selected：{{array[index]}}
+                &lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;/<span style="color:#f92672">picker</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">index</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+                    <span style="color:#a6e22e">array</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>]
+                }
+            },
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">bindPickerChange</span>(<span style="color:#a6e22e">e</span>) {
+                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">e</span>)
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><ul>
+<li>Form elements <code>radio</code>used <code>radio-group</code>for assembly instead of</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">radio-group</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio-group&#34;</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">change</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radioChange&#34;</span>&gt;
+                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(item, index) in items&#34;</span> <span style="color:#a6e22e">:key</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.name&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">radio</span> <span style="color:#a6e22e">:value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.name&#34;</span> <span style="color:#a6e22e">:checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item.checked&#34;</span> /&gt; {{item.value}}
+                &lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;/<span style="color:#f92672">radio-group</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">items</span><span style="color:#f92672">:</span> [{
+                            <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;USA&#39;</span>,
+                            <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;The United States&#39;</span>
+                        },
+                        {
+                            <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;CHN&#39;</span>,
+                            <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;China&#39;</span>,
+                            <span style="color:#a6e22e">checked</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;true&#39;</span>
+                        },
+                        {
+                            <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;BRA&#39;</span>,
+                            <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Brazil&#39;</span>
+                        },
+                        {
+                            <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;JPN&#39;</span>,
+                            <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Japan&#39;</span>
+                        },
+                        {
+                            <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;ENG&#39;</span>,
+                            <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Britain&#39;</span>
+                        },
+                        {
+                            <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;TUR&#39;</span>,
+                            <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;The French&#39;</span>
+                        }
+                    ]
+                }
+            },
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">radioChange</span>(<span style="color:#a6e22e">e</span>) {
+                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Radio has a change event and carries a value of:&#39;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>)
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="computed-attributes-and-listeners">
+  Computed attributes and listeners
+  <a class="anchor" href="#computed-attributes-and-listeners">#</a>
+</h2>
+<h3 id="calculated-attribute">
+  Calculated attribute
+  <a class="anchor" href="#calculated-attribute">#</a>
+</h3>
+<p>Each contains a calculated attribute <code>getter</code>and a <code>setter</code>default is to use <code>getter</code>to read. All <code>getter</code>and <code>setter</code>the <code>this</code>context is automatically bound instance Vue.</p>
+<h4 id="getter-of-calculated-property">
+  Getter of calculated property
+  <a class="anchor" href="#getter-of-calculated-property">#</a>
+</h4>
+<p>Binding expressions in templates is very convenient, but they are actually only used for simple operations. Putting too much logic in the template makes the template too heavy and difficult to maintain. E.g:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">view</span>&gt;
+        {{ message.split(&#39;&#39;).reverse().join(&#39;&#39;) }}
+    &lt;/<span style="color:#f92672">view</span>&gt;
+</code></pre></div><p>Here are the variables you want to display <code>message</code>flip string. When you want to include more inverted strings here in the template, it will be more difficult to handle.</p>
+<p>Therefore, for any complex logic, you should use <strong>calculated attributes</strong> .</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span>&gt;Original message: &#34;{{ message }}&#34;&lt;/<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span>&gt;Computed reversed message: &#34;{{ reversedMessage }}&#34;&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>
+                }
+            },
+            <span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+                <span style="color:#75715e">// Computed attribute getter
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">reversedMessage</span>(){
+                  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>).<span style="color:#a6e22e">reverse</span>().<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>)
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>result:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    Original message: &#34;Hello&#34;
+    Computed reversed message: &#34;olleH&#34;
+</code></pre></div><p>You can bind as ordinary <code>property</code>as calculated binding properties in the template.</p>
+<p>Vue know <code>reversedMessage</code>rely on <code>message</code>, so when <code>message</code>change occurs, all dependent <code>reversedMessage</code>binding will be updated. And best of all is that we have to declaratively create this dependency: the calculation of property <code>getter</code>functions are no side effects (side effect), making it easier to test and understand.</p>
+<p>Calculated properties can also depend on the data of multiple Vue instances. As long as any of the data changes, the calculated properties will be re-executed and the view will be updated.</p>
+<h4 id="setter-of-calculated-property">
+  Setter of calculated property
+  <a class="anchor" href="#setter-of-calculated-property">#</a>
+</h4>
+<p>When you need it can also provide a <code>setter</code>function, when manually modify the calculated value of the property, it will trigger <code>setter</code>function, perform some custom actions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span>&gt;{{ fullName }}&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Foo&#39;</span>,
+                    <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Bar&#39;</span>
+                }
+            },
+            <span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">fullName</span><span style="color:#f92672">:</span> {
+                    <span style="color:#75715e">// getter
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">get</span>(){
+                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastName</span>
+                    },
+                    <span style="color:#75715e">// setter
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">newValue</span>){
+                        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">names</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newValue</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39; &#39;</span>)
+                        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">names</span>[<span style="color:#ae81ff">0</span>]
+                        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">names</span>[<span style="color:#a6e22e">names</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
+                    }
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Now run <code>fullName = 'John Doe'</code>time, <code>setter</code>will be called <code>firstName</code>and <code>lastName</code>will be updated accordingly.</p>
+<h4 id="the-difference-between-getter-and-setter">
+  The difference between getter and setter
+  <a class="anchor" href="#the-difference-between-getter-and-setter">#</a>
+</h4>
+<ul>
+<li>get: The new value of fullName can be obtained by setting the get method.</li>
+<li>set: Set a value (newValue) to change the value associated with fullName through the set method, causing the fullName to be recalculated, and the fullName on the corresponding page will also be changed to new content.</li>
+</ul>
+<h3 id="calculated-attribute-cache-vs-method">
+  Calculated attribute cache vs method
+  <a class="anchor" href="#calculated-attribute-cache-vs-method">#</a>
+</h3>
+<p>We can achieve the same effect by calling methods in expressions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">template</span>&gt;
+        &lt;<span style="color:#f92672">view</span>&gt;
+            &lt;<span style="color:#f92672">view</span>&gt;Reversed message: &#34;{{ reversedMessage() }}&#34;&lt;/<span style="color:#f92672">view</span>&gt;
+        &lt;/<span style="color:#f92672">view</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+            <span style="color:#a6e22e">data</span>() {
+                <span style="color:#66d9ef">return</span> {
+                    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>
+                }
+            },
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">reversedMessage</span>(){
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>).<span style="color:#a6e22e">reverse</span>().<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>)
+                }
+            }
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>You can define the same function as a method instead of a calculated attribute. The final result of the two methods is indeed exactly the same. However, the difference is that <strong>calculated attributes are cached based on their responsive dependencies</strong> .</p>
+<p>They will be re-evaluated only when the related reactive dependencies change. This means that as long as <code>message</code>no change, many visits to <code>reversedMessage</code>the calculation results before the property will return immediately to calculate, without having to perform functions again.</p>
+<p>This also means that the following calculated properties will no longer be updated, because Date.now() is not a reactive dependency:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">now</span>(){
+            <span style="color:#66d9ef">return</span> Date.<span style="color:#a6e22e">now</span>()
+        }
+    }
+</code></pre></div><p>In contrast, whenever a re-render is triggered, the <strong>calling method will always execute the function again</strong> .</p>
+<p>Why do we need caching? Suppose we have a computational property A with a relatively large performance overhead, and it needs to traverse a huge array and do a lot of calculations. Then we may have other calculated properties that depend on A. If there is no cache, we will inevitably execute A&rsquo;s getter multiple times! If you do not want to have a cache, please use methods instead.</p>
+<h3 id="computed-attributes-vs-listening-attributes">
+  Computed attributes vs. listening attributes
+  <a class="anchor" href="#computed-attributes-vs-listening-attributes">#</a>
+</h3>
+<p>Vue provides a more general way to observe and respond to data changes on Vue instances: <strong>listening to properties</strong> . When you have some data that needs to change with other data changes, you can easily abuse it <code>watch</code>. Often, however, a better practice is to use the calculation attribute rather than a command-style <code>watch</code>callback.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span>() {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Foo&#39;</span>,
+                <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Bar&#39;</span>,
+                <span style="color:#a6e22e">fullName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Foo Bar&#39;</span>
+            }
+        },
+        <span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">val</span>) {
+                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">fullName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">val</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastName</span>
+            },
+            <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">val</span>) {
+                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">fullName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">val</span>
+            }
+        }
+    }
+</code></pre></div><p>The above code is imperative and repetitive. Compare it with the version of the calculated attribute:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span>() {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Foo&#39;</span>,
+                <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Bar&#39;</span>,
+                <span style="color:#a6e22e">fullName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Foo Bar&#39;</span>
+            }
+        },
+        <span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">fullName</span>(){
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastName</span>
+            }
+        }
+    }
+</code></pre></div><h3 id="listener-watch">
+  Listener watch
+  <a class="anchor" href="#listener-watch">#</a>
+</h3>
+<ul>
+<li>
+<p>Type: {[key: string]: string | Function | Object | Array}</p>
+</li>
+<li>
+<p>For an object, the key is the expression to be observed, and the value is the corresponding callback function. The value can also be a method name, or an object containing options. Vue instance will be called upon instantiation <code>$watch()</code>, traversing <code>watch</code>each object <code>property</code>.</p>
+</li>
+<li>
+<p>Example:</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">view</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">v-model</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;word&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">view</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span>() {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">word</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;word&#39;</span>
+            }
+        },
+        <span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+            <span style="color:#75715e">/* Watch is used to respond to changes in data */</span>
+            <span style="color:#a6e22e">word</span>(<span style="color:#a6e22e">newVal</span>, <span style="color:#a6e22e">oldVal</span>) {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;The latest value is: &#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">newVal</span> <span style="color:#e6db74">&#34;, the original value is:&#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">oldVal</span>);
+            }
+        },
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span>() {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+                <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+                <span style="color:#a6e22e">c</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+                <span style="color:#a6e22e">d</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span>,
+                <span style="color:#a6e22e">e</span><span style="color:#f92672">:</span> {
+                    <span style="color:#a6e22e">f</span><span style="color:#f92672">:</span> {
+                        <span style="color:#a6e22e">g</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
+                    }
+                }
+            }
+        },
+        <span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">oldVal</span>) {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;new: %s, old: %s&#39;</span>, <span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">oldVal</span>)
+            },
+            <span style="color:#75715e">// the method name
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;someMethod&#39;</span>,
+            <span style="color:#75715e">// This callback is called whenever the property of any object being listened on changes, regardless of how deeply nested it is
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">c</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">handler</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">oldVal</span>) { <span style="color:#75715e">/* ... */</span> },
+                <span style="color:#a6e22e">deep</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            },
+            <span style="color:#75715e">// This callback will be invoked immediately after the listening begins
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">d</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">handler</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;someMethod&#39;</span>,
+                <span style="color:#a6e22e">immediate</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            },
+            <span style="color:#75715e">// You can pass in an array of callbacks, and they&#39;ll be called one by one
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">e</span><span style="color:#f92672">:</span> [
+                <span style="color:#e6db74">&#39;handle1&#39;</span>,
+                <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handle2</span>(<span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">oldVal</span>) { <span style="color:#75715e">/* ... */</span> },
+                {
+                    <span style="color:#a6e22e">handler</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handle3</span>(<span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">oldVal</span>) { <span style="color:#75715e">/* ... */</span> },
+                    <span style="color:#75715e">/* ... */</span>
+                }
+            ],
+            <span style="color:#75715e">// watch vm.e.f&#39;s value: {g: 5}
+</span><span style="color:#75715e"></span>            <span style="color:#e6db74">&#39;e.f&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">oldVal</span>) { <span style="color:#75715e">/* ... */</span> }
+        }
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#vue-development-advantages-over-traditional-js">Vue development advantages over traditional js</a>
+          <ul>
+            <li><a href="#file-type-changes">File type changes</a></li>
+            <li><a href="#changes-in-the-code-structure-within-the-file">Changes in the code structure within the file</a></li>
+            <li><a href="#changes-in-the-way-external-files-are-cited">Changes in the way external files are cited</a></li>
+            <li><a href="#componentlabel-changes">Component/label changes</a></li>
+            <li><a href="#js-changes">js changes</a></li>
+          </ul>
+        </li>
+        <li><a href="#template-syntax">Template syntax</a>
+          <ul>
+            <li><a href="#interpolation">Interpolation</a></li>
+            <li><a href="#instruction">instruction</a></li>
+          </ul>
+        </li>
+        <li><a href="#data-attribute">data attribute</a></li>
+        <li><a href="#class-and-style-binding">Class and Style binding</a>
+          <ul>
+            <li><a href="#object-syntax">Object syntax</a></li>
+            <li><a href="#array-syntax">Array syntax</a></li>
+            <li><a href="#used-on-components">Used on components</a></li>
+          </ul>
+        </li>
+        <li><a href="#conditional-rendering">Conditional rendering</a>
+          <ul>
+            <li><a href="#v-if-and-v-else">v-if and v-else</a></li>
+            <li><a href="#conditional-rendering-grouping">Conditional rendering grouping</a></li>
+            <li><a href="#v-show">v-show</a></li>
+            <li><a href="#the-difference-between-v-if-and-v-show">The difference between v-if and v-show</a></li>
+          </ul>
+        </li>
+        <li><a href="#list-rendering">List rendering</a>
+          <ul>
+            <li><a href="#use-arrays-in-v-for">Use arrays in v-for</a></li>
+            <li><a href="#use-objects-in-v-for">Use objects in v-for</a></li>
+            <li><a href="#list-rendering-grouping">List rendering grouping</a></li>
+            <li><a href="#key">key</a></li>
+            <li><a href="#precautions">Precautions</a></li>
+            <li><a href="#use-v-for-on-components">Use v-for on components</a></li>
+          </ul>
+        </li>
+        <li><a href="#event-handler">Event handler</a>
+          <ul>
+            <li><a href="#listen-for-events">Listen for events</a></li>
+            <li><a href="#event-handling-method">Event handling method</a></li>
+            <li><a href="#event-modifier">Event modifier</a></li>
+            <li><a href="#event-mapping-table">Event mapping table</a></li>
+          </ul>
+        </li>
+        <li><a href="#form-control-binding">Form control binding</a>
+          <ul>
+            <li><a href="#v-model">v-model</a></li>
+          </ul>
+        </li>
+        <li><a href="#computed-attributes-and-listeners">Computed attributes and listeners</a>
+          <ul>
+            <li><a href="#calculated-attribute">Calculated attribute</a></li>
+            <li><a href="#calculated-attribute-cache-vs-method">Calculated attribute cache vs method</a></li>
+            <li><a href="#computed-attributes-vs-listening-attributes">Computed attributes vs. listening attributes</a></li>
+            <li><a href="#listener-watch">Listener watch</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,27 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>易才批量代付项目</title>
-    <link>https://example.com/docs/Meeting/</link>
-    <description>Recent content on 易才批量代付项目</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/docs/Meeting/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://example.com/docs/Meeting/20210114/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/Meeting/20210114/</guid>
-      <description> 文件系统使用fastDFS，报表也需要使用fastDFS，接口相应修改。 下周易才给环境，部署DEMO SDK下周二之后 数据库内账户信息加密 鉴权查询返回权限列表 functionID 短信api，邮件问题，易才确认。 工行都是代发工资，招行附言根据账户类型。基本户代发工资，一般户用薪酬/薪资替换，逻辑编写邮件，由业务确认。 GBK生僻字问题，出现生僻字，整包拒绝。 附言放在批次上，送中文。 银行类型，二次发放必输。若存则直接取，若无，则根据卡宾判断 回盘文件交易明细状态，成功、失败、已退票。 退票查询接口，交易交易状态字段待定。 支付地账户同步，bankCode字段填写ICBC或CMB 支付地抬头里分行号，从新提供一份全的。 记账方式，逐笔，并笔。逐笔记账，发送频率过高，会导致工行人为恶意攻击系统。 跨行快汇，超网，100万以下都支持 对方行行号，送联行号，工行需要确认是否送到总行级即可。 工行逐笔记账，立刻返回交易结果信息。 工行返回交易状态 失败：6、11，7-成功，其他状态为处理中，一天未查询到终态，认为异常，通知工行。 账户只认账户中文名。账户英文名不填。 加密机并发180笔，工行确认加密机并发量。 工行内部先评估，软证书方式工行是否能处理掉这么多记录。 工行确认是否有预约功能？ 测试环境测试是否可以预约处理。  </description>
-    </item>
-    
-    <item>
-      <title>20210108周例会</title>
-      <link>https://example.com/docs/Meeting/20210108/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/Meeting/20210108/</guid>
-      <description>项目例会：# 确认加密机。加密机品牌：江南所 业务种类号确认，按单笔拆分处理。 回单根据业务种类号汇成同一个回单。 999业务种类编号无法扩展，北京单日150批次，成都100批次。实际够用。使用计数器。 加密机逐笔发送，资金调拨是多笔还是单笔。易才验证？若无法处理，易才资金调拨走人工 工行约会议 招行分行号是否能送到总行分行号？不能 发放优先级定位1,2,3 数字越大，优先级越高，HRO大客户优先发送，其他默认。 支付地同步功能，增加费项代码，用于选择代发工资或者其他，增加附言。由HRO审批时默认。提交时无，则按默认。 批次新增优先级字段，用于插队处理 后期需求预约代付 招行是否有10S后查询与15分钟后查询结果不一致的问题。 新增命中风控报表、按通道客户每月总金额，总笔数报表、按通道退票报表，到客户层 重新整理一份预警。失败率预警。 支付地抬头双方数据库不一致，异常补偿机制。 与易才联调时间，1月25号  </description>
-    </item>
-    
-  </channel>
-</rss>

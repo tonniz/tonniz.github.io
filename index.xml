@@ -1,241 +1,1185 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>易才批量代付概况 on 易才批量代付项目</title>
-    <link>https://example.com/</link>
-    <description>Recent content in 易才批量代付概况 on 易才批量代付项目</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <title>易才批量代付概况 on MR MiniApp</title>
+    <link>http://tonniz.github.io/</link>
+    <description>Recent content in 易才批量代付概况 on MR MiniApp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://tonniz.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>HRO接口文档</title>
-      <link>https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</link>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/API/HRO%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</guid>
-      <description>易才代收付API#修订记录
-   版本号 更新日期 更新人 更新内容     v0.7 2021-01-18 赵磊 增加对账接口   v0.6 2021-01-14 赵磊 明确交易状态；增加批次失败信息；调整附言位置；   v0.5 2021-01-13 赵磊 diskResult/diskNotify增加diskMessage；增加账户类型   v0.4 2021-01-12 赵磊 refundQuery增加页码、总页数、当前页码   v0.3 2021-01-11 赵磊 titleSync去除费项代码，增加账户类型   v0.2 2021-01-11 赵磊 支付地增加代付默认配置   v0.1 2020-12-29 赵磊 初稿    [TOC]
-接口设计#报文头#报文头格式为：“&amp;lt;head&amp;gt;报文头内容&amp;lt;/head&amp;gt;”，内容结构详见接口设计部分公共报文头
-报文体#报文体主要用于传输业务数据信息，格式为：“&amp;lt;body&amp;gt;报文体内容&amp;lt;/body&amp;gt;”</description>
-    </item>
-    
-    <item>
-      <title>任务分配</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/task/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/task/</guid>
-      <description>HRO API# 详参考《HRO接口文档》
-    任务名称 描述 负责人 进度     diskApply 批量代付申请 王磊 30%   diskResult 批量代付结果查询 王磊 0%   diskNotify 批次终态通知 王磊 0%   refundQuery 退票查询 赵林林 30%   customerSync 客户信息同步 赵林林 30%   titleSync 支付地账户信息同步 赵林林 30%   transStsSync 业务状态同步 王磊 0%   cardInfoQuery 卡信息查询 赵林林 30%    UI#   任务名称 描述 负责人 进度     UI Revision Flex翻写 左登红 70%   corgRiskRefactor 机构风控改造 左登红 0%   customerBrowse 客户信息浏览 左登红 0%   customerRiskManager 客户风控管理 左登红 0%   titleBrowse 支付地抬头浏览 左登红 0%   routerRefactor 路由改造（增加汇路） 左登红/王磊 0%   HRO Integration HRO整合 马东 0%    招行通道# 详参考《招商银行新引起开发指南》</description>
-    </item>
-    
-    <item>
-      <title>开发环境</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/env/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/env/</guid>
-      <description>门户#  平安版本运营
-http://182.18.1.4:8280/ubui
-User:T00001 Pass:1234qwer
-  版本库#   仓库名称 仓库描述 仓库地址     ctg-app-cap 易才代付核心-应用 https://alawn.cn:3001/MrTech/ctg-app-cap.git   ctg-plat-cap 易才代付核心-平台 https://alawn.cn:3001/MrTech/ctg-plat-cap.git   ctg-app-ui 易才代付运营-应用 https://alawn.cn:3001/MrTech/ctg-app-ui.git   ctg-plat-ui 易才代付运营-平台 https://alawn.cn:3001/MrTech/ctg-plat-ui.git   ctg-plat-ui 易才代付运营-平台 https://alawn.cn:3001/MrTech/ctg-plat-ui.git   ctg-vue 易才代付运营-前端 https://alawn.cn:3001/MrTech/ctg-vue.git   capbui 平安代付运营-应用 https://alawn.cn:3001/zhang_xx/capubui.git   ctg-jar Jar源码 https://alawn.cn:3001/MrTech/ctg-jar.git    开发环境 [易才]# 需要连易才VPN</description>
-    </item>
-    
-    <item>
-      <title>银行接口</title>
-      <link>https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/API/%E9%93%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3/</guid>
-      <description>银行接口#工行# 中国工商银行银企互联系统企业开发手册.doc 高级新企业财务室提交指令查询接口.xls 企业财务室指令提交汇总记账.xls  招行# 招商银行新银企直联开发指南.docx  </description>
-    </item>
-    
-    <item>
-      <title>HRO融合方案</title>
-      <link>https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/API/HRO%E8%9E%8D%E5%90%88%E6%96%B9%E6%A1%88/</guid>
-      <description>HRO融合方案#流程图#流程图#接口说明#Auth Server#鉴权#  请求
-protocol : HTTP method : GET content-Type : application/x-www-form-urlencoded token：Token funcId：功能ID
-eg.
-GET /auth?token=ZW9xpZTdvamE4SWVTNmkK&amp;amp;funcId=10001 HTTP/1.1 Content-Type : application/x-www-form-urlencoded Host: localhost: 8888 Connection: keep-alive   返回
-根据http state来判断是否鉴权成功；200：鉴权通过 403：鉴权失败 funcSet: 满足条件的funcId集合，以逗号符分割
-eg. 成功：
-HTTP/1.1 200 OK Date: Wed, 13 Jan 2021 15:27:25 GMT Content-Type : application/xml Content-Length: 52 &amp;lt;root&amp;gt;&amp;lt;funcSet&amp;gt;100001,100002,100005&amp;lt;/funcSet&amp;gt;&amp;lt;/root&amp;gt; eg.</description>
-    </item>
-    
-    <item>
-      <title>平安版本系统流程</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/pab/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/pab/</guid>
-      <description>Guide#Flowchart#文件处理 &amp;amp; 批次打包#送盘#回盘#技术要点#  库表索引的合理性
-  库表要分区
-  </description>
-    </item>
-    
-    <item>
-      <title>改造点</title>
-      <link>https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/%E5%BC%80%E5%8F%91/reconstruct/</guid>
-      <description>代收付#  易才HRO API
-  批量送盘
-  批次查询
-  对账文件生成
-  名录维护API
- 由HRO在名录发生变更时推送给沐融系统
-   退票查询
-    短信/邮件 改造
-  短信模板
-  短信调用易才RabbitMQ
-  邮件配置
-    银行类型的改造
-  批次送盘 &amp;amp; 回盘增加重点客户的优先级
-  删除商户有关的风控、检查；改造成客户
-  去除合作机构接口管理
-  提供卡BIN反查
- 支持批量上送（需做笔数控制）
-   客户风控增加单批 笔数/金额 上限
-  交易状态增加 R：已退汇，流水表中增加退汇流水号、退汇日期</description>
+      <guid>http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E5%9C%B0%E5%9B%BE%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/map/</guid>
+      <description>uni.createMapContext(mapId,this)#Creates and returns a map context mapContextobject. In the custom component, the second component parameters into the this example, the operation to the component &amp;lt;map&amp;gt;assembly.
+List of methods of the mapContext object
+   method parameter Description     getCenterLocation OBJECT Get the latitude and longitude of the current map center, the return is the gcj02 coordinate system   moveToLocation OBJECT To move the center of the map to the current location, it needs to be used with the show-location of the map component   getRegion OBJECT Get the field of view of the current map   getScale OBJECT Get the zoom level of the current map    $getAppMap() Precautions:</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/</link>
+      <link>http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E6%9F%A5%E7%9C%8B%E4%BD%8D%E7%BD%AE/open-location/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/API/HRO%E7%AD%BE%E5%90%8DDEMO/</guid>
-      <description>HRO签名DEMO#import org.junit.Test; import java.io.UnsupportedEncodingException; import java.security.MessageDigest; import java.security.NoSuchAlgorithmException; import java.util.Base64; /** * @Author: Alawn * @Description: * @Date: Create in 6:40 下午 2021/1/20 */ public class SignDemo { private final static String secret = &amp;#34;Giur9quiuD&amp;#34;; private final static String charSet = &amp;#34;UTF-8&amp;#34;; @Test public void sign() throws NoSuchAlgorithmException, UnsupportedEncodingException { String reqBody = &amp;#34;&amp;lt;root&amp;gt;&amp;lt;head&amp;gt;&amp;lt;version&amp;gt;v1.0&amp;lt;/version&amp;gt;&amp;lt;serviceName&amp;gt;diskApply&amp;lt;/serviceName&amp;gt;&amp;lt;requestId&amp;gt;20210104000000000001&amp;lt;/requestId&amp;gt;&amp;lt;requestTime&amp;gt;20200104235959&amp;lt;/requestTime&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;applyDate&amp;gt;20201229&amp;lt;/applyDate&amp;gt;&amp;lt;diskNo&amp;gt;20201229000000000000000000000001&amp;lt;/diskNo&amp;gt;&amp;lt;filePath&amp;gt;/data/send/20201229000000000000000000000001&amp;lt;/filePath&amp;gt;&amp;lt;fileVersion&amp;gt;v1&amp;lt;/fileVersion&amp;gt;&amp;lt;customerId&amp;gt;OHJEMIA1EINGUGAH0AITHOHNUEYAHWOO&amp;lt;/customerId&amp;gt;&amp;lt;titleId&amp;gt;1000001&amp;lt;/titleId&amp;gt;&amp;lt;md5&amp;gt;c5950a259435d3e51262539a10a22910&amp;lt;/md5&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/root&amp;gt;&amp;#34;; MessageDigest md5Digest = MessageDigest.getInstance(&amp;#34;MD5&amp;#34;); String md5 = byteArrayToHexString(md5Digest.digest(reqBody.getBytes(charSet))); MessageDigest shaDigest = MessageDigest.getInstance(&amp;#34;SHA-256&amp;#34;); byte[] signBuf = new byte[md5.</description>
+      <guid>http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E6%9F%A5%E7%9C%8B%E4%BD%8D%E7%BD%AE/open-location/</guid>
+      <description>uni.openLocation(OBJECT)#Use the in-app map to view the location.
+OBJECT parameter description
+   parameter name Types Required Description Platform difference description     latitude Float Yes Latitude, the range is -90~90, a negative number means south latitude, using the gcj02 National Survey    longitude Float Yes Longitude, the range is -180~180, the negative number indicates the west longitude, using the gcj02 National Survey    success Function no Callback function for successful interface call    fail Function no Callback function for interface call failure    complete Function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)     Example</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/</link>
+      <link>http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/API/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/</guid>
-      <description>文件压缩/解压#Maven配置#&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;net.lingala.zip4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zip4j&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.6.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 压缩#ZipParameters zipParameters = new ZipParameters(); zipParameters.setEncryptFiles(true); zipParameters.setEncryptionMethod(EncryptionMethod.AES); // Below line is optional. AES 256 is used by default. You can override it to use AES 128. AES 192 is supported only for extracting. zipParameters.setAesKeyStrength(AesKeyStrength.KEY_STRENGTH_256); List&amp;lt;File&amp;gt; filesToAdd = Arrays.asList( new File(&amp;#34;somefile&amp;#34;), new File(&amp;#34;someotherfile&amp;#34;) ); ZipFile zipFile = new ZipFile(&amp;#34;filename.zip&amp;#34;, &amp;#34;password&amp;#34;.toCharArray()); zipFile.addFiles(filesToAdd, zipParameters); 解压#new ZipFile(&amp;#34;filename.zip&amp;#34;, &amp;#34;password&amp;#34;.</description>
+      <guid>http://tonniz.github.io/docs/API/%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE/location/</guid>
+      <description>uni.getLocation(OBJECT)#Get the current geographic location and speed.
+In the WeChat Mini Program, after the user leaves the application, this interface cannot be called unless the background continuous positioning permission is requested; when the user clicks &amp;ldquo;display at the top of the chat&amp;rdquo;, this interface can continue to be called.
+OBJECT parameter description
+   parameter name Types Required Description     type String no The default is wgs84 return gps coordinates, gcj02 return to the country office coordinate measurement can be used to uni.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://example.com/docs/Meeting/20210114/</link>
+      <link>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/Meeting/20210114/</guid>
-      <description> 文件系统使用fastDFS，报表也需要使用fastDFS，接口相应修改。 下周易才给环境，部署DEMO SDK下周二之后 数据库内账户信息加密 鉴权查询返回权限列表 functionID 短信api，邮件问题，易才确认。 工行都是代发工资，招行附言根据账户类型。基本户代发工资，一般户用薪酬/薪资替换，逻辑编写邮件，由业务确认。 GBK生僻字问题，出现生僻字，整包拒绝。 附言放在批次上，送中文。 银行类型，二次发放必输。若存则直接取，若无，则根据卡宾判断 回盘文件交易明细状态，成功、失败、已退票。 退票查询接口，交易交易状态字段待定。 支付地账户同步，bankCode字段填写ICBC或CMB 支付地抬头里分行号，从新提供一份全的。 记账方式，逐笔，并笔。逐笔记账，发送频率过高，会导致工行人为恶意攻击系统。 跨行快汇，超网，100万以下都支持 对方行行号，送联行号，工行需要确认是否送到总行级即可。 工行逐笔记账，立刻返回交易结果信息。 工行返回交易状态 失败：6、11，7-成功，其他状态为处理中，一天未查询到终态，认为异常，通知工行。 账户只认账户中文名。账户英文名不填。 加密机并发180笔，工行确认加密机并发量。 工行内部先评估，软证书方式工行是否能处理掉这么多记录。 工行确认是否有预约功能？ 测试环境测试是否可以预约处理。  </description>
+      <guid>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</guid>
+      <description>setTimeout(callback, delay, rest)#Set a timer. Execute the registered callback function after the time expires
+Parameter Description
+   parameter Types of Required Description     callback Function Yes Callback   delay Number no Delay time, the function call will occur after the delay, the unit is ms   rest Any no Additional parameters such as param1, param2, &amp;hellip;, paramN will be passed as parameters to the callback function    return value</description>
     </item>
     
     <item>
-      <title>20210108周例会</title>
-      <link>https://example.com/docs/Meeting/20210108/</link>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/Meeting/20210108/</guid>
-      <description>项目例会：# 确认加密机。加密机品牌：江南所 业务种类号确认，按单笔拆分处理。 回单根据业务种类号汇成同一个回单。 999业务种类编号无法扩展，北京单日150批次，成都100批次。实际够用。使用计数器。 加密机逐笔发送，资金调拨是多笔还是单笔。易才验证？若无法处理，易才资金调拨走人工 工行约会议 招行分行号是否能送到总行分行号？不能 发放优先级定位1,2,3 数字越大，优先级越高，HRO大客户优先发送，其他默认。 支付地同步功能，增加费项代码，用于选择代发工资或者其他，增加附言。由HRO审批时默认。提交时无，则按默认。 批次新增优先级字段，用于插队处理 后期需求预约代付 招行是否有10S后查询与15分钟后查询结果不一致的问题。 新增命中风控报表、按通道客户每月总金额，总笔数报表、按通道退票报表，到客户层 重新整理一份预警。失败率预警。 支付地抬头双方数据库不一致，异常补偿机制。 与易才联调时间，1月25号  </description>
+      <guid>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E5%BA%94%E7%94%A8%E7%BA%A7%E4%BA%8B%E4%BB%B6/application/</guid>
+      <description>uni.onPageNotFound(funciton callback)#There is no event for the page to be opened by the listening application. The event with the App.onPageNotFoundcallback time to coincide
+parameter#function callback
+The callback function for the event that the page to be opened does not exist
+parameter#   Attributes Types of Description     path String The path of the page does not exist (code package path)   query Object Open the query parameter of a page that does not exist   isEntryPage Boolean Whether it’s the first page launched this time (for example, coming in from an entry such as sharing, the first page is the sharing page configured by the developer)    note</description>
     </item>
     
     <item>
-      <title>技术沟通确认清单</title>
-      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/technology/</link>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/technology/</guid>
-      <description>技术沟通确认清单#  关于HRO与沐融代付管理系统的融合方案
- 最终效果沐融代付系统的管理功能完全嵌入至HRO中
-   移除沐融管理系统中的菜单、用户、角色、权限，使用HRO的用户、角色、权限来控制沐融的页面
-  HRO系统在原有的菜单基础上增加沐融批量代付相关的菜单，并且点击其链接能跳转至沐融管理系统相应的页面
-  HRO向沐融系统提供Token鉴权接口用于沐融系统相关页面渲染前的权限检查，并在鉴权成功后返回HRO系统的用户ID及该页面下的按钮权限
-  沐融系统使用鉴权返回的UserId来登记操作员日志
-    关于HRO与沐融系统批次交互模式
-  沐融向HRO系统提供批次请求、批次查询等API，批次的内容以文件的形式存放在NFS服务器上
-  批次文件采用tar.gz压缩以减少网络传输的流量
-  批次文件使用对称加密及MD5签名的方式来保障文件的防篡改、防窃取
-  HRO上送的批次号全局唯一；批次文件中的明细ID全局唯一
-  沐融提供给HRO的回盘文件中需包含通道、出账账号、错误码、错误信息、业务状态、HRO流水、沐融流水、银行流水（银行如提供）
-    关于命中风控的处理策略
-  如整个批次命中风控的，则整批失败
-  如批次中局部明细命中风控的，则命中风控的部分明细作失败处理，未命中风控的部分正常发送
-    关于HRO与沐融系统的对账
-  沐融系统在 T + 1 日生成HRO系统T日的对账文件
-  对账文件仅包含成功、处理中的明细
-    关于退票的处理方式</description>
+      <guid>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</guid>
+      <description>console#Print log information to the console.
+debug#Print debug log to the console
+Note: In the App-side custom component mode, the debug method is equivalent to the log method.
+log#Print log to the console
+info#Print info log to the console
+warn#Print warn log to the console
+error#Print error log to the console</description>
     </item>
     
     <item>
-      <title>易才需求沟通会</title>
-      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/</link>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/requirement/</guid>
-      <description>易才需求#技术#  批次全部成功后，通知易才
-  提供批量客户录入/修改接口
-  操作员日志沐融需要重写，只登记userID(易才给验证Token接口中给) + action
-  易才倾向于接口中附明细
-  送盘与回盘方式
-   使用文件，通过NFS、文件压缩且加密，压缩格式tar.gz
-  出口网络情况   上下行都是100M 电信、联通双线路、后期生产部署在北京
-  批次号不同、内容相同，如何处理?   HRO控制（SHA值校验）
-  批次中对于触发风控预警的明细处理情况   整批触发风控：整批作失败处理 单批部分明细触发风控：明细失败处理
-  短信客户端   易才提供MQ地址与格式
-  邮件服务器   易才提供邮件服务器配置
-  退票用推送？查询？   HRO每天查询
-  监控如何实现   业务监控沐融提供监控脚本</description>
+      <guid>http://tonniz.github.io/docs/API/%E5%9F%BA%E7%A1%80/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</guid>
+      <description>Application life cycle#Support application life cycle functions such as onLaunch, onShow, onHide, etc.
+Page life cycle#Support life cycle functions such as onLoad, onShow, onReady.</description>
     </item>
     
     <item>
-      <title>银行待沟通问题列表（工行）</title>
-      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/</link>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_icbc/</guid>
-      <description>银行待沟通问题列表（工行）#工行#  商务&amp;amp;流程
-  商务流程是什么样的？
-  多久可以提供测试参数？
- 2~3个工作日
-   是否具备现成的联调环境？
- ==工行近期更换环境，1月下旬到1月底才有联调环境==
-   是否有专人配合联调？
- 专人配合
-   开发完成后银行是否需要在测试环境上验收？
- 工行不验收，但需要易才出示带公章的验收报告，工行提供模板
-   生产参数及前置机软件多久可以提供？
- 2~3个工作日
-   我方投产后行方是否需要生产环境的验收？
- 不验收
-     跨行
-  大额、小额、超网 的限额及时效各是什么样的？
- 大额：实时，100W以上（5 x 8） 小额：非实时，100w以下（7 x 24） 超网：实时，==5w以下==（7 x 24）
-   跨行业务是否要上送开户行行名、开户所在地、开户行支行名或联行号？</description>
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%9B%BE%E7%89%87/image/</guid>
+      <description>uni.chooseImage(OBJECT)#Choose a picture from a local album or take a photo with the camera.
+If you need a richer camera API on the App side (such as directly calling the front camera)
+OBJECT parameter description
+   parameter name Types of Required Description Platform difference description     count Number no The maximum number of pictures that can be selected, the default is 9 See description below   sizeType Array&amp;lt;String&amp;gt; no original original image, compressed image, both have by default    extension Array&amp;lt;String&amp;gt; no According to the file extension filtering, each item cannot be an empty string.</description>
     </item>
     
     <item>
-      <title>银行待沟通问题列表（招行）</title>
-      <link>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/</link>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/%E9%9C%80%E6%B1%82/channel_cmb/</guid>
-      <description>银行待沟通问题列表（招行）#  商务&amp;amp;流程
-  商务流程是什么样的？
-  多久可以提供测试参数？
- 2~3个工作日
-   是否具备现成的联调环境？
- 有联调环境
-   是否有专人配合联调？
- 有专人配合
-   开发完成后银行是否需要在测试环境上验收？
- 测试环境需要验收，执行案例并填写银行给的测试报告
-   生产参数及前置机软件多久可以提供？
- 2~3个工作日
-   我方投产后行方是否需要生产环境的验收？
- 我方自行验证
-     跨行
-  大额、小额、超网 的限额及时效各是什么样的？
- 大额：实时，100W以上（5 x 8） 小额：非实时，100w以下（7 x 24） 超网：实时，100w以下（7 x 24）
-   未走超网的跨行业务是否一定要上送开户行行名、开户所在地、开户行支行名或联行号？
- 大小额需要上送；超网不需要上送</description>
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%AF%8C%E6%96%87%E6%9C%AC/editor-context/</guid>
+      <description>editorContext#The editorContext instance corresponding to the editor component can be obtained through uni.createSelectorQuery
+onEditorReady() { uni.createSelectorQuery().select(&amp;#39;#editor&amp;#39;).context((res) =&amp;gt; { this.editorCtx = res.context }).exec() } onEditorReady() { this.editorCtx = requireDynamicLib(&amp;#39;editorLib&amp;#39;).createEditorContext(&amp;#39;editorId&amp;#39;); }  References dynamic libraries in the project, in the manifest.jsonmiddle to add adynamicLib  &amp;#34;mp-baidu&amp;#34; : { &amp;#34;usingComponents&amp;#34; : true, &amp;#34;appid&amp;#34; : &amp;#34;&amp;#34;, &amp;#34;setting&amp;#34; : { &amp;#34;urlCheck&amp;#34; : true }, &amp;#34;dynamicLib&amp;#34;: { &amp;#34;editorLib&amp;#34;: { &amp;#34;provider&amp;#34;: &amp;#34;swan-editor&amp;#34; } } }, In each using a rich text editor component to a page, the configuration pages.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86/record-manager/</guid>
+      <description>uni.getRecorderManager()#Get the globally unique recording manager recorderManager.
+List of methods of recorderManager object
+   method parameter Description Platform difference description     start options start recording    pause  Pause recording App not currently supported   resume  Continue recording App not currently supported   stop  Stop recording    onStart callback Recording start event    onPause callback Recording pause event    onStop callback Recording stop event, will call back the file address    onFrameRecorded callback After the file with the specified frame size has been recorded, the recording fragment result data will be called back.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E6%96%87%E4%BB%B6/file/</guid>
+      <description>uni.chooseFile(OBJECT)#Select the file locally.
+This API is mainly used to select non-media files. If the selected file is a media file, there are 3 dedicated APIs:
+ Picture selection Video selection Multimedia file selection (including picture video)  Platform difference description
+ If you need to select non-media files on the App side, you can search for file options in the plug-in market . Among them, Native.js can be used on the Android side without native plug-ins, while the iOS side requires native plug-ins.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/live-player-context/</guid>
+      <description>uni.createLivePlayerContext(livePlayerId, this)#Create a live-player context livePlayerContext object. Note that it is live broadcast, not push streaming.
+Parameter Description
+   parameter Description Platform difference description     livePlayerId &amp;lt;live-player&amp;gt;Component id          List of methods of livePlayerContext object:
+   method parameter Description     play Object Play   stop Object stop   mute Object Mute   pause Object time out   resume Object restore   requestFullScreen Object Enter full screen   exitFullScreen Object Exit Full Screen    Object parameter list of requestFullScreen:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/camera-context/</guid>
+      <description>uni.createCameraContext()#Create and return the context cameraContext object of the camera component.
+This API is a js API supporting the camera component. It has the same platform compatibility as the camera component and can realize non-full-screen cameras. App can realize full-screen camera through plus.camera
+method list of cameraContext object
+   method parameter Description     takePhoto Object Take a picture, you can specify the quality, and return the picture path if successful.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86/background-audio-manager/</guid>
+      <description>uni.getBackgroundAudioManager()#Get the globally unique background audio manager backgroundAudioManager.
+The background audio is not the background music of the game, but similar to QQ Music. When the App is in the background, it is still playing music. If you do not need to continue playing when the App is switched to the background, then you should not use this API, but use the normal audio API uni.createInnerAudioContext instead.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91/video/</guid>
+      <description>uni.chooseVideo(OBJECT)#Take a video or select a video from the phone album, and return to the temporary file path of the video.
+OBJECT parameter description
+   parameter name Types of Required Description Platform difference description     sourceType Array&amp;lt;String&amp;gt; no album Select a video from the album, and the camera uses the camera to shoot, the default is: [&amp;lsquo;album&amp;rsquo;,&amp;lsquo;camera&amp;rsquo;]    extension Array&amp;lt;String&amp;gt; no According to the file extension filtering, each item cannot be an empty string.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/video-context/</guid>
+      <description>uni.createVideoContext(videoId, this)#Create and return a video context videoContext object. In the custom component, the second component parameters into the this example, the operation to the component &amp;lt;video&amp;gt; assembly.
+List of methods of the videoContext object
+   method parameter Description Platform difference description     play no Play    pause no time out    seek position Jump to the specified position, unit s    stop  Stop video WeChat Mini Program   sendDanmu danmu Send barrage, danmu contains two attributes text, color    playbackRate rate Set the double speed playback, the supported magnifications are 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E6%88%90/media-container/</guid>
+      <description>uni.createMediaContainer()#Creating audio and video processing vessel, the final container can be synthesized one video track, returns MediaContainerthe object
+MediaContainer.addTrack(track)#Add audio or video tracks to the container
+Parameter Description
+   parameter Description     track Audio or video track to add    MediaContainer.destroy()#Destroy the container and release resources
+MediaContainer.export()#Combine the tracks in the container and export the video file</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E5%AA%92%E4%BD%93/%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6/audio-context/</guid>
+      <description>uni.createInnerAudioContext()#Creates and returns an internal audio context innerAudioContextobject.
+List of properties of innerAudioContext object
+   Attributes Types of Description Read only Platform difference description     src String Audio data link for direct playback. no    startTime Number Start playing position (unit: s), default 0 no    autoplay Boolean Whether to start playing automatically, the default is false no Some browsers on H5 do not support   loop Boolean Whether to play in a loop, the default is false no    obeyMuteSwitch Boolean Whether to follow the system mute switch, when this parameter is false, even if the user turns on the mute switch, the sound can continue to be emitted, the default value is true no    duration Number The length of the current audio (unit: s), only returned when there is currently a valid src, it needs to be obtained in onCanplay Yes    currentTime Number The current audio playback position (unit: s), only returned when there is currently a legal src, the time is not rounded up, and 6 digits after the decimal point are kept Yes    paused Boolean Whether the current state is paused or stopped, true means pause or stop, false means playing Yes    buffered Number The time of audio buffering, only to ensure that the content has been buffered from the current playback time to this time.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/storage/</guid>
+      <description>uni.setStorage(OBJECT)#Storing data in the specified key in the local cache will overwrite the original content corresponding to the key. This is an asynchronous interface.
+OBJECT parameter description
+   parameter name Types Required Description     key String Yes The specified key in the local cache   data Any Yes The content that needs to be stored, only supports native types and objects that can be serialized through JSON.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E6%96%87%E4%BB%B6/file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E6%96%87%E4%BB%B6/file/</guid>
+      <description>uni.saveFile(OBJECT)#Save the file locally.
+OBJECT parameter description:
+   parameter name Types Required Description     tempFilePath String Yes Temporary path of the file to be saved   success Function no Return the save path of the file, res = {savedFilePath:&amp;lsquo;File save path&amp;rsquo;}   fail Function no Callback function for interface call failure   complete Function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    success return parameter description:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/pulldown/</guid>
+      <description>onPullDownRefresh#Define the onPullDownRefresh processing function in js (at the same level as onLoad and other life cycle functions) to monitor the pull-down refresh event of the page user.
+ Need pages.json, pages node of the current page to find, and in styleopen option enablePullDownRefresh. After processing the data refresh, uni.stopPullDownRefreshyou can stop the pull-down refresh of the current page.  uni.startPullDownRefresh(OBJECT)#The pull-down refresh starts, and the pull-down refresh animation is triggered after the call.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E4%BA%A4%E4%BA%92%E5%8F%8D%E9%A6%88/prompt/</guid>
+      <description>uni.showToast(OBJECT)#A message box is displayed.
+OBJECT parameter description
+   parameter Types of Required Description     title String Yes The length of the prompt content is related to the icon value.   icon String no Icon, the effective value is detailed in the description below.   image String no The local path of the custom icon   mask Boolean no Whether to display a transparent mask to prevent touch penetration, default: false   duration Number no Prompt delay time, in milliseconds, default: 1500   position String no Light plain text display position, only fill the effective value of titleproperty to take effect, the effective value see note below.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%8A%A8%E7%94%BB/animation/</guid>
+      <description>uni.createAnimation(OBJECT)
+Create an animation instance animation . Call the method of the instance to describe the animation. Finally, the animation data is exported to the animation property of the component through the export method of the animation instance.
+note:
+ The export method will clear the previous animation operation after each call  OBJECT parameter description:
+   parameter Types of Required Defaults Description     duration Integer no 400 Animation duration, unit ms   timingFunction String no &amp;ldquo;linear&amp;rdquo; Define the effect of the animation   delay Integer no 0 Animation delay time, unit ms   transformOrigin String no &amp;ldquo;50% 50% 0&amp;rdquo; Set transform-origin    Valid values of timingFunction:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/media-query-observer/</guid>
+      <description>The MediaQueryObserver object is used to monitor changes in the media query status of the page, such as whether the width and height of the interface are within a specified range.
+uni.createMediaQueryObserver([this])#Creates and returns an MediaQueryObserverobject instance.
+List of methods of the MediaQueryObserver object#   method Description     MediaQueryObserver.observe (Object descriptor, function callback) Start monitoring the changes of the page media query   MediaQueryObserver.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E5%AD%97%E4%BD%93/font/</guid>
+      <description>uni.loadFontFace(Object object)#Load web fonts dynamically, the file address must be the download type.
+note:
+ Introduce Chinese fonts, errors will occur when the volume is too large, it is recommended to extract part of the Chinese, reduce the volume, or replace it with pictures Native components such as canvas do not support fonts added using the interface The tool prompts Faild to load font can be ignored  Parameter Description</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E6%BB%9A%E5%8A%A8/scroll/</guid>
+      <description>uni.pageScrollTo(OBJECT)#Scroll the page to the target position.
+OBJECT parameter description
+   parameter name Types of Required Description     scrollTop String Yes Scroll to the target position of the page (in px)   duration Number no The duration of the scroll animation, the default is 300ms, the unit is ms   success function no Callback function for successful interface call   fail function no Callback function for interface call failure   complete function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    selector syntax selector is similar to CSS selector, but only supports the following syntax.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E7%AA%97%E5%8F%A3/window/</guid>
+      <description>uni.onWindowResize(CALLBACK)#Listen to the window size change event
+CALLBACK parameter description
+   Attributes Types of Description     size Object The size of the changed window, in px, {windowWidth,windowHeight}    Code example
+uni.onWindowResize((res) =&amp;gt; { console.log(&amp;#39;Changed the width of window=&amp;#39; + res.size.windowWidth) console.log(&amp;#39;Changed the height of window=&amp;#39; + res.size.windowHeight) }) TIPS
+ If the App side sets the soft keyboard pop-up mode to adjustResize, this event will be triggered when the keyboard pops up.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%83%8C%E6%99%AF/bgcolor/</guid>
+      <description>uni.setBackgroundColor(OBJECT)#Dynamically set the background color of the window.
+Parameter Description
+   Attributes Types of Defaults Required Description     backgroundColor String  no The background color of the window, must be a hexadecimal color value   success Function  no Callback function for successful interface call   fail Function  no Callback function for interface call failure   complete Function  no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    Code example</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nextTick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/nextTick/</guid>
+      <description>nextTick(function callback)#Use in custom components in mini programs, such as wxcomponents. Delay a part of the operation to the next time slice before execution. (Similar to setTimeout).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF/nodes-info/</guid>
+      <description>uni.createSelectorQuery()#It returns an SelectorQueryobject instance. You may be used in this example selectand other methods to select a node, and using boundingClientRecta method such as selection information to be queried.
+Tips:
+ Use uni.createSelectorQuery()needs in the life cycle mountedbe called later. Custom components compile mode (default mode), requires the use of selectorQuery.inthe method.  SelectorQuery#Object to query node information
+selectorQuery.in(component)#The selector changes the selection for the custom components componentwithin, a return SelectorQueryobject instance.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%8A%82%E7%82%B9%E5%B8%83%E5%B1%80%E7%9B%B8%E4%BA%A4%E7%8A%B6%E6%80%81/intersection-observer/</guid>
+      <description>The Node Layout Intersection State API can be used to monitor the intersection state of two or more component nodes in the layout position. This set of APIs can often be used to infer whether certain nodes can be seen by users and what percentage of them can be seen by users.
+uni.createIntersectionObserver([this], [options])#Creates and returns an IntersectionObserverobject instance.
+The optional parameters of options are:
+   Field name Types of Description     thresholds Array A numeric array containing all thresholds.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AETabBar/tabbar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AETabBar/tabbar/</guid>
+      <description>uni.setTabBarItem(OBJECT)#Dynamically set the content of a tabBar
+OBJECT parameter description:
+   Attributes Types of Defaults Required Description     index number  Yes Which item of the tabBar, counting from the left   text String  no button text on tab   iconPath String  no The image path, the icon size is limited to 40kb, and the recommended size is 81px * 81px.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%95%8C%E9%9D%A2/%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E6%9D%A1/navigationbar/</guid>
+      <description>uni.setNavigationBarTitle(OBJECT)#Dynamically set the title of the current page.
+OBJECT parameter description
+   parameter Types of Required Description     title String Yes page title   success Function no Callback function for successful interface call   fail Function no Callback function for interface call failure   complete Function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    Example</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/network-file/</guid>
+      <description>uni.uploadFile(OBJECT)#The local resources uploaded to the developer server, the client initiates a POSTrequest, which content-typeis multipart/form-data. OBJECT parameter description
+   parameter name Types Required Description     url String Yes Developer server url   name String Yes The key corresponding to the file, the developer can obtain the binary content of the file through this key on the server side   header Object no HTTP request Header, Referer cannot be set in the header.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E7%BD%91%E7%BB%9C/%E5%8F%91%E8%B5%B7%E8%AF%B7%E6%B1%82/request/</guid>
+      <description>uni.request(OBJECT)#Initiate a network request.
+OBJECT parameter description
+   parameter name Types Required Defaults Description Platform difference description     url String Yes  Developer server interface address    data Object/String no  Requested parameters    header Object no  Set the requested header. Referer cannot be set in the header.    method String no GET See the description below for valid values    dataType String no json If set to json, it will try to do a JSON.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/accelerometer/accelerometer/</guid>
+      <description>uni.onAccelerometerChange(CALLBACK)#Listen for acceleration data,Frequency: 5 cycles per second,Interface calls will automatically start listening,use uni.offAccelerometer to listening the cancel.
+CALLBACK Return Parameter
+   Parameter Type Description     x Number The X axis   y Number The Y axis   z Number The Z axis    Tips
+ H5 to obtain acceleration information,need to be deployed in https server,http protocol still available when local preview（localhost）.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/barcode/barcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/barcode/barcode/</guid>
+      <description>uni.scanCode(OBJECT)#Turn up the client scan interface, scan code after successful return the corresponding results.
+Object Parameter Description
+   Paramater Name Type Required Description     onlyFromCamera Boolean no If only from the camera code, are not allowed to select images from album   scanType Array no Sweep the code type,The parameter type is an array,Qr code is &amp;lsquo;qrCode&amp;rsquo;,One dimension code is&amp;rsquo;barCode&#39;,DataMatrix是‘datamatrix’,pdf417是‘pdf417’.   success Function no A successful callback to the interface call,See details for returned content.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/batteryInfo/batteryInfo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/batteryInfo/batteryInfo/</guid>
+      <description>Battery Information#The battery API is not unified yet,It needs to be compiled according to platform conditions.
+ App platform:use Native.js.  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/ble/ble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/ble/ble/</guid>
+      <description>uni.setBLEMTU(OBJECT)#2.8.4+
+Set Bluetooth maximum transmission unit.Call after successful call uni.createBLEConnection, mtu range (22,512), need Android 5.1 or above.
+OBJECT Parameter Description
+   Attribute Type Default value Required Description     deviceId string  yes ID used to distinguish devices   mtu number  yes Maximum transmission unit range (22,512),Unit bytes   success function  no Callback function for successful interface call   fail function  no Callback function for interface call failure   complete function  no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    uni.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/bluetooth/bluetooth/</guid>
+      <description>uni.openBluetoothAdapter(OBJECT)#Initialize the Bluetooth module
+Object Parameter description
+   Attribute Type Default value Required Description     success function  no Interface calls a successful callback function   fail function  no Callback function for interface call failure   complete function  no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    Error#   Error Code Error Message Description     0 ok normal   10000 not init The Bluetooth adapter is not initialized   10001 not available The current Bluetooth adapter is not available   10002 no device The specified device was not found   10003 connection fail Connection failed   10004 no service The specified service was not found   10005 no characteristic The specified property was not found   10006 no connection The current connection is disconnected   10007 property not support The current property does not support this operation   10008 system error Exceptions reported by all other systems   10009 system not support Only supported by Android system, system version lower than 4.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/brightness/brightness/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/brightness/brightness/</guid>
+      <description>uni.setScreenBrightness(OBJECT)#Screen brightness setting.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |value|Number|yes|Screen brightness value,Ranges 0 to 1, where 0 is darkest and 1 is brightest| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+Sample
+uni.setScreenBrightness({ value: 0.5, success: function () { console.log(&amp;#39;success&amp;#39;); } });  Tips: avoid using setScreenBrightness() in onshow() process, The brightness change triggers onShow() again, causing an endless loop</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/clipboard/clipboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/clipboard/clipboard/</guid>
+      <description>uni.setClipboardData(OBJECT)#Sets the contents of the system clipboard.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |data|String|yes|What needs to be set| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+Sample
+uni.setClipboardData({ data: &amp;#39;hello&amp;#39;, success: function () { console.log(&amp;#39;success&amp;#39;); } }); uni.getClipboardData(OBJECT)#Get the contents of the system clipboard.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/compass/compass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/compass/compass/</guid>
+      <description>uni.onCompassChange(CALLBACK)#Monitor compass data, frequency:5 beats per second,Interface calls automatically start listening,You can cancel listening by using uni.offCompassChange().
+CALLBACK Return Parameter
+   Parameter Type Description     direction Number The degree of the direction we&amp;rsquo;re facing    Tips
+ H5 Obtain disk information,It needs to be deployed on HTTPS service,Local Preview (localhost) can still use HTTP.  Sample
+uni.onCompassChange(function (res) { console.log(res.direction); }); uni.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/contact/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/contact/contact/</guid>
+      <description>uni.addPhoneContact(OBJECT)#Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |photoFilePath|String|no|Avatars local file path| |nickName|String|no|nick name| |lastName|String|no|family name| |middleName|String|no|middle name| |firstName|String|yes|name| |remark|String|no|remark| |mobilePhoneNumber|String|no|cell-phone number| |weChatNumber|String|no|WeChat ID| |addressCountry|String|no|Contact Address Country| |addressState|String|no|Contact Address Provinces| |addressCity|String|no|Contact Address City| |addressStreet|String|no|Contact Address Street| |addressPostalCode|String|no|Contact Address postal code| |organization|String|no|corporation| |title|String|no|position| |workFaxNumber|String|no|work fax| |workPhoneNumber|String|no|work phone| |hostNumber|String|no|company tel| |email|String|no|EMail| |url|String|no|website| |workAddressCountry|String|no|Work Address Country| |workAddressState|String|no|Work address province| |workAddressCity|String|no|Work Address City| |workAddressStreet|String|no|Work Address Street| |workAddressPostalCode|String|no|Work address postal code| |homeFaxNumber|String|no|Residential fax| |homePhoneNumber|String|no|Home phone| |homeAddressCountry|String|no|Residential address Country| |homeAddressState|String|no|Residential address province| |homeAddressCity|String|no|Residential address City| |homeAddressStreet|String|no|Residential address Street| |homeAddressPostalCode|String|no|Residential address postal code| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/iBeacon/ibeacon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/iBeacon/ibeacon/</guid>
+      <description>uni.onBeaconServiceChange(CALLBACK)#Monitor iBeacon service status change events
+CALLBACK Return parameter
+   Attribute Type Description     available boolean is the service currently available   discovering boolean is it currently in search state    uni.onBeaconUpdate(CALLBACK)#Monitor iBeacon device update events
+CALLBACK Return parameter
+   Attribute Type Description     beacons Array List of all iBeacon devices currently found    uni.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/newwork/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/newwork/network/</guid>
+      <description>uni.getNetworkType(OBJECT)#Get the network type.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |success|Function|yes|The interface call was successful,return network type| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+success Return parameter description
+   Attribute Description     networkType network type    The legal value of networkType</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/NFC/nfc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/NFC/nfc/</guid>
+      <description>NFC#Pay Tips to using conditional compile to call codes of different platforms.
+ App platform is implemented through Native.js.  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/phone/phone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/phone/phone/</guid>
+      <description>uni.makePhoneCall(OBJECT)#Make a phone call.
+Object Parameter description
+|Attribute|Type|Default value|Required|Description| |:-|:-|:-|:-| |phoneNumber|String|yes|The number to call| |success|Function|no|Callback function for successful interface call| |fail|Function|no|Callback function for interface call failure| |complete|Function|no|The callback function for the end of the interface call (the call will be executed if it succeeds or fails)|
+Sample
+uni.makePhoneCall({ phoneNumber: &amp;#39;114&amp;#39; //Just for a sample }); </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemInfo/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemInfo/info/</guid>
+      <description>uni.getSystemInfo(OBJECT)#Get System Information.
+OBJECT parameter description:
+   Argument Name Type Required Description     success Function yes A successful callback to the interface call   fail Function no The interface calls the callback function that failed   complete Function no The callback function for the end of the interface call (the call will be executed if it succeeds or fails)    success Return parameter description:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemTheme/theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/SystemTheme/theme/</guid>
+      <description>uni.onThemeChange(CALLBACK)#Listen for system theme changes.
+Sample
+uni.onThemeChange(function (res) { console.log(res.theme); }); Tips
+ In effect by CustomBase V3 compilation support only,reference manifest.json configuration  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/Wi-Fi/wifi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%AE%BE%E5%A4%87/Wi-Fi/wifi/</guid>
+      <description>Wi-Fi#Pay Tips to using conditional compile to call codes of different platforms.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/router/</guid>
+      <description>uni.navigateTo(OBJECT)#Keep the current page, jump to a page in the app, and use uni.navigateBackit to return to the original page.
+OBJECT parameter description
+   parameter Types of Required Defaults Description Platform difference description     url String Yes  The path of the non-tabBar page in the application that needs to be redirected. Parameters can be added after the path. The parameter and the path are separated by ?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E9%94%AE%E7%9B%98/key/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E9%94%AE%E7%9B%98/key/</guid>
+      <description>uni.hideKeyboard ()#Hide soft keyboard
+Hide the displayed soft keyboard, if the soft keyboard is not displayed, do nothing.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subNVue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subNVues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/subNVue%E5%8E%9F%E7%94%9F%E5%AD%90%E7%AA%97%E4%BD%93/subNVues/</guid>
+      <description>subNvue is the native sub-form of the vue page. The native interface rendered by weex is used as the sub-form of the vue page to overlay the page. It is not a full-screen page, it provides a more powerful and flexible solution for the hierarchical coverage and native interface customization in the vue page of the App platform. It is not a component, but a native child form.
+ subNvue is supported since 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2/window/</guid>
+      <description>getCurrentPages()#getCurrentPages() The function is used to obtain the instance of the current page stack, which is given in the order of the stack in the form of an array, the first element is the home page, and the last element is the current page.
+Note: It getCurrentPages() is only used to display the page stack. Please do not modify the page stack to avoid causing page status errors.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</guid>
+      <description>uni.$emit(eventName,OBJECT)#To trigger a global custom event, additional parameters will be passed to the listener callback function.
+   Attributes Types description     eventName String Event name   OBJECT Object Additional parameters carried by the trigger event    Code example
+uni.$emit(&amp;#39;update&amp;#39;,{msg:&amp;#39;Page updates&amp;#39;}) uni.$on(eventName,callback)#Monitor global custom events, the event uni.$emitis triggered, the callback function receives an incoming event trigger function parameters.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/API/%E9%A1%B5%E9%9D%A2%E5%92%8C%E7%AA%97%E4%BD%93/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/prompt/</guid>
+      <description>uni.showToast(OBJECT)#Displays a message prompt box.
+**OBJECT Parameter description **
+   parameter name Types Required Description     title String Yes The length of the prompt is related to the value of icon.   icon String no Icon, effective value see below.   duration Number no The prompt delay time, in milliseconds, default: 1500   success Function no Interface calls a successful callback function   fail Function no Interface calls a failed callback function   complete Function no Callback function at the end of interface call (executed on success or failure)    Icon Value description</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/API/vue-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/API/vue-api/</guid>
+      <description>Global configuration#   Vue global configuration description H5 App side     Vue.config.silent Cancel all logging and warning Vue √ √   Vue.config.optionMergeStrategies Custom options into policy details √ √   Vue.config.errorHandler Uncaught error handler specified component during rendering and viewing details √ √   Vue.config.warnHandler Vue to run when a warning given to a custom handler details √ √   Vue.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E5%9F%BA%E7%A1%80/vue-basics/</guid>
+      <description>Introduction#What is Vue.js
+Vue (pronounced /vjuː/, similar to view) is a progressive framework for building user interfaces. Vue is designed to be applied layer by layer from the bottom up.
+Vue.js uses HTML-based template syntax, allowing developers to declaratively bind the DOM to the data of the underlying Vue instance. All Vue.js templates are legal HTML, so they can be parsed by browsers and HTML parsers that follow the specification.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/%E7%BB%84%E4%BB%B6/vue-components/</guid>
+      <description>Concept# Components are the basic building blocks of the view layer. The component is an encapsulation of a single functional module. A component includes a start tag and an end tag. Attributes can be written on the label and assigned values to the attributes. The content is written in two labels.  Root is &amp;lt;template&amp;gt;, this &amp;lt;template&amp;gt;case can only and must have a root &amp;lt;view&amp;gt;component. This is the [vue single file component specification] .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/frame/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/frame/</guid>
+      <description>Directory Structure#┌─components a directory of components that conforms to the VUE component specification│ └─comp-a.vue reusable component A├─hybrid a directory to hold local web pages├─platforms a directory that holds pages specific to each platform├─pages business page file storage directory│ ├─index│ │ └─index.vue the index page│ └─list│ └─list.vue the list page├─static The directory where the application references static resources (such as images, videos, etc.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8/timer/</guid>
+      <description>setTimeout(callback, delay, rest)#Set a timer. Execute the registered callback function after the time expires
+Parameter Description
+   parameter Types of Required Description     callback Function Yes Callback   delay Number no Delay time, the function call will occur after the delay, the unit is ms   rest Any no Additional parameters such as param1, param2, &amp;hellip;, paramN will be passed as parameters to the callback function    return value</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0/log/</guid>
+      <description>console#Print log information to the console.
+debug#Print debug log to the console
+Note: In the App-side custom component mode, the debug method is equivalent to the log method.
+log#Print log to the console
+info#Print info log to the console
+warn#Print warn log to the console
+error#Print error log to the console
+note:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/lifecycle/</guid>
+      <description>Application life cycle#The following application life cycle functions are supported:
+   Function name Description     onLaunch uni-appTriggered when the initialization is completed (global trigger only once)   onShow When uni-appstarted, or from the background into the foreground display   onHide As uni-appfrom the foreground into the background   onError When the uni-apptrigger error   onUniNViewMessage For nvuedata pages sent by the monitor, refer to nvue to communicate vue   onUnhandledRejection Listener function for unprocessed Promise rejection event (2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2/window/</guid>
+      <description>getApp ()#getApp() The function is used to obtain the current application instance, generally used to obtain globalData.
+Instance
+const app = getApp() console.log(app.globalData) note:
+ Do not defined in the App()in the function, or calling Appbefore the call getApp(), by this.$scopeapp corresponding instance Get By getApp()then obtain an instance, the life cycle Do not attempt to call the function. The v3 mode accelerates the nvuestartup speed of the homepage , and when used on the homepage nvue, it getApp()may not be possible to obtain real Appobjects.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E6%A1%86%E6%9E%B6%E6%8E%A5%E5%8F%A3/%E9%A1%B5%E9%9D%A2%E9%80%9A%E8%AE%AF/communication/</guid>
+      <description>Since HBuilderX 2.0.0, custom component compilation mode support.
+ uni.$emit(eventName,OBJECT)#Trigger global custom events. Additional parameters will be passed to the listener callback.
+   Attributes Types of description     eventName String Event name   OBJECT Object Additional parameters carried by the trigger event    Code example
+uni.$emit(&amp;#39;update&amp;#39;,{msg:&amp;#39;Page updates&amp;#39;}) uni.$on(eventName,callback)#Listen to global custom events. The event can be triggered by uni.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/App.vue/App/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/App.vue/App/</guid>
+      <description>App.vueIs uni-app main assembly, all the pages are in App.vuethe switch is a page entry file. But it App.vueis not a page itself, and view elements cannot be written here.
+The role of this file includes: calling application life cycle functions, configuring global styles, configuring global storage globalData
+The application life cycle can only be App.vuemonitored in , and monitoring on the page is invalid.
+Application life cycle#uni-appSupport application life cycle functions such as onLaunch, onShow, onHide, etc.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/main.js/main/</guid>
+      <description>main.jsIt is the entry file of uni-app. Its main function is to initialize vueinstances, define global components, and use required plug-ins such as vuex.
+First introduced the Vuelibrary and App.vue, created an vueinstance, and mounted the vueinstance.
+import Vue from &#39;vue&#39;import App from &#39;./App&#39;import pageHead from &#39;./components/page-head.vue&#39; //Global reference to the page-head componentVue.config.productionTip = falseVue.component(&#39;page-head&#39;, pageHead) //Globally register the page-head component, which each page will be able to use directlyApp.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/manifest.json/manifest/</guid>
+      <description>manifest.jsonThe file is the configuration file of the application, used to specify the name, icon, permissions, etc. of the application. The project created by HBuilderX is in the root directory, and the project created by CLI is in the src directory.
+List of configuration items#   Attributes Types of Defaults description Minimum version     name String  Application Name    appid String When creating a new uni-app project, DCloud will assign it.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/pages.json/pages/</guid>
+      <description>pages.json The file is used to configure uni-app globally, determine the path of the page file, window style, native navigation bar, native tabbar at the bottom, etc.
+It is similar to app.jsonthe page management part of the WeChat applet . Note that app.jsonthe content that originally belonged to the location permission application is configured in the manifest in the uni-app.
+List of configuration items#   Attributes Types of Required description Platform compatible     globalStyle Object no Set the window performance of the default page    pages Object Array Yes Set page path and window performance    easycom Object no Automatic component introduction rules 2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/uni.scss/uni-scss/</guid>
+      <description>uni.scssThe purpose of the file is to facilitate overall control of the style of the application. For example, button color, border style, uni.scssa batch of scss variable presets are preset in the file.
+uni-appThe official extension (uni ui) have used these tripartite plug-style variables, if you are a plugin developer, I suggest you use scss pretreatment, and use these variables (no need to import this file) directly in the plug-in code , It is convenient for users to develop apps with the same overall style by building blocks.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E6%A1%86%E6%9E%B6/%E9%85%8D%E7%BD%AE/vue.config.js/vue-config/</guid>
+      <description>vue.config.js is an optional configuration file. If this file exists in the root directory of the project, it will be automatically loaded. It is generally used to configure compilation options such as webpack. For specific specifications, refer to: vue.config.js
+**Support situation**- CLI project- HBuilderX 2.1.5 and above**Precautions**- Only the vue page takes effectSome configuration items will be overwritten by the compiled configuration, for example:- PublicPath does not support.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/webview/web-view/web-view/</guid>
+      <description>web-view#web-view It is a web browser component that can be used to host a web page container, which will automatically fill the entire page (nvue use requires manual specification of width and height).
+ For each applet platform, the URL loaded by the web-view needs to configure the domain name whitelist in the background, including other URLs embedded in the iframe again.
+ Property description
+   Attribute name Types of Description Platform difference description     src String webview links to web pages    allow String Used to specify the characteristic strategy for the iframe    sandbox String This attribute enables some additional restrictions on the content rendered in the iframe frame.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9C%B0%E5%9B%BE/map/map/</guid>
+      <description>map#Map component.
+The map component is used to display the map, and the positioning API just gets the coordinates, don&amp;rsquo;t confuse the two.
+Property description
+   Attribute name Types of Defaults Description     longitude Number  Center longitude   latitude Number  Center latitude   scale Number 16 Zoom level, the value range is 3-20   min-scale Number 3 Minimum zoom level   max-scale Number 20 Maximum zoom level   layer-style Number 1 Personalized map   markers Array  Mark point   polyline Array  route   circles Array  round   controls Array  Control   include-points Array  Zoom the field of view to include all given coordinate points   enable-3D Boolean false Whether to display 3D blocks   show-compass Boolean false Whether to show the compass   enable-zoom Boolean true Whether to support zoom   enable-scroll Boolean true Whether to support drag   enable-rotate Boolean false Whether to support rotation   enable-overlooking Boolean false Whether to open the top view   enable-satellite Boolean false Whether to open the satellite image   enable-traffic Boolean false Whether to enable real-time traffic   enable-poi Boolean false Whether to show POI points   enable-building Boolean false Whether to display the building   polygons Array.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/icon/icon/</guid>
+      <description>icon#icon.
+Tips
+ Due to differences in each end of the icon component performance, by using the Fonts icon to compensate for differences in the way each end.  Property description
+   Attribute name Types of Defaults Description     type String  icon type   size Number twenty three icon size, unit px   color Color  icon color, same as css color    &amp;lt;view class=&amp;#34;item&amp;#34; v-for=&amp;#34;(value,index) in iconType&amp;#34; :key=&amp;#34;index&amp;#34;&amp;gt; &amp;lt;icon :type=&amp;#34;value&amp;#34; size=&amp;#34;26&amp;#34;/&amp;gt; &amp;lt;text&amp;gt;{{value}}&amp;lt;/text&amp;gt; &amp;lt;/view&amp;gt; export default { data() { return { iconType: [&amp;#39;success&amp;#39;] } }, onLoad() { // #ifdef APP-PLUS|| MP-WEIXIN  this.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/progress/progress/</guid>
+      <description>progress#progress bar.
+Property description
+   Attribute name Types of Defaults Description     percent Float no Percentage 0~100   show-info Boolean false Show percentage on the right side of the progress bar   border-radius number/string 0 Fillet size   font-size number/string 16 Percentage font size on the right   stroke-width Number 6 The width of the progress bar, in px   activeColor Color #09BB07 (Baidu is #E6E6E6) The color of the selected progress bar   backgroundColor Color #EBEBEB The color of the unselected progress bar   active Boolean false Animation of the progress bar from left to right   active-mode String backwards backwards: the animation is played from the beginning; forwards: the animation is played from the last end point   duration number 30 The number of milliseconds required to increase the progress by 1%    Example view demo</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/rich-text/rich-text/</guid>
+      <description>rich-text#Rich text.
+Property description
+   Attribute name Types of Defaults Description     nodes Array / String [] Node list / HTML String    note
+ The app-nvue platform nodes property only supports the Array type  If you need to support HTML String, you need to convert HTML String to nodes array by yourself, you can use html-parser to convert.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/text/text/</guid>
+      <description>text#Text component.
+Used to wrap text content.
+Property description
+   Attribute name Types of Defaults Description     selectable Boolean false Whether the text is optional   space String  Show consecutive spaces   decode Boolean false Whether to decode    space value description
+   value Description     ensp Half size of Chinese character space   emsp Chinese character space size   nbsp Space size set according to font    Tips</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/audio/audio/</guid>
+      <description>audio#Audio.
+Property description
+   Attribute name Types of Defaults Description     id String  Unique identifier of the audio component   src String  Resource address to play audio   loop Boolean false Whether to loop   controls Boolean false Whether to show the default controls   poster String  The image resource address of the audio cover on the default control.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/image/image/</guid>
+      <description>image#image.
+   Attribute name Types of Defaults Description Platform difference description     src String  Image resource address    mode String &amp;lsquo;scaleToFill&amp;rsquo; Image cropping and zooming mode    lazy-load Boolean false Images are lazy loading. Only valid for image under page and scroll-view App   fade-show Boolean true Picture shows animation effect Only App-nvue 2.3.4+ Android is valid   @error HandleEvent  When an error occurs, the name of the event posted to AppService, event object event.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AA%92%E4%BD%93%E7%BB%84%E4%BB%B6/video/video/</guid>
+      <description>video#Video playback component.
+Property description
+   Attribute name Types of Defaults Description Platform difference description     src String  The resource address of the video to be played    autoplay Boolean false Whether to play automatically    loop Boolean false Whether to loop    muted Boolean false Whether to play silently    initial-time Number  Specify the initial playback position of the video, in seconds (s).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E5%AF%BC%E8%88%AA%E7%B1%BB%E7%BB%84%E4%BB%B6/navigation-bar/navigation-bar/</guid>
+      <description>navigation-bar#The page navigation bar configuration node is used to specify some properties of the navigation bar. It can only be the first node in the page-meta component, and it needs to be used together.
+Property description
+   Attributes Types of Defaults Required Description     title-icon string  no Title icon, icon path such as &amp;ldquo;./img/t.png&amp;rdquo;, only supports local file path, relative path, relative to the host position of the current page, fixed width and height are logical pixel value &amp;ldquo;34px&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E7%94%BB%E5%B8%83/canvas/canvas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E7%94%BB%E5%B8%83/canvas/canvas/</guid>
+      <description>canvas#canvas.
+Property description
+   Attribute name Types of Defaults Description     canvas-id String  The unique identifier of the canvas component   disable-scroll Boolean false When moving in the canvas and there are bound gesture events, prohibit screen scrolling and pull-down refresh   @touchstart EventHandle  Finger touch action starts   @touchmove EventHandle  Move after finger touch   @touchend EventHandle  End of finger touch   @touchcancel EventHandle  Interrupted finger touch action, such as call reminder, pop-up window   @longtap EventHandle  Triggered after a long finger press for 500ms, moving after the long press event is triggered will not trigger the scrolling of the screen   @error EventHandle  The error event is triggered when an error occurs, detail = {errMsg:&amp;lsquo;something wrong&amp;rsquo;}    Precautions:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/button/button/</guid>
+      <description>Button#button.
+Property description
+   Attribute name Types of Defaults Description Effective time     size String default Button size    type String default Button style type    plain Boolean false Whether the button is hollowed out and the background color is transparent    disabled Boolean false Whether to disable    loading Boolean false Whether there is a loading icon before the name      Note1：button-hover default is {background-color: rgba(0, 0, 0, 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/checkbox/checkbox/</guid>
+      <description>checkbox-group#Multiple selector, composed of multiple checkboxes inside.
+Property description
+   Attribute name type Defaults Describe     @change EventHandle  &amp;lt;checkbox-group&amp;gt;The change of the selected item in the middle triggers the change event, detail = {value:[array of value of the selected checkbox]}    checkbox#Multiple selection items.
+Property description
+   Attribute name type Defaults Description     value String  &amp;lt;checkbox&amp;gt;Identify, select trigger &amp;lt;checkbox-group&amp;gt;the change event and carry &amp;lt;checkbox&amp;gt;the value.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/editor/editor/</guid>
+      <description>editor#Rich text editor, you can edit and mix pictures and text formats.
+In web development, you can use it contenteditableto implement content editing. But this is a dom API and cannot be used on non-H5 platforms. So the WeChat applet and Uni-app&amp;rsquo;s App-vue provide editorcomponents to achieve this function, and compatibility is also provided on the uni-app&amp;rsquo;s H5 platform. Technically speaking, this component is still running in the view layer webview, which also uses the contenteditablefunctions of the browser .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/form/form/</guid>
+      <description>form#Form, &amp;lt;switch&amp;gt; &amp;lt;input&amp;gt; &amp;lt;checkbox&amp;gt; &amp;lt;slider&amp;gt; &amp;lt;radio&amp;gt; &amp;lt;picker&amp;gt;submit the user input in the component .
+When you click &amp;lt;form&amp;gt;the form to submit formType of &amp;lt;button&amp;gt;the component, value value will be submitted in the form component, we need to add components to the form name as key.
+Property description
+   Attribute name Types of Description     report-submit Boolean Whether to return formId for sending template message   report-submit-timeout number Wait for a period of time (milliseconds) to confirm whether the formId is valid.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/input/input/</guid>
+      <description>input#Input box.
+Property description
+   Attribute name Types of Defaults Description     value String  The initial content of the input box   type String text input type   password Boolean false Is it a password type   placeholder String  Placeholder when the input box is empty   placeholder-style String  Specify the style of the placeholder   placeholder-class String &amp;ldquo;input-placeholder&amp;rdquo; Specify the style class of the placeholder.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/label/label/</guid>
+      <description>label#Used to improve the usability of form components, use the for attribute to find the corresponding id, or place the control under the label. When clicked, the corresponding control will be triggered.
+The priority of for is higher than internal controls. When there are multiple controls inside, the first control is triggered by default.
+Currently controls can be bound to include: &amp;lt;button&amp;gt;, &amp;lt;checkbox&amp;gt;, &amp;lt;radio&amp;gt;, &amp;lt;switch&amp;gt;.
+Property description</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker-view/picker-view/</guid>
+      <description>picker-view#Scroll selector embedded in the page.
+Compared with pickercomponents, it picker-viewhas more flexibility. When you need to customize the pop-up mode and UI performance, you often need to use it picker-view.
+Property description
+   Attribute name Types of Defaults     value Array＜Number＞ The numbers in the array indicate the number of items selected by picker-view-column in picker-view (the subscript starts from 0). When the number is greater than the length of the picker-view-column option, the last item is selected.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/picker/picker/</guid>
+      <description>picker#The scroll selector that pops up from the bottom. Supports five types of selectors, distinguished by mode, they are ordinary selector, multi-column selector, time selector, date selector, province/city selector, and the default is normal selector.
+Normal selector#mode = selectorProperty description
+   Attribute name Types of Defaults Description     range Array / Array＜Object＞ [] When mode is selector or multiSelector, range is valid   range-key String  When range is an Array, use range-key to specify the value of key in Object as the selector display content   value Number 0 The value of value indicates which number in the range is selected (the subscript starts from 0)   selector-type String auto UI type for large screens, support picker, select, auto, by default it is displayed in picker style on iPad and select style on PC   @change EventHandle  The change event is triggered when the value changes, event.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/radio/radio/</guid>
+      <description>radio-group#Single selector, a plurality of internal &amp;lt;radio&amp;gt;components. By putting multiple radiopackages under one radio-group, radiothe single selection of these is realized .
+Property description
+   Attribute name Types of Defaults Description     @change EventHandle  &amp;lt;radio-group&amp;gt; The change event is triggered when the selected item in the selection changes, event.detail = {value: the value of the selected item radio}    radio#Single-select items.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/slider/slider/</guid>
+      <description>slider#Slide the selector.
+Property description
+   Attribute name Types of Defaults Description     min Number 0 Minimum   max Number 100 Max   step Number 1 Step size, the value must be greater than 0 and divisible by (max-min)   disabled Boolean false Whether to disable   value Number 0 Current value   activeColor Color Different platforms, see below for details The line color of the selected part on the left side of the slider   backgroundColor Color # e9e9e9 The color of the background bar on the right side of the slider   block-size Number 28 The size of the slider, the value range is 12-28   block-color Color #ffffff The color of the slider   show-value Boolean false Whether to display the current value   @change EventHandle  Event triggered after completing a drag, event.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/switch/switch/</guid>
+      <description>switch#Switch selector.
+Property description
+   Attribute name Types of Defaults Description     checked Boolean false Whether selected   disabled Boolean false Whether to disable   type String switch Style, valid values: switch, checkbox   @change EventHandle  The change event is triggered when checked changes, event.detail={ value:checked}   color Color  The color of switch, same as the color of css    Example</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/textarea/textarea/</guid>
+      <description>textarea#Multi-line input box.
+Property description
+   Attribute name Types of Defaults Description     value String  The content of the input box   placeholder String  Placeholder when the input box is empty   placeholder-style String  Specify the style of the placeholder   disabled Boolean false Whether to disable   maxlength Number 140 Maximum input length, when set to -1, the maximum length is not limited   focus Boolean false Get focus   auto-height Boolean false Whether to increase automatically, style.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/cover-image/cover-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/cover-image/cover-view/</guid>
+      <description>cover-image#The image view overlaid on the native component. Native components that can be overridden are the same cover-view, and nesting is supported cover-view.
+Property description
+   Attribute name Types of Defaults Description Platform difference description     src String  Icon path. Support local path and network path. The base64 format is not supported.    @load eventhandle  Triggered when the image is loaded successfully    @error eventhandle  Triggered when the image fails to load     may cover the native app-vue components: &amp;lt;video&amp;gt;,&amp;lt;map&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/match-media/match-media/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/match-media/match-media/</guid>
+      <description>match-media#The media query matches the detection node.
+Similar to the use of media queries to adapt to large and small screens in web development, match-media is a basic view component that can adapt to different screens. You can specify a set of media query media query rules, and this component will only be displayed when the query conditions are met.
+For example, placing a sidebar in the match-media component and setting the media query rule to display on widescreen can achieve the effect of displaying the sidebar on the widescreen of the PC, but not displaying the sidebar on the narrow screen of the mobile phone.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movable-view/movable-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movable-view/movable-view/</guid>
+      <description>movable-view#Movable view container, you can drag and slide or pinch to zoom on the page.
+movable-viewIt must be in the movable-areacomponent and must be a direct child node, otherwise it cannot be moved.
+Property description
+   Attribute name Types of Defaults Description Platform difference description     direction String none The moving direction of movable-view, the attribute values are all, vertical, horizontal, none    inertia Boolean false Whether movable-view has inertia    out-of-bounds Boolean false After exceeding the movable area, can the movable-view still move?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movavle-area/movable-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/movavle-area/movable-view/</guid>
+      <description>movable-area#Draggable area components.
+Since the architecture of app and applet is separated from the logic layer and the view layer, using js to monitor the drag will cause frequent communication between the logic layer and the view layer and affect performance. In order to facilitate high-performance dragging, the platform specially encapsulates movable-areacomponents.
+movable-areaRefers to the draggable range, in which embedded movable-viewcomponents are used to indicate the draggable area.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/scroll-view/scroll-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/scroll-view/scroll-view/</guid>
+      <description>scroll-view#Scrollable view area. Used for area scrolling.
+It should be noted that in the page rendered by webview, the performance of area scrolling is not as good as page scrolling.
+Property description
+   Attribute name Types of Defaults Description Platform difference description     scroll-x Boolean false Allow horizontal scrolling    scroll-y Boolean false Allow vertical scrolling    upper-threshold Number 50 How far from the top/left (in px), the scrolltoupper event is triggered    lower-threshold Number 50 How far from the bottom/right side (in px), the scrolltolower event is triggered    scroll-top Number  Set the vertical scroll bar position    scroll-left Number  Set the horizontal scroll bar position    scroll-into-view String  The value should be a child element id (id cannot start with a number).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/swiper/swiper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/swiper/swiper/</guid>
+      <description>swiper#Slider view container.
+Generally used for sliding left and right or up and down, such as banner carousel.
+Pay attention to the difference between sliding switch and scrolling, sliding switch is one screen one screen switch. Each swiper-item under swiper is a sliding switching area and cannot stay between 2 sliding areas.
+Property description
+   Attribute name Types of Defaults Description Platform difference description     indicator-dots Boolean false Whether to display the panel indicator    indicator-color Color rgba(0, 0, 0, .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/view/view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%A7%86%E5%9B%BE%E5%AE%B9%E5%99%A8/view/view/</guid>
+      <description>view#View container.
+It is similar to the div in traditional html and is used to wrap the content of various elements.
+Property description
+   Attribute name Types of Defaults Description     hover-class String none Specifies the style class to be pressed. When hover-class=&amp;ldquo;none&amp;rdquo;, there is no click state effect   hover-stop-propagation Boolean false Specify whether to prevent the click state of the ancestor node of this node   hover-start-time Number 50 How long does the click state appear after pressing, in milliseconds   hover-stay-time Number 400 Retention time of the click state after releasing the finger, in milliseconds    Example</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/custom-tab-bar/custom-tab-bar/</guid>
+      <description>custom-tab-bar#Custom tabBar component.
+to enhance performance, pages.jsonin a fixed configuration native tabBar.
+At the same time, has more flexible requirements for the position and style of the tabBar. As a first-level navigation, the tabBar is more often at the top of the PC web page rather than the bottom.
+Custom tabBar components should be born, it still reads pages.jsontabBar information in configuration, but this component can customize its placement, the flexibility to configure various css.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tonniz.github.io/docs/%E7%BB%84%E4%BB%B6/%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/navigator/navigator/</guid>
+      <description>navigator#Page jump.
+This component is similar to the component in HTML &amp;lt;a&amp;gt;, but it can only jump to local pages. The target page must be registered in pages.json.
+The function of this component has API method, see also: API&amp;gt;Routing and page jump&amp;gt;router.md
+Property description
+   Attribute name Types of Defaults Description Platform difference description     url String  Hoplinks within the application, is a relative or absolute path, such as: &amp;ldquo;.</description>
     </item>
     
   </channel>
