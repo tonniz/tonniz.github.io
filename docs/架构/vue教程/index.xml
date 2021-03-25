@@ -11,7 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tonniz.github.io/docs/%E6%9E%B6%E6%9E%84/vue%E6%95%99%E7%A8%8B/api/vue-api/</guid>
-      <description>Global configuration#   Vue global configuration description H5 App side     Vue.config.silent Cancel all logging and warning Vue √ √   Vue.config.optionMergeStrategies Custom options into policy details √ √   Vue.config.errorHandler Uncaught error handler specified component during rendering and viewing details √ √   Vue.config.warnHandler Vue to run when a warning given to a custom handler details √ √   Vue.</description>
+      <description>Global configuration#   Vue global configuration description     Vue.config.silent Cancel all logging and warning Vue   Vue.config.optionMergeStrategies Custom options into policy details   Vue.config.errorHandler Uncaught error handler specified component during rendering and viewing details   Vue.config.warnHandler Vue to run when a warning given to a custom handler details   Vue.config.ignoredElements Vue must ignore the custom elements outside the Vue&amp;rsquo;s details   Vue.</description>
     </item>
     
     <item>
